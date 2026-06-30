@@ -160,18 +160,18 @@ export function ContactSection() {
                     WhatsApp
                   </a>
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/thebritishdentalhub?igsh=ODl5OXZ0cjdxMzg2"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-[20px] border border-primary/15 bg-[#07152C]/85 px-4 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/25"
                   >
                     <Globe className="size-4" />
                     Instagram
                   </a>
                   <a
-                    href="https://www.facebook.com/"
+                    href="https://www.facebook.com/share/1BuVGxN8H3/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-[20px] border border-primary/15 bg-[#07152C]/85 px-4 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/25"
                   >
                     <Share2 className="size-4" />
