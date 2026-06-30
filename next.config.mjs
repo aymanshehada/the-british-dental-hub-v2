@@ -3,8 +3,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
   images: {
     unoptimized: true,
+    qualities: [75, 100],
   },
 }
 
