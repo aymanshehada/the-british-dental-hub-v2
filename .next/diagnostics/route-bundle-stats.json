@@ -1,0 +1,45 @@
+[
+  {
+    "route": "/",
+    "firstLoadUncompressedJsBytes": 607744,
+    "firstLoadChunkPaths": [
+      ".next\\static\\chunks\\0ya5kixflpvgt.js",
+      ".next\\static\\chunks\\0d3tkj33oycf2.js",
+      ".next\\static\\chunks\\0a-.iu_~atdrk.js",
+      ".next\\static\\chunks\\09vaywbmrkr0h.js",
+      ".next\\static\\chunks\\070uvxfynpfin.js",
+      ".next\\static\\chunks\\0cje14_narrpx.js",
+      ".next\\static\\chunks\\0nls.c_8vefv8.js",
+      ".next\\static\\chunks\\10u3y4bw1ayzs.js",
+      ".next\\static\\chunks\\turbopack-0wf3cpnf9mi-p.js"
+    ]
+  },
+  {
+    "route": "/dental-implants",
+    "firstLoadUncompressedJsBytes": 575565,
+    "firstLoadChunkPaths": [
+      ".next\\static\\chunks\\0ya5kixflpvgt.js",
+      ".next\\static\\chunks\\0d3tkj33oycf2.js",
+      ".next\\static\\chunks\\04q~84~ixp5y9.js",
+      ".next\\static\\chunks\\0w1fz-wy4l.1d.js",
+      ".next\\static\\chunks\\070uvxfynpfin.js",
+      ".next\\static\\chunks\\0cje14_narrpx.js",
+      ".next\\static\\chunks\\0nls.c_8vefv8.js",
+      ".next\\static\\chunks\\10u3y4bw1ayzs.js",
+      ".next\\static\\chunks\\turbopack-0wf3cpnf9mi-p.js"
+    ]
+  },
+  {
+    "route": "/_not-found",
+    "firstLoadUncompressedJsBytes": 517595,
+    "firstLoadChunkPaths": [
+      ".next\\static\\chunks\\0ya5kixflpvgt.js",
+      ".next\\static\\chunks\\0d3tkj33oycf2.js",
+      ".next\\static\\chunks\\070uvxfynpfin.js",
+      ".next\\static\\chunks\\0cje14_narrpx.js",
+      ".next\\static\\chunks\\0nls.c_8vefv8.js",
+      ".next\\static\\chunks\\10u3y4bw1ayzs.js",
+      ".next\\static\\chunks\\turbopack-0wf3cpnf9mi-p.js"
+    ]
+  }
+]

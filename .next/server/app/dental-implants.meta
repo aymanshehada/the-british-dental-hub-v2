@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/dental-implants/layout,_N_T_/dental-implants/page,_N_T_/dental-implants"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/dental-implants/__PAGE__",
+    "/dental-implants",
+    "/_index",
+    "/_head"
+  ]
+}

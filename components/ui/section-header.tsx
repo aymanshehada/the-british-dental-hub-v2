@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import { Eyebrow } from '@/components/ui/eyebrow'
 
 interface SectionHeaderProps {
   eyebrow: string
@@ -33,20 +34,14 @@ export function SectionHeader({
         className,
       )}
     >
-      <p
-        className={cn(
-          'eyebrow',
-          align === 'center' ? 'justify-center' : 'justify-start',
-          'mx-auto inline-flex',
-          eyebrowClassName,
-        )}
+      <Eyebrow
+        align={align}
+        className={eyebrowClassName}
+        lineClassName={eyebrowLineClassName}
+        line={eyebrowLine}
       >
-        <span className={cn('h-px w-10 bg-primary', eyebrowLineClassName)} />
         {eyebrow}
-        {eyebrowLine === 'double' ? (
-          <span className={cn('h-px w-10 bg-primary', eyebrowLineClassName)} />
-        ) : null}
-      </p>
+      </Eyebrow>
       <h2 className={cn('section-title mt-5', align === 'center' ? 'mx-auto' : '', titleClassName)}>
         {title}
       </h2>
