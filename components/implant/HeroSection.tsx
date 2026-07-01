@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { ArrowRight, MessageSquare } from 'lucide-react'
+import { Container } from '@/components/ui/container'
 import { PremiumButton } from '@/components/ui/premium-button'
 
 export function HeroSection() {
@@ -18,7 +19,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,209,110,0.16),transparent_35%)]" />
       </div>
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24 sm:px-8 lg:px-10 lg:py-32">
+      <Container className="relative flex min-h-screen items-center py-24 lg:py-32">
         <div className="max-w-3xl">
           <p className="eyebrow justify-start">
             <span className="h-px w-10 bg-primary" />
@@ -54,7 +55,7 @@ export function HeroSection() {
             </PremiumButton>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
