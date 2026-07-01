@@ -1,58 +1,6 @@
-import {
-  Brain,
-  CalendarDays,
-  HeartPulse,
-  ScanSearch,
-  ShieldCheck,
-  Sparkles,
-} from 'lucide-react'
 import { PremiumButton } from '@/components/ui/premium-button'
 import { PremiumCard } from '@/components/ui/premium-card'
-
-const journeySteps = [
-  {
-    number: '01',
-    icon: CalendarDays,
-    title: 'Consultation',
-    description: 'A thorough clinical assessment and treatment discussion to define the optimal implant pathway.',
-    detail: 'Duration: 30–45 min',
-  },
-  {
-    number: '02',
-    icon: ScanSearch,
-    title: '3D CBCT Scan',
-    description: 'Advanced digital diagnosis and bone assessment for precise anatomical planning.',
-    detail: 'Precision imaging',
-  },
-  {
-    number: '03',
-    icon: Brain,
-    title: 'Digital Planning',
-    description: 'Virtual implant positioning designed for maximum precision, stability and long-term harmony.',
-    detail: 'Custom treatment design',
-  },
-  {
-    number: '04',
-    icon: ShieldCheck,
-    title: 'Implant Placement',
-    description: 'Precise implant placement using minimally invasive techniques for maximum comfort and predictability.',
-    detail: 'Gentle and efficient',
-  },
-  {
-    number: '05',
-    icon: HeartPulse,
-    title: 'Healing Phase',
-    description: 'A carefully guided osseointegration period with attentive follow-up and recovery support.',
-    detail: 'Supportive recovery',
-  },
-  {
-    number: '06',
-    icon: Sparkles,
-    title: 'Final Restoration',
-    description: 'A bespoke crown crafted to restore natural form, function and confidence with exceptional aesthetics.',
-    detail: 'Beautiful long-term result',
-  },
-]
+import { journeySteps } from '@/components/implant/data'
 
 export function JourneySection() {
   return (

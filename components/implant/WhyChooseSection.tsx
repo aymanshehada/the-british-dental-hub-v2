@@ -1,57 +1,6 @@
 import { ArrowRight, Check } from 'lucide-react'
 import { PremiumCard } from '@/components/ui/premium-card'
-
-const trustPoints = [
-  'British Standards',
-  'Digital Planning',
-  'Premium Implant Systems',
-  'Personalized Care',
-]
-
-const reasons = [
-  {
-    number: '01',
-    icon: ScanSearch,
-    title: 'Digital Treatment Planning',
-    description:
-      'Every implant is digitally planned using advanced 3D CBCT imaging for maximum precision and predictable long-term results.',
-  },
-  {
-    number: '02',
-    icon: ShieldCheck,
-    title: 'Premium Implant Systems',
-    description:
-      'We use internationally recognized implant systems supported by long-term scientific evidence and exceptional reliability.',
-  },
-  {
-    number: '03',
-    icon: UserRoundCheck,
-    title: 'Experienced Implant Team',
-    description:
-      'Treatment is performed by experienced dentists following modern British clinical protocols and meticulous planning.',
-  },
-  {
-    number: '04',
-    icon: HeartPulse,
-    title: 'Comfortable Surgery',
-    description:
-      'Gentle surgical techniques and modern anesthesia provide a comfortable and stress-free treatment experience.',
-  },
-  {
-    number: '05',
-    icon: Sparkles,
-    title: 'Natural Aesthetic Results',
-    description:
-      'Every implant restoration is carefully crafted to match your smile naturally in shape, color, and function.',
-  },
-  {
-    number: '06',
-    icon: BadgeCheck,
-    title: 'Long-Term Support',
-    description:
-      'Regular follow-up appointments help protect your investment and maintain healthy implants for many years.',
-  },
-]
+import { reasons, trustPoints } from '@/components/implant/data'
 
 export function WhyChooseSection() {
   return (
