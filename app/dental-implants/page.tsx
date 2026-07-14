@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { BeforeAfterGallery } from '@/components/implant/BeforeAfterGallery'
 import { ConsultationCtaSection } from '@/components/implant/ConsultationCtaSection'
-import { DigitalDentistrySection } from '@/components/implant/DigitalDentistrySection'
 import { HeroSection } from '@/components/implant/HeroSection'
-import { ImplantSystemsSection } from '@/components/implant/ImplantSystemsSection'
+import { SuitabilitySection } from '@/components/implant/SuitabilitySection'
 import { JourneySection } from '@/components/implant/JourneySection'
+import { DigitalDentistrySection } from '@/components/implant/DigitalDentistrySection'
 import { PatientStoriesSection } from '@/components/implant/PatientStoriesSection'
-import { WhyChooseSection } from '@/components/implant/WhyChooseSection'
 
 const pageTitle = 'Dental Implants | The British Dental Hub'
 const pageDescription =
@@ -54,13 +52,8 @@ export default function DentalImplantsPage() {
   return (
     <main className="min-h-screen bg-background">
       <HeroSection />
-
-      <WhyChooseSection />
-
+      <SuitabilitySection />
       <JourneySection />
-
-      <BeforeAfterGallery />
-      <ImplantSystemsSection />
       <DigitalDentistrySection />
       <PatientStoriesSection />
       <ConsultationCtaSection />

@@ -1,109 +1,93 @@
-import { ArrowRight, Star } from 'lucide-react'
-import { Container } from '@/components/ui/container'
-import { Eyebrow } from '@/components/ui/eyebrow'
-import { Heading, Text } from '@/components/ui/typography'
-import { PremiumCard } from '@/components/ui/premium-card'
-import { SectionWrapper } from '@/components/ui/section-wrapper'
+import { Star } from 'lucide-react'
+
+const featuredTestimonial = {
+  quote:
+    'The care felt calm, thoughtful and reassuring from the very first consultation. Every step was explained clearly and the experience felt exceptionally well organised.',
+  author: 'Verified Patient',
+  treatment: 'Dental Implant Treatment',
+}
 
 const testimonials = [
   {
     quote:
-      'The experience felt calm, thoughtful and reassuring from the very first consultation.',
-    author: 'Verified Patient',
-    treatment: 'Dental Implant Treatment',
-  },
-  {
-    quote:
-      'Every step was explained clearly, which made the process feel manageable and confident.',
+      'The consultation was thorough, calm and easy to follow. I left feeling informed rather than overwhelmed.',
     author: 'Verified Patient',
     treatment: 'Implant Consultation',
   },
   {
     quote:
-      'The clinical care felt precise and personal, and the overall experience was beautifully organised.',
+      'The clinical care felt precise and personal, and the treatment experience was handled with real attention to detail.',
     author: 'Verified Patient',
     treatment: 'Smile Restoration',
   },
+  {
+    quote:
+      'Everything was explained with clarity and patience, which made the whole journey feel reassuring and premium.',
+    author: 'Verified Patient',
+    treatment: 'Full-Arch Treatment',
+  },
 ]
+
+function Stars() {
+  return (
+    <div className="flex items-center gap-1 text-[#D4AF37]" aria-label="Five star review">
+      {Array.from({ length: 5 }).map((_, index) => (
+        <Star key={index} className="size-4 fill-current" />
+      ))}
+    </div>
+  )
+}
 
 export function PatientStoriesSection() {
   return (
-    <SectionWrapper aria-labelledby="patient-stories-heading">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,209,110,0.06),transparent_70%)]" />
-
-      <Container>
+    <section aria-labelledby="patient-stories-heading" className="border-t border-white/10 bg-[#07152C] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
-          <Eyebrow>Patient Experience</Eyebrow>
-          <Heading id="patient-stories-heading" className="mt-6">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+            Patient Experience
+          </p>
+          <h2
+            id="patient-stories-heading"
+            className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]"
+          >
             What Our Patients Remember
-          </Heading>
-          <Text className="mt-6 text-lg font-light leading-8 text-slate-300/85 sm:text-xl">
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-[1.02rem] leading-8 text-[rgba(255,255,255,0.82)] sm:text-[1.08rem]">
             Beyond clinical excellence, we believe every patient should remember how they were treated, supported and cared for throughout their journey.
-          </Text>
+          </p>
         </div>
 
-        <div className="mt-16 space-y-6">
-          <PremiumCard className="group rounded-[34px] border border-white/15 bg-[rgba(5,13,31,0.96)] p-8 shadow-[0_24px_80px_rgba(0,0,0,0.24)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-1 hover:border-primary/35 hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] sm:p-10 lg:p-12">
-            <div className="flex items-center gap-1 text-primary" aria-label="Five star review">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Star key={index} className="size-4 fill-current" />
-              ))}
-            </div>
-            <blockquote className="mt-6 max-w-4xl text-2xl font-medium leading-[1.35] text-white sm:text-3xl lg:text-[2.15rem]">
-              “The care felt calm, reassuring and deeply considered at every stage. It was a treatment experience defined by clarity, comfort and trust.”
+        <div className="mt-10 grid gap-5 lg:grid-cols-[1.08fr_0.92fr] lg:gap-6">
+          <article className="rounded-[32px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6 shadow-[0_8px_22px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)] sm:p-7 lg:p-8">
+            <Stars />
+            <blockquote className="mt-5 max-w-3xl text-[1.6rem] font-medium leading-[1.38] tracking-[-0.02em] text-[#F8F8F6] sm:text-[1.95rem] lg:text-[2.1rem]">
+              “{featuredTestimonial.quote}”
             </blockquote>
-            <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-[0.95rem] font-semibold text-white">Verified Patient</p>
-                <p className="mt-1 text-sm font-light text-slate-300/85">Dental Implant Treatment</p>
-              </div>
-              <div className="inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-primary/80">
-                Premium patient experience
-                <ArrowRight className="size-4" />
-              </div>
+            <div className="mt-6 border-t border-white/10 pt-4">
+              <p className="text-[0.95rem] font-semibold text-[#F8F8F6]">{featuredTestimonial.author}</p>
+              <p className="mt-1 text-sm font-light text-[rgba(255,255,255,0.82)]">{featuredTestimonial.treatment}</p>
             </div>
-          </PremiumCard>
+          </article>
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
             {testimonials.map((testimonial) => (
-              <PremiumCard
+              <article
                 key={testimonial.quote}
-                className="group h-full rounded-[30px] border border-white/15 bg-[rgba(7,21,44,0.95)] p-7 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_80px_rgba(0,0,0,0.24)]"
+                className="rounded-[28px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5 shadow-[0_8px_22px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)]"
               >
-                <div className="flex items-center gap-1 text-primary" aria-label="Five star review">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} className="size-4 fill-current" />
-                  ))}
-                </div>
-                <p className="mt-5 text-[0.98rem] font-light leading-7 text-slate-200/90">
+                <Stars />
+                <p className="mt-4 text-[0.98rem] font-light leading-7 text-[rgba(255,255,255,0.82)]">
                   {testimonial.quote}
                 </p>
-                <div className="mt-8 border-t border-white/10 pt-5">
-                  <p className="text-sm font-semibold text-white">{testimonial.author}</p>
-                  <p className="mt-1 text-sm font-light text-slate-300/85">{testimonial.treatment}</p>
+                <div className="mt-4 border-t border-white/10 pt-3">
+                  <p className="text-sm font-semibold text-[#F8F8F6]">{testimonial.author}</p>
+                  <p className="mt-1 text-sm font-light text-[rgba(255,255,255,0.82)]">{testimonial.treatment}</p>
                 </div>
-              </PremiumCard>
+              </article>
             ))}
           </div>
         </div>
-
-        <div className="mt-8 rounded-[34px] border border-primary/20 bg-[linear-gradient(135deg,rgba(255,209,110,0.10),transparent_60%),rgba(7,21,44,0.95)] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:p-10">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              'Comfort-Focused Care',
-              'Transparent Communication',
-              'Precision Dentistry',
-              'Long-Term Relationships',
-            ].map((value) => (
-              <div key={value} className="rounded-[24px] border border-white/10 bg-white/5 px-4 py-4 text-center">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-primary/80">
-                  {value}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </SectionWrapper>
+      </div>
+    </section>
   )
 }

@@ -1,29 +1,34 @@
-import { Navbar } from "@/components/navbar"
-import { Hero } from "@/components/hero"
-import { TrustSection } from "@/components/trust-section"
-import { AboutSection } from "@/components/about-section"
-import { TreatmentsSection } from "@/components/treatments-section"
-import { BeforeAfterSection } from "@/components/before-after-section"
-import { JourneySection } from "@/components/journey-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { FaqSection } from "@/components/faq-section"
-import { BlogSection } from "@/components/blog-section"
-import { ContactSection } from "@/components/contact-section"
+import TopBar from "@/components/layout/TopBar"
+import Navbar from "@/components/layout/Navbar"
+import Footer from "@/components/layout/Footer"
 
-export default function Page() {
+import Hero from "@/components/home/Hero"
+import TrustBar from "@/components/home/TrustBar"
+import Treatments from "@/components/home/Treatments"
+import WhyChooseUs from "@/components/home/WhyChooseUs"
+import BeforeAfter from "@/components/home/BeforeAfter"
+import Doctors from "@/components/home/Doctors"
+import Testimonials from "@/components/home/Testimonials"
+import CTA from "@/components/home/CTA"
+
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#fcfaf6] text-[#0A2247]">
+      <TopBar />
       <Navbar />
-      <Hero />
-      <TrustSection />
-      <AboutSection />
-      <TreatmentsSection />
-      <BeforeAfterSection />
-      <JourneySection />
-      <TestimonialsSection />
-      <FaqSection />
-      <BlogSection />
-      <ContactSection />
-    </main>
+
+      <main id="insights">
+        <Hero />
+        <TrustBar />
+        <Treatments />
+        <WhyChooseUs />
+        <BeforeAfter />
+        <Doctors />
+        <Testimonials />
+        <CTA />
+      </main>
+
+      <Footer />
+    </div>
   )
 }

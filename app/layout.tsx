@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Jost } from 'next/font/google'
+import { Cormorant_Garamond, Manrope } from 'next/font/google'
 import './globals.css'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
@@ -14,7 +14,7 @@ const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
 })
-const jost = Jost({
+const manrope = Manrope({
   variable: '--font-body',
   subsets: ['latin'],
 })
@@ -137,8 +137,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#0a1428',
+  colorScheme: 'light',
+  themeColor: '#fcfaf6',
 }
 
 export default function RootLayout({
@@ -149,7 +149,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${jost.variable} bg-background`}
+      className={`${cormorant.variable} ${manrope.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         <script

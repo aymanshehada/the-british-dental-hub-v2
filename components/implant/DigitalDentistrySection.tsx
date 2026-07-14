@@ -1,9 +1,5 @@
 import { Activity, Microscope, ScanSearch, ShieldCheck } from 'lucide-react'
 import { Container } from '@/components/ui/container'
-import { Eyebrow } from '@/components/ui/eyebrow'
-import { Heading, Text } from '@/components/ui/typography'
-import { PremiumCard } from '@/components/ui/premium-card'
-import { SectionWrapper } from '@/components/ui/section-wrapper'
 
 const technologies = [
   {
@@ -38,99 +34,90 @@ const technologies = [
 
 export function DigitalDentistrySection() {
   return (
-    <SectionWrapper aria-labelledby="digital-dentistry-heading">
+    <section aria-labelledby="digital-dentistry-heading" className="relative overflow-hidden border-t border-white/10 bg-[#07152C] py-16 sm:py-20 lg:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,209,110,0.06),transparent_70%)]" />
 
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <Eyebrow>Advanced Digital Dentistry</Eyebrow>
-          <Heading id="digital-dentistry-heading" className="mt-6">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+            Advanced Digital Dentistry
+          </p>
+          <h2 id="digital-dentistry-heading" className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]">
             Precision Through Technology
-          </Heading>
-          <Text className="mt-6 text-lg font-light leading-8 text-slate-300/85 sm:text-xl">
+          </h2>
+          <p className="mt-4 text-lg font-light leading-8 text-[rgba(255,255,255,0.82)] sm:text-xl">
             Every stage of implant treatment is enhanced through advanced digital planning, modern imaging and precision-guided clinical protocols.
-          </Text>
+          </p>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-          <PremiumCard className="group h-full rounded-[34px] border border-white/15 bg-[rgba(5,13,31,0.96)] p-8 shadow-[0_24px_80px_rgba(0,0,0,0.24)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-1 hover:border-primary/35 hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] lg:p-10">
+        <div className="mt-10 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="rounded-[30px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.08)] sm:p-7 lg:p-8">
             <div className="flex items-center justify-between gap-4">
-              <div className="flex h-15 w-15 items-center justify-center rounded-[24px] border border-primary/20 bg-primary/10 text-primary transition duration-300 ease-out group-hover:scale-105 group-hover:border-primary/40 group-hover:bg-primary/15">
-                <ScanSearch className="size-8" strokeWidth={1.4} />
+              <div className="flex size-14 items-center justify-center rounded-[24px] border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#D4AF37]">
+                <ScanSearch className="size-7" strokeWidth={1.4} />
               </div>
-              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-primary/80">
+              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
                 Digital Intraoral Scanner
               </span>
             </div>
 
-            <h3 className="mt-8 text-[1.5rem] font-semibold leading-tight text-white transition duration-300 ease-out group-hover:text-primary/95 sm:text-[1.7rem]">
+            <h3 className="mt-6 text-[1.5rem] font-semibold leading-tight text-[#F8F8F6] sm:text-[1.7rem]">
               Digital Intraoral Scanner
             </h3>
-            <p className="mt-4 max-w-xl text-[0.95rem] font-light leading-7 text-slate-200/90 sm:text-[1rem]">
+            <p className="mt-3 max-w-xl text-[0.95rem] font-light leading-7 text-[rgba(255,255,255,0.82)] sm:text-[1rem]">
               Create precise digital impressions for implant planning, restorative design and a more comfortable patient experience.
             </p>
 
-            <div className="mt-8 rounded-[24px] border border-white/10 bg-white/5 p-5">
-              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-primary/80">
+            <div className="mt-6 rounded-[24px] border border-white/10 bg-white/[0.04] p-4">
+              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#D4AF37]">
                 Patient Benefits
               </p>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
                 {[
                   'More accurate impressions',
                   'Improved restorative communication',
                   'Smoother treatment workflow',
                   'Greater comfort for patients',
                 ].map((benefit) => (
-                  <div key={benefit} className="flex items-start gap-2 rounded-2xl border border-white/10 bg-[#07152C]/70 px-3 py-2.5">
-                    <span className="mt-1 size-1.5 rounded-full bg-primary" />
-                    <span className="text-sm font-light leading-6 text-slate-200/90">{benefit}</span>
+                  <div key={benefit} className="flex items-start gap-2 rounded-2xl border border-white/10 bg-[rgba(255,255,255,0.05)] px-3 py-2">
+                    <span className="mt-1 size-1.5 rounded-full bg-[#D4AF37]" />
+                    <span className="text-sm font-light leading-6 text-[rgba(255,255,255,0.82)]">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
-          </PremiumCard>
+          </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {technologies.map((technology) => {
               const Icon = technology.icon
 
               return (
-                <PremiumCard
+                <article
                   key={technology.title}
-                  className="group h-full rounded-[30px] border border-white/15 bg-[rgba(7,21,44,0.95)] p-7 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_80px_rgba(0,0,0,0.24)]"
+                  className="group h-full rounded-[28px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5 shadow-[0_8px_22px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)]"
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-[20px] border border-primary/20 bg-primary/10 text-primary transition duration-300 ease-out group-hover:scale-105 group-hover:border-primary/40 group-hover:bg-primary/15">
-                      <Icon className="size-6" strokeWidth={1.4} />
+                    <div className="flex size-11 items-center justify-center rounded-[20px] border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#D4AF37] transition duration-300 ease-out group-hover:border-[#D4AF37]/40 group-hover:bg-[#D4AF37]/15">
+                      <Icon className="size-5" strokeWidth={1.4} />
                     </div>
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-primary/80">
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#D4AF37]">
                       {technology.eyebrow}
                     </p>
                   </div>
-                  <h3 className="mt-6 text-[1.15rem] font-semibold leading-tight text-white transition duration-300 ease-out group-hover:text-primary/95">
+
+                  <h3 className="mt-4 text-[1.12rem] font-semibold leading-tight text-[#F8F8F6] transition duration-300 ease-out group-hover:text-[#F8F8F6]">
                     {technology.title}
                   </h3>
-                  <p className="mt-3 text-[0.95rem] font-light leading-7 text-slate-200/90">
+                  <p className="mt-2 text-[0.95rem] font-light leading-7 text-[rgba(255,255,255,0.82)]">
                     {technology.description}
                   </p>
-                </PremiumCard>
+                </article>
               )
             })}
           </div>
         </div>
-
-        <div className="mt-8 rounded-[34px] border border-primary/20 bg-[linear-gradient(135deg,rgba(255,209,110,0.10),transparent_60%),rgba(7,21,44,0.95)] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:p-10">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-primary/80">
-            Clinical Philosophy
-          </p>
-          <h3 className="mt-4 text-2xl font-semibold leading-tight text-white sm:text-[1.8rem]">
-            Technology supports expertise—never replaces it.
-          </h3>
-          <p className="mt-4 max-w-3xl text-[0.95rem] font-light leading-7 text-slate-200/90 sm:text-[1rem]">
-            Advanced digital dentistry allows our clinicians to deliver safer, more predictable and more comfortable implant treatment while maintaining meticulous attention to every clinical detail. When clinically indicated, CBCT imaging is obtained through trusted diagnostic imaging partners, and treatment is supported by trusted dental laboratory collaboration for restorative precision.
-          </p>
-        </div>
       </Container>
-    </SectionWrapper>
+    </section>
   )
 }

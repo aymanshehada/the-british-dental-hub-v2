@@ -1,58 +1,72 @@
 import Image from 'next/image'
-import { ArrowRight, MessageSquare } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import { PremiumButton } from '@/components/ui/premium-button'
 
 export function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#07152C]">
+    <section className="relative isolate overflow-hidden bg-[#050d1f]">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-clinic.png"
-          alt="Luxury dental clinic interior at The British Dental Hub"
+          src="/images/implant-treatment.png"
+          alt="Clinician reviewing a digital implant treatment plan with a patient"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-30"
+          className="object-cover object-[58%_center]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,21,44,0.96)_0%,rgba(7,21,44,0.82)_45%,rgba(7,21,44,0.7)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,209,110,0.16),transparent_35%)]" />
       </div>
+      <div className="absolute inset-0 bg-[linear-gradient(104deg,rgba(5,13,31,0.82)_0%,rgba(5,13,31,0.62)_38%,rgba(5,13,31,0.3)_62%,rgba(5,13,31,0.14)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(5,13,31,0.44)_0%,transparent_36%)]" />
 
-      <Container className="relative flex min-h-screen items-center py-24 lg:py-32">
-        <div className="max-w-3xl">
-          <p className="eyebrow justify-start">
-            <span className="h-px w-10 bg-primary" />
-            Premium Implant Dentistry
+      <Container className="relative flex min-h-[90vh] items-center pt-24 pb-16 sm:pb-20 lg:pt-28 lg:pb-24">
+        <div className="w-full max-w-[620px]">
+          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-white/68">
+            The British Dental Hub
+            <span className="mt-1 block text-[0.58rem] tracking-[0.24em] text-white/56">
+              (British-inspired Implant Dentistry)
+            </span>
           </p>
 
-          <h1 className="section-title mt-6 max-w-3xl text-balance text-white sm:text-5xl lg:text-[4rem] leading-[0.95]">
-            Dental Implants Inspired by British Standards
+          <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#ffd4ce]">
+            <span className="h-px w-10 bg-[#D62828]" />
+            Dental Implants in Cairo
+          </p>
+
+          <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.92] tracking-[-0.022em] text-white">
+            Rebuild Your Smile
+            <span className="mt-3 block">With Quiet Confidence</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg font-light leading-8 text-slate-200/90 sm:text-xl sm:leading-9">
-            Restore your smile with premium implant dentistry using digital planning, world-class implant systems and meticulous clinical precision in Cairo.
+          <p className="mt-7 max-w-[600px] text-[1.08rem] leading-8 text-white/84 sm:text-[1.16rem] sm:leading-9">
+            Your treatment starts with a calm clinician-led assessment, clear planning,
+            and a step-by-step pathway designed around long-term comfort and stability.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <PremiumButton
               href="/#contact"
               variant="primary"
-              className="min-w-[220px]"
+              className="min-w-[250px] justify-center"
               iconRight={<ArrowRight className="size-4" />}
             >
-              Book Consultation
+              Book Your Implant Assessment
             </PremiumButton>
             <PremiumButton
-              href="https://wa.me/201556887765"
-              variant="secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="min-w-[240px]"
-              iconLeft={<MessageSquare className="size-4" />}
+              href="#implant-journey"
+              variant="outline"
+              className="min-w-[280px] justify-center border-white/30 bg-white/5 text-white hover:bg-white/10"
             >
-              WhatsApp Consultation
+              Explore the Implant Journey
             </PremiumButton>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/72 sm:gap-x-5">
+            <span>Clinician-led assessment</span>
+            <span className="hidden h-px w-4 bg-white/30 sm:block" />
+            <span>Digital implant planning</span>
+            <span className="hidden h-px w-4 bg-white/30 sm:block" />
+            <span>Long-term aftercare</span>
           </div>
         </div>
       </Container>

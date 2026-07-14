@@ -1,9 +1,5 @@
+import Link from 'next/link'
 import { ArrowRight, MessageSquare } from 'lucide-react'
-import { Container } from '@/components/ui/container'
-import { Eyebrow } from '@/components/ui/eyebrow'
-import { Heading, Text } from '@/components/ui/typography'
-import { PremiumButton } from '@/components/ui/premium-button'
-import { SectionWrapper } from '@/components/ui/section-wrapper'
 
 const trustItems = [
   '30–45 Minute Consultation',
@@ -14,70 +10,71 @@ const trustItems = [
 
 export function ConsultationCtaSection() {
   return (
-    <SectionWrapper aria-labelledby="consultation-cta-heading">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,209,110,0.08),transparent_70%)]" />
+    <section
+      aria-labelledby="consultation-cta-heading"
+      className="relative overflow-hidden border-t border-[#E8DFD0] bg-[#F7F4EE] py-16 sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+          <div>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+              Begin Your Journey
+            </p>
+            <h2
+              id="consultation-cta-heading"
+              className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
+            >
+              Ready to Restore Your Smile?
+            </h2>
 
-      <Container>
-        <div className="overflow-hidden rounded-[40px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,209,110,0.10),transparent_65%),rgba(7,21,44,0.98)] shadow-[0_30px_100px_rgba(0,0,0,0.26)] backdrop-blur-sm">
-          <div className="grid gap-10 p-8 sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:p-12">
-            <div className="flex flex-col justify-between">
-              <div>
-                <Eyebrow align="left">Begin Your Journey</Eyebrow>
-                <Heading id="consultation-cta-heading" className="mt-6 sm:text-4xl lg:text-[3rem]">
-                  Ready to Restore Your Smile?
-                </Heading>
-                <Text className="mt-6 max-w-2xl text-lg font-light leading-8 text-slate-300/85 sm:text-xl">
-                  Every successful implant treatment begins with a comprehensive consultation. We’ll assess your smile, explain every available option and create a personalised treatment plan designed around your clinical needs.
-                </Text>
-                <Text className="mt-4 text-[0.95rem] font-light leading-7 text-slate-200/90">
-                  No pressure. Just honest clinical advice.
-                </Text>
-              </div>
+            <p className="mt-8 max-w-2xl text-lg font-light leading-8 text-[rgba(10,34,71,0.84)] sm:text-xl">
+              Every successful implant treatment begins with a comprehensive consultation. We’ll assess your smile, explain every available option and create a personalised treatment plan designed around your clinical needs.
+            </p>
+            <p className="mt-3 text-[0.95rem] font-light leading-7 text-[rgba(10,34,71,0.78)]">
+              No pressure. Just honest clinical advice.
+            </p>
 
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <PremiumButton
-                  href="/#contact"
-                  variant="primary"
-                  className="min-w-[220px] justify-center"
-                  iconRight={<ArrowRight className="size-4" />}
-                >
-                  Book Consultation
-                </PremiumButton>
-                <PremiumButton
-                  href="https://wa.me/201556887765"
-                  variant="secondary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="min-w-[240px] justify-center"
-                  iconLeft={<MessageSquare className="size-4" />}
-                >
-                  Chat on WhatsApp
-                </PremiumButton>
-              </div>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <Link
+                href="/#contact"
+                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-[#D4AF37] bg-[#D4AF37] px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] shadow-[0_10px_24px_rgba(212,175,55,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#DFC26C] hover:shadow-[0_14px_30px_rgba(212,175,55,0.26)]"
+              >
+                Book Consultation
+                <ArrowRight className="size-4" />
+              </Link>
 
-              <p className="mt-6 text-sm font-light leading-7 text-slate-300/85">
-                Our team will contact you as soon as possible to arrange your consultation.
-              </p>
+              <Link
+                href="https://wa.me/201556887765"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-[#D4AF37] bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#C9A437] hover:bg-[rgba(212,175,55,0.10)]"
+              >
+                <MessageSquare className="size-4 text-[#D4AF37]" />
+                Chat on WhatsApp
+              </Link>
             </div>
 
-            <div className="rounded-[32px] border border-white/10 bg-[rgba(7,21,44,0.92)] p-6 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:p-8">
-              <div className="rounded-[28px] border border-primary/20 bg-[radial-gradient(circle_at_top,rgba(255,209,110,0.16),transparent_70%)] p-6 sm:p-8">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-primary/80">
-                  What your consultation includes
-                </p>
-                <div className="mt-6 space-y-4">
-                  {trustItems.map((item) => (
-                    <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-                      <span className="size-2.5 rounded-full bg-primary" />
-                      <span className="text-sm font-light leading-6 text-slate-200/90">{item}</span>
-                    </div>
-                  ))}
+            <p className="mt-5 text-sm font-light leading-7 text-[rgba(10,34,71,0.72)]">
+              Our team will personally contact you to arrange your consultation at a convenient time.
+            </p>
+          </div>
+
+          <div className="rounded-[32px] border border-[#E6DCCB] bg-[#FCFAF6] p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+              What your consultation includes
+            </p>
+
+            <div className="mt-5 space-y-3.5">
+              {trustItems.map((item) => (
+                <div key={item} className="flex items-center gap-3 rounded-[14px] border border-[#E9E1D3] bg-white px-4 py-3">
+                  <span className="size-2.5 rounded-full bg-[#D4AF37]" />
+                  <span className="text-sm font-light leading-6 text-[rgba(10,34,71,0.84)]">{item}</span>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-      </Container>
-    </SectionWrapper>
+      </div>
+    </section>
   )
 }
