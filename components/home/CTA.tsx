@@ -31,7 +31,7 @@ export default function CTA() {
             <div className="rounded-[8px] border border-white/10 bg-white/8 p-5 backdrop-blur sm:p-6">
               <div className="space-y-4">
                 <Link
-                  href="#home"
+                  href="#contact"
                   className="inline-flex h-[42px] w-full items-center justify-center gap-2 rounded-[3px] bg-white px-6 text-[14px] font-medium text-[#183668] transition hover:bg-brand-bg"
                 >
                   Book Appointment
