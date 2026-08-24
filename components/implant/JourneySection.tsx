@@ -35,10 +35,10 @@ const journeySteps = [
 
 export function JourneySection() {
   return (
-    <section id="implant-journey" className="bg-[#f8f9fb] py-24 sm:py-28 lg:py-32">
+    <section id="implant-journey" className="bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D62828]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             The Implant Journey
           </p>
           <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
@@ -76,7 +76,7 @@ export function JourneySection() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-[18px] border border-[#e6edf5] bg-[#fbfcfe] px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
+        <div className="mt-12 rounded-[18px] border border-[#e6edf5] bg-brand-bg px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
           <p className="text-[0.95rem] leading-7">
             Every treatment plan is personalised. Some patients may require additional stages such as bone grafting or sinus augmentation before implant placement.
           </p>

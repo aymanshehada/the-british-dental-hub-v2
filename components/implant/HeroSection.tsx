@@ -28,8 +28,8 @@ export function HeroSection() {
             </span>
           </p>
 
-          <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#ffd4ce]">
-            <span className="h-px w-10 bg-[#D62828]" />
+          <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
+            <span className="h-px w-10 bg-brand-red" />
             Dental Implants in Cairo
           </p>
 

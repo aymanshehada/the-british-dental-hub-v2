@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="patient-stories" className="bg-[#f7f9fc] py-12 sm:py-14 lg:py-16">
+    <section id="patient-stories" className="bg-brand-bg py-12 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -35,7 +35,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-[760px] text-center"
         >
-          <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-[#ff2a22]">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
             Patient Stories
           </p>
           <h2 className="mt-5 font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
@@ -60,7 +60,7 @@ export default function Testimonials() {
                     <Star key={starIndex} size={17} fill="currentColor" />
                   ))}
                 </div>
-                <div className="rounded-[8px] bg-[#f6f8fb] p-3 text-[#183668]/35">
+                <div className="rounded-[8px] bg-brand-bg p-3 text-[#183668]/35">
                   <Quote size={22} />
                 </div>
               </div>

@@ -13,7 +13,7 @@ import CTA from "@/components/home/CTA"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#fcfaf6] text-[#0A2247]">
+    <div className="min-h-screen bg-brand-bg text-[#0A2247]">
       <TopBar />
       <Navbar />
 

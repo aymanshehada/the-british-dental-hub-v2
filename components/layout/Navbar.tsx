@@ -79,7 +79,7 @@ export default function Navbar() {
           type="button"
           aria-label={isOpen ? "Close navigation" : "Open navigation"}
           onClick={() => setIsOpen((open) => !open)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded border border-[#d8dee8] text-[#0A2247] transition-colors duration-300 hover:bg-[#f6f8fb] xl:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded border border-[#d8dee8] text-[#0A2247] transition-colors duration-300 hover:bg-brand-bg xl:hidden"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -93,7 +93,7 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded px-4 py-3 text-sm font-medium text-[#233b63] transition hover:bg-[#f6f8fb] hover:text-[#0A2247]"
+                className="rounded px-4 py-3 text-sm font-medium text-[#233b63] transition hover:bg-brand-bg hover:text-[#0A2247]"
               >
                 {item.label}
               </Link>

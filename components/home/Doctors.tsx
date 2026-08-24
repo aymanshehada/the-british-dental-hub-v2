@@ -41,10 +41,10 @@ export default function Doctors() {
         >
           <div className="max-w-[640px]">
             <div className="mb-5 flex items-center gap-3">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-[#ff2a22]">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
                 Clinical Team
               </p>
-              <span className="h-px w-16 bg-[#ff6f67]" />
+              <span className="h-px w-16 bg-brand-red" />
             </div>
             <h2 className="font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
               Specialists chosen for precision, judgement, and calm patient care.
@@ -70,7 +70,7 @@ export default function Doctors() {
                 className="rounded-[10px] border border-[#edf1f6] bg-white p-6 shadow-[0_2px_8px_rgba(15,39,78,0.06)] transition hover:shadow-[0_10px_24px_rgba(15,39,78,0.1)]"
               >
                 <div className="flex items-center justify-between">
-                  <div className="h-[120px] w-[120px] overflow-hidden rounded-full bg-[#f6f8fb]">
+                  <div className="h-[120px] w-[120px] overflow-hidden rounded-full bg-brand-bg">
                     <Image
                       src={doctor.image}
                       alt={doctor.name}
@@ -79,7 +79,7 @@ export default function Doctors() {
                       className="h-full w-full object-cover"
                     />
                   </div>
-                  <div className="rounded-[8px] bg-[#f6f8fb] p-3 text-[#ff2a22]">
+                  <div className="rounded-[8px] bg-brand-bg p-3 text-brand-red">
                     <Icon size={20} />
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function Doctors() {
                 <h3 className="mt-6 font-heading text-[2rem] tracking-[-0.03em] text-[#183668]">
                   {doctor.name}
                 </h3>
-                <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#ff2a22]">
+                <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-brand-red">
                   {doctor.role}
                 </p>
 
@@ -107,7 +107,7 @@ export default function Doctors() {
         <div className="mt-12 flex justify-center">
           <Link
             href="#contact"
-            className="inline-flex h-[41px] items-center gap-3 rounded-[3px] border border-[#8a9ab3] px-5 text-[14px] font-medium text-[#183668] transition hover:bg-[#f8fafc]"
+            className="inline-flex h-[41px] items-center gap-3 rounded-[3px] border border-[#8a9ab3] px-5 text-[14px] font-medium text-[#183668] transition hover:bg-brand-bg"
           >
             Request a Consultation
             <ArrowRight size={16} />

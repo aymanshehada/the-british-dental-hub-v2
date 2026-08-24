@@ -37,10 +37,10 @@ export function ArtOfPorcelainVeneersSection() {
 
   return (
     <>
-      <section className="bg-[#f8f9fb] py-26 sm:py-30 lg:py-34">
+      <section className="bg-brand-bg py-26 sm:py-30 lg:py-34">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               Editorial Showcase
             </p>
             <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.4vw,4.1rem)] leading-[1.02] tracking-[-0.03em] text-[#0A2247]">
@@ -58,7 +58,7 @@ export function ArtOfPorcelainVeneersSection() {
                 resetZoom()
                 setIsOpen(true)
               }}
-              className="group mx-auto block w-[88%] max-w-[1400px] overflow-hidden rounded-[28px] border border-[#D4AF37]/30 bg-[linear-gradient(180deg,#071937_0%,#041126_100%)] p-4 shadow-[0_18px_48px_rgba(10,34,71,0.14)] transition-all duration-500 ease-out hover:scale-[1.015] hover:shadow-[0_26px_58px_rgba(10,34,71,0.18)] sm:p-5"
+              className="group mx-auto block w-[88%] max-w-[1400px] overflow-hidden rounded-[28px] border border-brand-red/30 bg-[linear-gradient(180deg,#071937_0%,#041126_100%)] p-4 shadow-[0_18px_48px_rgba(10,34,71,0.14)] transition-all duration-500 ease-out hover:scale-[1.015] hover:shadow-[0_26px_58px_rgba(10,34,71,0.18)] sm:p-5"
               aria-label="Open porcelain veneers artwork in fullscreen"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[22px] bg-[#06132c]">
@@ -84,7 +84,7 @@ export function ArtOfPorcelainVeneersSection() {
         aria-hidden={!isOpen}
       >
         <div className="flex h-full w-full items-center justify-center p-4 sm:p-6" onClick={(event) => event.stopPropagation()}>
-          <div className="relative h-[92vh] w-[min(96vw,1800px)] rounded-[24px] border border-[#D4AF37]/30 bg-[linear-gradient(180deg,#06142d_0%,#030c1c_100%)] p-4 shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:p-5">
+          <div className="relative h-[92vh] w-[min(96vw,1800px)] rounded-[24px] border border-brand-red/30 bg-[linear-gradient(180deg,#06142d_0%,#030c1c_100%)] p-4 shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:p-5">
             <div className="relative h-full w-full overflow-hidden rounded-[18px] bg-[#051024]">
               <div
                 className="relative h-full w-full transition-transform duration-250 ease-out"

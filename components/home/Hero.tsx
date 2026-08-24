@@ -30,7 +30,7 @@ export default function Hero() {
                 transition={{ duration: 0.45, ease: "easeOut" }}
                 className="max-w-[585px] rounded-[10px] border border-white/45 bg-white/54 px-6 py-9 shadow-[0_16px_42px_rgba(10,34,71,0.09)] backdrop-blur-[12px] sm:px-8 sm:py-11 lg:ml-[30px] lg:-translate-y-12 lg:px-9 lg:py-[3.15rem] xl:-translate-y-14"
               >
-                <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ff2a22]">
+                <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.28em] text-brand-red">
                   Premium Dentistry in Cairo
                 </p>
 

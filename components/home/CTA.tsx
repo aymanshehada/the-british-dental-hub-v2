@@ -17,7 +17,7 @@ export default function CTA() {
         >
           <div className="relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-[#ff8a82]">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
                 Book Consultation
               </p>
               <h2 className="mt-4 max-w-[760px] font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-white sm:text-[3.2rem]">
@@ -32,7 +32,7 @@ export default function CTA() {
               <div className="space-y-4">
                 <Link
                   href="#home"
-                  className="inline-flex h-[42px] w-full items-center justify-center gap-2 rounded-[3px] bg-white px-6 text-[14px] font-medium text-[#183668] transition hover:bg-[#f3f6fb]"
+                  className="inline-flex h-[42px] w-full items-center justify-center gap-2 rounded-[3px] bg-white px-6 text-[14px] font-medium text-[#183668] transition hover:bg-brand-bg"
                 >
                   Book Appointment
                   <ArrowRight className="ml-2" size={16} />

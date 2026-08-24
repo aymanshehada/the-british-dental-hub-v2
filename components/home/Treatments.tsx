@@ -48,10 +48,10 @@ export default function Treatments() {
           className="max-w-[900px] pt-3 lg:pt-4"
         >
           <div className="mb-6 flex items-center gap-3">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-[#ff2a22]">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
               Our Treatments
             </p>
-            <span className="h-px w-16 bg-[#ff6f67]" />
+            <span className="h-px w-16 bg-brand-red" />
           </div>
 
           <h2 className="max-w-[820px] font-heading text-[3.15rem] leading-[1.04] tracking-[-0.04em] text-[#183668] lg:text-[3.72rem]">
@@ -65,7 +65,7 @@ export default function Treatments() {
 
           <Link
             href="#contact"
-            className="mt-7 inline-flex h-[46px] items-center gap-3 rounded-[3px] border border-[#8a9ab3] px-7 text-[14px] font-medium text-[#183668] transition-all duration-300 ease-out hover:bg-[#f8fafc] hover:shadow-[0_5px_12px_rgba(15,39,78,0.045)]"
+            className="mt-7 inline-flex h-[46px] items-center gap-3 rounded-[3px] border border-[#8a9ab3] px-7 text-[14px] font-medium text-[#183668] transition-all duration-300 ease-out hover:bg-brand-bg hover:shadow-[0_5px_12px_rgba(15,39,78,0.045)]"
           >
             Explore All Treatments
             <ArrowRight size={16} />

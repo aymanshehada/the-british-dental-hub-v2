@@ -12,12 +12,12 @@ export function ConsultationCtaSection() {
   return (
     <section
       aria-labelledby="consultation-cta-heading"
-      className="relative overflow-hidden border-t border-[#E8DFD0] bg-[#F7F4EE] py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               Begin Your Journey
             </p>
             <h2
@@ -37,7 +37,7 @@ export function ConsultationCtaSection() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/#contact"
-                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-[#D4AF37] bg-[#D4AF37] px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] shadow-[0_10px_24px_rgba(212,175,55,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#DFC26C] hover:shadow-[0_14px_30px_rgba(212,175,55,0.26)]"
+                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_14px_30px_rgba(10,34,71,0.26)]"
               >
                 Book Consultation
                 <ArrowRight className="size-4" />
@@ -47,9 +47,9 @@ export function ConsultationCtaSection() {
                 href="https://wa.me/201556887765"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-[#D4AF37] bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#C9A437] hover:bg-[rgba(212,175,55,0.10)]"
+                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
-                <MessageSquare className="size-4 text-[#D4AF37]" />
+                <MessageSquare className="size-4 text-brand-red" />
                 Chat on WhatsApp
               </Link>
             </div>
@@ -59,15 +59,15 @@ export function ConsultationCtaSection() {
             </p>
           </div>
 
-          <div className="rounded-[32px] border border-[#E6DCCB] bg-[#FCFAF6] p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+          <div className="rounded-[32px] border border-brand-border bg-brand-bg p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               What your consultation includes
             </p>
 
             <div className="mt-5 space-y-3.5">
               {trustItems.map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-[14px] border border-[#E9E1D3] bg-white px-4 py-3">
-                  <span className="size-2.5 rounded-full bg-[#D4AF37]" />
+                <div key={item} className="flex items-center gap-3 rounded-[14px] border border-brand-border bg-white px-4 py-3">
+                  <span className="size-2.5 rounded-full bg-brand-red" />
                   <span className="text-sm font-light leading-6 text-[rgba(10,34,71,0.84)]">{item}</span>
                 </div>
               ))}

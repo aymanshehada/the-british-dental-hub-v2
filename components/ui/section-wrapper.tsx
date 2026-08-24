@@ -15,7 +15,7 @@ export function SectionWrapper({
 }: SectionWrapperProps) {
   return (
     <Component
-      className={cn('relative overflow-hidden border-t border-white/10 bg-[#07152C]/95 py-24 sm:py-28 lg:py-32', className)}
+      className={cn('relative overflow-hidden border-t border-brand-border bg-white py-24 sm:py-28 lg:py-32', className)}
       {...props}
     >
       {children}

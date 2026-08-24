@@ -154,7 +154,7 @@ const testimonials = [
 
 function Stars() {
   return (
-    <div className="flex items-center gap-1 text-[#D4AF37]" aria-label="Five star review">
+    <div className="flex items-center gap-1 text-brand-red" aria-label="Five star review">
       {Array.from({ length: 5 }).map((_, index) => (
         <Star key={index} className="size-4 fill-current" />
       ))}
@@ -178,8 +178,8 @@ function HeroSection() {
             </span>
           </p>
 
-          <p className="mt-5 inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#ffd4ce]">
-            <span className="h-px w-10 bg-[#D62828]" />
+          <p className="mt-5 inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
+            <span className="h-px w-10 bg-brand-red" />
             Porcelain Veneers in Cairo
           </p>
 
@@ -237,10 +237,10 @@ function HeroSection() {
 
 function JourneySection() {
   return (
-    <section id="veneers-journey" className="bg-[#f8f9fb] py-24 sm:py-28 lg:py-32">
+    <section id="veneers-journey" className="bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D62828]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             The Veneers Journey
           </p>
           <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
@@ -278,7 +278,7 @@ function JourneySection() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-[18px] border border-[#e6edf5] bg-[#fbfcfe] px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
+        <div className="mt-12 rounded-[18px] border border-[#e6edf5] bg-brand-bg px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
           <p className="text-[0.95rem] leading-7">
             Every treatment plan is personalised. Some patients may require additional stages such as minor recontouring or selective preparation before veneer placement.
           </p>
@@ -293,13 +293,13 @@ function TypesSection() {
     <SectionWrapper aria-labelledby="veneer-types-heading">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             Types of Veneers
           </p>
-          <h2 id="veneer-types-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]">
+          <h2 id="veneer-types-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             Veneer Options Planned Around Your Smile
           </h2>
-          <p className="mt-6 text-lg font-light leading-8 text-[rgba(255,255,255,0.82)] sm:text-xl">
+          <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
             The right material is selected according to your clinical needs, the amount of refinement required and the long-term aesthetic result.
           </p>
         </div>
@@ -308,26 +308,26 @@ function TypesSection() {
           {veneerTypes.map((item) => (
             <PremiumCard
               key={item.title}
-              className="group h-full rounded-[30px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6 shadow-[0_8px_22px_rgba(0,0,0,0.08)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)]"
+              className="group h-full rounded-[30px] border border-[#e5ebf3] bg-white p-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)]"
             >
               <div className="flex items-start justify-between gap-4">
-                <div className="flex size-11 items-center justify-center rounded-[20px] border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#D4AF37] transition duration-300 ease-out group-hover:border-[#D4AF37]/40 group-hover:bg-[#D4AF37]/15">
+                <div className="flex size-11 items-center justify-center rounded-[20px] border border-brand-red/25 bg-brand-red/10 text-brand-red transition duration-300 ease-out group-hover:border-brand-red/40 group-hover:bg-brand-red/15">
                   <Sparkles className="size-5" strokeWidth={1.6} />
                 </div>
-                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#D4AF37]">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
                   Veneer Option
                 </p>
               </div>
 
-              <h3 className="mt-5 text-[1.24rem] font-semibold leading-[1.25] tracking-[-0.016em] text-[#F8F8F6]">
+              <h3 className="mt-5 text-[1.24rem] font-semibold leading-[1.25] tracking-[-0.016em] text-[#0A2247]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-[0.95rem] leading-[1.75] text-[rgba(255,255,255,0.82)]">
+              <p className="mt-3 text-[0.95rem] leading-[1.75] text-[#495a73]">
                 {item.description}
               </p>
 
-              <div className="mt-6 border-t border-white/10 pt-4">
-                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.24em] text-[rgba(255,255,255,0.74)]">
+              <div className="mt-6 border-t border-[#e5ebf3] pt-4">
+                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.24em] text-[#5f6f88]">
                   {item.note}
                 </p>
               </div>
@@ -341,40 +341,40 @@ function TypesSection() {
 
 function DigitalSmileDesignSection() {
   return (
-    <SectionWrapper aria-labelledby="digital-smile-design-heading">
+    <SectionWrapper aria-labelledby="digital-smile-design-heading" className="bg-brand-bg">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             Digital Smile Design
           </p>
-          <h2 id="digital-smile-design-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]">
+          <h2 id="digital-smile-design-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             Precision Before a Tooth Is Prepared
           </h2>
-          <p className="mt-6 text-lg font-light leading-8 text-[rgba(255,255,255,0.82)] sm:text-xl">
+          <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
             A digital workflow helps define proportions, preview the smile and reduce uncertainty before treatment begins.
           </p>
         </div>
 
         <div className="mt-16 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-          <PremiumCard className="group h-full rounded-[34px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6 shadow-[0_8px_22px_rgba(0,0,0,0.08)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)] lg:p-8">
+          <PremiumCard className="group h-full rounded-[34px] border border-[#e5ebf3] bg-white p-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)] lg:p-8">
             <div className="flex items-center justify-between gap-4">
-              <div className="flex size-14 items-center justify-center rounded-[24px] border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#D4AF37]">
+              <div className="flex size-14 items-center justify-center rounded-[24px] border border-brand-red/25 bg-brand-red/10 text-brand-red">
                 <ScanSearch className="size-7" strokeWidth={1.4} />
               </div>
-              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brand-red">
                 Digital workflow
               </span>
             </div>
 
-            <h3 className="mt-6 text-[1.5rem] font-semibold leading-tight text-[#F8F8F6] sm:text-[1.7rem]">
+            <h3 className="mt-6 text-[1.5rem] font-semibold leading-tight text-[#0A2247] sm:text-[1.7rem]">
               Smile design that is planned, not guessed
             </h3>
-            <p className="mt-3 max-w-xl text-[0.95rem] font-light leading-7 text-[rgba(255,255,255,0.82)] sm:text-[1rem]">
+            <p className="mt-3 max-w-xl text-[0.95rem] font-light leading-7 text-[#495a73] sm:text-[1rem]">
               Digital photography, scanner-based records and simulation tools help shape a clear and measured treatment plan.
             </p>
 
-            <div className="mt-6 rounded-[24px] border border-white/10 bg-white/[0.04] p-4">
-              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#D4AF37]">
+            <div className="mt-6 rounded-[24px] border border-[#e5ebf3] bg-brand-bg p-4">
+              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
                 Precision tools
               </p>
               <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
@@ -385,9 +385,9 @@ function DigitalSmileDesignSection() {
                   'Mock-up Preview',
                   'Precision Planning',
                 ].map((item) => (
-                  <div key={item} className="flex items-start gap-2 rounded-2xl border border-white/10 bg-[rgba(255,255,255,0.05)] px-3 py-2">
-                    <span className="mt-1 size-1.5 rounded-full bg-[#D4AF37]" />
-                    <span className="text-sm font-light leading-6 text-[rgba(255,255,255,0.82)]">{item}</span>
+                  <div key={item} className="flex items-start gap-2 rounded-2xl border border-[#e5ebf3] bg-white px-3 py-2">
+                    <span className="mt-1 size-1.5 rounded-full bg-brand-red" />
+                    <span className="text-sm font-light leading-6 text-[#495a73]">{item}</span>
                   </div>
                 ))}
               </div>
@@ -398,17 +398,17 @@ function DigitalSmileDesignSection() {
             {smileDesignStages.map((item) => (
               <article
                 key={item}
-                className="group h-full rounded-[28px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5 shadow-[0_8px_22px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)]"
+                className="group h-full rounded-[28px] border border-[#e5ebf3] bg-white p-5 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)]"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <div className="flex size-11 items-center justify-center rounded-[20px] border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#D4AF37] transition duration-300 ease-out group-hover:border-[#D4AF37]/40 group-hover:bg-[#D4AF37]/15">
+                  <div className="flex size-11 items-center justify-center rounded-[20px] border border-brand-red/25 bg-brand-red/10 text-brand-red transition duration-300 ease-out group-hover:border-brand-red/40 group-hover:bg-brand-red/15">
                     <Sparkles className="size-5" strokeWidth={1.6} />
                   </div>
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#D4AF37]">
+                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
                     Workflow stage
                   </span>
                 </div>
-                <h3 className="mt-4 text-[1.12rem] font-semibold leading-tight text-[#F8F8F6]">
+                <h3 className="mt-4 text-[1.12rem] font-semibold leading-tight text-[#0A2247]">
                   {item}
                 </h3>
               </article>
@@ -422,10 +422,10 @@ function DigitalSmileDesignSection() {
 
 function WhyPatientsChooseVeneersSection() {
   return (
-    <section className="bg-[#f8f9fb] py-24 sm:py-28 lg:py-32">
+    <section className="bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D62828]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             Why Patients Choose Veneers
           </p>
           <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
@@ -443,10 +443,10 @@ function WhyPatientsChooseVeneersSection() {
               className="group h-full overflow-hidden rounded-[30px] border border-[#e5ebf3] bg-white p-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#d5deea] hover:shadow-[0_6px_14px_rgba(15,39,78,0.05)]"
             >
               <div className="flex items-start justify-between gap-4">
-                <div className="flex size-11 items-center justify-center rounded-[20px] border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#D4AF37] transition duration-300 ease-out group-hover:border-[#D4AF37]/40 group-hover:bg-[#D4AF37]/15">
+                <div className="flex size-11 items-center justify-center rounded-[20px] border border-brand-red/25 bg-brand-red/10 text-brand-red transition duration-300 ease-out group-hover:border-brand-red/40 group-hover:bg-brand-red/15">
                   <Check className="size-5" strokeWidth={1.8} />
                 </div>
-                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#D4AF37]">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
                   Veneer Benefit
                 </span>
               </div>
@@ -469,13 +469,13 @@ function BeforeAfterSection() {
     <SectionWrapper aria-labelledby="veneers-before-after-heading">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             Before & After Gallery
           </p>
-          <h2 id="veneers-before-after-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]">
+          <h2 id="veneers-before-after-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             Clinical Photography Framework
           </h2>
-          <p className="mt-6 text-lg font-light leading-8 text-[rgba(255,255,255,0.82)] sm:text-xl">
+          <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
             Verified before-and-after photography will be presented here once real veneer cases are professionally documented.
           </p>
         </div>
@@ -483,37 +483,37 @@ function BeforeAfterSection() {
         <div className="mt-16 grid gap-8 xl:grid-cols-[1.15fr_0.85fr]">
           <div className="grid gap-5 sm:grid-cols-2">
             {['Before', 'After'].map((label) => (
-              <div key={label} className="rounded-[30px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-4 shadow-[0_8px_22px_rgba(0,0,0,0.08)]">
+              <div key={label} className="rounded-[30px] border border-[#e5ebf3] bg-white p-4 shadow-[0_2px_10px_rgba(15,39,78,0.035)]">
                 <div className="flex items-center justify-between gap-4">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-[#D4AF37]">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-brand-red">
                     {label}
                   </p>
-                  <Sparkles className="size-4 text-[#D4AF37]" strokeWidth={1.6} />
+                  <Sparkles className="size-4 text-brand-red" strokeWidth={1.6} />
                 </div>
-                <div className="mt-4 aspect-[4/5] rounded-[24px] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.10),transparent_45%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))]" />
+                <div className="mt-4 aspect-[4/5] rounded-[24px] border border-[#e5ebf3] bg-[radial-gradient(circle_at_top,rgba(215,25,32,0.07),transparent_45%),linear-gradient(180deg,#F8F9FB_0%,#EEF2F6_100%)]" />
               </div>
             ))}
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-[30px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6 shadow-[0_8px_22px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+            <div className="rounded-[30px] border border-[#e5ebf3] bg-white p-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)]">
               <div className="flex items-center gap-3">
-                <div className="flex size-12 items-center justify-center rounded-[20px] border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#D4AF37]">
+                <div className="flex size-12 items-center justify-center rounded-[20px] border border-brand-red/25 bg-brand-red/10 text-brand-red">
                   <Sparkles className="size-6" strokeWidth={1.4} />
                 </div>
                 <div>
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#D4AF37]">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-brand-red">
                     Clinical documentation
                   </p>
-                  <p className="mt-1 text-sm font-light leading-7 text-[rgba(255,255,255,0.82)]">
+                  <p className="mt-1 text-sm font-light leading-7 text-[#495a73]">
                     This section is reserved for verified veneer cases once professional photography becomes available.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-[30px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-6 shadow-[0_8px_22px_rgba(0,0,0,0.08)] backdrop-blur-sm">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+            <div className="rounded-[30px] border border-[#e5ebf3] bg-white p-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)]">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
                 Case notes
               </p>
               <div className="mt-5 space-y-3">
@@ -523,9 +523,9 @@ function BeforeAfterSection() {
                   'Conservative preparation planning',
                   'Follow-up review and maintenance',
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 rounded-[14px] border border-white/10 bg-[rgba(255,255,255,0.05)] px-4 py-3">
-                    <span className="size-2.5 rounded-full bg-[#D4AF37]" />
-                    <span className="text-sm font-light leading-6 text-[rgba(255,255,255,0.82)]">{item}</span>
+                  <div key={item} className="flex items-center gap-3 rounded-[14px] border border-[#e5ebf3] bg-brand-bg px-4 py-3">
+                    <span className="size-2.5 rounded-full bg-brand-red" />
+                    <span className="text-sm font-light leading-6 text-[#495a73]">{item}</span>
                   </div>
                 ))}
               </div>
@@ -539,29 +539,29 @@ function BeforeAfterSection() {
 
 function TestimonialsSection() {
   return (
-    <SectionWrapper aria-labelledby="veneers-testimonials-heading">
+    <SectionWrapper aria-labelledby="veneers-testimonials-heading" className="bg-brand-bg">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             Patient Testimonials
           </p>
-          <h2 id="veneers-testimonials-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]">
+          <h2 id="veneers-testimonials-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             What Patients Remember
           </h2>
-          <p className="mt-6 text-lg font-light leading-8 text-[rgba(255,255,255,0.82)] sm:text-xl">
+          <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
             Beyond the final result, we believe patients should remember the clarity, calm and consideration of the experience itself.
           </p>
         </div>
 
         <div className="mt-10 space-y-5">
-          <article className="rounded-[34px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5 shadow-[0_8px_22px_rgba(0,0,0,0.08)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)] sm:p-6 lg:p-7">
+          <article className="rounded-[34px] border border-[#e5ebf3] bg-white p-5 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)] sm:p-6 lg:p-7">
             <Stars />
-            <blockquote className="mt-3 max-w-4xl text-2xl font-medium leading-[1.35] text-[#F8F8F6] sm:text-3xl lg:text-[2.05rem]">
+            <blockquote className="mt-3 max-w-4xl text-2xl font-medium leading-[1.35] text-[#0A2247] sm:text-3xl lg:text-[2.05rem]">
               “{testimonials[0].quote}”
             </blockquote>
-            <div className="mt-4 border-t border-white/10 pt-4">
-              <p className="text-[0.95rem] font-semibold text-[#F8F8F6]">Verified Patient</p>
-              <p className="mt-1 text-sm font-light text-[rgba(255,255,255,0.82)]">{testimonials[0].treatment}</p>
+            <div className="mt-4 border-t border-[#e5ebf3] pt-4">
+              <p className="text-[0.95rem] font-semibold text-[#0A2247]">Verified Patient</p>
+              <p className="mt-1 text-sm font-light text-[#495a73]">{testimonials[0].treatment}</p>
             </div>
           </article>
 
@@ -569,15 +569,15 @@ function TestimonialsSection() {
             {testimonials.slice(1).map((testimonial) => (
               <PremiumCard
                 key={testimonial.quote}
-                className="group h-full rounded-[30px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-4 shadow-[0_8px_22px_rgba(0,0,0,0.08)] backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-[2px] hover:border-[#D4AF37]/20 hover:shadow-[0_10px_26px_rgba(212,175,55,0.05)]"
+                className="group h-full rounded-[30px] border border-[#e5ebf3] bg-white p-4 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)]"
               >
                 <Stars />
-                <p className="mt-3 text-[0.98rem] font-light leading-7 text-[rgba(255,255,255,0.82)]">
+                <p className="mt-3 text-[0.98rem] font-light leading-7 text-[#495a73]">
                   {testimonial.quote}
                 </p>
-                <div className="mt-4 border-t border-white/10 pt-3">
-                  <p className="text-sm font-semibold text-[#F8F8F6]">Verified Patient</p>
-                  <p className="mt-1 text-sm font-light text-[rgba(255,255,255,0.82)]">{testimonial.treatment}</p>
+                <div className="mt-4 border-t border-[#e5ebf3] pt-3">
+                  <p className="text-sm font-semibold text-[#0A2247]">Verified Patient</p>
+                  <p className="mt-1 text-sm font-light text-[#495a73]">{testimonial.treatment}</p>
                 </div>
               </PremiumCard>
             ))}
@@ -599,12 +599,12 @@ function ConsultationCtaSection() {
   return (
     <section
       aria-labelledby="consultation-cta-heading"
-      className="relative overflow-hidden border-t border-[#E8DFD0] bg-[#F7F4EE] py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               Begin Your Journey
             </p>
             <h2
@@ -624,7 +624,7 @@ function ConsultationCtaSection() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/#contact"
-                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-[#D4AF37] bg-[#D4AF37] px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] shadow-[0_10px_24px_rgba(212,175,55,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#DFC26C] hover:shadow-[0_14px_30px_rgba(212,175,55,0.26)]"
+                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_14px_30px_rgba(10,34,71,0.26)]"
               >
                 Book Consultation
                 <ArrowRight className="size-4" />
@@ -634,9 +634,9 @@ function ConsultationCtaSection() {
                 href="https://wa.me/201556887765"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-[#D4AF37] bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#C9A437] hover:bg-[rgba(212,175,55,0.10)]"
+                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
-                <MessageSquare className="size-4 text-[#D4AF37]" />
+                <MessageSquare className="size-4 text-brand-red" />
                 Chat on WhatsApp
               </Link>
             </div>
@@ -646,15 +646,15 @@ function ConsultationCtaSection() {
             </p>
           </div>
 
-          <div className="rounded-[32px] border border-[#E6DCCB] bg-[#FCFAF6] p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
+          <div className="rounded-[32px] border border-brand-border bg-brand-bg p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               What your consultation includes
             </p>
 
             <div className="mt-5 space-y-3.5">
               {trustItems.map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-[14px] border border-[#E9E1D3] bg-white px-4 py-3">
-                  <span className="size-2.5 rounded-full bg-[#D4AF37]" />
+                <div key={item} className="flex items-center gap-3 rounded-[14px] border border-brand-border bg-white px-4 py-3">
+                  <span className="size-2.5 rounded-full bg-brand-red" />
                   <span className="text-sm font-light leading-6 text-[rgba(10,34,71,0.84)]">{item}</span>
                 </div>
               ))}

@@ -76,10 +76,10 @@ export default function WhyChooseUs() {
           className="pt-2"
         >
           <div className="mb-6 flex items-center gap-3">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-[#ff2a22]">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
               Why Choose Us
             </p>
-            <span className="h-px w-16 bg-[#ff6f67]" />
+            <span className="h-px w-16 bg-brand-red" />
           </div>
           <h2 className="max-w-[340px] font-heading text-[3rem] leading-[1.03] tracking-[-0.036em] text-[#183668] lg:text-[3.28rem]">
             British-inspired dental care with true clinical depth.
@@ -110,10 +110,10 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.18 }}
           transition={{ duration: 0.4, delay: 0.08 }}
-          className="rounded-[18px] border border-[#edf1f6] bg-[#fbfcfe] p-6 shadow-[0_8px_24px_rgba(15,39,78,0.05)] sm:p-7 lg:p-8"
+          className="rounded-[18px] border border-[#edf1f6] bg-brand-bg p-6 shadow-[0_8px_24px_rgba(15,39,78,0.05)] sm:p-7 lg:p-8"
         >
           <div className="flex items-center gap-3 rounded-[10px] bg-white px-4 py-3.5 text-[12px] font-semibold uppercase tracking-[0.17em] text-[#183668] shadow-[0_4px_12px_rgba(15,39,78,0.045)]">
-            <Clock3 size={16} className="shrink-0 text-[#ff2a22]" />
+            <Clock3 size={16} className="shrink-0 text-brand-red" />
             Luxury care, thoughtfully timed around your life
           </div>
 
@@ -132,7 +132,7 @@ export default function WhyChooseUs() {
                   className="rounded-[14px] border border-[#edf1f6] bg-white p-5 shadow-[0_4px_14px_rgba(15,39,78,0.045)] transition-shadow duration-300 ease-out hover:shadow-[0_8px_18px_rgba(15,39,78,0.06)]"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="rounded-[10px] bg-[#f4f7fb] p-3 text-[#ff2a22]">
+                    <div className="rounded-[10px] bg-brand-bg p-3 text-brand-red">
                       <Icon size={19} />
                     </div>
                     <div>
@@ -148,7 +148,7 @@ export default function WhyChooseUs() {
           </div>
 
           <div className="mt-6 rounded-[16px] bg-[#0A2247] p-6 text-white lg:p-7">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#ff7268]">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">
               The patient journey
             </p>
             <div className="mt-3.5 max-w-[540px] text-[15px] leading-[1.8] text-white/72">

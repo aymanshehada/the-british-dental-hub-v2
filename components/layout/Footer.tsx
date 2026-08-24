@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="mb-10 border-b border-white/10 pb-8">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#ff8a82]">The British Dental Hub</p>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">The British Dental Hub</p>
               <h2 className="mt-4 max-w-[560px] font-heading text-[2.5rem] leading-[1.02] tracking-[-0.03em] text-white sm:text-[3rem]">
                 Luxury dental care with British-inspired standards and modern clinical precision.
               </h2>
@@ -54,7 +54,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="inline-flex h-10 min-w-10 items-center justify-center rounded-full border border-white/12 bg-white/6 px-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/88 transition hover:bg-white/10 hover:text-[#ff8a82]"
+                  className="inline-flex h-10 min-w-10 items-center justify-center rounded-full border border-white/12 bg-white/6 px-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/88 transition hover:bg-white/10 hover:text-brand-red"
                 >
                   {shortLabel}
                 </Link>

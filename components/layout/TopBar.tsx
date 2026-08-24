@@ -43,7 +43,7 @@ export default function TopBar() {
       <div className="mx-auto flex min-h-[36px] w-full max-w-[1440px] flex-col gap-2 px-6 py-2 sm:px-8 md:flex-row md:items-center md:justify-between md:py-0 lg:px-10 xl:px-12">
         <div className="flex flex-wrap items-center gap-7 text-[13px] font-medium text-white/94 sm:gap-12 lg:gap-14">
           <div className="flex items-center gap-2.5">
-            <MapPin size={13} className="text-[#ff1f1f]" />
+            <MapPin size={13} className="text-brand-red" />
             <span>New Cairo, Egypt</span>
           </div>
 
@@ -51,7 +51,7 @@ export default function TopBar() {
             href="tel:+201556887765"
             className="flex items-center gap-2.5 transition hover:text-white/80"
           >
-            <Phone size={13} className="text-[#ff1f1f]" />
+            <Phone size={13} className="text-brand-red" />
             <span>+20 155 688 7765</span>
           </Link>
         </div>
@@ -64,7 +64,7 @@ export default function TopBar() {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="inline-flex h-6 w-6 items-center justify-center text-white/92 transition hover:text-[#ff1f1f]"
+              className="inline-flex h-6 w-6 items-center justify-center text-white/92 transition hover:text-brand-red"
             >
               <Icon size={14} />
             </Link>

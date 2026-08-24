@@ -30,7 +30,7 @@ export function SuitabilitySection() {
       <Container>
         <div className="grid gap-14 lg:grid-cols-[40%_60%] lg:gap-16 xl:gap-20">
           <div className="max-w-[520px]">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#D62828]">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-brand-red">
               Implant Suitability
             </p>
 
@@ -51,7 +51,7 @@ export function SuitabilitySection() {
               <PremiumButton
                 href="/#contact"
                 variant="primary"
-                className="min-w-[270px] justify-center"
+                className="min-w-[270px] justify-center bg-brand-navy text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] hover:bg-[#123164] focus-visible:ring-brand-navy/50"
               >
                 Book Your Implant Assessment
               </PremiumButton>

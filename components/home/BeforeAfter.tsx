@@ -40,10 +40,10 @@ export default function BeforeAfter() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[640px]">
             <div className="mb-5 flex items-center gap-3">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-[#ff2a22]">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
                 Before & After
               </p>
-              <span className="h-px w-16 bg-[#ff6f67]" />
+              <span className="h-px w-16 bg-brand-red" />
             </div>
             <h2 className="font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
               Carefully transformed smiles, presented with complete transparency.
@@ -58,7 +58,7 @@ export default function BeforeAfter() {
               type="button"
               onClick={goPrevious}
               aria-label="Previous case"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#d6deea] bg-white text-[#183668] transition hover:bg-[#f6f8fb]"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#d6deea] bg-white text-[#183668] transition hover:bg-brand-bg"
             >
               <ChevronLeft size={20} />
             </button>
@@ -66,7 +66,7 @@ export default function BeforeAfter() {
               type="button"
               onClick={goNext}
               aria-label="Next case"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#d6deea] bg-white text-[#183668] transition hover:bg-[#f6f8fb]"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#d6deea] bg-white text-[#183668] transition hover:bg-brand-bg"
             >
               <ChevronRight size={20} />
             </button>
@@ -110,8 +110,8 @@ export default function BeforeAfter() {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-center rounded-[10px] bg-[#fbfcfe] p-5 sm:p-6">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#ff2a22]">
+              <div className="flex flex-col justify-center rounded-[10px] bg-brand-bg p-5 sm:p-6">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">
                   Featured Case {activeIndex + 1}
                 </p>
                 <h3 className="mt-4 font-heading text-[2.3rem] leading-[1.04] tracking-[-0.03em] text-[#183668]">
@@ -134,7 +134,7 @@ export default function BeforeAfter() {
                           : "border-[#edf1f6] bg-transparent text-[#6A7485] hover:border-[#d9e1ec] hover:bg-white"
                       }`}
                     >
-                      <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ff2a22]">
+                      <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-red">
                         Case {index + 1}
                       </span>
                       <span className="mt-2 block text-base font-semibold leading-6">{item.title}</span>
