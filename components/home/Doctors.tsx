@@ -1,30 +1,30 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Award, Languages, Stethoscope } from "lucide-react"
+import { ArrowRight, Award, Stethoscope } from "lucide-react"
 
 const doctors = [
   {
-    initials: "IR",
-    role: "Implant & Restorative Lead",
-    focus: "Complex implant planning, surgical precision, and high-detail restorative finishing.",
-    highlights: ["Digital implant workflows", "Aesthetic restorative focus"],
-    icon: Stethoscope,
-  },
-  {
-    initials: "SD",
-    role: "Cosmetic Dentistry Specialist",
-    focus: "Smile refinement with careful attention to proportion, shade, and natural facial harmony.",
-    highlights: ["Veneers and smile design", "Minimally invasive planning"],
+    name: "Dr. Ayman Chhada",
+    role: "Implant & Aesthetic Dentistry Specialist",
+    image: "/images/dr-ayman-chhada.jpg",
+    qualifications: [
+      "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)",
+      "Currently pursuing MRD and MProstho (Prosthodontics)",
+      "King's College London certificate: \"The Art and Science of Indirect Aesthetic Restorations\"",
+    ],
     icon: Award,
   },
   {
-    initials: "OA",
-    role: "Orthodontic Care Specialist",
-    focus: "Straightening pathways designed to improve bite function, comfort, and long-term smile balance.",
-    highlights: ["Adult orthodontics", "Clear communication and aftercare"],
-    icon: Languages,
+    name: "Dr. Issam Kayali",
+    role: "Implant & Aesthetic Dentistry Specialist",
+    image: "/images/dr-issam-kayali.jpg",
+    qualifications: [
+      "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)",
+    ],
+    icon: Stethoscope,
   },
 ]
 
@@ -55,13 +55,13 @@ export default function Doctors() {
           </p>
         </motion.div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-[760px] gap-5 sm:grid-cols-2">
           {doctors.map((doctor, index) => {
             const Icon = doctor.icon
 
             return (
               <motion.article
-                key={doctor.role}
+                key={doctor.name}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -70,8 +70,14 @@ export default function Doctors() {
                 className="rounded-[10px] border border-[#edf1f6] bg-white p-6 shadow-[0_2px_8px_rgba(15,39,78,0.06)] transition hover:shadow-[0_10px_24px_rgba(15,39,78,0.1)]"
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-[8px] bg-[#f6f8fb] font-heading text-[1.7rem] tracking-[-0.04em] text-[#183668]">
-                    {doctor.initials}
+                  <div className="h-[120px] w-[120px] overflow-hidden rounded-full bg-[#f6f8fb]">
+                    <Image
+                      src={doctor.image}
+                      alt={doctor.name}
+                      width={120}
+                      height={120}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                   <div className="rounded-[8px] bg-[#f6f8fb] p-3 text-[#ff2a22]">
                     <Icon size={20} />
@@ -79,15 +85,17 @@ export default function Doctors() {
                 </div>
 
                 <h3 className="mt-6 font-heading text-[2rem] tracking-[-0.03em] text-[#183668]">
-                  {doctor.role}
+                  {doctor.name}
                 </h3>
-                <p className="mt-3 text-[15px] leading-7 text-[#5A6577]">{doctor.focus}</p>
+                <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#ff2a22]">
+                  {doctor.role}
+                </p>
 
                 <div className="mt-7 space-y-3">
-                  {doctor.highlights.map((highlight) => (
-                    <div key={highlight} className="flex items-start gap-3 text-sm leading-6 text-[#556273]">
+                  {doctor.qualifications.map((qualification) => (
+                    <div key={qualification} className="flex items-start gap-3 text-sm leading-6 text-[#556273]">
                       <span className="mt-2 h-2 w-2 rounded-full bg-[#D4AF37]" />
-                      <span>{highlight}</span>
+                      <span>{qualification}</span>
                     </div>
                   ))}
                 </div>
