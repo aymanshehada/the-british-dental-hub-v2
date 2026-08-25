@@ -1,0 +1,257 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import {
+  ArrowRight,
+  Check,
+  Home,
+  MessageSquare,
+  ShieldCheck,
+  Sun,
+} from 'lucide-react'
+import { Container } from '@/components/ui/container'
+
+const pageTitle = 'Teeth Whitening | The British Dental Hub'
+const pageDescription =
+  'A brighter, more confident smile achieved safely and under clinical supervision, with in-office and custom take-home whitening options in Cairo.'
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    'Teeth Whitening',
+    'In-Office Whitening',
+    'Take-Home Whitening Trays',
+    'Cosmetic Dentistry',
+    'British Dental Clinic',
+  ],
+  alternates: {
+    canonical: '/teeth-whitening',
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: '/teeth-whitening',
+    type: 'website',
+    siteName: 'The British Dental Hub',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+  },
+}
+
+const whiteningOptions = [
+  {
+    title: 'In-Office Teeth Whitening',
+    description: 'A professional whitening treatment carried out here in the clinic, under close clinical supervision from start to finish.',
+    note: 'Ideal for: patients who prefer their whitening fully managed in-clinic',
+    icon: Sun,
+  },
+  {
+    title: 'Custom Take-Home Whitening Trays',
+    description: 'Whitening trays made specifically for your teeth, for you to use at home following clear professional guidance and instructions.',
+    note: 'Ideal for: patients who prefer a guided, at-home whitening routine',
+    icon: Home,
+  },
+]
+
+function HeroSection() {
+  return (
+    <section className="relative overflow-hidden bg-white">
+      <Container className="pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
+            <span className="h-px w-10 bg-brand-red" />
+            Teeth Whitening
+          </p>
+
+          <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
+            A Brighter Smile, Safely and Under Clinical Supervision
+          </h1>
+
+          <p className="mt-7 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
+            Every whitening treatment is planned around your teeth and gums, so the result feels confident, natural, and safely achieved.
+          </p>
+
+          <div className="mt-9 flex justify-center">
+            <Link
+              href="/#contact"
+              className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
+            >
+              Book a Consultation
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </div>
+      </Container>
+    </section>
+  )
+}
+
+function WhiteningOptionsSection() {
+  return (
+    <section className="bg-brand-bg py-20 sm:py-24 lg:py-28">
+      <Container>
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
+            Treatment Options
+          </p>
+          <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl">
+            Whitening Options
+          </h2>
+          <p className="mt-6 text-lg font-light leading-8 text-[#495a73]">
+            Two considered approaches, so treatment fits how you'd like to experience it.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+          {whiteningOptions.map((item) => {
+            const Icon = item.icon
+
+            return (
+              <div
+                key={item.title}
+                className="group h-full rounded-[30px] border border-[#e5ebf3] bg-white p-7 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)]"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex size-12 items-center justify-center rounded-[20px] border border-brand-red/25 bg-brand-red/10 text-brand-red transition duration-300 ease-out group-hover:border-brand-red/40 group-hover:bg-brand-red/15">
+                    <Icon className="size-6" strokeWidth={1.6} />
+                  </div>
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
+                    Treatment Option
+                  </p>
+                </div>
+
+                <h3 className="mt-6 text-[1.3rem] font-semibold leading-[1.25] tracking-[-0.016em] text-[#0A2247]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-[0.96rem] leading-[1.75] text-[#495a73]">
+                  {item.description}
+                </p>
+
+                <div className="mt-6 border-t border-[#e5ebf3] pt-4">
+                  <p className="text-[0.66rem] font-semibold uppercase tracking-[0.24em] text-[#5f6f88]">
+                    {item.note}
+                  </p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </Container>
+    </section>
+  )
+}
+
+function BeforeYouWhitenSection() {
+  return (
+    <section className="bg-white py-20 sm:py-24 lg:py-28">
+      <Container>
+        <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto flex size-14 items-center justify-center rounded-[22px] border border-brand-red/25 bg-brand-red/10 text-brand-red">
+            <ShieldCheck className="size-7" strokeWidth={1.5} />
+          </div>
+          <p className="mt-6 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
+            Before You Whiten
+          </p>
+          <h2 className="mt-4 text-balance font-heading text-3xl font-semibold leading-[1.15] text-[#0A2247] sm:text-4xl">
+            A safe starting point, checked first.
+          </h2>
+          <p className="mt-6 text-lg font-light leading-8 text-[#495a73]">
+            Every whitening treatment begins with a preliminary clinical assessment to check that your teeth and gums are ready. Issues such as untreated decay or gum concerns are identified and addressed first, so whitening treatment can proceed safely and effectively.
+          </p>
+        </div>
+      </Container>
+    </section>
+  )
+}
+
+function ConsultationCtaSection() {
+  const trustItems = [
+    '30–45 Minute Consultation',
+    'Suitability Assessment',
+    'Treatment Options Discussion',
+    'No Obligation',
+  ]
+
+  return (
+    <section
+      aria-labelledby="whitening-consultation-heading"
+      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-16 sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+          <div>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
+              Begin Your Journey
+            </p>
+            <h2
+              id="whitening-consultation-heading"
+              className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
+            >
+              Ready for a Brighter Smile?
+            </h2>
+
+            <p className="mt-8 max-w-2xl text-lg font-light leading-8 text-[rgba(10,34,71,0.84)] sm:text-xl">
+              Every whitening treatment begins with a comprehensive consultation. We'll assess your suitability, explain every available option, and shape a plan around your needs.
+            </p>
+            <p className="mt-3 text-[0.95rem] font-light leading-7 text-[rgba(10,34,71,0.78)]">
+              No pressure. Just honest clinical advice.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <Link
+                href="/#contact"
+                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
+              >
+                Book Consultation
+                <ArrowRight className="size-4" />
+              </Link>
+
+              <Link
+                href="https://wa.me/201556887765"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
+              >
+                <MessageSquare className="size-4 text-brand-red" />
+                Chat on WhatsApp
+              </Link>
+            </div>
+
+            <p className="mt-5 text-sm font-light leading-7 text-[rgba(10,34,71,0.72)]">
+              Our team will personally contact you to arrange your consultation at a convenient time.
+            </p>
+          </div>
+
+          <div className="rounded-[32px] border border-brand-border bg-white p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
+              What your consultation includes
+            </p>
+
+            <div className="mt-5 space-y-3.5">
+              {trustItems.map((item) => (
+                <div key={item} className="flex items-center gap-3 rounded-[14px] border border-brand-border bg-brand-bg px-4 py-3">
+                  <Check className="size-4 shrink-0 text-brand-red" />
+                  <span className="text-sm font-light leading-6 text-[rgba(10,34,71,0.84)]">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default function TeethWhiteningPage() {
+  return (
+    <main className="min-h-screen bg-white">
+      <HeroSection />
+      <WhiteningOptionsSection />
+      <BeforeYouWhitenSection />
+      <ConsultationCtaSection />
+    </main>
+  )
+}

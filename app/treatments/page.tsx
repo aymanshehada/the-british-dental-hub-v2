@@ -68,14 +68,14 @@ const services = [
     title: 'Check-up & Cleaning',
     description: 'Routine examinations and professional cleaning to maintain long-term oral health.',
     icon: ClipboardCheck,
-    href: '/#contact',
+    href: '/check-up-cleaning',
   },
   {
     number: '04',
     title: 'Teeth Whitening',
     description: 'Safe, effective brightening treatments for a noticeably whiter, more confident smile.',
     icon: Sun,
-    href: '/#contact',
+    href: '/teeth-whitening',
   },
   {
     number: '05',
