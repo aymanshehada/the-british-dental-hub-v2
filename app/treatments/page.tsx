@@ -103,7 +103,7 @@ const services = [
     title: 'Children’s Dentistry',
     description: 'Gentle, specialised paediatric care designed to keep young smiles healthy and happy.',
     icon: Baby,
-    href: '/#contact',
+    href: '/children-dentistry',
   },
 ]
 
