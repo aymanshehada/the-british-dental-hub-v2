@@ -13,7 +13,7 @@ export default function Navbar() {
   const navigation = [
     { label: "Home", href: "#home" },
     { label: "About Us", href: "#about" },
-    { label: "Treatments", href: "#treatments" },
+    { label: "Treatments", href: "/treatments" },
     { label: "Our Doctors", href: "#doctors" },
     { label: "Patient Stories", href: "#patient-stories" },
     { label: "Gallery", href: "#gallery" },
