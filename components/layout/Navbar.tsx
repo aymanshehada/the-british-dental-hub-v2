@@ -17,7 +17,7 @@ export default function Navbar() {
     { label: "Our Doctors", href: "#doctors" },
     { label: "Patient Stories", href: "#patient-stories" },
     { label: "Gallery", href: "#gallery" },
-    { label: "Blog", href: "#insights" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "#contact" },
   ]
 
