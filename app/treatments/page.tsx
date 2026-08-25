@@ -82,7 +82,7 @@ const services = [
     title: 'Orthodontics',
     description: 'Clear aligners and modern techniques to straighten teeth comfortably and discreetly.',
     icon: AlignCenter,
-    href: '/#contact',
+    href: '/orthodontics',
   },
   {
     number: '06',
