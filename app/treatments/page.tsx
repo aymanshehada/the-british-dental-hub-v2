@@ -89,7 +89,7 @@ const services = [
     title: 'Gum Treatment',
     description: 'Comprehensive periodontal care, from prevention to advanced gum disease therapy.',
     icon: ShieldCheck,
-    href: '/#contact',
+    href: '/gum-treatment',
   },
   {
     number: '07',
