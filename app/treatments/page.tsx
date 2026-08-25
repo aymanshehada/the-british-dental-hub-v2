@@ -96,7 +96,7 @@ const services = [
     title: 'Root Canal Treatment',
     description: 'Precise, comfortable endodontic care to save damaged teeth and relieve pain at the source.',
     icon: Microscope,
-    href: '/#contact',
+    href: '/root-canal-treatment',
   },
   {
     number: '08',
