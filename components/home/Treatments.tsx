@@ -1,39 +1,46 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { AlignCenter, Anchor, ArrowRight, Baby, ShieldCheck, Sparkles, Sun } from "lucide-react"
 
 export default function Treatments() {
   const treatments = [
     {
       title: "Dental Implants",
-      description: "Permanent solutions for missing teeth",
-      image: "/images/implant-treatment.png",
+      description: "Permanent, natural-looking replacements for missing teeth, planned with digital precision.",
+      icon: Anchor,
       href: "/dental-implants",
-      imagePosition: "center center",
     },
     {
-      title: "Veneers",
-      description: "Perfect your smile with natural-looking veneers",
-      image: "/images/veneers-treatment.png",
+      title: "Porcelain Veneers",
+      description: "Refined porcelain shells that transform shape, shade, and symmetry for a Hollywood smile.",
+      icon: Sparkles,
       href: "/porcelain-veneers",
-      imagePosition: "center 42%",
+    },
+    {
+      title: "Teeth Whitening",
+      description: "Safe, effective brightening treatments for a noticeably whiter, more confident smile.",
+      icon: Sun,
+      href: "/teeth-whitening",
     },
     {
       title: "Orthodontics",
-      description: "Straighten your teeth discreetly and comfortably",
-      image: "/images/clear-aligners.png",
-      href: "#contact",
-      imagePosition: "center 38%",
+      description: "Clear aligners and modern techniques to straighten teeth comfortably and discreetly.",
+      icon: AlignCenter,
+      href: "/orthodontics",
     },
     {
-      title: "General Dentistry",
-      description: "Preventive care for long-term oral health",
-      image: "/images/general-dentistry.png",
-      href: "#contact",
-      imagePosition: "58% center",
+      title: "Gum Treatment",
+      description: "Comprehensive periodontal care, from prevention to advanced gum disease therapy.",
+      icon: ShieldCheck,
+      href: "/gum-treatment",
+    },
+    {
+      title: "Children’s Dentistry",
+      description: "Gentle, specialised paediatric care designed to keep young smiles healthy and happy.",
+      icon: Baby,
+      href: "/children-dentistry",
     },
   ]
 
@@ -64,7 +71,7 @@ export default function Treatments() {
           </p>
 
           <Link
-            href="#contact"
+            href="/treatments"
             className="mt-7 inline-flex h-[46px] items-center gap-3 rounded-[3px] border border-[#8a9ab3] px-7 text-[14px] font-medium text-[#183668] transition-all duration-300 ease-out hover:bg-brand-bg hover:shadow-[0_5px_12px_rgba(15,39,78,0.045)]"
           >
             Explore All Treatments
@@ -72,45 +79,43 @@ export default function Treatments() {
           </Link>
         </motion.div>
 
-        <div className="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 xl:gap-[26px]">
-          {treatments.map((treatment, index) => (
-            <motion.div
-              key={treatment.title}
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
-              whileHover={{ y: -4 }}
-              className="group h-full"
-            >
-              <Link
-                href={treatment.href}
-                className="flex h-full min-h-[520px] flex-col overflow-hidden rounded-[18px] border border-[#edf1f6] bg-white shadow-[0_5px_16px_rgba(15,39,78,0.05)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_12px_24px_rgba(15,39,78,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/10 focus-visible:ring-offset-2"
-              >
-                <div className="relative mx-3 mt-3 overflow-hidden rounded-[16px]">
-                  <Image
-                    src={treatment.image}
-                    alt={treatment.title}
-                    width={720}
-                    height={540}
-                    quality={94}
-                    sizes="(min-width: 1440px) 330px, (min-width: 1280px) 23vw, (min-width: 1024px) 24vw, (min-width: 640px) 48vw, 100vw"
-                    className="h-[364px] w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02]"
-                    style={{ objectPosition: treatment.imagePosition }}
-                  />
-                </div>
+        <div className="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:gap-[26px]">
+          {treatments.map((treatment, index) => {
+            const Icon = treatment.icon
 
-                <div className="flex flex-1 flex-col px-6 pb-8 pt-4.5">
-                  <h3 className="font-heading text-[1.96rem] font-bold leading-[1.05] tracking-[-0.036em] text-[#1a3767]">
+            return (
+              <motion.div
+                key={treatment.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+                whileHover={{ y: -4 }}
+                className="group h-full"
+              >
+                <Link
+                  href={treatment.href}
+                  className="flex h-full flex-col rounded-[18px] border border-[#edf1f6] bg-white p-6 shadow-[0_5px_16px_rgba(15,39,78,0.05)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-brand-red/20 hover:shadow-[0_12px_24px_rgba(15,39,78,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/10 focus-visible:ring-offset-2"
+                >
+                  <div className="flex size-14 items-center justify-center rounded-[16px] border border-brand-red/25 bg-brand-red/10 text-brand-red transition duration-300 ease-out group-hover:border-brand-red/40 group-hover:bg-brand-red/15">
+                    <Icon size={26} strokeWidth={1.7} />
+                  </div>
+
+                  <h3 className="mt-6 font-heading text-[1.56rem] font-bold leading-[1.1] tracking-[-0.03em] text-[#1a3767]">
                     {treatment.title}
                   </h3>
-                  <p className="mt-2.5 text-[14px] leading-[1.75] text-[#6a7d99]">
+                  <p className="mt-2.5 flex-1 text-[14px] leading-[1.75] text-[#6a7d99]">
                     {treatment.description}
                   </p>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-brand-red transition-all duration-300 ease-out group-hover:gap-2.5">
+                    Learn More
+                    <ArrowRight size={14} />
+                  </span>
+                </Link>
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>
