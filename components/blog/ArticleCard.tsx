@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowRight, BookOpen } from "lucide-react"
 import type { BlogArticle } from "@/lib/blog/types"
 import { formatArticleDate, getCategoryLabel, getReadingTime } from "@/lib/blog/articles"

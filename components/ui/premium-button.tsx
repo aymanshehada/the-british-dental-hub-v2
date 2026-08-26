@@ -1,4 +1,5 @@
 import { type AnchorHTMLAttributes, type ButtonHTMLAttributes, type MouseEventHandler, type ReactNode } from 'react'
+import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 
 export type PremiumButtonVariant = 'primary' | 'secondary' | 'outline'
@@ -58,7 +59,7 @@ export function PremiumButton({
 
   if (href) {
     return (
-      <a
+      <Link
         href={href}
         className={sharedClasses}
         onClick={onClick as MouseEventHandler<HTMLAnchorElement>}
@@ -66,7 +67,7 @@ export function PremiumButton({
         {...props}
       >
         {content}
-      </a>
+      </Link>
     )
   }
 

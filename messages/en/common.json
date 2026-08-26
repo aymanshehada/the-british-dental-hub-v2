@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "treatments": "Treatments",
+    "doctors": "Our Doctors",
+    "patientStories": "Patient Stories",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookAppointment": "Book Appointment"
+  },
+  "languageSwitcher": {
+    "switchToArabic": "العربية",
+    "switchToEnglish": "EN"
+  },
+  "footer": {
+    "navigate": "Navigate",
+    "contact": "Contact",
+    "rightsReserved": "The British Dental Hub. British-inspired dental care in New Cairo."
+  }
+}

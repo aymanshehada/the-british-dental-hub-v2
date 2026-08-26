@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { MapPin, MessageCircle, Phone } from "lucide-react"
 
 function FacebookIcon() {

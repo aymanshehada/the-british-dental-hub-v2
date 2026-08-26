@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { categories } from "@/lib/blog/articles"
 
 export function CategoryFilter({ activeCategory }: { activeCategory?: string }) {

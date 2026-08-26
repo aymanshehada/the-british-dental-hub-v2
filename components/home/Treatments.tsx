@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 import { AlignCenter, Anchor, ArrowRight, Baby, ShieldCheck, Sparkles, Sun } from "lucide-react"
 

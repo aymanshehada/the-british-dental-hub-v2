@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
 import { CalendarDays, Menu, X } from "lucide-react"
+import { Link, usePathname } from "@/i18n/navigation"
+import { LanguageSwitcher } from "./LanguageSwitcher"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -65,6 +65,7 @@ export default function Navbar() {
         </nav>
 
         <div className="relative z-10 mr-[-42px] hidden shrink-0 items-center self-center gap-3 sm:flex xl:mr-[-56px] 2xl:mr-[-64px]">
+          <LanguageSwitcher />
           <Link
             href="/#contact"
             onClick={handleContactClick}
@@ -75,14 +76,17 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <button
-          type="button"
-          aria-label={isOpen ? "Close navigation" : "Open navigation"}
-          onClick={() => setIsOpen((open) => !open)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded border border-[#d8dee8] text-[#0A2247] transition-colors duration-300 hover:bg-brand-bg xl:hidden"
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2 xl:hidden">
+          <LanguageSwitcher className="hidden sm:inline-flex" />
+          <button
+            type="button"
+            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+            onClick={() => setIsOpen((open) => !open)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded border border-[#d8dee8] text-[#0A2247] transition-colors duration-300 hover:bg-brand-bg"
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {isOpen && (
@@ -109,6 +113,10 @@ export default function Navbar() {
             >
               Book Appointment
             </Link>
+
+            <div className="mt-2 flex justify-center sm:hidden">
+              <LanguageSwitcher />
+            </div>
           </nav>
         </div>
       )}

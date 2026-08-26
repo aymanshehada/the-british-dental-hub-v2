@@ -35,7 +35,7 @@ const journeySteps = [
 
 export function JourneySection() {
   return (
-    <section id="implant-journey" className="bg-brand-bg py-24 sm:py-28 lg:py-32">
+    <section id="implant-journey" className="scroll-mt-28 bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">

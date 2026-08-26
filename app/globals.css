@@ -134,6 +134,18 @@
   --sidebar-ring: oklch(0.78 0.1 85);
 }
 
+/* RTL support: when the document direction is right-to-left (Arabic),
+   swap the heading/body font tokens to the Arabic typefaces loaded in
+   app/[locale]/layout.tsx. Every existing `font-heading` / `font-sans`
+   class across the site picks this up automatically — no component
+   changes needed. Component-level RTL layout mirroring (physical
+   left/right spacing and alignment utilities) is a separate follow-up
+   pass, not covered by this override. */
+html[dir='rtl'] {
+  --font-heading: var(--font-heading-ar), 'Amiri', 'Traditional Arabic', serif;
+  --font-body: var(--font-body-ar), 'Tajawal', 'Segoe UI', sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
