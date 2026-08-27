@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { CalendarDays, Menu, X } from "lucide-react"
 import { Link, usePathname } from "@/i18n/navigation"
 import { LanguageSwitcher } from "./LanguageSwitcher"
@@ -9,16 +10,17 @@ import { LanguageSwitcher } from "./LanguageSwitcher"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+  const t = useTranslations("common.nav")
 
   const navigation = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Treatments", href: "/treatments" },
-    { label: "Our Doctors", href: "#doctors" },
-    { label: "Patient Stories", href: "#patient-stories" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "#contact" },
+    { label: t("home"), href: "#home" },
+    { label: t("about"), href: "#about" },
+    { label: t("treatments"), href: "/treatments" },
+    { label: t("doctors"), href: "#doctors" },
+    { label: t("patientStories"), href: "#patient-stories" },
+    { label: t("gallery"), href: "#gallery" },
+    { label: t("blog"), href: "/blog" },
+    { label: t("contact"), href: "#contact" },
   ]
 
   const handleContactClick = () => {
@@ -72,7 +74,7 @@ export default function Navbar() {
             className="inline-flex h-[48px] items-center gap-2 rounded-[3px] bg-[#0A2247] px-7 text-[14px] font-semibold text-white shadow-[0_2px_6px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_6px_16px_rgba(10,34,71,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/20 focus-visible:ring-offset-2"
           >
             <CalendarDays size={16} />
-            Book Appointment
+            {t("bookAppointment")}
           </Link>
         </div>
 
@@ -80,7 +82,7 @@ export default function Navbar() {
           <LanguageSwitcher className="hidden sm:inline-flex" />
           <button
             type="button"
-            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+            aria-label={isOpen ? t("closeMenu") : t("openMenu")}
             onClick={() => setIsOpen((open) => !open)}
             className="inline-flex h-11 w-11 items-center justify-center rounded border border-[#d8dee8] text-[#0A2247] transition-colors duration-300 hover:bg-brand-bg"
           >
@@ -111,7 +113,7 @@ export default function Navbar() {
               }}
               className="mt-2 inline-flex items-center justify-center rounded-[3px] bg-[#0A2247] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#123164]"
             >
-              Book Appointment
+              {t("bookAppointment")}
             </Link>
 
             <div className="mt-2 flex justify-center sm:hidden">

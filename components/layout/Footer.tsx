@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server"
 import { Link } from "@/i18n/navigation"
 import { Mail, MapPin, PhoneCall } from "lucide-react"
 
@@ -27,20 +28,22 @@ function WhatsAppIcon() {
   )
 }
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("common.footer")
+
   const navigation = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Treatments", href: "#treatments" },
-    { label: "Doctors", href: "#doctors" },
-    { label: "Patient Stories", href: "#patient-stories" },
-    { label: "Gallery", href: "#gallery" },
+    { label: t("nav.home"), href: "#home" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.treatments"), href: "#treatments" },
+    { label: t("nav.doctors"), href: "#doctors" },
+    { label: t("nav.patientStories"), href: "#patient-stories" },
+    { label: t("nav.gallery"), href: "#gallery" },
   ]
 
   const socials = [
-    { label: "Facebook", href: "https://www.facebook.com/share/1BuVGxN8H3/", icon: FacebookIcon },
-    { label: "Instagram", href: "https://www.instagram.com/thebritishdentalhub?igsh=ODl5OXZ0cjdxMzg2", icon: InstagramIcon },
-    { label: "WhatsApp", href: "https://wa.me/201556887765", icon: WhatsAppIcon },
+    { label: t("socials.facebook"), href: "https://www.facebook.com/share/1BuVGxN8H3/", icon: FacebookIcon },
+    { label: t("socials.instagram"), href: "https://www.instagram.com/thebritishdentalhub?igsh=ODl5OXZ0cjdxMzg2", icon: InstagramIcon },
+    { label: t("socials.whatsapp"), href: "https://wa.me/201556887765", icon: WhatsAppIcon },
   ]
 
   return (
@@ -49,9 +52,9 @@ export default function Footer() {
         <div className="mb-10 border-b border-white/10 pb-8">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">The British Dental Hub</p>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">{t("brandEyebrow")}</p>
               <h2 className="mt-4 max-w-[560px] font-heading text-[2.5rem] leading-[1.02] tracking-[-0.03em] text-white sm:text-[3rem]">
-                Luxury dental care with British-inspired standards and modern clinical precision.
+                {t("tagline")}
               </h2>
             </div>
 
@@ -70,7 +73,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.65fr_0.9fr]">
           <div>
             <p className="max-w-[430px] text-base leading-8 text-white/72">
-              A premium New Cairo dental clinic delivering British-inspired standards of care, elegant patient journeys, and digitally guided treatment planning.
+              {t("description")}
             </p>
 
             <div className="mt-8 flex items-center gap-3">
@@ -90,7 +93,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">Navigate</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">{t("navigate")}</p>
             <div className="mt-6 grid gap-4">
               {navigation.map((item) => (
                 <Link
@@ -105,11 +108,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">Contact</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">{t("contact")}</p>
             <div className="mt-6 space-y-4 text-sm leading-7 text-white/72">
               <div className="flex items-start gap-4 rounded-[6px] border border-white/8 bg-white/5 p-4">
                 <MapPin size={18} className="mt-1 text-brand-red" />
-                <span>Gateway Mall, D1 Clinics, Clinic 226, New Cairo, Egypt</span>
+                <span>{t("address")}</span>
               </div>
               <Link href="tel:+201556887765" className="flex items-center gap-4 rounded-[6px] border border-white/8 bg-white/5 p-4 transition hover:text-white">
                 <PhoneCall size={18} className="text-brand-red" />
@@ -124,7 +127,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-sm text-white/52">
-          © 2026 The British Dental Hub. British-inspired dental care in New Cairo.
+          {t("copyright")}
         </div>
       </div>
     </footer>

@@ -8,15 +8,34 @@
     "gallery": "Gallery",
     "blog": "Blog",
     "contact": "Contact",
-    "bookAppointment": "Book Appointment"
+    "bookAppointment": "Book Appointment",
+    "openMenu": "Open navigation",
+    "closeMenu": "Close navigation"
   },
   "languageSwitcher": {
     "switchToArabic": "العربية",
     "switchToEnglish": "EN"
   },
   "footer": {
+    "brandEyebrow": "The British Dental Hub",
+    "tagline": "Luxury dental care with British-inspired standards and modern clinical precision.",
+    "description": "A premium New Cairo dental clinic delivering British-inspired standards of care, elegant patient journeys, and digitally guided treatment planning.",
+    "socials": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp"
+    },
     "navigate": "Navigate",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "treatments": "Treatments",
+      "doctors": "Doctors",
+      "patientStories": "Patient Stories",
+      "gallery": "Gallery"
+    },
     "contact": "Contact",
-    "rightsReserved": "The British Dental Hub. British-inspired dental care in New Cairo."
+    "address": "Gateway Mall, D1 Clinics, Clinic 226, New Cairo, Egypt",
+    "copyright": "© 2026 The British Dental Hub. British-inspired dental care in New Cairo."
   }
 }

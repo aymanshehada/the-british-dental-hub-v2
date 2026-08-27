@@ -1,22 +1,41 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About Us",
-    "treatments": "Treatments",
-    "doctors": "Our Doctors",
-    "patientStories": "Patient Stories",
-    "gallery": "Gallery",
-    "blog": "Blog",
-    "contact": "Contact",
-    "bookAppointment": "Book Appointment"
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "treatments": "العلاجات",
+    "doctors": "أطباؤنا",
+    "patientStories": "قصص المرضى",
+    "gallery": "معرض الصور",
+    "blog": "المدونة",
+    "contact": "تواصل معنا",
+    "bookAppointment": "احجز موعدك",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة"
   },
   "languageSwitcher": {
     "switchToArabic": "العربية",
     "switchToEnglish": "EN"
   },
   "footer": {
-    "navigate": "Navigate",
-    "contact": "Contact",
-    "rightsReserved": "The British Dental Hub. British-inspired dental care in New Cairo."
+    "brandEyebrow": "The British Dental Hub",
+    "tagline": "رعاية أسنانٍ فاخرة، بمعايير بريطانية عريقة ودقة سريرية حديثة.",
+    "description": "عيادة أسنانٍ راقية في القاهرة الجديدة، تُقدِّم رعايةً بمعايير بريطانية الطابع، ورحلةَ علاجٍ أنيقة، وتخطيطًا علاجيًّا موجَّهًا رقميًّا.",
+    "socials": {
+      "facebook": "فيسبوك",
+      "instagram": "إنستغرام",
+      "whatsapp": "واتساب"
+    },
+    "navigate": "روابط سريعة",
+    "nav": {
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "treatments": "العلاجات",
+      "doctors": "الأطباء",
+      "patientStories": "قصص المرضى",
+      "gallery": "معرض الصور"
+    },
+    "contact": "تواصل معنا",
+    "address": "مول جيتواي، عيادات D1، العيادة رقم 226، القاهرة الجديدة، مصر",
+    "copyright": "© 2026 The British Dental Hub. رعاية أسنانٍ بمعايير بريطانية في القاهرة الجديدة."
   }
 }
