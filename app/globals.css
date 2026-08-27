@@ -142,7 +142,7 @@
    left/right spacing and alignment utilities) is a separate follow-up
    pass, not covered by this override. */
 html[dir='rtl'] {
-  --font-heading: var(--font-heading-ar), 'Amiri', 'Traditional Arabic', serif;
+  --font-heading: var(--font-heading-ar), 'El Messiri', 'Traditional Arabic', serif;
   --font-body: var(--font-body-ar), 'Tajawal', 'Segoe UI', sans-serif;
 }
 

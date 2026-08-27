@@ -32,12 +32,12 @@ export default async function Footer() {
   const t = await getTranslations("common.footer")
 
   const navigation = [
-    { label: t("nav.home"), href: "#home" },
-    { label: t("nav.about"), href: "#about" },
-    { label: t("nav.treatments"), href: "#treatments" },
-    { label: t("nav.doctors"), href: "#doctors" },
-    { label: t("nav.patientStories"), href: "#patient-stories" },
-    { label: t("nav.gallery"), href: "#gallery" },
+    { label: t("nav.home"), href: "/#home" },
+    { label: t("nav.about"), href: "/#about" },
+    { label: t("nav.treatments"), href: "/#treatments" },
+    { label: t("nav.doctors"), href: "/#doctors" },
+    { label: t("nav.patientStories"), href: "/#patient-stories" },
+    { label: t("nav.gallery"), href: "/#gallery" },
   ]
 
   const socials = [
@@ -116,7 +116,7 @@ export default async function Footer() {
               </div>
               <Link href="tel:+201556887765" className="flex items-center gap-4 rounded-[6px] border border-white/8 bg-white/5 p-4 transition hover:text-white">
                 <PhoneCall size={18} className="text-brand-red" />
-                <span>+20 155 688 7765</span>
+                <span dir="ltr">+20 155 688 7765</span>
               </Link>
               <Link href="mailto:info@thebritishdentalhub.com" className="flex items-center gap-4 rounded-[6px] border border-white/8 bg-white/5 p-4 transition hover:text-white">
                 <Mail size={18} className="text-brand-red" />

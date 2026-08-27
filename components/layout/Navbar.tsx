@@ -13,14 +13,14 @@ export default function Navbar() {
   const t = useTranslations("common.nav")
 
   const navigation = [
-    { label: t("home"), href: "#home" },
-    { label: t("about"), href: "#about" },
+    { label: t("home"), href: "/#home" },
+    { label: t("about"), href: "/#about" },
     { label: t("treatments"), href: "/treatments" },
-    { label: t("doctors"), href: "#doctors" },
-    { label: t("patientStories"), href: "#patient-stories" },
-    { label: t("gallery"), href: "#gallery" },
+    { label: t("doctors"), href: "/#doctors" },
+    { label: t("patientStories"), href: "/#patient-stories" },
+    { label: t("gallery"), href: "/#gallery" },
     { label: t("blog"), href: "/blog" },
-    { label: t("contact"), href: "#contact" },
+    { label: t("contact"), href: "/#contact" },
   ]
 
   const handleContactClick = () => {

@@ -55,7 +55,7 @@ export default function CTA() {
                     <span className="text-sm font-semibold uppercase tracking-[0.18em]">Call Us</span>
                   </div>
                   <Link href="tel:+201556887765" className="mt-3 block text-lg text-white/78 transition hover:text-white">
-                    +20 155 688 7765
+                    <span dir="ltr">+20 155 688 7765</span>
                   </Link>
                 </div>
                 <div className="rounded-[6px] border border-white/10 bg-white/8 p-4">

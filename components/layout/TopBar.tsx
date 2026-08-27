@@ -52,7 +52,7 @@ export default function TopBar() {
             className="flex items-center gap-2.5 transition hover:text-white/80"
           >
             <Phone size={13} className="text-brand-red" />
-            <span>+20 155 688 7765</span>
+            <span dir="ltr">+20 155 688 7765</span>
           </Link>
         </div>
 
