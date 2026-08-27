@@ -1,11 +1,13 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value))
 
 export function ArtOfPorcelainVeneersSection() {
+  const t = useTranslations('porcelainVeneers.editorial')
   const [isOpen, setIsOpen] = useState(false)
   const [zoom, setZoom] = useState(1)
 
@@ -41,13 +43,13 @@ export function ArtOfPorcelainVeneersSection() {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              Editorial Showcase
+              {t('eyebrow')}
             </p>
             <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.4vw,4.1rem)] leading-[1.02] tracking-[-0.03em] text-[#0A2247]">
-              THE ART OF PORCELAIN VENEERS
+              {t('title')}
             </h2>
             <p className="mt-7 text-[1.05rem] leading-8 text-[#5b6e8b] sm:text-[1.12rem] sm:leading-9">
-              A complete editorial study of porcelain veneer layering, presented as a luxury educational exhibition piece.
+              {t('subtitle')}
             </p>
           </div>
 
@@ -59,7 +61,7 @@ export function ArtOfPorcelainVeneersSection() {
                 setIsOpen(true)
               }}
               className="group mx-auto block w-[88%] max-w-[1400px] overflow-hidden rounded-[28px] border border-brand-red/30 bg-[linear-gradient(180deg,#071937_0%,#041126_100%)] p-4 shadow-[0_18px_48px_rgba(10,34,71,0.14)] transition-all duration-500 ease-out hover:scale-[1.015] hover:shadow-[0_26px_58px_rgba(10,34,71,0.18)] sm:p-5"
-              aria-label="Open porcelain veneers artwork in fullscreen"
+              aria-label={t('openFullscreen')}
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[22px] bg-[#06132c]">
                 <Image
@@ -105,7 +107,7 @@ export function ArtOfPorcelainVeneersSection() {
                 type="button"
                 onClick={zoomOut}
                 className="rounded-md border border-white/25 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/16"
-                aria-label="Zoom out"
+                aria-label={t('zoomOut')}
               >
                 -
               </button>
@@ -113,7 +115,7 @@ export function ArtOfPorcelainVeneersSection() {
                 type="button"
                 onClick={resetZoom}
                 className="rounded-md border border-white/25 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/16"
-                aria-label="Reset zoom"
+                aria-label={t('resetZoom')}
               >
                 {Math.round(zoom * 100)}%
               </button>
@@ -121,7 +123,7 @@ export function ArtOfPorcelainVeneersSection() {
                 type="button"
                 onClick={zoomIn}
                 className="rounded-md border border-white/25 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/16"
-                aria-label="Zoom in"
+                aria-label={t('zoomIn')}
               >
                 +
               </button>
@@ -129,9 +131,9 @@ export function ArtOfPorcelainVeneersSection() {
                 type="button"
                 onClick={() => setIsOpen(false)}
                 className="rounded-md border border-white/25 bg-white/10 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/16"
-                aria-label="Close fullscreen artwork"
+                aria-label={t('closeFullscreen')}
               >
-                Close
+                {t('closeButton')}
               </button>
             </div>
           </div>
