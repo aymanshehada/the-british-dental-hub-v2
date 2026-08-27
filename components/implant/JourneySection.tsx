@@ -1,52 +1,31 @@
+import { getTranslations } from 'next-intl/server'
 import { Container } from '@/components/ui/container'
 
-const journeySteps = [
-  {
-    number: '01',
-    title: 'Consultation & Assessment',
-    description:
-      'Comprehensive examination, photos, and CBCT imaging define your treatment pathway.',
-  },
-  {
-    number: '02',
-    title: 'Digital Implant Planning',
-    description:
-      'Implant position is digitally mapped for accuracy, safety, and long-term stability.',
-  },
-  {
-    number: '03',
-    title: 'Implant Placement',
-    description:
-      'Implants are placed using precise, minimally invasive techniques for comfort.',
-  },
-  {
-    number: '04',
-    title: 'Healing & Integration',
-    description:
-      'The implant bonds with bone while healing is monitored closely.',
-  },
-  {
-    number: '05',
-    title: 'Final Crown & Review',
-    description:
-      'Your custom crown is fitted and long-term review care begins.',
-  },
-]
+const stepKeys = ['consultation', 'digitalPlanning', 'placement', 'healing', 'finalCrown'] as const
+const stepNumbers = ['01', '02', '03', '04', '05'] as const
 
-export function JourneySection() {
+export async function JourneySection() {
+  const t = await getTranslations('dentalImplants.journey')
+
+  const journeySteps = stepKeys.map((key, index) => ({
+    number: stepNumbers[index],
+    title: t(`steps.${key}.title`),
+    description: t(`steps.${key}.description`),
+  }))
+
   return (
     <section id="implant-journey" className="scroll-mt-28 bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            The Implant Journey
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
-            Your Implant Journey,
-            <span className="mt-2 block">Step by Step.</span>
+            {t('titleLine1')}
+            <span className="mt-2 block">{t('titleLine2')}</span>
           </h2>
           <p className="mt-7 text-[1.06rem] leading-8 text-[#566681] sm:text-[1.12rem] sm:leading-9">
-            From your first consultation to your final restoration, every stage is carefully planned to maximise comfort, precision, and long-term success.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -78,7 +57,7 @@ export function JourneySection() {
 
         <div className="mt-12 rounded-[18px] border border-[#e6edf5] bg-brand-bg px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
           <p className="text-[0.95rem] leading-7">
-            Every treatment plan is personalised. Some patients may require additional stages such as bone grafting or sinus augmentation before implant placement.
+            {t('footnote')}
           </p>
         </div>
       </Container>

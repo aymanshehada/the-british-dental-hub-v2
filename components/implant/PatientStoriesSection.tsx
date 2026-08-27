@@ -1,32 +1,7 @@
+import { getTranslations } from 'next-intl/server'
 import { Star } from 'lucide-react'
 
-const featuredTestimonial = {
-  quote:
-    'The care felt calm, thoughtful and reassuring from the very first consultation. Every step was explained clearly and the experience felt exceptionally well organised.',
-  author: 'Verified Patient',
-  treatment: 'Dental Implant Treatment',
-}
-
-const testimonials = [
-  {
-    quote:
-      'The consultation was thorough, calm and easy to follow. I left feeling informed rather than overwhelmed.',
-    author: 'Verified Patient',
-    treatment: 'Implant Consultation',
-  },
-  {
-    quote:
-      'The clinical care felt precise and personal, and the treatment experience was handled with real attention to detail.',
-    author: 'Verified Patient',
-    treatment: 'Smile Restoration',
-  },
-  {
-    quote:
-      'Everything was explained with clarity and patience, which made the whole journey feel reassuring and premium.',
-    author: 'Verified Patient',
-    treatment: 'Full-Arch Treatment',
-  },
-]
+const itemKeys = ['item1', 'item2', 'item3'] as const
 
 function Stars() {
   return (
@@ -38,22 +13,37 @@ function Stars() {
   )
 }
 
-export function PatientStoriesSection() {
+export async function PatientStoriesSection() {
+  const t = await getTranslations('dentalImplants.patientStories')
+  const verifiedPatient = t('verifiedPatient')
+
+  const featuredTestimonial = {
+    quote: t('featured.quote'),
+    author: verifiedPatient,
+    treatment: t('featured.treatment'),
+  }
+
+  const testimonials = itemKeys.map((key) => ({
+    quote: t(`items.${key}.quote`),
+    author: verifiedPatient,
+    treatment: t(`items.${key}.treatment`),
+  }))
+
   return (
     <section aria-labelledby="patient-stories-heading" className="border-t border-brand-border bg-brand-bg py-14 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Patient Experience
+            {t('eyebrow')}
           </p>
           <h2
             id="patient-stories-heading"
             className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
           >
-            What Our Patients Remember
+            {t('title')}
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-[1.02rem] leading-8 text-[#495a73] sm:text-[1.08rem]">
-            Beyond clinical excellence, we believe every patient should remember how they were treated, supported and cared for throughout their journey.
+            {t('subtitle')}
           </p>
         </div>
 

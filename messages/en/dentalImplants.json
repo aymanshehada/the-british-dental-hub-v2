@@ -4,8 +4,102 @@
     "description": "Restore your smile with premium implant dentistry using digital planning, world-class implant systems and meticulous clinical precision in Cairo."
   },
   "hero": {
+    "tagline": "(British-inspired Implant Dentistry)",
     "eyebrow": "Dental Implants in Cairo",
-    "title": "Rebuild Your Smile With Quiet Confidence",
-    "subtitle": "Your treatment starts with a calm clinician-led assessment, clear planning, and a step-by-step pathway designed around long-term comfort and stability."
+    "titleLine1": "Rebuild Your Smile",
+    "titleLine2": "With Quiet Confidence",
+    "subtitle": "Your treatment starts with a calm clinician-led assessment, clear planning, and a step-by-step pathway designed around long-term comfort and stability.",
+    "ctaPrimary": "Book Your Implant Assessment",
+    "ctaSecondary": "Explore the Implant Journey",
+    "trust": {
+      "clinicianLed": "Clinician-led assessment",
+      "digitalPlanning": "Digital implant planning",
+      "aftercare": "Long-term aftercare"
+    }
+  },
+  "suitability": {
+    "eyebrow": "Implant Suitability",
+    "title": "Is Dental Implant Treatment Right For You?",
+    "description1": "Most patients can be assessed for implant treatment with a careful review of their gums, bone support, and long-term restorative goals.",
+    "description2": "This section is designed to answer the first questions patients usually have before deciding whether to book a consultation.",
+    "ctaButton": "Book Your Implant Assessment",
+    "benefitsIntro": "You may benefit from dental implants if you...",
+    "points": {
+      "missingTeeth": { "title": "Missing teeth", "detail": "Looking for a fixed, natural-looking replacement." },
+      "longTermGoals": { "title": "Long-term replacement goals", "detail": "To removable dentures or traditional bridges." },
+      "healthyGums": { "title": "Healthy gums", "detail": "Or happy to complete any recommended gum treatment before implant placement." },
+      "boneSupport": { "title": "Adequate bone support", "detail": "Or suitable for bone grafting following clinical assessment." },
+      "generalHealth": { "title": "Good general health", "detail": "Committed to excellent oral hygiene and regular follow-up care." }
+    },
+    "stillUnsure": {
+      "title": "Still unsure?",
+      "paragraph1": "Many patients who believe implants are not possible are successfully treated after a detailed clinical assessment.",
+      "paragraph2": "Every recommendation begins with a comprehensive examination and 3D CBCT planning.",
+      "ctaButton": "Book an Implant Consultation"
+    }
+  },
+  "journey": {
+    "eyebrow": "The Implant Journey",
+    "titleLine1": "Your Implant Journey,",
+    "titleLine2": "Step by Step.",
+    "subtitle": "From your first consultation to your final restoration, every stage is carefully planned to maximise comfort, precision, and long-term success.",
+    "steps": {
+      "consultation": { "title": "Consultation & Assessment", "description": "Comprehensive examination, photos, and CBCT imaging define your treatment pathway." },
+      "digitalPlanning": { "title": "Digital Implant Planning", "description": "Implant position is digitally mapped for accuracy, safety, and long-term stability." },
+      "placement": { "title": "Implant Placement", "description": "Implants are placed using precise, minimally invasive techniques for comfort." },
+      "healing": { "title": "Healing & Integration", "description": "The implant bonds with bone while healing is monitored closely." },
+      "finalCrown": { "title": "Final Crown & Review", "description": "Your custom crown is fitted and long-term review care begins." }
+    },
+    "footnote": "Every treatment plan is personalised. Some patients may require additional stages such as bone grafting or sinus augmentation before implant placement."
+  },
+  "digitalDentistry": {
+    "eyebrow": "Advanced Digital Dentistry",
+    "title": "Precision Through Technology",
+    "subtitle": "Every stage of implant treatment is enhanced through advanced digital planning, modern imaging and precision-guided clinical protocols.",
+    "scanner": {
+      "label": "Digital Intraoral Scanner",
+      "description": "Create precise digital impressions for implant planning, restorative design and a more comfortable patient experience.",
+      "benefitsLabel": "Patient Benefits",
+      "benefits": {
+        "accurate": "More accurate impressions",
+        "communication": "Improved restorative communication",
+        "workflow": "Smoother treatment workflow",
+        "comfort": "Greater comfort for patients"
+      }
+    },
+    "technologies": {
+      "planning": { "eyebrow": "Precision planning", "title": "Digital Treatment Planning", "description": "Each implant pathway is planned digitally to support precision, prosthetic alignment and long-term predictability." },
+      "guidedSurgery": { "eyebrow": "Guided care", "title": "Guided Implant Surgery", "description": "When clinically indicated, digitally guided placement supports accurate positioning, efficient surgery and minimally invasive treatment." },
+      "magnification": { "eyebrow": "Fine detail", "title": "Magnification Dentistry (Loupes)", "description": "Enhanced visual accuracy allows meticulous attention to fine detail throughout assessment, treatment and review." },
+      "sterilisation": { "eyebrow": "Safety and care", "title": "Class B Sterilisation Protocols", "description": "Strict sterilisation procedures support patient safety and clinical excellence at every appointment." }
+    }
+  },
+  "patientStories": {
+    "eyebrow": "Patient Experience",
+    "title": "What Our Patients Remember",
+    "subtitle": "Beyond clinical excellence, we believe every patient should remember how they were treated, supported and cared for throughout their journey.",
+    "verifiedPatient": "Verified Patient",
+    "featured": { "quote": "The care felt calm, thoughtful and reassuring from the very first consultation. Every step was explained clearly and the experience felt exceptionally well organised.", "treatment": "Dental Implant Treatment" },
+    "items": {
+      "item1": { "quote": "The consultation was thorough, calm and easy to follow. I left feeling informed rather than overwhelmed.", "treatment": "Implant Consultation" },
+      "item2": { "quote": "The clinical care felt precise and personal, and the treatment experience was handled with real attention to detail.", "treatment": "Smile Restoration" },
+      "item3": { "quote": "Everything was explained with clarity and patience, which made the whole journey feel reassuring and premium.", "treatment": "Full-Arch Treatment" }
+    }
+  },
+  "consultationCta": {
+    "eyebrow": "Begin Your Journey",
+    "title": "Ready to Restore Your Smile?",
+    "description": "Every successful implant treatment begins with a comprehensive consultation. We'll assess your smile, explain every available option and create a personalised treatment plan designed around your clinical needs.",
+    "noPressure": "No pressure. Just honest clinical advice.",
+    "bookConsultation": "Book Consultation",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "contactNote": "Our team will personally contact you to arrange your consultation at a convenient time.",
+    "includesLabel": "What your consultation includes",
+    "trustItems": {
+      "duration": "30–45 Minute Consultation",
+      "personalisedPlan": "Personalised Treatment Plan",
+      "transparentPricing": "Transparent Pricing",
+      "noObligation": "No Obligation"
+    }
   }
 }

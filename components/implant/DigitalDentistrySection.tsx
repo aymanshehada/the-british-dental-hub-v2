@@ -1,50 +1,36 @@
+import { getTranslations } from 'next-intl/server'
 import { Activity, Microscope, ScanSearch, ShieldCheck } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 
-const technologies = [
-  {
-    title: 'Digital Treatment Planning',
-    description:
-      'Each implant pathway is planned digitally to support precision, prosthetic alignment and long-term predictability.',
-    icon: ScanSearch,
-    eyebrow: 'Precision planning',
-  },
-  {
-    title: 'Guided Implant Surgery',
-    description:
-      'When clinically indicated, digitally guided placement supports accurate positioning, efficient surgery and minimally invasive treatment.',
-    icon: Activity,
-    eyebrow: 'Guided care',
-  },
-  {
-    title: 'Magnification Dentistry (Loupes)',
-    description:
-      'Enhanced visual accuracy allows meticulous attention to fine detail throughout assessment, treatment and review.',
-    icon: Microscope,
-    eyebrow: 'Fine detail',
-  },
-  {
-    title: 'Class B Sterilisation Protocols',
-    description:
-      'Strict sterilisation procedures support patient safety and clinical excellence at every appointment.',
-    icon: ShieldCheck,
-    eyebrow: 'Safety and care',
-  },
-]
+const technologyMeta = [
+  { key: 'planning', icon: ScanSearch },
+  { key: 'guidedSurgery', icon: Activity },
+  { key: 'magnification', icon: Microscope },
+  { key: 'sterilisation', icon: ShieldCheck },
+] as const
 
-export function DigitalDentistrySection() {
+export async function DigitalDentistrySection() {
+  const t = await getTranslations('dentalImplants.digitalDentistry')
+
+  const technologies = technologyMeta.map((tech) => ({
+    icon: tech.icon,
+    eyebrow: t(`technologies.${tech.key}.eyebrow`),
+    title: t(`technologies.${tech.key}.title`),
+    description: t(`technologies.${tech.key}.description`),
+  }))
+
   return (
     <section aria-labelledby="digital-dentistry-heading" className="relative overflow-hidden border-t border-brand-border bg-white py-16 sm:py-20 lg:py-24">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Advanced Digital Dentistry
+            {t('eyebrow')}
           </p>
           <h2 id="digital-dentistry-heading" className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            Precision Through Technology
+            {t('title')}
           </h2>
           <p className="mt-4 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Every stage of implant treatment is enhanced through advanced digital planning, modern imaging and precision-guided clinical protocols.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -55,27 +41,27 @@ export function DigitalDentistrySection() {
                 <ScanSearch className="size-7" strokeWidth={1.4} />
               </div>
               <span className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brand-red">
-                Digital Intraoral Scanner
+                {t('scanner.label')}
               </span>
             </div>
 
             <h3 className="mt-6 text-[1.5rem] font-semibold leading-tight text-[#0A2247] sm:text-[1.7rem]">
-              Digital Intraoral Scanner
+              {t('scanner.label')}
             </h3>
             <p className="mt-3 max-w-xl text-[0.95rem] font-light leading-7 text-[#495a73] sm:text-[1rem]">
-              Create precise digital impressions for implant planning, restorative design and a more comfortable patient experience.
+              {t('scanner.description')}
             </p>
 
             <div className="mt-6 rounded-[24px] border border-[#e5ebf3] bg-brand-bg p-4">
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
-                Patient Benefits
+                {t('scanner.benefitsLabel')}
               </p>
               <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
                 {[
-                  'More accurate impressions',
-                  'Improved restorative communication',
-                  'Smoother treatment workflow',
-                  'Greater comfort for patients',
+                  t('scanner.benefits.accurate'),
+                  t('scanner.benefits.communication'),
+                  t('scanner.benefits.workflow'),
+                  t('scanner.benefits.comfort'),
                 ].map((benefit) => (
                   <div key={benefit} className="flex items-start gap-2 rounded-2xl border border-[#e5ebf3] bg-white px-3 py-2">
                     <span className="mt-1 size-1.5 rounded-full bg-brand-red" />

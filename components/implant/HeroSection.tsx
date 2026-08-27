@@ -1,9 +1,12 @@
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 import { ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import { PremiumButton } from '@/components/ui/premium-button'
 
-export function HeroSection() {
+export async function HeroSection() {
+  const t = await getTranslations('dentalImplants.hero')
+
   return (
     <section className="relative isolate overflow-hidden bg-[#050d1f]">
       <div className="absolute inset-0">
@@ -24,23 +27,22 @@ export function HeroSection() {
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-white/68">
             The British Dental Hub
             <span className="mt-1 block text-[0.58rem] tracking-[0.24em] text-white/56">
-              (British-inspired Implant Dentistry)
+              {t('tagline')}
             </span>
           </p>
 
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
-            Dental Implants in Cairo
+            {t('eyebrow')}
           </p>
 
           <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.92] tracking-[-0.022em] text-white">
-            Rebuild Your Smile
-            <span className="mt-3 block">With Quiet Confidence</span>
+            {t('titleLine1')}
+            <span className="mt-3 block">{t('titleLine2')}</span>
           </h1>
 
           <p className="mt-7 max-w-[600px] text-[1.08rem] leading-8 text-white/84 sm:text-[1.16rem] sm:leading-9">
-            Your treatment starts with a calm clinician-led assessment, clear planning,
-            and a step-by-step pathway designed around long-term comfort and stability.
+            {t('subtitle')}
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -50,23 +52,23 @@ export function HeroSection() {
               className="min-w-[250px] justify-center"
               iconRight={<ArrowRight className="size-4" />}
             >
-              Book Your Implant Assessment
+              {t('ctaPrimary')}
             </PremiumButton>
             <PremiumButton
               href="#implant-journey"
               variant="outline"
               className="min-w-[280px] justify-center border-white/30 bg-white/5 text-white hover:bg-white/10"
             >
-              Explore the Implant Journey
+              {t('ctaSecondary')}
             </PremiumButton>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/72 sm:gap-x-5">
-            <span>Clinician-led assessment</span>
+            <span>{t('trust.clinicianLed')}</span>
             <span className="hidden h-px w-4 bg-white/30 sm:block" />
-            <span>Digital implant planning</span>
+            <span>{t('trust.digitalPlanning')}</span>
             <span className="hidden h-px w-4 bg-white/30 sm:block" />
-            <span>Long-term aftercare</span>
+            <span>{t('trust.aftercare')}</span>
           </div>
         </div>
       </Container>
