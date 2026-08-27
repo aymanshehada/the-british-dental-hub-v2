@@ -5,7 +5,65 @@
   },
   "hero": {
     "eyebrow": "Root Canal Treatment in Cairo",
-    "title": "Comfortable Care Without the Worry",
-    "subtitle": "Root canal treatment is planned to be as gentle and pain-free as possible, and is available for any tooth that needs it — front or back."
+    "titleLine1": "Comfortable Care",
+    "titleLine2": "Without the Worry",
+    "subtitle": "Root canal treatment is planned to be as gentle and pain-free as possible, and is available for any tooth that needs it — front or back.",
+    "ctaPrimary": "Book a Consultation",
+    "ctaSecondary": "See Our Approach",
+    "trust": {
+      "frontAndBack": "Front and back teeth",
+      "loupes": "Magnifying loupes",
+      "comfortFocused": "Comfort-focused care"
+    }
+  },
+  "approach": {
+    "eyebrow": "Our Approach",
+    "title": "Our Approach to Root Canal Treatment",
+    "subtitle": "Every step is planned with precision equipment and a considered, comfort-focused technique.",
+    "points": {
+      "loupes": { "title": "Magnifying Dental Loupes", "description": "Magnifying dental loupes support finer control and a more precise view throughout every stage of treatment." },
+      "rotaryInstruments": { "title": "Modern Rotary Instruments", "description": "Rotary instruments help shape and clean the root canal system efficiently, supporting a precise, well-controlled result." },
+      "singleVisit": { "title": "Single-Visit Potential", "description": "Depending on clinical assessment, some cases can be completed in a single visit for a more convenient experience." },
+      "comfortFocused": { "title": "Comfort-Focused Care", "description": "We use considered equipment and materials throughout, aiming for treatment that's as comfortable and pain-free as possible." },
+      "everyTooth": { "title": "Every Tooth, Front or Back", "description": "Root canal treatment is available for any tooth that needs it, front or back, without exception." }
+    }
+  },
+  "whenRecommended": {
+    "eyebrow": "General Awareness",
+    "title": "When Root Canal Treatment May Be Recommended",
+    "subtitle": "These general signs are shared for awareness only — a proper diagnosis always requires a clinical examination with your dentist.",
+    "signs": {
+      "persistentPain": { "title": "Persistent Tooth Pain", "description": "Ongoing discomfort in or around a tooth is often the first sign worth discussing with your dentist." },
+      "sensitivity": { "title": "Sensitivity to Hot or Cold", "description": "Sharp sensitivity that lingers after hot or cold food and drink can be a useful early signal." },
+      "swelling": { "title": "Swelling or Tenderness", "description": "Swelling, tenderness, or a visible bump near a tooth is always worth a proper clinical assessment." }
+    },
+    "footnote": "If any of this sounds familiar, the next step is simply a consultation — not a diagnosis. Our team will assess your specific case in person before recommending any treatment."
+  },
+  "testimonials": {
+    "eyebrow": "Patient Testimonials",
+    "title": "What Patients Remember",
+    "subtitle": "Beyond the final result, we believe patients should remember the clarity, calm, and consideration of the experience itself.",
+    "verifiedPatient": "Verified Patient",
+    "items": {
+      "item1": { "quote": "I was nervous beforehand, but everything was explained clearly and the treatment itself was far more comfortable than I expected.", "treatment": "Root Canal Treatment" },
+      "item2": { "quote": "The team took the time to explain each step, and the whole appointment felt calm and well organised.", "treatment": "Root Canal Consultation" },
+      "item3": { "quote": "What stood out was how gently and carefully everything was handled, even though I was dreading the visit.", "treatment": "Endodontic Treatment" }
+    }
+  },
+  "consultationCta": {
+    "eyebrow": "Begin Your Journey",
+    "title": "Ready to Feel Comfortable Again?",
+    "description": "Every root canal treatment begins with a comprehensive consultation. We'll assess your tooth, explain the recommended approach, and answer every question before any treatment begins.",
+    "noPressure": "No pressure. Just honest clinical advice.",
+    "bookConsultation": "Book Consultation",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "contactNote": "Our team will personally contact you to arrange your consultation at a convenient time.",
+    "includesLabel": "What your consultation includes",
+    "trustItems": {
+      "duration": "30–45 Minute Consultation",
+      "comfortFocusedPlan": "Comfort-Focused Treatment Plan",
+      "optionsDiscussion": "Treatment Options Discussion",
+      "noObligation": "No Obligation"
+    }
   }
 }

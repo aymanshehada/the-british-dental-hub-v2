@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -20,111 +20,69 @@ import {
   Thermometer,
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
+import type { AppLocale } from '@/i18n/routing'
 
-const pageTitle = 'Root Canal Treatment | The British Dental Hub'
-const pageDescription =
-  'Comfortable, precisely planned root canal treatment for front and back teeth alike, using magnifying loupes and modern rotary instruments in Cairo.'
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: 'rootCanalTreatment.meta' })
+  const pageTitle = t('title')
+  const pageDescription = t('description')
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  keywords: [
-    'Root Canal Treatment',
-    'Endodontics',
-    'Pain-Free Dentistry',
-    'Tooth Pain Relief',
-    'Rotary Endodontics',
-    'British Dental Clinic',
-  ],
-  alternates: {
-    canonical: '/root-canal-treatment',
-  },
-  openGraph: {
+  return {
     title: pageTitle,
     description: pageDescription,
-    url: '/root-canal-treatment',
-    type: 'website',
-    siteName: 'The British Dental Hub',
-    images: [
-      {
-        url: '/images/general-dentistry.png',
-        width: 1200,
-        height: 630,
-        alt: 'Root canal treatment at The British Dental Hub',
-      },
+    keywords: [
+      'Root Canal Treatment',
+      'Endodontics',
+      'Pain-Free Dentistry',
+      'Tooth Pain Relief',
+      'Rotary Endodontics',
+      'British Dental Clinic',
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: pageDescription,
-    images: ['/images/general-dentistry.png'],
-  },
+    alternates: {
+      canonical: '/root-canal-treatment',
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: '/root-canal-treatment',
+      type: 'website',
+      siteName: 'The British Dental Hub',
+      images: [
+        {
+          url: '/images/general-dentistry.png',
+          width: 1200,
+          height: 630,
+          alt: 'Root canal treatment at The British Dental Hub',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+      images: ['/images/general-dentistry.png'],
+    },
+  }
 }
 
-const approachPoints = [
-  {
-    title: 'Magnifying Dental Loupes',
-    description: 'Magnifying dental loupes support finer control and a more precise view throughout every stage of treatment.',
-    icon: Focus,
-  },
-  {
-    title: 'Modern Rotary Instruments',
-    description: 'Rotary instruments help shape and clean the root canal system efficiently, supporting a precise, well-controlled result.',
-    icon: Settings2,
-  },
-  {
-    title: 'Single-Visit Potential',
-    description: 'Depending on clinical assessment, some cases can be completed in a single visit for a more convenient experience.',
-    icon: Clock3,
-  },
-  {
-    title: 'Comfort-Focused Care',
-    description: "We use considered equipment and materials throughout, aiming for treatment that's as comfortable and pain-free as possible.",
-    icon: HeartHandshake,
-  },
-  {
-    title: 'Every Tooth, Front or Back',
-    description: 'Root canal treatment is available for any tooth that needs it, front or back, without exception.',
-    icon: LayoutGrid,
-  },
-]
+const approachPointKeys = ['loupes', 'rotaryInstruments', 'singleVisit', 'comfortFocused', 'everyTooth'] as const
+const approachPointIcons = {
+  loupes: Focus,
+  rotaryInstruments: Settings2,
+  singleVisit: Clock3,
+  comfortFocused: HeartHandshake,
+  everyTooth: LayoutGrid,
+} as const
 
-const signs = [
-  {
-    title: 'Persistent Tooth Pain',
-    description: 'Ongoing discomfort in or around a tooth is often the first sign worth discussing with your dentist.',
-    icon: AlertCircle,
-  },
-  {
-    title: 'Sensitivity to Hot or Cold',
-    description: "Sharp sensitivity that lingers after hot or cold food and drink can be a useful early signal.",
-    icon: Thermometer,
-  },
-  {
-    title: 'Swelling or Tenderness',
-    description: 'Swelling, tenderness, or a visible bump near a tooth is always worth a proper clinical assessment.',
-    icon: ShieldAlert,
-  },
-]
+const signKeys = ['persistentPain', 'sensitivity', 'swelling'] as const
+const signIcons = { persistentPain: AlertCircle, sensitivity: Thermometer, swelling: ShieldAlert } as const
 
-const testimonials = [
-  {
-    quote:
-      'I was nervous beforehand, but everything was explained clearly and the treatment itself was far more comfortable than I expected.',
-    treatment: 'Root Canal Treatment',
-  },
-  {
-    quote:
-      'The team took the time to explain each step, and the whole appointment felt calm and well organised.',
-    treatment: 'Root Canal Consultation',
-  },
-  {
-    quote:
-      'What stood out was how gently and carefully everything was handled, even though I was dreading the visit.',
-    treatment: 'Endodontic Treatment',
-  },
-]
+const testimonialKeys = ['item1', 'item2', 'item3'] as const
 
 function Stars() {
   return (
@@ -136,23 +94,25 @@ function Stars() {
   )
 }
 
-function HeroSection() {
+async function HeroSection() {
+  const t = await getTranslations('rootCanalTreatment.hero')
+
   return (
     <section className="relative isolate overflow-hidden bg-white">
       <Container className="relative grid min-h-[auto] items-center gap-10 pt-28 pb-16 sm:pb-20 lg:min-h-[80vh] lg:grid-cols-[0.5fr_0.5fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
-            Root Canal Treatment in Cairo
+            {t('eyebrow')}
           </p>
 
           <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.94] tracking-[-0.022em] text-[#0A2247]">
-            Comfortable Care
-            <span className="mt-2 block">Without the Worry</span>
+            {t('titleLine1')}
+            <span className="mt-2 block">{t('titleLine2')}</span>
           </h1>
 
           <p className="mt-7 max-w-[560px] text-[1.08rem] leading-8 text-[#495a73] sm:text-[1.16rem] sm:leading-9">
-            Root canal treatment is planned to be as gentle and pain-free as possible, and is available for any tooth that needs it — front or back.
+            {t('subtitle')}
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -160,23 +120,23 @@ function HeroSection() {
               href="/#contact"
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
-              Book a Consultation
+              {t('ctaPrimary')}
               <ArrowRight className="size-4" />
             </Link>
             <Link
               href="#our-approach"
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-[#8a9ab3] bg-white px-8 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-bg"
             >
-              See Our Approach
+              {t('ctaSecondary')}
             </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#5f6f88] sm:gap-x-5">
-            <span>Front and back teeth</span>
+            <span>{t('trust.frontAndBack')}</span>
             <span className="hidden h-px w-4 bg-[#d9e2ed] sm:block" />
-            <span>Magnifying loupes</span>
+            <span>{t('trust.loupes')}</span>
             <span className="hidden h-px w-4 bg-[#d9e2ed] sm:block" />
-            <span>Comfort-focused care</span>
+            <span>{t('trust.comfortFocused')}</span>
           </div>
         </div>
 
@@ -198,19 +158,27 @@ function HeroSection() {
   )
 }
 
-function ApproachSection() {
+async function ApproachSection() {
+  const t = await getTranslations('rootCanalTreatment.approach')
+
+  const approachPoints = approachPointKeys.map((key) => ({
+    title: t(`points.${key}.title`),
+    description: t(`points.${key}.description`),
+    icon: approachPointIcons[key],
+  }))
+
   return (
     <section id="our-approach" className="scroll-mt-28 bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Our Approach
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            Our Approach to Root Canal Treatment
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Every step is planned with precision equipment and a considered, comfort-focused technique.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -241,19 +209,27 @@ function ApproachSection() {
   )
 }
 
-function WhenRecommendedSection() {
+async function WhenRecommendedSection() {
+  const t = await getTranslations('rootCanalTreatment.whenRecommended')
+
+  const signs = signKeys.map((key) => ({
+    title: t(`signs.${key}.title`),
+    description: t(`signs.${key}.description`),
+    icon: signIcons[key],
+  }))
+
   return (
     <section className="bg-white py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            General Awareness
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            When Root Canal Treatment May Be Recommended
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            These general signs are shared for awareness only — a proper diagnosis always requires a clinical examination with your dentist.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -281,26 +257,34 @@ function WhenRecommendedSection() {
         </div>
 
         <p className="mx-auto mt-10 max-w-2xl text-center text-[0.9rem] leading-7 text-[#5f6f88]">
-          If any of this sounds familiar, the next step is simply a consultation — not a diagnosis. Our team will assess your specific case in person before recommending any treatment.
+          {t('footnote')}
         </p>
       </Container>
     </section>
   )
 }
 
-function TestimonialsSection() {
+async function TestimonialsSection() {
+  const t = await getTranslations('rootCanalTreatment.testimonials')
+  const verifiedPatient = t('verifiedPatient')
+
+  const testimonials = testimonialKeys.map((key) => ({
+    quote: t(`items.${key}.quote`),
+    treatment: t(`items.${key}.treatment`),
+  }))
+
   return (
     <section className="bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Patient Testimonials
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            What Patients Remember
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Beyond the final result, we believe patients should remember the clarity, calm, and consideration of the experience itself.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -311,7 +295,7 @@ function TestimonialsSection() {
               "{testimonials[0].quote}"
             </blockquote>
             <div className="mt-4 border-t border-[#e5ebf3] pt-4">
-              <p className="text-[0.95rem] font-semibold text-[#0A2247]">Verified Patient</p>
+              <p className="text-[0.95rem] font-semibold text-[#0A2247]">{verifiedPatient}</p>
               <p className="mt-1 text-sm font-light text-[#495a73]">{testimonials[0].treatment}</p>
             </div>
           </article>
@@ -327,7 +311,7 @@ function TestimonialsSection() {
                   {testimonial.quote}
                 </p>
                 <div className="mt-4 border-t border-[#e5ebf3] pt-3">
-                  <p className="text-sm font-semibold text-[#0A2247]">Verified Patient</p>
+                  <p className="text-sm font-semibold text-[#0A2247]">{verifiedPatient}</p>
                   <p className="mt-1 text-sm font-light text-[#495a73]">{testimonial.treatment}</p>
                 </div>
               </div>
@@ -339,12 +323,14 @@ function TestimonialsSection() {
   )
 }
 
-function ConsultationCtaSection() {
+async function ConsultationCtaSection() {
+  const t = await getTranslations('rootCanalTreatment.consultationCta')
+
   const trustItems = [
-    '30–45 Minute Consultation',
-    'Comfort-Focused Treatment Plan',
-    'Treatment Options Discussion',
-    'No Obligation',
+    t('trustItems.duration'),
+    t('trustItems.comfortFocusedPlan'),
+    t('trustItems.optionsDiscussion'),
+    t('trustItems.noObligation'),
   ]
 
   return (
@@ -356,20 +342,20 @@ function ConsultationCtaSection() {
         <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              Begin Your Journey
+              {t('eyebrow')}
             </p>
             <h2
               id="root-canal-consultation-heading"
               className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
-              Ready to Feel Comfortable Again?
+              {t('title')}
             </h2>
 
             <p className="mt-8 max-w-2xl text-lg font-light leading-8 text-[rgba(10,34,71,0.84)] sm:text-xl">
-              Every root canal treatment begins with a comprehensive consultation. We'll assess your tooth, explain the recommended approach, and answer every question before any treatment begins.
+              {t('description')}
             </p>
             <p className="mt-3 text-[0.95rem] font-light leading-7 text-[rgba(10,34,71,0.78)]">
-              No pressure. Just honest clinical advice.
+              {t('noPressure')}
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -377,7 +363,7 @@ function ConsultationCtaSection() {
                 href="/#contact"
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
-                Book Consultation
+                {t('bookConsultation')}
                 <ArrowRight className="size-4" />
               </Link>
 
@@ -388,18 +374,18 @@ function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
                 <MessageSquare className="size-4 text-brand-red" />
-                Chat on WhatsApp
+                {t('chatWhatsapp')}
               </Link>
             </div>
 
             <p className="mt-5 text-sm font-light leading-7 text-[rgba(10,34,71,0.72)]">
-              Our team will personally contact you to arrange your consultation at a convenient time.
+              {t('contactNote')}
             </p>
           </div>
 
           <div className="rounded-[32px] border border-brand-border bg-brand-bg p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              What your consultation includes
+              {t('includesLabel')}
             </p>
 
             <div className="mt-5 space-y-3.5">
@@ -423,7 +409,7 @@ export default async function RootCanalTreatmentPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  setRequestLocale(locale)
+  setRequestLocale(locale as AppLocale)
 
   return (
     <>
