@@ -7,5 +7,16 @@
     "eyebrow": "Our Services",
     "title": "Comprehensive Dental Care",
     "subtitle": "Every treatment is planned with disciplined technique and measured attention, from routine care to complete smile transformations."
-  }
+  },
+  "services": {
+    "dentalImplants": { "title": "Dental Implants", "description": "Permanent, natural-looking replacements for missing teeth, planned with digital precision." },
+    "porcelainVeneers": { "title": "Porcelain Veneers", "description": "Refined porcelain shells that transform shape, shade, and symmetry for a Hollywood smile." },
+    "checkUpCleaning": { "title": "Check-up & Cleaning", "description": "Routine examinations and professional cleaning to maintain long-term oral health." },
+    "teethWhitening": { "title": "Teeth Whitening", "description": "Safe, effective brightening treatments for a noticeably whiter, more confident smile." },
+    "orthodontics": { "title": "Orthodontics", "description": "Clear aligners and modern techniques to straighten teeth comfortably and discreetly." },
+    "gumTreatment": { "title": "Gum Treatment", "description": "Comprehensive periodontal care, from prevention to advanced gum disease therapy." },
+    "rootCanalTreatment": { "title": "Root Canal Treatment", "description": "Precise, comfortable endodontic care to save damaged teeth and relieve pain at the source." },
+    "childrensDentistry": { "title": "Children's Dentistry", "description": "Gentle, specialised paediatric care designed to keep young smiles healthy and happy." }
+  },
+  "learnMore": "Learn More"
 }

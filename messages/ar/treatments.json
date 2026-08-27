@@ -1,11 +1,22 @@
 {
   "meta": {
-    "title": "Treatments | The British Dental Hub",
-    "description": "Explore the full range of premium dental treatments at The British Dental Hub, from implants and veneers to preventive and family care in New Cairo."
+    "title": "العلاجات | The British Dental Hub",
+    "description": "اكتشف الطيف الكامل من علاجات الأسنان الفاخرة في The British Dental Hub، من الزراعة والفينير إلى الرعاية الوقائية ورعاية الأسرة، في القاهرة الجديدة."
   },
   "hero": {
-    "eyebrow": "Our Services",
-    "title": "Comprehensive Dental Care",
-    "subtitle": "Every treatment is planned with disciplined technique and measured attention, from routine care to complete smile transformations."
-  }
+    "eyebrow": "خدماتنا",
+    "title": "رعاية أسنانٍ متكاملة",
+    "subtitle": "يُخطَّط كل علاج بأسلوبٍ منضبط واهتمامٍ مدروس، من الرعاية الدورية إلى التحول الكامل للابتسامة."
+  },
+  "services": {
+    "dentalImplants": { "title": "زراعة الأسنان", "description": "بدائل دائمة وطبيعية المظهر للأسنان المفقودة، تُخطَّط بدقة رقمية." },
+    "porcelainVeneers": { "title": "قشور الأسنان الخزفية (الفينير)", "description": "قشور خزفية دقيقة تُعيد تشكيل الأسنان ولونها وتناسقها، لابتسامة هوليوودية." },
+    "checkUpCleaning": { "title": "الفحص والتنظيف", "description": "فحوصات دورية وتنظيف احترافي، للحفاظ على صحة الفم على المدى الطويل." },
+    "teethWhitening": { "title": "تبييض الأسنان", "description": "علاجات تبييض آمنة وفعّالة، لابتسامة أكثر إشراقًا وثقة." },
+    "orthodontics": { "title": "تقويم الأسنان", "description": "تقنيات حديثة وتقويم شفاف لتصحيح استقامة الأسنان بأناقة وراحة." },
+    "gumTreatment": { "title": "علاج اللثة", "description": "رعاية شاملة للثة، من الوقاية إلى علاج الحالات المتقدمة." },
+    "rootCanalTreatment": { "title": "علاج العصب", "description": "رعاية دقيقة ومريحة لعلاج قناة الجذر، لإنقاذ الأسنان المتضررة وتسكين الألم من مصدره." },
+    "childrensDentistry": { "title": "طب أسنان الأطفال", "description": "رعاية متخصصة ولطيفة، مصمَّمة للحفاظ على ابتسامة صحية وسعيدة لدى الأطفال." }
+  },
+  "learnMore": "اعرف المزيد"
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -16,114 +16,82 @@ import {
   Sun,
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
+import type { AppLocale } from '@/i18n/routing'
 
-const pageTitle = 'Treatments | The British Dental Hub'
-const pageDescription =
-  'Explore the full range of premium dental treatments at The British Dental Hub, from implants and veneers to preventive and family care in New Cairo.'
+const serviceMeta = [
+  { key: 'dentalImplants', number: '01', icon: Anchor, href: '/dental-implants' },
+  { key: 'porcelainVeneers', number: '02', icon: Sparkles, href: '/porcelain-veneers' },
+  { key: 'checkUpCleaning', number: '03', icon: ClipboardCheck, href: '/check-up-cleaning' },
+  { key: 'teethWhitening', number: '04', icon: Sun, href: '/teeth-whitening' },
+  { key: 'orthodontics', number: '05', icon: AlignCenter, href: '/orthodontics' },
+  { key: 'gumTreatment', number: '06', icon: ShieldCheck, href: '/gum-treatment' },
+  { key: 'rootCanalTreatment', number: '07', icon: Microscope, href: '/root-canal-treatment' },
+  { key: 'childrensDentistry', number: '08', icon: Baby, href: '/children-dentistry' },
+] as const
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  keywords: [
-    'Dental Treatments',
-    'Dental Implants',
-    'Porcelain Veneers',
-    'Teeth Whitening',
-    'Orthodontics',
-    'Gum Treatment',
-    'Root Canal Treatment',
-    'Children’s Dentistry',
-    'British Dental Clinic',
-  ],
-  alternates: {
-    canonical: '/treatments',
-  },
-  openGraph: {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: 'treatments.meta' })
+  const pageTitle = t('title')
+  const pageDescription = t('description')
+
+  return {
     title: pageTitle,
     description: pageDescription,
-    url: '/treatments',
-    type: 'website',
-    siteName: 'The British Dental Hub',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: pageDescription,
-  },
+    keywords: [
+      'Dental Treatments',
+      'Dental Implants',
+      'Porcelain Veneers',
+      'Teeth Whitening',
+      'Orthodontics',
+      'Gum Treatment',
+      'Root Canal Treatment',
+      'Children’s Dentistry',
+      'British Dental Clinic',
+    ],
+    alternates: {
+      canonical: '/treatments',
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: '/treatments',
+      type: 'website',
+      siteName: 'The British Dental Hub',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+    },
+  }
 }
 
-const services = [
-  {
-    number: '01',
-    title: 'Dental Implants',
-    description: 'Permanent, natural-looking replacements for missing teeth, planned with digital precision.',
-    icon: Anchor,
-    href: '/dental-implants',
-  },
-  {
-    number: '02',
-    title: 'Porcelain Veneers',
-    description: 'Refined porcelain shells that transform shape, shade, and symmetry for a Hollywood smile.',
-    icon: Sparkles,
-    href: '/porcelain-veneers',
-  },
-  {
-    number: '03',
-    title: 'Check-up & Cleaning',
-    description: 'Routine examinations and professional cleaning to maintain long-term oral health.',
-    icon: ClipboardCheck,
-    href: '/check-up-cleaning',
-  },
-  {
-    number: '04',
-    title: 'Teeth Whitening',
-    description: 'Safe, effective brightening treatments for a noticeably whiter, more confident smile.',
-    icon: Sun,
-    href: '/teeth-whitening',
-  },
-  {
-    number: '05',
-    title: 'Orthodontics',
-    description: 'Clear aligners and modern techniques to straighten teeth comfortably and discreetly.',
-    icon: AlignCenter,
-    href: '/orthodontics',
-  },
-  {
-    number: '06',
-    title: 'Gum Treatment',
-    description: 'Comprehensive periodontal care, from prevention to advanced gum disease therapy.',
-    icon: ShieldCheck,
-    href: '/gum-treatment',
-  },
-  {
-    number: '07',
-    title: 'Root Canal Treatment',
-    description: 'Precise, comfortable endodontic care to save damaged teeth and relieve pain at the source.',
-    icon: Microscope,
-    href: '/root-canal-treatment',
-  },
-  {
-    number: '08',
-    title: 'Children’s Dentistry',
-    description: 'Gentle, specialised paediatric care designed to keep young smiles healthy and happy.',
-    icon: Baby,
-    href: '/children-dentistry',
-  },
-]
-
-function HeroSection() {
+function HeroSection({
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow: string
+  title: string
+  subtitle: string
+}) {
   return (
     <section className="relative overflow-hidden bg-white pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Our Services
+            {eyebrow}
           </p>
           <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            Comprehensive Dental Care
+            {title}
           </h1>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Every treatment is planned with disciplined technique and measured attention, from routine care to complete smile transformations.
+            {subtitle}
           </p>
         </div>
       </Container>
@@ -131,7 +99,19 @@ function HeroSection() {
   )
 }
 
-function ServicesGridSection() {
+function ServicesGridSection({
+  services,
+  learnMore,
+}: {
+  services: Array<{
+    number: string
+    title: string
+    description: string
+    icon: (typeof serviceMeta)[number]['icon']
+    href: string
+  }>
+  learnMore: string
+}) {
   return (
     <section className="bg-brand-bg py-16 sm:py-20 lg:py-24">
       <Container>
@@ -162,7 +142,7 @@ function ServicesGridSection() {
                 </p>
 
                 <span className="mt-6 inline-flex items-center gap-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-brand-red transition-all duration-300 ease-out group-hover:gap-2.5">
-                  Learn More
+                  {learnMore}
                   <ArrowRight size={14} />
                 </span>
               </Link>
@@ -180,15 +160,25 @@ export default async function TreatmentsPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  setRequestLocale(locale)
+  setRequestLocale(locale as AppLocale)
+
+  const t = await getTranslations('treatments')
+
+  const services = serviceMeta.map((service) => ({
+    number: service.number,
+    icon: service.icon,
+    href: service.href,
+    title: t(`services.${service.key}.title`),
+    description: t(`services.${service.key}.description`),
+  }))
 
   return (
     <>
       <TopBar />
       <Navbar />
       <main className="min-h-screen bg-white">
-      <HeroSection />
-      <ServicesGridSection />
+      <HeroSection eyebrow={t('hero.eyebrow')} title={t('hero.title')} subtitle={t('hero.subtitle')} />
+      <ServicesGridSection services={services} learnMore={t('learnMore')} />
       </main>
       <Footer />
     </>
