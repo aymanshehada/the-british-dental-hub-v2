@@ -5,7 +5,47 @@
   },
   "hero": {
     "eyebrow": "Periodontal Care",
-    "title": "Restore Your Gum Health With Quiet Care",
-    "subtitle": "Comprehensive periodontal care planned around your needs, from preventive maintenance to more advanced gum treatment."
+    "titleLine1": "Restore Your Gum Health",
+    "titleLine2": "With Quiet Care",
+    "subtitle": "Comprehensive periodontal care planned around your needs, from preventive maintenance to more advanced gum treatment — delivered with the same measured, clinician-led approach as every treatment here.",
+    "ctaPrimary": "Book a Consultation"
+  },
+  "types": {
+    "eyebrow": "Treatment Options",
+    "title": "Types of Gum Treatment",
+    "subtitle": "The right approach depends on your specific gum health, from routine maintenance to more advanced periodontal care.",
+    "badge": "Treatment Option",
+    "items": {
+      "deepCleaning": { "title": "Deep Cleaning", "subtitle": "Scaling & Root Planing", "description": "A thorough, deep clean beneath the gumline that removes plaque and tartar to support healthier gums.", "note": "Ideal for: early gum concerns and routine periodontal maintenance" },
+      "laser": { "title": "Laser Gum Treatment", "description": "Laser-assisted treatment, used when clinically appropriate, for greater precision and a more comfortable recovery.", "note": "Ideal for: cases where a targeted, minimally invasive approach is suitable" },
+      "gingivitis": { "title": "Gingivitis & Periodontitis Treatment", "description": "Structured care for gum inflammation at every stage, from early gingivitis to more advanced periodontal disease.", "note": "Ideal for: ongoing gum health, at whatever stage treatment is needed" },
+      "crownLengthening": { "title": "Crown Lengthening", "description": "A precise procedure that reshapes the gumline, often used to prepare for restorative or cosmetic dental work.", "note": "Ideal for: patients preparing for crowns, veneers, or a more balanced smile line" }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Patient Testimonials",
+    "title": "What Patients Remember",
+    "verifiedPatient": "Verified Patient",
+    "items": {
+      "item1": { "quote": "My gums feel healthier than they have in years, and every stage of the treatment was explained clearly and calmly.", "treatment": "Gum Treatment" },
+      "item2": { "quote": "I appreciated how thorough the assessment was before anything was recommended — nothing felt rushed.", "treatment": "Periodontal Consultation" },
+      "item3": { "quote": "The team made a treatment I was nervous about feel genuinely comfortable and well managed.", "treatment": "Deep Cleaning" }
+    }
+  },
+  "consultationCta": {
+    "eyebrow": "Begin Your Journey",
+    "title": "Ready for Healthier Gums?",
+    "description": "Every periodontal treatment begins with a comprehensive consultation. We'll assess your gum health, explain every available option, and shape a personalised treatment plan around your needs.",
+    "noPressure": "No pressure. Just honest clinical advice.",
+    "bookConsultation": "Book Consultation",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "contactNote": "Our team will personally contact you to arrange your consultation at a convenient time.",
+    "includesLabel": "What your consultation includes",
+    "trustItems": {
+      "duration": "30–45 Minute Consultation",
+      "personalisedPlan": "Personalised Treatment Plan",
+      "optionsDiscussion": "Treatment Options Discussion",
+      "noObligation": "No Obligation"
+    }
   }
 }

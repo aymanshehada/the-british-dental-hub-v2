@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -15,86 +15,53 @@ import {
   Zap,
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
+import type { AppLocale } from '@/i18n/routing'
 
-const pageTitle = 'Gum Treatment | The British Dental Hub'
-const pageDescription =
-  'Comprehensive periodontal care in Cairo, from preventive deep cleaning to advanced gum disease treatment and crown lengthening.'
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: 'gumTreatment.meta' })
+  const pageTitle = t('title')
+  const pageDescription = t('description')
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  keywords: [
-    'Gum Treatment',
-    'Periodontics',
-    'Deep Cleaning',
-    'Scaling and Root Planing',
-    'Laser Gum Treatment',
-    'Gingivitis Treatment',
-    'Crown Lengthening',
-    'British Dental Clinic',
-  ],
-  alternates: {
-    canonical: '/gum-treatment',
-  },
-  openGraph: {
+  return {
     title: pageTitle,
     description: pageDescription,
-    url: '/gum-treatment',
-    type: 'website',
-    siteName: 'The British Dental Hub',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: pageDescription,
-  },
+    keywords: [
+      'Gum Treatment',
+      'Periodontics',
+      'Deep Cleaning',
+      'Scaling and Root Planing',
+      'Laser Gum Treatment',
+      'Gingivitis Treatment',
+      'Crown Lengthening',
+      'British Dental Clinic',
+    ],
+    alternates: {
+      canonical: '/gum-treatment',
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: '/gum-treatment',
+      type: 'website',
+      siteName: 'The British Dental Hub',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+    },
+  }
 }
 
-const treatmentTypes = [
-  {
-    title: 'Deep Cleaning',
-    subtitle: 'Scaling & Root Planing',
-    description: 'A thorough, deep clean beneath the gumline that removes plaque and tartar to support healthier gums.',
-    note: 'Ideal for: early gum concerns and routine periodontal maintenance',
-    icon: Sparkles,
-  },
-  {
-    title: 'Laser Gum Treatment',
-    description: 'Laser-assisted treatment, used when clinically appropriate, for greater precision and a more comfortable recovery.',
-    note: 'Ideal for: cases where a targeted, minimally invasive approach is suitable',
-    icon: Zap,
-  },
-  {
-    title: 'Gingivitis & Periodontitis Treatment',
-    description: 'Structured care for gum inflammation at every stage, from early gingivitis to more advanced periodontal disease.',
-    note: 'Ideal for: ongoing gum health, at whatever stage treatment is needed',
-    icon: HeartPulse,
-  },
-  {
-    title: 'Crown Lengthening',
-    description: 'A precise procedure that reshapes the gumline, often used to prepare for restorative or cosmetic dental work.',
-    note: 'Ideal for: patients preparing for crowns, veneers, or a more balanced smile line',
-    icon: Scissors,
-  },
-]
+const typeKeys = ['deepCleaning', 'laser', 'gingivitis', 'crownLengthening'] as const
+const typeIcons = { deepCleaning: Sparkles, laser: Zap, gingivitis: HeartPulse, crownLengthening: Scissors } as const
 
-const testimonials = [
-  {
-    quote:
-      'My gums feel healthier than they have in years, and every stage of the treatment was explained clearly and calmly.',
-    treatment: 'Gum Treatment',
-  },
-  {
-    quote:
-      'I appreciated how thorough the assessment was before anything was recommended — nothing felt rushed.',
-    treatment: 'Periodontal Consultation',
-  },
-  {
-    quote:
-      'The team made a treatment I was nervous about feel genuinely comfortable and well managed.',
-    treatment: 'Deep Cleaning',
-  },
-]
+const testimonialKeys = ['item1', 'item2', 'item3'] as const
 
 function Stars() {
   return (
@@ -106,23 +73,25 @@ function Stars() {
   )
 }
 
-function HeroSection() {
+async function HeroSection() {
+  const t = await getTranslations('gumTreatment.hero')
+
   return (
     <section className="relative overflow-hidden bg-white">
       <Container className="pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
         <div className="mx-auto max-w-3xl text-center">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
-            Periodontal Care
+            {t('eyebrow')}
           </p>
 
           <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            Restore Your Gum Health
-            <span className="mt-2 block">With Quiet Care</span>
+            {t('titleLine1')}
+            <span className="mt-2 block">{t('titleLine2')}</span>
           </h1>
 
           <p className="mt-7 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Comprehensive periodontal care planned around your needs, from preventive maintenance to more advanced gum treatment — delivered with the same measured, clinician-led approach as every treatment here.
+            {t('subtitle')}
           </p>
 
           <div className="mt-9 flex justify-center">
@@ -130,7 +99,7 @@ function HeroSection() {
               href="/#contact"
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
-              Book a Consultation
+              {t('ctaPrimary')}
               <ArrowRight className="size-4" />
             </Link>
           </div>
@@ -140,19 +109,29 @@ function HeroSection() {
   )
 }
 
-function TypesSection() {
+async function TypesSection() {
+  const t = await getTranslations('gumTreatment.types')
+
+  const treatmentTypes = typeKeys.map((key) => ({
+    title: t(`items.${key}.title`),
+    subtitle: key === 'deepCleaning' ? t(`items.${key}.subtitle`) : null,
+    description: t(`items.${key}.description`),
+    note: t(`items.${key}.note`),
+    icon: typeIcons[key],
+  }))
+
   return (
     <section className="bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Treatment Options
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl">
-            Types of Gum Treatment
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73]">
-            The right approach depends on your specific gum health, from routine maintenance to more advanced periodontal care.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -170,7 +149,7 @@ function TypesSection() {
                     <Icon className="size-5" strokeWidth={1.6} />
                   </div>
                   <p className="text-[0.62rem] font-semibold uppercase tracking-[0.24em] text-brand-red">
-                    Treatment Option
+                    {t('badge')}
                   </p>
                 </div>
 
@@ -198,16 +177,24 @@ function TypesSection() {
   )
 }
 
-function TestimonialsSection() {
+async function TestimonialsSection() {
+  const t = await getTranslations('gumTreatment.testimonials')
+  const verifiedPatient = t('verifiedPatient')
+
+  const testimonials = testimonialKeys.map((key) => ({
+    quote: t(`items.${key}.quote`),
+    treatment: t(`items.${key}.treatment`),
+  }))
+
   return (
     <section className="bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Patient Testimonials
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl">
-            What Patients Remember
+            {t('title')}
           </h2>
         </div>
 
@@ -222,7 +209,7 @@ function TestimonialsSection() {
                 {testimonial.quote}
               </p>
               <div className="mt-4 border-t border-[#e5ebf3] pt-3">
-                <p className="text-sm font-semibold text-[#0A2247]">Verified Patient</p>
+                <p className="text-sm font-semibold text-[#0A2247]">{verifiedPatient}</p>
                 <p className="mt-1 text-sm font-light text-[#495a73]">{testimonial.treatment}</p>
               </div>
             </div>
@@ -233,12 +220,14 @@ function TestimonialsSection() {
   )
 }
 
-function ConsultationCtaSection() {
+async function ConsultationCtaSection() {
+  const t = await getTranslations('gumTreatment.consultationCta')
+
   const trustItems = [
-    '30–45 Minute Consultation',
-    'Personalised Treatment Plan',
-    'Treatment Options Discussion',
-    'No Obligation',
+    t('trustItems.duration'),
+    t('trustItems.personalisedPlan'),
+    t('trustItems.optionsDiscussion'),
+    t('trustItems.noObligation'),
   ]
 
   return (
@@ -250,20 +239,20 @@ function ConsultationCtaSection() {
         <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              Begin Your Journey
+              {t('eyebrow')}
             </p>
             <h2
               id="gum-treatment-consultation-heading"
               className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
-              Ready for Healthier Gums?
+              {t('title')}
             </h2>
 
             <p className="mt-8 max-w-2xl text-lg font-light leading-8 text-[rgba(10,34,71,0.84)] sm:text-xl">
-              Every periodontal treatment begins with a comprehensive consultation. We'll assess your gum health, explain every available option, and shape a personalised treatment plan around your needs.
+              {t('description')}
             </p>
             <p className="mt-3 text-[0.95rem] font-light leading-7 text-[rgba(10,34,71,0.78)]">
-              No pressure. Just honest clinical advice.
+              {t('noPressure')}
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -271,7 +260,7 @@ function ConsultationCtaSection() {
                 href="/#contact"
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
-                Book Consultation
+                {t('bookConsultation')}
                 <ArrowRight className="size-4" />
               </Link>
 
@@ -282,18 +271,18 @@ function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
                 <MessageSquare className="size-4 text-brand-red" />
-                Chat on WhatsApp
+                {t('chatWhatsapp')}
               </Link>
             </div>
 
             <p className="mt-5 text-sm font-light leading-7 text-[rgba(10,34,71,0.72)]">
-              Our team will personally contact you to arrange your consultation at a convenient time.
+              {t('contactNote')}
             </p>
           </div>
 
           <div className="rounded-[32px] border border-brand-border bg-white p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              What your consultation includes
+              {t('includesLabel')}
             </p>
 
             <div className="mt-5 space-y-3.5">
@@ -317,7 +306,7 @@ export default async function GumTreatmentPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  setRequestLocale(locale)
+  setRequestLocale(locale as AppLocale)
 
   return (
     <>
