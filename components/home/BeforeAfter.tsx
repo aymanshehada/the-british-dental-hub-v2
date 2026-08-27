@@ -2,28 +2,31 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { AnimatePresence, motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-const cases = [
-  {
-    title: "Implant restoration and smile balance",
-    treatment: "Full planning, implant placement, and aesthetic restoration",
-    before: "/images/case-1-before.png",
-    after: "/images/case-1-after.png",
-    summary: "A carefully phased implant-led treatment plan rebuilt support, symmetry, and confidence while preserving a natural finish.",
-  },
-  {
-    title: "Smile refinement with restorative detailing",
-    treatment: "Comprehensive cosmetic and restorative case finishing",
-    before: "/images/case-2-before.png",
-    after: "/images/case-2-after.png",
-    summary: "Subtle contouring, restorative refinement, and detail-focused finishing created a healthier, more harmonious smile.",
-  },
-]
-
 export default function BeforeAfter() {
+  const t = useTranslations("home.beforeAfter")
   const [activeIndex, setActiveIndex] = useState(0)
+
+  const cases = [
+    {
+      title: t("case1.title"),
+      treatment: t("case1.treatment"),
+      before: "/images/case-1-before.png",
+      after: "/images/case-1-after.png",
+      summary: t("case1.summary"),
+    },
+    {
+      title: t("case2.title"),
+      treatment: t("case2.treatment"),
+      before: "/images/case-2-before.png",
+      after: "/images/case-2-after.png",
+      summary: t("case2.summary"),
+    },
+  ]
+
   const activeCase = cases[activeIndex]
 
   const goPrevious = () => {
@@ -41,15 +44,15 @@ export default function BeforeAfter() {
           <div className="max-w-[640px]">
             <div className="mb-5 flex items-center gap-3">
               <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
-                Before & After
+                {t("eyebrow")}
               </p>
               <span className="h-px w-16 bg-brand-red" />
             </div>
             <h2 className="font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
-              Carefully transformed smiles, presented with complete transparency.
+              {t("title")}
             </h2>
             <p className="mt-5 text-[15px] leading-7 text-[#697b95]">
-              Our clinical approach focuses on healthy foundations and elegant outcomes, with every case planned for longevity as much as aesthetics.
+              {t("subtitle")}
             </p>
           </div>
 
@@ -57,7 +60,7 @@ export default function BeforeAfter() {
             <button
               type="button"
               onClick={goPrevious}
-              aria-label="Previous case"
+              aria-label={t("previousCase")}
               className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#d6deea] bg-white text-[#183668] transition hover:bg-brand-bg"
             >
               <ChevronLeft size={20} />
@@ -65,7 +68,7 @@ export default function BeforeAfter() {
             <button
               type="button"
               onClick={goNext}
-              aria-label="Next case"
+              aria-label={t("nextCase")}
               className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#d6deea] bg-white text-[#183668] transition hover:bg-brand-bg"
             >
               <ChevronRight size={20} />
@@ -86,7 +89,7 @@ export default function BeforeAfter() {
               <div className="grid gap-5 md:grid-cols-2">
                 <div className="overflow-hidden rounded-[10px] border border-[#edf1f6] bg-white">
                   <div className="border-b border-[#edf1f6] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#183668]">
-                    Before
+                    {t("before")}
                   </div>
                   <Image
                     src={activeCase.before}
@@ -98,7 +101,7 @@ export default function BeforeAfter() {
                 </div>
                 <div className="overflow-hidden rounded-[10px] border border-[#edf1f6] bg-white">
                   <div className="border-b border-[#edf1f6] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#183668]">
-                    After
+                    {t("after")}
                   </div>
                   <Image
                     src={activeCase.after}
@@ -112,7 +115,7 @@ export default function BeforeAfter() {
 
               <div className="flex flex-col justify-center rounded-[10px] bg-brand-bg p-5 sm:p-6">
                 <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">
-                  Featured Case {activeIndex + 1}
+                  {t("featuredCase", { number: activeIndex + 1 })}
                 </p>
                 <h3 className="mt-4 font-heading text-[2.3rem] leading-[1.04] tracking-[-0.03em] text-[#183668]">
                   {activeCase.title}
@@ -135,7 +138,7 @@ export default function BeforeAfter() {
                       }`}
                     >
                       <span className="block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-red">
-                        Case {index + 1}
+                        {t("caseLabel", { number: index + 1 })}
                       </span>
                       <span className="mt-2 block text-base font-semibold leading-6">{item.title}</span>
                     </button>

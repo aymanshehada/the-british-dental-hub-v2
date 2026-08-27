@@ -1,34 +1,37 @@
 "use client"
 
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 import { ArrowRight, Award, Stethoscope } from "lucide-react"
 
-const doctors = [
-  {
-    name: "Dr. Ayman Chhada",
-    role: "Implant & Aesthetic Dentistry Specialist",
-    image: "/images/dr-ayman-chhada.jpg",
-    qualifications: [
-      "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)",
-      "Currently pursuing MRD and MProstho (Prosthodontics)",
-      "King's College London certificate: \"The Art and Science of Indirect Aesthetic Restorations\"",
-    ],
-    icon: Award,
-  },
-  {
-    name: "Dr. Issam Kayali",
-    role: "Implant & Aesthetic Dentistry Specialist",
-    image: "/images/dr-issam-kayali.jpg",
-    qualifications: [
-      "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)",
-    ],
-    icon: Stethoscope,
-  },
-]
-
 export default function Doctors() {
+  const t = useTranslations("home.doctors")
+
+  const doctors = [
+    {
+      name: t("dr1.name"),
+      role: t("role"),
+      image: "/images/dr-ayman-chhada.jpg",
+      qualifications: [
+        t("dr1.qualification1"),
+        t("dr1.qualification2"),
+        t("dr1.qualification3"),
+      ],
+      icon: Award,
+    },
+    {
+      name: t("dr2.name"),
+      role: t("role"),
+      image: "/images/dr-issam-kayali.jpg",
+      qualifications: [
+        t("dr2.qualification1"),
+      ],
+      icon: Stethoscope,
+    },
+  ]
+
   return (
     <section id="doctors" className="bg-white py-12 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
@@ -42,16 +45,16 @@ export default function Doctors() {
           <div className="max-w-[640px]">
             <div className="mb-5 flex items-center gap-3">
               <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
-                Clinical Team
+                {t("eyebrow")}
               </p>
               <span className="h-px w-16 bg-brand-red" />
             </div>
             <h2 className="font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
-              Specialists chosen for precision, judgement, and calm patient care.
+              {t("title")}
             </h2>
           </div>
           <p className="max-w-[360px] text-[15px] leading-7 text-[#697b95]">
-            Every treatment pathway is supported by clinicians who combine disciplined technique with the warmth and communication expected from a premium healthcare brand.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -109,7 +112,7 @@ export default function Doctors() {
             href="#contact"
             className="inline-flex h-[41px] items-center gap-3 rounded-[3px] border border-[#8a9ab3] px-5 text-[14px] font-medium text-[#183668] transition hover:bg-brand-bg"
           >
-            Request a Consultation
+            {t("requestConsultation")}
             <ArrowRight size={16} />
           </Link>
         </div>

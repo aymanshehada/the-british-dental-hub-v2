@@ -1,4 +1,7 @@
 {
+  "topBar": {
+    "location": "New Cairo, Egypt"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",

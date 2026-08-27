@@ -5,7 +5,182 @@
   },
   "hero": {
     "eyebrow": "Premium Dentistry in Cairo",
-    "title": "British Standards Exceptional Care",
-    "subtitle": "Experience world-class dentistry in a modern, comfortable environment with advanced technology and a patient-first approach."
+    "titleLine1": "British Standards",
+    "titleLine2": "Exceptional Care",
+    "subtitle": "Experience world-class dentistry in a modern, comfortable environment with advanced technology and a patient-first approach.",
+    "bookAppointment": "Book Appointment",
+    "chatWhatsapp": "Chat on WhatsApp"
+  },
+  "trustBar": {
+    "britishStandards": {
+      "title": "British Standards",
+      "description": "International protocols and sterilization standards"
+    },
+    "advancedTechnology": {
+      "title": "Advanced Technology",
+      "description": "Digital dentistry for precision, comfort, and predictability"
+    },
+    "expertTeam": {
+      "title": "Expert Team",
+      "description": "Specialized dentists with years of experience"
+    },
+    "patientCare": {
+      "title": "Patient Care",
+      "description": "Personalized care in a warm and comfortable environment"
+    }
+  },
+  "treatments": {
+    "eyebrow": "Our Treatments",
+    "title": "Comprehensive Dental Solutions Tailored to You",
+    "subtitle": "From routine care to complete smile makeovers, we offer a wide range of treatments using the latest techniques and materials.",
+    "exploreAll": "Explore All Treatments",
+    "learnMore": "Learn More",
+    "dentalImplants": {
+      "title": "Dental Implants",
+      "description": "Permanent, natural-looking replacements for missing teeth, planned with digital precision."
+    },
+    "porcelainVeneers": {
+      "title": "Porcelain Veneers",
+      "description": "Refined porcelain shells that transform shape, shade, and symmetry for a Hollywood smile."
+    },
+    "teethWhitening": {
+      "title": "Teeth Whitening",
+      "description": "Safe, effective brightening treatments for a noticeably whiter, more confident smile."
+    },
+    "orthodontics": {
+      "title": "Orthodontics",
+      "description": "Clear aligners and modern techniques to straighten teeth comfortably and discreetly."
+    },
+    "gumTreatment": {
+      "title": "Gum Treatment",
+      "description": "Comprehensive periodontal care, from prevention to advanced gum disease therapy."
+    },
+    "childrensDentistry": {
+      "title": "Children’s Dentistry",
+      "description": "Gentle, specialised paediatric care designed to keep young smiles healthy and happy."
+    }
+  },
+  "whyChooseUs": {
+    "eyebrow": "Why Choose Us",
+    "title": "British-inspired dental care with true clinical depth.",
+    "subtitle": "Calm surroundings, measured protocols, and a patient experience designed around clarity and trust.",
+    "values": {
+      "britishStandards": {
+        "title": "British Standards",
+        "description": "Measured protocols, consistent sterilisation, and a clinical approach shaped by clarity and discipline."
+      },
+      "digitalDentistry": {
+        "title": "Digital Dentistry",
+        "description": "Modern scanning and planning tools are used to improve comfort, precision, and decision-making."
+      },
+      "transparentPlanning": {
+        "title": "Transparent Planning",
+        "description": "Every recommendation is explained carefully, so treatment feels informed, calm, and fully tailored."
+      }
+    },
+    "banner": "Luxury care, thoughtfully timed around your life",
+    "features": {
+      "consultations": {
+        "title": "Consultations with clarity",
+        "description": "You receive a clear diagnosis, carefully explained options, and a treatment roadmap shaped around your priorities."
+      },
+      "technology": {
+        "title": "Technology with purpose",
+        "description": "Digital workflows are used where they improve accuracy, comfort, and decision-making rather than for show."
+      },
+      "protocols": {
+        "title": "Safe, structured protocols",
+        "description": "From sterilisation to follow-up, every detail is delivered with measured attention and consistent standards."
+      }
+    },
+    "journeyEyebrow": "The patient journey",
+    "journeySubtitle": "What happens after you book is clearly structured from your first consultation through long-term care.",
+    "journeySteps": {
+      "consultation": {
+        "title": "Consultation",
+        "description": "A calm first visit focused on your concerns, goals, and clinical assessment."
+      },
+      "digitalScan": {
+        "title": "Digital Scan",
+        "description": "Detailed digital records are gathered to guide accurate diagnosis and planning."
+      },
+      "treatmentPlan": {
+        "title": "Personalised Treatment Plan",
+        "description": "Your options are explained clearly with a plan shaped around your priorities."
+      },
+      "precisionTreatment": {
+        "title": "Precision Treatment",
+        "description": "Treatment is delivered with measured technique, comfort, and attention to detail."
+      },
+      "reviewCare": {
+        "title": "Review & Long-term Care",
+        "description": "Follow-up and ongoing care help protect results and support lasting oral health."
+      }
+    }
+  },
+  "beforeAfter": {
+    "eyebrow": "Before & After",
+    "title": "Carefully transformed smiles, presented with complete transparency.",
+    "subtitle": "Our clinical approach focuses on healthy foundations and elegant outcomes, with every case planned for longevity as much as aesthetics.",
+    "previousCase": "Previous case",
+    "nextCase": "Next case",
+    "before": "Before",
+    "after": "After",
+    "featuredCase": "Featured Case {number}",
+    "caseLabel": "Case {number}",
+    "case1": {
+      "title": "Implant restoration and smile balance",
+      "treatment": "Full planning, implant placement, and aesthetic restoration",
+      "summary": "A carefully phased implant-led treatment plan rebuilt support, symmetry, and confidence while preserving a natural finish."
+    },
+    "case2": {
+      "title": "Smile refinement with restorative detailing",
+      "treatment": "Comprehensive cosmetic and restorative case finishing",
+      "summary": "Subtle contouring, restorative refinement, and detail-focused finishing created a healthier, more harmonious smile."
+    }
+  },
+  "doctors": {
+    "eyebrow": "Clinical Team",
+    "title": "Specialists chosen for precision, judgement, and calm patient care.",
+    "subtitle": "Every treatment pathway is supported by clinicians who combine disciplined technique with the warmth and communication expected from a premium healthcare brand.",
+    "role": "Implant & Aesthetic Dentistry Specialist",
+    "requestConsultation": "Request a Consultation",
+    "dr1": {
+      "name": "Dr. Ayman Chhada",
+      "qualification1": "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)",
+      "qualification2": "Currently pursuing MRD and MProstho (Prosthodontics)",
+      "qualification3": "King's College London certificate: \"The Art and Science of Indirect Aesthetic Restorations\""
+    },
+    "dr2": {
+      "name": "Dr. Issam Kayali",
+      "qualification1": "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Patient Stories",
+    "title": "Trust built through thoughtful care and beautifully delivered results.",
+    "patientStoryLabel": "Patient Story",
+    "item1": {
+      "quote": "From the first consultation, everything felt calm, organised, and genuinely premium. The treatment plan was explained beautifully and the result exceeded my expectations.",
+      "treatment": "Smile Design and Restorative Care"
+    },
+    "item2": {
+      "quote": "The level of professionalism is exceptional. The team made implant treatment feel structured and reassuring, and the aftercare was every bit as thoughtful as the procedure itself.",
+      "treatment": "Dental Implants"
+    },
+    "item3": {
+      "quote": "A clinic that feels luxurious without losing its medical credibility. Every detail, from communication to comfort, was handled with real precision.",
+      "treatment": "Cosmetic and Preventive Care"
+    }
+  },
+  "cta": {
+    "eyebrow": "Book Consultation",
+    "title": "Begin your treatment journey with a clinic that values detail.",
+    "subtitle": "Speak with our team about implants, smile design, orthodontics, or preventive care and receive a consultation experience that feels clear, private, and expertly guided.",
+    "bookAppointment": "Book Appointment",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "callUs": "Call Us",
+    "location": "Location",
+    "address": "Gateway Mall, D1 Clinics, New Cairo"
   }
 }

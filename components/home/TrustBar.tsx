@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { ShieldCheck, Stethoscope } from "lucide-react"
 
@@ -41,28 +42,30 @@ function HandHoldingHeartIcon({ className }: { className?: string }) {
 }
 
 export default function TrustBar() {
+  const t = useTranslations("home.trustBar")
+
   const trustItems = [
     {
-      title: "British Standards",
-      description: "International protocols and sterilization standards",
+      title: t("britishStandards.title"),
+      description: t("britishStandards.description"),
       icon: ShieldCheck,
       iconClassName: "text-white",
     },
     {
-      title: "Advanced Technology",
-      description: "Digital dentistry for precision, comfort, and predictability",
+      title: t("advancedTechnology.title"),
+      description: t("advancedTechnology.description"),
       icon: ToothIcon,
       iconClassName: "text-white",
     },
     {
-      title: "Expert Team",
-      description: "Specialized dentists with years of experience",
+      title: t("expertTeam.title"),
+      description: t("expertTeam.description"),
       icon: Stethoscope,
       iconClassName: "text-white",
     },
     {
-      title: "Patient Care",
-      description: "Personalized care in a warm and comfortable environment",
+      title: t("patientCare.title"),
+      description: t("patientCare.description"),
       icon: HandHoldingHeartIcon,
       iconClassName: "text-white",
     },

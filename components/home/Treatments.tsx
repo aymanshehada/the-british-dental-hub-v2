@@ -1,44 +1,47 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 import { AlignCenter, Anchor, ArrowRight, Baby, ShieldCheck, Sparkles, Sun } from "lucide-react"
 
 export default function Treatments() {
+  const t = useTranslations("home.treatments")
+
   const treatments = [
     {
-      title: "Dental Implants",
-      description: "Permanent, natural-looking replacements for missing teeth, planned with digital precision.",
+      title: t("dentalImplants.title"),
+      description: t("dentalImplants.description"),
       icon: Anchor,
       href: "/dental-implants",
     },
     {
-      title: "Porcelain Veneers",
-      description: "Refined porcelain shells that transform shape, shade, and symmetry for a Hollywood smile.",
+      title: t("porcelainVeneers.title"),
+      description: t("porcelainVeneers.description"),
       icon: Sparkles,
       href: "/porcelain-veneers",
     },
     {
-      title: "Teeth Whitening",
-      description: "Safe, effective brightening treatments for a noticeably whiter, more confident smile.",
+      title: t("teethWhitening.title"),
+      description: t("teethWhitening.description"),
       icon: Sun,
       href: "/teeth-whitening",
     },
     {
-      title: "Orthodontics",
-      description: "Clear aligners and modern techniques to straighten teeth comfortably and discreetly.",
+      title: t("orthodontics.title"),
+      description: t("orthodontics.description"),
       icon: AlignCenter,
       href: "/orthodontics",
     },
     {
-      title: "Gum Treatment",
-      description: "Comprehensive periodontal care, from prevention to advanced gum disease therapy.",
+      title: t("gumTreatment.title"),
+      description: t("gumTreatment.description"),
       icon: ShieldCheck,
       href: "/gum-treatment",
     },
     {
-      title: "Children’s Dentistry",
-      description: "Gentle, specialised paediatric care designed to keep young smiles healthy and happy.",
+      title: t("childrensDentistry.title"),
+      description: t("childrensDentistry.description"),
       icon: Baby,
       href: "/children-dentistry",
     },
@@ -56,25 +59,24 @@ export default function Treatments() {
         >
           <div className="mb-6 flex items-center gap-3">
             <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
-              Our Treatments
+              {t("eyebrow")}
             </p>
             <span className="h-px w-16 bg-brand-red" />
           </div>
 
           <h2 className="max-w-[820px] font-heading text-[3.15rem] leading-[1.04] tracking-[-0.04em] text-[#183668] lg:text-[3.72rem]">
-            Comprehensive Dental Solutions Tailored to You
+            {t("title")}
           </h2>
 
           <p className="mt-6 max-w-[660px] text-[16px] leading-[1.9] text-[#697b95]">
-            From routine care to complete smile makeovers, we offer a wide range of
-            treatments using the latest techniques and materials.
+            {t("subtitle")}
           </p>
 
           <Link
             href="/treatments"
             className="mt-7 inline-flex h-[46px] items-center gap-3 rounded-[3px] border border-[#8a9ab3] px-7 text-[14px] font-medium text-[#183668] transition-all duration-300 ease-out hover:bg-brand-bg hover:shadow-[0_5px_12px_rgba(15,39,78,0.045)]"
           >
-            Explore All Treatments
+            {t("exploreAll")}
             <ArrowRight size={16} />
           </Link>
         </motion.div>
@@ -109,7 +111,7 @@ export default function Treatments() {
                   </p>
 
                   <span className="mt-5 inline-flex items-center gap-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-brand-red transition-all duration-300 ease-out group-hover:gap-2.5">
-                    Learn More
+                    {t("learnMore")}
                     <ArrowRight size={14} />
                   </span>
                 </Link>

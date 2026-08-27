@@ -1,67 +1,70 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { BadgeCheck, Clock3, ShieldCheck, Sparkles } from "lucide-react"
 
-const features = [
-  {
-    title: "Consultations with clarity",
-    description: "You receive a clear diagnosis, carefully explained options, and a treatment roadmap shaped around your priorities.",
-    icon: BadgeCheck,
-  },
-  {
-    title: "Technology with purpose",
-    description: "Digital workflows are used where they improve accuracy, comfort, and decision-making rather than for show.",
-    icon: Sparkles,
-  },
-  {
-    title: "Safe, structured protocols",
-    description: "From sterilisation to follow-up, every detail is delivered with measured attention and consistent standards.",
-    icon: ShieldCheck,
-  },
-]
-
-const values = [
-  {
-    title: "British Standards",
-    description: "Measured protocols, consistent sterilisation, and a clinical approach shaped by clarity and discipline.",
-  },
-  {
-    title: "Digital Dentistry",
-    description: "Modern scanning and planning tools are used to improve comfort, precision, and decision-making.",
-  },
-  {
-    title: "Transparent Planning",
-    description: "Every recommendation is explained carefully, so treatment feels informed, calm, and fully tailored.",
-  },
-]
-
 export default function WhyChooseUs() {
+  const t = useTranslations("home.whyChooseUs")
+
+  const features = [
+    {
+      title: t("features.consultations.title"),
+      description: t("features.consultations.description"),
+      icon: BadgeCheck,
+    },
+    {
+      title: t("features.technology.title"),
+      description: t("features.technology.description"),
+      icon: Sparkles,
+    },
+    {
+      title: t("features.protocols.title"),
+      description: t("features.protocols.description"),
+      icon: ShieldCheck,
+    },
+  ]
+
+  const values = [
+    {
+      title: t("values.britishStandards.title"),
+      description: t("values.britishStandards.description"),
+    },
+    {
+      title: t("values.digitalDentistry.title"),
+      description: t("values.digitalDentistry.description"),
+    },
+    {
+      title: t("values.transparentPlanning.title"),
+      description: t("values.transparentPlanning.description"),
+    },
+  ]
+
   const journeySteps = [
     {
       number: "01",
-      title: "Consultation",
-      description: "A calm first visit focused on your concerns, goals, and clinical assessment.",
+      title: t("journeySteps.consultation.title"),
+      description: t("journeySteps.consultation.description"),
     },
     {
       number: "02",
-      title: "Digital Scan",
-      description: "Detailed digital records are gathered to guide accurate diagnosis and planning.",
+      title: t("journeySteps.digitalScan.title"),
+      description: t("journeySteps.digitalScan.description"),
     },
     {
       number: "03",
-      title: "Personalised Treatment Plan",
-      description: "Your options are explained clearly with a plan shaped around your priorities.",
+      title: t("journeySteps.treatmentPlan.title"),
+      description: t("journeySteps.treatmentPlan.description"),
     },
     {
       number: "04",
-      title: "Precision Treatment",
-      description: "Treatment is delivered with measured technique, comfort, and attention to detail.",
+      title: t("journeySteps.precisionTreatment.title"),
+      description: t("journeySteps.precisionTreatment.description"),
     },
     {
       number: "05",
-      title: "Review & Long-term Care",
-      description: "Follow-up and ongoing care help protect results and support lasting oral health.",
+      title: t("journeySteps.reviewCare.title"),
+      description: t("journeySteps.reviewCare.description"),
     },
   ]
 
@@ -77,15 +80,15 @@ export default function WhyChooseUs() {
         >
           <div className="mb-6 flex items-center gap-3">
             <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
-              Why Choose Us
+              {t("eyebrow")}
             </p>
             <span className="h-px w-16 bg-brand-red" />
           </div>
           <h2 className="max-w-[340px] font-heading text-[3rem] leading-[1.03] tracking-[-0.036em] text-[#183668] lg:text-[3.28rem]">
-            British-inspired dental care with true clinical depth.
+            {t("title")}
           </h2>
           <p className="mt-6 max-w-[330px] text-[15px] leading-[1.9] text-[#697b95]">
-            Calm surroundings, measured protocols, and a patient experience designed around clarity and trust.
+            {t("subtitle")}
           </p>
 
           <div className="mt-8 grid gap-3">
@@ -114,7 +117,7 @@ export default function WhyChooseUs() {
         >
           <div className="flex items-center gap-3 rounded-[10px] bg-white px-4 py-3.5 text-[12px] font-semibold uppercase tracking-[0.17em] text-[#183668] shadow-[0_4px_12px_rgba(15,39,78,0.045)]">
             <Clock3 size={16} className="shrink-0 text-brand-red" />
-            Luxury care, thoughtfully timed around your life
+            {t("banner")}
           </div>
 
           <div className="mt-6 grid gap-4 lg:grid-cols-3 lg:gap-4.5">
@@ -149,10 +152,10 @@ export default function WhyChooseUs() {
 
           <div className="mt-6 rounded-[16px] bg-[#0A2247] p-6 text-white lg:p-7">
             <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">
-              The patient journey
+              {t("journeyEyebrow")}
             </p>
             <div className="mt-3.5 max-w-[540px] text-[15px] leading-[1.8] text-white/72">
-              What happens after you book is clearly structured from your first consultation through long-term care.
+              {t("journeySubtitle")}
             </div>
             <div className="relative mt-6 grid gap-3.5 lg:grid-cols-5 lg:gap-3.5">
               <div className="absolute left-[8%] right-[8%] top-[33px] hidden h-px bg-white/12 lg:block" />

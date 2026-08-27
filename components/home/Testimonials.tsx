@@ -1,30 +1,30 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Quote, Star } from "lucide-react"
 
-const testimonials = [
-  {
-    quote:
-      "From the first consultation, everything felt calm, organised, and genuinely premium. The treatment plan was explained beautifully and the result exceeded my expectations.",
-    patient: "Patient Story",
-    treatment: "Smile Design and Restorative Care",
-  },
-  {
-    quote:
-      "The level of professionalism is exceptional. The team made implant treatment feel structured and reassuring, and the aftercare was every bit as thoughtful as the procedure itself.",
-    patient: "Patient Story",
-    treatment: "Dental Implants",
-  },
-  {
-    quote:
-      "A clinic that feels luxurious without losing its medical credibility. Every detail, from communication to comfort, was handled with real precision.",
-    patient: "Patient Story",
-    treatment: "Cosmetic and Preventive Care",
-  },
-]
-
 export default function Testimonials() {
+  const t = useTranslations("home.testimonials")
+
+  const testimonials = [
+    {
+      quote: t("item1.quote"),
+      patient: t("patientStoryLabel"),
+      treatment: t("item1.treatment"),
+    },
+    {
+      quote: t("item2.quote"),
+      patient: t("patientStoryLabel"),
+      treatment: t("item2.treatment"),
+    },
+    {
+      quote: t("item3.quote"),
+      patient: t("patientStoryLabel"),
+      treatment: t("item3.treatment"),
+    },
+  ]
+
   return (
     <section id="patient-stories" className="bg-brand-bg py-12 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
@@ -36,10 +36,10 @@ export default function Testimonials() {
           className="mx-auto max-w-[760px] text-center"
         >
           <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
-            Patient Stories
+            {t("eyebrow")}
           </p>
           <h2 className="mt-5 font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
-            Trust built through thoughtful care and beautifully delivered results.
+            {t("title")}
           </h2>
         </motion.div>
 

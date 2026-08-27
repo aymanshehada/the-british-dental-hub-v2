@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server"
 import { Link } from "@/i18n/navigation"
 import { MapPin, MessageCircle, Phone } from "lucide-react"
 
@@ -19,7 +20,8 @@ function InstagramIcon() {
   )
 }
 
-export default function TopBar() {
+export default async function TopBar() {
+  const t = await getTranslations("common.topBar")
   const socialLinks = [
     {
       href: "https://www.facebook.com/share/1BuVGxN8H3/",
@@ -44,7 +46,7 @@ export default function TopBar() {
         <div className="flex flex-wrap items-center gap-7 text-[13px] font-medium text-white/94 sm:gap-12 lg:gap-14">
           <div className="flex items-center gap-2.5">
             <MapPin size={13} className="text-brand-red" />
-            <span>New Cairo, Egypt</span>
+            <span>{t("location")}</span>
           </div>
 
           <Link

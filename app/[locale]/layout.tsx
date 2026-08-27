@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Manrope, El_Messiri, Tajawal } from 'next/font/google'
+import { Cormorant_Garamond, Manrope, Cairo, Tajawal } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -25,11 +25,11 @@ const manrope = Manrope({
   subsets: ['latin'],
 })
 
-// Arabic typefaces — an elegant modern serif for headings (mirroring
+// Arabic typefaces — a refined display sans for headings (mirroring
 // Cormorant's role) and a clean sans for body text (mirroring Manrope's
 // role). Loaded unconditionally (required by next/font) but only applied
 // when locale === 'ar'.
-const elMessiri = El_Messiri({
+const cairo = Cairo({
   variable: '--font-heading-ar',
   subsets: ['arabic'],
   weight: ['400', '500', '600', '700'],
@@ -187,7 +187,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isArabic ? 'rtl' : 'ltr'}
-      className={`${cormorant.variable} ${manrope.variable} ${elMessiri.variable} ${tajawal.variable} bg-background`}
+      className={`${cormorant.variable} ${manrope.variable} ${cairo.variable} ${tajawal.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         <script
