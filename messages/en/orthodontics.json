@@ -5,7 +5,77 @@
   },
   "hero": {
     "eyebrow": "Orthodontics in Cairo",
-    "title": "Straighten Your Smile With Quiet Precision",
-    "subtitle": "Orthodontic treatment is planned calmly and precisely, with a personalised treatment timeline built around your goals — for adults, teenagers, and children alike."
+    "titleLine1": "Straighten Your Smile",
+    "titleLine2": "With Quiet Precision",
+    "subtitle": "Orthodontic treatment is planned calmly and precisely, with a personalised treatment timeline built around your goals — for adults, teenagers, and children alike.",
+    "ctaPrimary": "Book Orthodontic Consultation",
+    "ctaSecondary": "Explore Treatment Options",
+    "trust": {
+      "allAges": "All ages welcome",
+      "digitalPlanning": "Digital treatment planning",
+      "discreetCare": "Discreet, clinician-led care"
+    }
+  },
+  "types": {
+    "eyebrow": "Treatment Options",
+    "title": "Types of Orthodontic Treatment",
+    "subtitle": "The right system is selected around your clinical needs, daily lifestyle, and how discreet you'd like treatment to be.",
+    "badge": "Treatment Option",
+    "items": {
+      "metal": { "title": "Metal Braces", "description": "A traditional, highly effective system of metal brackets and wires that reliably corrects a wide range of orthodontic cases.", "note": "Ideal for: comprehensive correction and dependable, well-proven results" },
+      "ceramic": { "title": "Ceramic Braces", "description": "Tooth-coloured ceramic brackets that work the same way as traditional braces while blending naturally with your smile.", "note": "Ideal for: effective correction with a more discreet appearance" },
+      "aligners": { "title": "Clear Aligners", "description": "A series of clear, removable trays that gradually and comfortably guide teeth into their ideal position.", "note": "Ideal for: a virtually invisible, flexible everyday option" }
+    }
+  },
+  "digitalPlanning": {
+    "eyebrow": "Digital Workflow",
+    "title": "Digital Treatment Planning",
+    "subtitle": "A digital workflow helps map your treatment precisely before it begins, reducing uncertainty and guiding a considered result.",
+    "badge": "Precision planning",
+    "cardTitle": "A plan mapped before treatment starts",
+    "cardDescription": "An intraoral scan replaces messy impression trays, diagnostic X-rays give a clear picture of teeth and jaw structure, and specialised software brings it all together into a personalised treatment plan.",
+    "stages": {
+      "scanning": { "title": "Intraoral Digital Scanning", "description": "A digital scanner captures precise, detailed impressions of your teeth without messy trays." },
+      "xrays": { "title": "Diagnostic X-Rays", "description": "X-rays help assess tooth position, roots, and jaw structure to guide safe, accurate planning." },
+      "planning": { "title": "Digital Treatment Planning", "description": "Your case is mapped in specialised planning software to shape a considered, personalised approach." }
+    }
+  },
+  "whoIsItFor": {
+    "eyebrow": "All Ages Welcome",
+    "title": "Who Is Orthodontic Treatment For",
+    "subtitle": "Orthodontic care is planned around your stage of life, not a single one-size-fits-all approach.",
+    "audiences": {
+      "adults": { "title": "Adults", "description": "It's never too late to improve alignment and confidence — many adults choose treatment for comfort as much as appearance." },
+      "teenagers": { "title": "Teenagers", "description": "The most common stage for orthodontic treatment, planned around growth and everyday school life." },
+      "children": { "title": "Children", "description": "Early evaluation helps guide healthy jaw and bite development from a young age." }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Patient Testimonials",
+    "title": "What Patients Remember",
+    "subtitle": "Beyond the final result, we believe patients should remember the clarity, calm, and consideration of the experience itself.",
+    "verifiedPatient": "Verified Patient",
+    "items": {
+      "item1": { "quote": "The whole process felt calm and clearly explained from the very first visit. I always knew exactly what to expect at each stage.", "treatment": "Orthodontic Consultation" },
+      "item2": { "quote": "Every option was explained patiently, and I felt fully involved in choosing the right treatment for me.", "treatment": "Adult Orthodontic Treatment" },
+      "item3": { "quote": "The team made the entire experience comfortable, from the first scan to the final review.", "treatment": "Teen Orthodontic Care" },
+      "item4": { "quote": "I appreciated how carefully everything was planned before we even started.", "treatment": "Clear Aligner Treatment" }
+    }
+  },
+  "consultationCta": {
+    "eyebrow": "Begin Your Journey",
+    "title": "Ready to Straighten Your Smile?",
+    "description": "Every successful orthodontic treatment begins with a comprehensive consultation. We'll assess your smile, explain every available option, and shape a personalised treatment timeline around your clinical needs.",
+    "noPressure": "No pressure. Just honest clinical advice.",
+    "bookConsultation": "Book Consultation",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "contactNote": "Our team will personally contact you to arrange your consultation at a convenient time.",
+    "includesLabel": "What your consultation includes",
+    "trustItems": {
+      "duration": "30–45 Minute Consultation",
+      "personalisedTimeline": "Personalised Treatment Timeline",
+      "optionsDiscussion": "Treatment Options Discussion",
+      "noObligation": "No Obligation"
+    }
   }
 }

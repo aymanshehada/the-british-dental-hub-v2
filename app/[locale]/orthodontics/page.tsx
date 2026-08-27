@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -21,132 +21,68 @@ import {
   Wrench,
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
+import type { AppLocale } from '@/i18n/routing'
 
-const pageTitle = 'Orthodontics | The British Dental Hub'
-const pageDescription =
-  'Straighten your smile with metal braces, ceramic braces, or clear aligners, planned with digital precision for adults, teenagers, and children in Cairo.'
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: 'orthodontics.meta' })
+  const pageTitle = t('title')
+  const pageDescription = t('description')
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  keywords: [
-    'Orthodontics',
-    'Braces',
-    'Metal Braces',
-    'Ceramic Braces',
-    'Clear Aligners',
-    'Invisalign',
-    'Teeth Straightening',
-    'British Dental Clinic',
-  ],
-  alternates: {
-    canonical: '/orthodontics',
-  },
-  openGraph: {
+  return {
     title: pageTitle,
     description: pageDescription,
-    url: '/orthodontics',
-    type: 'website',
-    siteName: 'The British Dental Hub',
-    images: [
-      {
-        url: '/images/clear-aligners.png',
-        width: 1200,
-        height: 630,
-        alt: 'Clear orthodontic aligner at The British Dental Hub',
-      },
+    keywords: [
+      'Orthodontics',
+      'Braces',
+      'Metal Braces',
+      'Ceramic Braces',
+      'Clear Aligners',
+      'Invisalign',
+      'Teeth Straightening',
+      'British Dental Clinic',
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: pageDescription,
-    images: ['/images/clear-aligners.png'],
-  },
+    alternates: {
+      canonical: '/orthodontics',
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: '/orthodontics',
+      type: 'website',
+      siteName: 'The British Dental Hub',
+      images: [
+        {
+          url: '/images/clear-aligners.png',
+          width: 1200,
+          height: 630,
+          alt: 'Clear orthodontic aligner at The British Dental Hub',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+      images: ['/images/clear-aligners.png'],
+    },
+  }
 }
 
-const treatmentTypes = [
-  {
-    title: 'Metal Braces',
-    description:
-      'A traditional, highly effective system of metal brackets and wires that reliably corrects a wide range of orthodontic cases.',
-    note: 'Ideal for: comprehensive correction and dependable, well-proven results',
-    icon: Wrench,
-  },
-  {
-    title: 'Ceramic Braces',
-    description:
-      'Tooth-coloured ceramic brackets that work the same way as traditional braces while blending naturally with your smile.',
-    note: 'Ideal for: effective correction with a more discreet appearance',
-    icon: Gem,
-  },
-  {
-    title: 'Clear Aligners',
-    description:
-      'A series of clear, removable trays that gradually and comfortably guide teeth into their ideal position.',
-    note: 'Ideal for: a virtually invisible, flexible everyday option',
-    icon: Layers,
-  },
-]
+const typeKeys = ['metal', 'ceramic', 'aligners'] as const
+const typeIcons = { metal: Wrench, ceramic: Gem, aligners: Layers } as const
 
-const planningStages = [
-  {
-    title: 'Intraoral Digital Scanning',
-    description: 'A digital scanner captures precise, detailed impressions of your teeth without messy trays.',
-    icon: ScanSearch,
-  },
-  {
-    title: 'Diagnostic X-Rays',
-    description: 'X-rays help assess tooth position, roots, and jaw structure to guide safe, accurate planning.',
-    icon: ScanLine,
-  },
-  {
-    title: 'Digital Treatment Planning',
-    description: 'Your case is mapped in specialised planning software to shape a considered, personalised approach.',
-    icon: Workflow,
-  },
-]
+const planningStageKeys = ['scanning', 'xrays', 'planning'] as const
+const planningStageIcons = { scanning: ScanSearch, xrays: ScanLine, planning: Workflow } as const
 
-const audiences = [
-  {
-    title: 'Adults',
-    description: "It's never too late to improve alignment and confidence — many adults choose treatment for comfort as much as appearance.",
-    icon: UserRound,
-  },
-  {
-    title: 'Teenagers',
-    description: 'The most common stage for orthodontic treatment, planned around growth and everyday school life.',
-    icon: GraduationCap,
-  },
-  {
-    title: 'Children',
-    description: 'Early evaluation helps guide healthy jaw and bite development from a young age.',
-    icon: Baby,
-  },
-]
+const audienceKeys = ['adults', 'teenagers', 'children'] as const
+const audienceIcons = { adults: UserRound, teenagers: GraduationCap, children: Baby } as const
 
-const testimonials = [
-  {
-    quote:
-      'The whole process felt calm and clearly explained from the very first visit. I always knew exactly what to expect at each stage.',
-    treatment: 'Orthodontic Consultation',
-  },
-  {
-    quote:
-      'Every option was explained patiently, and I felt fully involved in choosing the right treatment for me.',
-    treatment: 'Adult Orthodontic Treatment',
-  },
-  {
-    quote:
-      'The team made the entire experience comfortable, from the first scan to the final review.',
-    treatment: 'Teen Orthodontic Care',
-  },
-  {
-    quote:
-      'I appreciated how carefully everything was planned before we even started.',
-    treatment: 'Clear Aligner Treatment',
-  },
-]
+const testimonialKeys = ['item1', 'item2', 'item3', 'item4'] as const
 
 function Stars() {
   return (
@@ -158,23 +94,25 @@ function Stars() {
   )
 }
 
-function HeroSection() {
+async function HeroSection() {
+  const t = await getTranslations('orthodontics.hero')
+
   return (
     <section className="relative isolate overflow-hidden bg-white">
       <Container className="relative grid min-h-[auto] items-center gap-10 pt-28 pb-16 sm:pb-20 lg:min-h-[80vh] lg:grid-cols-[0.5fr_0.5fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
-            Orthodontics in Cairo
+            {t('eyebrow')}
           </p>
 
           <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.94] tracking-[-0.022em] text-[#0A2247]">
-            Straighten Your Smile
-            <span className="mt-2 block">With Quiet Precision</span>
+            {t('titleLine1')}
+            <span className="mt-2 block">{t('titleLine2')}</span>
           </h1>
 
           <p className="mt-7 max-w-[560px] text-[1.08rem] leading-8 text-[#495a73] sm:text-[1.16rem] sm:leading-9">
-            Orthodontic treatment is planned calmly and precisely, with a personalised treatment timeline built around your goals — for adults, teenagers, and children alike.
+            {t('subtitle')}
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -182,23 +120,23 @@ function HeroSection() {
               href="/#contact"
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
-              Book Orthodontic Consultation
+              {t('ctaPrimary')}
               <ArrowRight className="size-4" />
             </Link>
             <Link
               href="#treatment-types"
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-[#8a9ab3] bg-white px-8 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-bg"
             >
-              Explore Treatment Options
+              {t('ctaSecondary')}
             </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#5f6f88] sm:gap-x-5">
-            <span>All ages welcome</span>
+            <span>{t('trust.allAges')}</span>
             <span className="hidden h-px w-4 bg-[#d9e2ed] sm:block" />
-            <span>Digital treatment planning</span>
+            <span>{t('trust.digitalPlanning')}</span>
             <span className="hidden h-px w-4 bg-[#d9e2ed] sm:block" />
-            <span>Discreet, clinician-led care</span>
+            <span>{t('trust.discreetCare')}</span>
           </div>
         </div>
 
@@ -220,19 +158,28 @@ function HeroSection() {
   )
 }
 
-function TypesSection() {
+async function TypesSection() {
+  const t = await getTranslations('orthodontics.types')
+
+  const treatmentTypes = typeKeys.map((key) => ({
+    title: t(`items.${key}.title`),
+    description: t(`items.${key}.description`),
+    note: t(`items.${key}.note`),
+    icon: typeIcons[key],
+  }))
+
   return (
     <section id="treatment-types" className="scroll-mt-28 bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Treatment Options
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            Types of Orthodontic Treatment
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            The right system is selected around your clinical needs, daily lifestyle, and how discreet you'd like treatment to be.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -250,7 +197,7 @@ function TypesSection() {
                     <Icon className="size-5" strokeWidth={1.6} />
                   </div>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
-                    Treatment Option
+                    {t('badge')}
                   </p>
                 </div>
 
@@ -275,19 +222,27 @@ function TypesSection() {
   )
 }
 
-function DigitalPlanningSection() {
+async function DigitalPlanningSection() {
+  const t = await getTranslations('orthodontics.digitalPlanning')
+
+  const planningStages = planningStageKeys.map((key) => ({
+    title: t(`stages.${key}.title`),
+    description: t(`stages.${key}.description`),
+    icon: planningStageIcons[key],
+  }))
+
   return (
     <section className="bg-white py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Digital Workflow
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            Digital Treatment Planning
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            A digital workflow helps map your treatment precisely before it begins, reducing uncertainty and guiding a considered result.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -298,15 +253,15 @@ function DigitalPlanningSection() {
             </div>
             <div>
               <span className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brand-red">
-                Precision planning
+                {t('badge')}
               </span>
               <h3 className="mt-1 text-[1.5rem] font-semibold leading-tight text-[#0A2247] sm:text-[1.7rem]">
-                A plan mapped before treatment starts
+                {t('cardTitle')}
               </h3>
             </div>
           </div>
           <p className="mt-4 max-w-2xl text-[0.95rem] font-light leading-7 text-[#495a73] sm:text-[1rem]">
-            An intraoral scan replaces messy impression trays, diagnostic X-rays give a clear picture of teeth and jaw structure, and specialised software brings it all together into a personalised treatment plan.
+            {t('cardDescription')}
           </p>
 
           <div className="mt-8 grid gap-5 sm:grid-cols-3">
@@ -337,19 +292,27 @@ function DigitalPlanningSection() {
   )
 }
 
-function WhoIsItForSection() {
+async function WhoIsItForSection() {
+  const t = await getTranslations('orthodontics.whoIsItFor')
+
+  const audiences = audienceKeys.map((key) => ({
+    title: t(`audiences.${key}.title`),
+    description: t(`audiences.${key}.description`),
+    icon: audienceIcons[key],
+  }))
+
   return (
     <section className="bg-brand-bg py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            All Ages Welcome
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            Who Is Orthodontic Treatment For
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Orthodontic care is planned around your stage of life, not a single one-size-fits-all approach.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -380,19 +343,27 @@ function WhoIsItForSection() {
   )
 }
 
-function TestimonialsSection() {
+async function TestimonialsSection() {
+  const t = await getTranslations('orthodontics.testimonials')
+  const verifiedPatient = t('verifiedPatient')
+
+  const testimonials = testimonialKeys.map((key) => ({
+    quote: t(`items.${key}.quote`),
+    treatment: t(`items.${key}.treatment`),
+  }))
+
   return (
     <section className="bg-white py-24 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Patient Testimonials
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            What Patients Remember
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Beyond the final result, we believe patients should remember the clarity, calm, and consideration of the experience itself.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -403,7 +374,7 @@ function TestimonialsSection() {
               "{testimonials[0].quote}"
             </blockquote>
             <div className="mt-4 border-t border-[#e5ebf3] pt-4">
-              <p className="text-[0.95rem] font-semibold text-[#0A2247]">Verified Patient</p>
+              <p className="text-[0.95rem] font-semibold text-[#0A2247]">{verifiedPatient}</p>
               <p className="mt-1 text-sm font-light text-[#495a73]">{testimonials[0].treatment}</p>
             </div>
           </article>
@@ -419,7 +390,7 @@ function TestimonialsSection() {
                   {testimonial.quote}
                 </p>
                 <div className="mt-4 border-t border-[#e5ebf3] pt-3">
-                  <p className="text-sm font-semibold text-[#0A2247]">Verified Patient</p>
+                  <p className="text-sm font-semibold text-[#0A2247]">{verifiedPatient}</p>
                   <p className="mt-1 text-sm font-light text-[#495a73]">{testimonial.treatment}</p>
                 </div>
               </div>
@@ -431,12 +402,14 @@ function TestimonialsSection() {
   )
 }
 
-function ConsultationCtaSection() {
+async function ConsultationCtaSection() {
+  const t = await getTranslations('orthodontics.consultationCta')
+
   const trustItems = [
-    '30–45 Minute Consultation',
-    'Personalised Treatment Timeline',
-    'Treatment Options Discussion',
-    'No Obligation',
+    t('trustItems.duration'),
+    t('trustItems.personalisedTimeline'),
+    t('trustItems.optionsDiscussion'),
+    t('trustItems.noObligation'),
   ]
 
   return (
@@ -448,20 +421,20 @@ function ConsultationCtaSection() {
         <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              Begin Your Journey
+              {t('eyebrow')}
             </p>
             <h2
               id="orthodontics-consultation-heading"
               className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
-              Ready to Straighten Your Smile?
+              {t('title')}
             </h2>
 
             <p className="mt-8 max-w-2xl text-lg font-light leading-8 text-[rgba(10,34,71,0.84)] sm:text-xl">
-              Every successful orthodontic treatment begins with a comprehensive consultation. We'll assess your smile, explain every available option, and shape a personalised treatment timeline around your clinical needs.
+              {t('description')}
             </p>
             <p className="mt-3 text-[0.95rem] font-light leading-7 text-[rgba(10,34,71,0.78)]">
-              No pressure. Just honest clinical advice.
+              {t('noPressure')}
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -469,7 +442,7 @@ function ConsultationCtaSection() {
                 href="/#contact"
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
-                Book Consultation
+                {t('bookConsultation')}
                 <ArrowRight className="size-4" />
               </Link>
 
@@ -480,18 +453,18 @@ function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
                 <MessageSquare className="size-4 text-brand-red" />
-                Chat on WhatsApp
+                {t('chatWhatsapp')}
               </Link>
             </div>
 
             <p className="mt-5 text-sm font-light leading-7 text-[rgba(10,34,71,0.72)]">
-              Our team will personally contact you to arrange your consultation at a convenient time.
+              {t('contactNote')}
             </p>
           </div>
 
           <div className="rounded-[32px] border border-brand-border bg-white p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              What your consultation includes
+              {t('includesLabel')}
             </p>
 
             <div className="mt-5 space-y-3.5">
@@ -515,7 +488,7 @@ export default async function OrthodonticsPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  setRequestLocale(locale)
+  setRequestLocale(locale as AppLocale)
 
   return (
     <>
