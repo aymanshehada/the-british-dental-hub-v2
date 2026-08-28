@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import type { AppLocale } from '@/i18n/routing'
+import { getLocaleAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -47,9 +48,7 @@ export async function generateMetadata({
       'Children Dental Fillings',
       'British Dental Clinic',
     ],
-    alternates: {
-      canonical: '/children-dentistry',
-    },
+    alternates: getLocaleAlternates('/children-dentistry', locale as AppLocale),
     openGraph: {
       title: pageTitle,
       description: pageDescription,

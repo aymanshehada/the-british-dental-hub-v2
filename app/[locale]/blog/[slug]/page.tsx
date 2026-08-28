@@ -18,6 +18,8 @@ import {
   getReadingTime,
   getRelatedArticles,
 } from '@/lib/blog/articles'
+import type { AppLocale } from '@/i18n/routing'
+import { getLocaleAlternates } from '@/lib/seo'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
 const siteName = 'The British Dental Hub'
@@ -31,7 +33,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { locale, slug } = await params
   const article = getArticleBySlug(slug)
 
   if (!article) {
@@ -43,9 +45,7 @@ export async function generateMetadata({
   return {
     title,
     description: article.dek,
-    alternates: {
-      canonical: `/blog/${article.slug}`,
-    },
+    alternates: getLocaleAlternates(`/blog/${article.slug}`, locale as AppLocale),
     openGraph: {
       title,
       description: article.dek,
@@ -150,16 +150,21 @@ export default async function BlogArticlePage({
   const related = getRelatedArticles(article, 3)
   const readingTime = getReadingTime(article)
 
+  const reviewerPerson = {
+    '@type': 'Person',
+    name: article.medicalReviewer,
+    jobTitle: 'Implant & Aesthetic Dentistry Specialist',
+    description: 'BDS, Implant Fellowship (The British University in Egypt & University of Sheffield), MFDS Part 1 RCS Edinburgh',
+  }
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.dek,
     datePublished: article.publishedAt,
-    author: {
-      '@type': 'Organization',
-      name: article.author,
-    },
+    author: reviewerPerson,
+    reviewedBy: reviewerPerson,
     publisher: {
       '@type': 'Organization',
       name: siteName,

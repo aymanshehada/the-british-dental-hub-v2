@@ -11,6 +11,7 @@ import { Container } from '@/components/ui/container'
 import { PremiumCard } from '@/components/ui/premium-card'
 import { SectionWrapper } from '@/components/ui/section-wrapper'
 import type { AppLocale } from '@/i18n/routing'
+import { getLocaleAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -33,9 +34,7 @@ export async function generateMetadata({
       'Luxury Cosmetic Dentistry',
       'British Dental Clinic',
     ],
-    alternates: {
-      canonical: '/porcelain-veneers',
-    },
+    alternates: getLocaleAlternates('/porcelain-veneers', locale as AppLocale),
     openGraph: {
       title: pageTitle,
       description: pageDescription,

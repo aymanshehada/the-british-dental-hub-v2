@@ -7,29 +7,37 @@ import { Container } from '@/components/ui/container'
 import { CategoryFilter } from '@/components/blog/CategoryFilter'
 import { ArticleCard, FeaturedArticleCard } from '@/components/blog/ArticleCard'
 import { getArticlesByCategory, getCategoryLabel } from '@/lib/blog/articles'
+import type { AppLocale } from '@/i18n/routing'
+import { getLocaleAlternates } from '@/lib/seo'
 
 const pageTitle = 'The BDH Journal | The British Dental Hub'
 const pageDescription =
   'Clear, clinically reviewed articles to help you understand your dental treatment options, from The British Dental Hub in New Cairo.'
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  alternates: {
-    canonical: '/blog',
-  },
-  openGraph: {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+
+  return {
     title: pageTitle,
     description: pageDescription,
-    url: '/blog',
-    type: 'website',
-    siteName: 'The British Dental Hub',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: pageDescription,
-  },
+    alternates: getLocaleAlternates('/blog', locale as AppLocale),
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: '/blog',
+      type: 'website',
+      siteName: 'The British Dental Hub',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+    },
+  }
 }
 
 export default async function BlogPage({

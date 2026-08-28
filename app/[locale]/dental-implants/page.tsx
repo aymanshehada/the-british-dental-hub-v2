@@ -10,6 +10,7 @@ import { JourneySection } from '@/components/implant/JourneySection'
 import { DigitalDentistrySection } from '@/components/implant/DigitalDentistrySection'
 import { PatientStoriesSection } from '@/components/implant/PatientStoriesSection'
 import type { AppLocale } from '@/i18n/routing'
+import { getLocaleAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -33,9 +34,7 @@ export async function generateMetadata({
       'British Dental Clinic',
       'Cosmetic Dentistry',
     ],
-    alternates: {
-      canonical: '/dental-implants',
-    },
+    alternates: getLocaleAlternates('/dental-implants', locale as AppLocale),
     openGraph: {
       title: pageTitle,
       description: pageDescription,

@@ -15,8 +15,8 @@ export function getCategoryLabel(slug: string): string {
   return categories.find((category) => category.slug === slug)?.label ?? slug
 }
 
-const DEFAULT_AUTHOR = 'The British Dental Hub Editorial Team'
-const DEFAULT_REVIEWER = 'The British Dental Hub Clinical Team'
+const DEFAULT_AUTHOR = 'Dr. Ayman Chhada, BDS'
+const DEFAULT_REVIEWER = 'Dr. Ayman Chhada, BDS'
 
 export const articles: BlogArticle[] = [
   {
