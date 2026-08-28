@@ -9,21 +9,8 @@ export async function HeroSection() {
 
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/implant-treatment.png"
-          alt="Premium dental implant crown at The British Dental Hub"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[58%_center]"
-        />
-      </div>
-      <div className="absolute inset-0 bg-[linear-gradient(104deg,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.75)_38%,rgba(255,255,255,0.25)_62%,rgba(255,255,255,0.05)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(255,255,255,0.44)_0%,transparent_36%)]" />
-
-      <Container className="relative flex min-h-[90vh] items-center pt-24 pb-16 sm:pb-20 lg:pt-28 lg:pb-24">
-        <div className="w-full max-w-[620px]">
+      <Container className="relative grid min-h-[auto] items-center gap-10 pt-28 pb-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
+        <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
             {t('eyebrow')}
@@ -60,6 +47,20 @@ export async function HeroSection() {
             <span>{t('trust.digitalPlanning')}</span>
             <span className="hidden h-px w-4 bg-[#d9e2ed] sm:block" />
             <span>{t('trust.aftercare')}</span>
+          </div>
+        </div>
+
+        <div className="flex w-full items-center justify-center lg:justify-end">
+          <div className="w-full overflow-hidden rounded-[28px] border border-[#e5ebf3] shadow-[0_20px_50px_rgba(15,39,78,0.08)]">
+            <Image
+              src="/images/implant-treatment.png"
+              alt="Premium dental implant crown at The British Dental Hub"
+              width={1400}
+              height={1100}
+              priority
+              sizes="(max-width: 1024px) 92vw, 58vw"
+              className="h-auto w-full object-cover"
+            />
           </div>
         </div>
       </Container>
