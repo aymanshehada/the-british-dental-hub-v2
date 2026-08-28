@@ -93,16 +93,12 @@ async function HeroSection() {
   const t = await getTranslations('porcelainVeneers.hero')
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#050d1f]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(104deg,rgba(5,13,31,0.86)_0%,rgba(5,13,31,0.72)_38%,rgba(5,13,31,0.3)_62%,rgba(5,13,31,0.16)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(5,13,31,0.44)_0%,transparent_36%)]" />
-
-      <Container className="relative grid min-h-[850px] items-center gap-10 pt-24 pb-16 sm:pb-20 lg:min-h-[90vh] lg:grid-cols-[0.41fr_0.59fr] lg:pt-28 lg:pb-24">
+    <section className="relative isolate overflow-hidden bg-white">
+      <Container className="relative grid min-h-[auto] items-center gap-10 pt-28 pb-16 sm:pb-20 lg:min-h-[80vh] lg:grid-cols-[0.41fr_0.59fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[620px]">
-          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-white/68">
+          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#5f6f88]">
             The British Dental Hub
-            <span className="mt-1 block text-[0.58rem] tracking-[0.24em] text-white/56">
+            <span className="mt-1 block text-[0.58rem] tracking-[0.24em] text-[#8a95a8]">
               {t('tagline')}
             </span>
           </p>
@@ -112,12 +108,12 @@ async function HeroSection() {
             {t('eyebrow')}
           </p>
 
-          <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.92] tracking-[-0.022em] text-white">
+          <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.92] tracking-[-0.022em] text-[#0A2247]">
             {t('titleLine1')}
             <span className="mt-3 block">{t('titleLine2')}</span>
           </h1>
 
-          <p className="mt-7 max-w-[600px] text-[1.08rem] leading-8 text-white/84 sm:text-[1.16rem] sm:leading-9">
+          <p className="mt-7 max-w-[600px] text-[1.08rem] leading-8 text-[#495a73] sm:text-[1.16rem] sm:leading-9">
             {t('subtitle')}
           </p>
 
@@ -133,31 +129,33 @@ async function HeroSection() {
             <PremiumButton
               href="#veneers-journey"
               variant="outline"
-              className="min-w-[280px] justify-center border-white/30 bg-white/5 text-white hover:bg-white/10"
+              className="min-w-[280px] justify-center"
             >
               {t('ctaSecondary')}
             </PremiumButton>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/72 sm:gap-x-5">
+          <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#5f6f88] sm:gap-x-5">
             <span>{t('trust.digitalSmileDesign')}</span>
-            <span className="hidden h-px w-4 bg-white/30 sm:block" />
+            <span className="hidden h-px w-4 bg-[#d9e2ed] sm:block" />
             <span>{t('trust.premiumMaterials')}</span>
-            <span className="hidden h-px w-4 bg-white/30 sm:block" />
+            <span className="hidden h-px w-4 bg-[#d9e2ed] sm:block" />
             <span>{t('trust.discreetCare')}</span>
           </div>
         </div>
 
         <div className="flex w-full items-center justify-center lg:justify-end">
-          <Image
-            src="/images/veneers-layering.png"
-            alt="Porcelain veneer layering artwork"
-            width={1800}
-            height={1400}
-            priority
-            sizes="(max-width: 1024px) 92vw, 58vw"
-            className="h-auto w-[90%] object-contain"
-          />
+          <div className="w-[90%] overflow-hidden rounded-[28px] border border-[#e5ebf3] shadow-[0_20px_50px_rgba(15,39,78,0.08)]">
+            <Image
+              src="/images/veneers-showcase.png"
+              alt="Premium porcelain veneers at The British Dental Hub"
+              width={1800}
+              height={1400}
+              priority
+              sizes="(max-width: 1024px) 92vw, 58vw"
+              className="h-auto w-full object-cover"
+            />
+          </div>
         </div>
       </Container>
     </section>

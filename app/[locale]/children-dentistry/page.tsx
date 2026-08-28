@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import {
   AlertCircle,
@@ -114,6 +115,18 @@ async function HeroSection() {
               <ArrowRight className="size-4" />
             </Link>
           </div>
+        </div>
+
+        <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-[28px] border border-[#e5ebf3] shadow-[0_20px_50px_rgba(15,39,78,0.08)]">
+          <Image
+            src="/images/children-dentistry.png"
+            alt="Gentle children's dentistry at The British Dental Hub"
+            width={1600}
+            height={900}
+            priority
+            sizes="(max-width: 1024px) 92vw, 896px"
+            className="h-auto w-full object-cover"
+          />
         </div>
       </Container>
     </section>
