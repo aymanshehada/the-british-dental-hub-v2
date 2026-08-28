@@ -61,9 +61,22 @@ async function HeroSection() {
   const t = await getTranslations('teethWhitening.hero')
 
   return (
-    <section className="relative overflow-hidden bg-white">
-      <Container className="pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
-        <div className="mx-auto max-w-3xl text-center">
+    <section className="relative isolate overflow-hidden bg-white">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/teeth-whitening.png"
+          alt="Professional teeth whitening at The British Dental Hub"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[58%_center]"
+        />
+      </div>
+      <div className="absolute inset-0 bg-[linear-gradient(104deg,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.75)_38%,rgba(255,255,255,0.25)_62%,rgba(255,255,255,0.05)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(255,255,255,0.44)_0%,transparent_36%)]" />
+
+      <Container className="relative flex min-h-[90vh] items-center pt-24 pb-16 sm:pb-20 lg:pt-28 lg:pb-24">
+        <div className="w-full max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
             {t('eyebrow')}
@@ -73,11 +86,11 @@ async function HeroSection() {
             {t('title')}
           </h1>
 
-          <p className="mt-7 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
+          <p className="mt-7 max-w-[560px] text-lg font-light leading-8 text-[#495a73] sm:text-xl">
             {t('subtitle')}
           </p>
 
-          <div className="mt-9 flex justify-center">
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/#contact"
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
@@ -86,18 +99,6 @@ async function HeroSection() {
               <ArrowRight className="size-4" />
             </Link>
           </div>
-        </div>
-
-        <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-[28px] border border-[#e5ebf3] shadow-[0_20px_50px_rgba(15,39,78,0.08)]">
-          <Image
-            src="/images/teeth-whitening.png"
-            alt="Professional teeth whitening at The British Dental Hub"
-            width={1600}
-            height={900}
-            priority
-            sizes="(max-width: 1024px) 92vw, 896px"
-            className="h-auto w-full object-cover"
-          />
         </div>
       </Container>
     </section>
