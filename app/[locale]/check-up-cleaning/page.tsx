@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -15,96 +15,77 @@ import {
   ScanLine,
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
+import type { AppLocale } from '@/i18n/routing'
 
-const pageTitle = 'Check-up & Cleaning | The British Dental Hub'
-const pageDescription =
-  'A comprehensive, visual, evidence-based dental assessment in Cairo, built around digital diagnostics and a clear, personalised treatment plan.'
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: 'checkUpCleaning.meta' })
+  const pageTitle = t('title')
+  const pageDescription = t('description')
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  keywords: [
-    'Dental Check-up',
-    'Dental Cleaning',
-    'Digital Dental Assessment',
-    'Preventive Dentistry',
-    'Oral Health Examination',
-    'British Dental Clinic',
-  ],
-  alternates: {
-    canonical: '/check-up-cleaning',
-  },
-  openGraph: {
+  return {
     title: pageTitle,
     description: pageDescription,
-    url: '/check-up-cleaning',
-    type: 'website',
-    siteName: 'The British Dental Hub',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: pageDescription,
-  },
+    keywords: [
+      'Dental Check-up',
+      'Dental Cleaning',
+      'Digital Dental Assessment',
+      'Preventive Dentistry',
+      'Oral Health Examination',
+      'British Dental Clinic',
+    ],
+    alternates: {
+      canonical: '/check-up-cleaning',
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: '/check-up-cleaning',
+      type: 'website',
+      siteName: 'The British Dental Hub',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+    },
+  }
 }
 
-const steps = [
-  {
-    number: '01',
-    title: 'Clinical Examination',
-    description: 'A comprehensive review of your teeth, gums, and overall oral health, forming the foundation of every visit.',
-    icon: ClipboardCheck,
-  },
-  {
-    number: '02',
-    title: 'Diagnostic Imaging',
-    description: 'Dental X-rays are used as part of the diagnostic assessment where clinically appropriate, not as a routine step for every patient.',
-    icon: ScanLine,
-  },
-  {
-    number: '03',
-    title: 'Intraoral Photography',
-    description: 'An intraoral camera captures precise, detailed images of your teeth and gums for a clearer picture.',
-    icon: Camera,
-  },
-  {
-    number: '04',
-    title: 'Diagnosis',
-    description: "Findings are reviewed and explained clearly, so you understand exactly what we're seeing.",
-    icon: FileSearch,
-  },
-  {
-    number: '05',
-    title: 'Personalised Treatment Plan',
-    description: 'Any recommendations — or the absence of them — are explained visually, using your own images and findings.',
-    icon: FileCheck2,
-  },
-]
+const stepKeys = ['examination', 'imaging', 'photography', 'diagnosis', 'treatmentPlan'] as const
+const stepNumbers = ['01', '02', '03', '04', '05'] as const
+const stepIcons = {
+  examination: ClipboardCheck,
+  imaging: ScanLine,
+  photography: Camera,
+  diagnosis: FileSearch,
+  treatmentPlan: FileCheck2,
+} as const
 
-const recordItems = [
-  'Examination results',
-  'Clinical diagnosis and assessment',
-  'Intraoral photographs',
-  'Relevant X-rays, where taken',
-  'A personalised treatment and prevention plan',
-]
+const recordItemKeys = ['examinationResults', 'diagnosis', 'photographs', 'xrays', 'plan'] as const
 
-function HeroSection() {
+async function HeroSection() {
+  const t = await getTranslations('checkUpCleaning.hero')
+
   return (
     <section className="relative overflow-hidden bg-white">
       <Container className="pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
         <div className="mx-auto max-w-3xl text-center">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
-            Check-up & Cleaning
+            {t('eyebrow')}
           </p>
 
           <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            A Comprehensive, Visual, Evidence-Based Assessment
+            {t('title')}
           </h1>
 
           <p className="mt-7 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            Every check-up goes beyond a quick look — it's a considered, digitally supported assessment of your whole mouth, explained clearly at every step.
+            {t('subtitle')}
           </p>
 
           <div className="mt-9 flex justify-center">
@@ -112,7 +93,7 @@ function HeroSection() {
               href="/#contact"
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
-              Book a Consultation
+              {t('ctaPrimary')}
               <ArrowRight className="size-4" />
             </Link>
           </div>
@@ -122,19 +103,28 @@ function HeroSection() {
   )
 }
 
-function DigitalAssessmentSection() {
+async function DigitalAssessmentSection() {
+  const t = await getTranslations('checkUpCleaning.digitalAssessment')
+
+  const steps = stepKeys.map((key, index) => ({
+    number: stepNumbers[index],
+    title: t(`steps.${key}.title`),
+    description: t(`steps.${key}.description`),
+    icon: stepIcons[key],
+  }))
+
   return (
     <section className="bg-brand-bg py-20 sm:py-24 lg:py-28">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            Our Process
+            {t('eyebrow')}
           </p>
           <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl">
-            Your Digital Dental Assessment
+            {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73]">
-            A clear, five-stage process that helps you see and understand exactly what we see, before any treatment is discussed.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -170,7 +160,7 @@ function DigitalAssessmentSection() {
 
         <div className="mt-10 rounded-[18px] border border-brand-border bg-white px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
           <p className="text-[0.95rem] leading-7">
-            Not every visit requires the same diagnostic imaging — X-rays and other investigations are recommended individually, based on clinical need, not as a standard step for every patient.
+            {t('footnote')}
           </p>
         </div>
       </Container>
@@ -178,26 +168,30 @@ function DigitalAssessmentSection() {
   )
 }
 
-function DigitalRecordSection() {
+async function DigitalRecordSection() {
+  const t = await getTranslations('checkUpCleaning.digitalRecord')
+
+  const recordItems = recordItemKeys.map((key) => t(`items.${key}`))
+
   return (
     <section className="bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              For New Patients
+              {t('eyebrow')}
             </p>
             <h2 className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl">
-              Your Personalised Digital Dental Record
+              {t('title')}
             </h2>
             <p className="mt-6 max-w-lg text-lg font-light leading-8 text-[#495a73]">
-              From your first visit, everything is gathered into one clear, personal record — so your care stays informed and consistent over time.
+              {t('subtitle')}
             </p>
           </div>
 
           <div className="rounded-[28px] border border-brand-border bg-brand-bg p-7 shadow-[0_2px_10px_rgba(15,39,78,0.035)] sm:p-8">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-brand-red">
-              Your record includes
+              {t('includesLabel')}
             </p>
             <div className="mt-5 space-y-3.5">
               {recordItems.map((item) => (
@@ -214,12 +208,14 @@ function DigitalRecordSection() {
   )
 }
 
-function ConsultationCtaSection() {
+async function ConsultationCtaSection() {
+  const t = await getTranslations('checkUpCleaning.consultationCta')
+
   const trustItems = [
-    '30–45 Minute Consultation',
-    'Digital Diagnostic Assessment',
-    'Treatment Options Discussion',
-    'No Obligation',
+    t('trustItems.duration'),
+    t('trustItems.digitalAssessment'),
+    t('trustItems.optionsDiscussion'),
+    t('trustItems.noObligation'),
   ]
 
   return (
@@ -231,20 +227,20 @@ function ConsultationCtaSection() {
         <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              Begin Your Journey
+              {t('eyebrow')}
             </p>
             <h2
               id="checkup-consultation-heading"
               className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
-              Ready for Your Assessment?
+              {t('title')}
             </h2>
 
             <p className="mt-8 max-w-2xl text-lg font-light leading-8 text-[rgba(10,34,71,0.84)] sm:text-xl">
-              Every visit begins with a comprehensive, digitally supported assessment. We'll walk you through exactly what we find and what, if anything, we'd recommend next.
+              {t('description')}
             </p>
             <p className="mt-3 text-[0.95rem] font-light leading-7 text-[rgba(10,34,71,0.78)]">
-              No pressure. Just honest clinical advice.
+              {t('noPressure')}
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -252,7 +248,7 @@ function ConsultationCtaSection() {
                 href="/#contact"
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
-                Book Consultation
+                {t('bookConsultation')}
                 <ArrowRight className="size-4" />
               </Link>
 
@@ -263,18 +259,18 @@ function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
                 <MessageSquare className="size-4 text-brand-red" />
-                Chat on WhatsApp
+                {t('chatWhatsapp')}
               </Link>
             </div>
 
             <p className="mt-5 text-sm font-light leading-7 text-[rgba(10,34,71,0.72)]">
-              Our team will personally contact you to arrange your consultation at a convenient time.
+              {t('contactNote')}
             </p>
           </div>
 
           <div className="rounded-[32px] border border-brand-border bg-white p-6 shadow-[0_16px_42px_rgba(10,34,71,0.08)] sm:p-7">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-              What your consultation includes
+              {t('includesLabel')}
             </p>
 
             <div className="mt-5 space-y-3.5">
@@ -298,7 +294,7 @@ export default async function CheckUpCleaningPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  setRequestLocale(locale)
+  setRequestLocale(locale as AppLocale)
 
   return (
     <>

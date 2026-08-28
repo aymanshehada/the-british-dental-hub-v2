@@ -1,11 +1,54 @@
 {
   "meta": {
-    "title": "Check-up & Cleaning | The British Dental Hub",
-    "description": "A comprehensive, visual, evidence-based dental assessment in Cairo, built around digital diagnostics and a personalised treatment plan."
+    "title": "الفحص والتنظيف | The British Dental Hub",
+    "description": "تقييم أسنانٍ شامل ومرئي ومبني على الأدلة، في القاهرة، يعتمد على التشخيص الرقمي وخطة علاج واضحة ومخصَّصة."
   },
   "hero": {
-    "eyebrow": "Preventive Care",
-    "title": "A Complete, Evidence-Based Assessment",
-    "subtitle": "Every check-up combines a thorough clinical examination with digital diagnostics, so you can see and understand exactly what we see."
+    "eyebrow": "الفحص والتنظيف",
+    "title": "تقييم شامل ومرئي ومبني على الأدلة",
+    "subtitle": "يتجاوز كل فحص مجرد نظرة سريعة — إنه تقييم مدروس، مدعوم رقميًا، لفمك بالكامل، يُشرح بوضوح في كل خطوة.",
+    "ctaPrimary": "احجز استشارتك"
+  },
+  "digitalAssessment": {
+    "eyebrow": "منهجنا",
+    "title": "تقييمك الرقمي لأسنانك",
+    "subtitle": "عملية واضحة من خمس مراحل تساعدك على رؤية وفهم ما نراه بالتحديد، قبل مناقشة أي علاج.",
+    "steps": {
+      "examination": { "title": "الفحص السريري", "description": "مراجعة شاملة لأسنانك ولثتك وصحة فمك العامة، تشكّل أساس كل زيارة." },
+      "imaging": { "title": "التصوير التشخيصي", "description": "تُستخدم الأشعة السينية للأسنان كجزء من التقييم التشخيصي عند الحاجة السريرية، لا كخطوة روتينية لكل مريض." },
+      "photography": { "title": "التصوير الفوتوغرافي داخل الفم", "description": "تلتقط كاميرا داخل الفم صورًا دقيقة ومفصَّلة لأسنانك ولثتك، لرؤية أوضح." },
+      "diagnosis": { "title": "التشخيص", "description": "تُراجَع النتائج وتُشرح بوضوح، لتفهم بالتحديد ما نراه." },
+      "treatmentPlan": { "title": "خطة علاج مخصَّصة", "description": "تُشرح أي توصيات — أو عدم وجودها — بصريًا، باستخدام صورك ونتائجك الخاصة." }
+    },
+    "footnote": "لا تتطلب كل زيارة نفس التصوير التشخيصي — تُوصى الأشعة والفحوصات الأخرى بشكلٍ فردي، وفق الحاجة السريرية، لا كخطوة معيارية لكل مريض."
+  },
+  "digitalRecord": {
+    "eyebrow": "للمرضى الجدد",
+    "title": "سجلك الرقمي الشخصي لأسنانك",
+    "subtitle": "منذ زيارتك الأولى، يُجمَع كل شيء في سجلٍّ شخصي واضح — لتبقى رعايتك مبنية على معلومات دقيقة ومتّسقة مع الوقت.",
+    "includesLabel": "يتضمّن سجلك",
+    "items": {
+      "examinationResults": "نتائج الفحص",
+      "diagnosis": "التشخيص والتقييم السريري",
+      "photographs": "صور داخل الفم",
+      "xrays": "الأشعة ذات الصلة، متى أُخذت",
+      "plan": "خطة علاج ووقاية مخصَّصة"
+    }
+  },
+  "consultationCta": {
+    "eyebrow": "ابدأ رحلتك",
+    "title": "هل أنت مستعد لتقييمك؟",
+    "description": "تبدأ كل زيارة بتقييمٍ شامل ومدعوم رقميًا. سنشرح لك بالتفصيل ما نجده وما قد نوصي به بعد ذلك، إن وُجد.",
+    "noPressure": "بلا أي ضغط. مجرد نصيحة سريرية صادقة.",
+    "bookConsultation": "احجز استشارتك",
+    "chatWhatsapp": "تواصل عبر واتساب",
+    "contactNote": "سيتواصل فريقنا معك شخصيًا لترتيب موعد استشارتك في الوقت الذي يناسبك.",
+    "includesLabel": "ما تتضمّنه استشارتك",
+    "trustItems": {
+      "duration": "استشارة مدتها 30–45 دقيقة",
+      "digitalAssessment": "تقييم تشخيصي رقمي",
+      "optionsDiscussion": "مناقشة خيارات العلاج",
+      "noObligation": "بلا التزام"
+    }
   }
 }

@@ -1,11 +1,54 @@
 {
   "meta": {
     "title": "Check-up & Cleaning | The British Dental Hub",
-    "description": "A comprehensive, visual, evidence-based dental assessment in Cairo, built around digital diagnostics and a personalised treatment plan."
+    "description": "A comprehensive, visual, evidence-based dental assessment in Cairo, built around digital diagnostics and a clear, personalised treatment plan."
   },
   "hero": {
-    "eyebrow": "Preventive Care",
-    "title": "A Complete, Evidence-Based Assessment",
-    "subtitle": "Every check-up combines a thorough clinical examination with digital diagnostics, so you can see and understand exactly what we see."
+    "eyebrow": "Check-up & Cleaning",
+    "title": "A Comprehensive, Visual, Evidence-Based Assessment",
+    "subtitle": "Every check-up goes beyond a quick look — it's a considered, digitally supported assessment of your whole mouth, explained clearly at every step.",
+    "ctaPrimary": "Book a Consultation"
+  },
+  "digitalAssessment": {
+    "eyebrow": "Our Process",
+    "title": "Your Digital Dental Assessment",
+    "subtitle": "A clear, five-stage process that helps you see and understand exactly what we see, before any treatment is discussed.",
+    "steps": {
+      "examination": { "title": "Clinical Examination", "description": "A comprehensive review of your teeth, gums, and overall oral health, forming the foundation of every visit." },
+      "imaging": { "title": "Diagnostic Imaging", "description": "Dental X-rays are used as part of the diagnostic assessment where clinically appropriate, not as a routine step for every patient." },
+      "photography": { "title": "Intraoral Photography", "description": "An intraoral camera captures precise, detailed images of your teeth and gums for a clearer picture." },
+      "diagnosis": { "title": "Diagnosis", "description": "Findings are reviewed and explained clearly, so you understand exactly what we're seeing." },
+      "treatmentPlan": { "title": "Personalised Treatment Plan", "description": "Any recommendations — or the absence of them — are explained visually, using your own images and findings." }
+    },
+    "footnote": "Not every visit requires the same diagnostic imaging — X-rays and other investigations are recommended individually, based on clinical need, not as a standard step for every patient."
+  },
+  "digitalRecord": {
+    "eyebrow": "For New Patients",
+    "title": "Your Personalised Digital Dental Record",
+    "subtitle": "From your first visit, everything is gathered into one clear, personal record — so your care stays informed and consistent over time.",
+    "includesLabel": "Your record includes",
+    "items": {
+      "examinationResults": "Examination results",
+      "diagnosis": "Clinical diagnosis and assessment",
+      "photographs": "Intraoral photographs",
+      "xrays": "Relevant X-rays, where taken",
+      "plan": "A personalised treatment and prevention plan"
+    }
+  },
+  "consultationCta": {
+    "eyebrow": "Begin Your Journey",
+    "title": "Ready for Your Assessment?",
+    "description": "Every visit begins with a comprehensive, digitally supported assessment. We'll walk you through exactly what we find and what, if anything, we'd recommend next.",
+    "noPressure": "No pressure. Just honest clinical advice.",
+    "bookConsultation": "Book Consultation",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "contactNote": "Our team will personally contact you to arrange your consultation at a convenient time.",
+    "includesLabel": "What your consultation includes",
+    "trustItems": {
+      "duration": "30–45 Minute Consultation",
+      "digitalAssessment": "Digital Diagnostic Assessment",
+      "optionsDiscussion": "Treatment Options Discussion",
+      "noObligation": "No Obligation"
+    }
   }
 }
