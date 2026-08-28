@@ -1,11 +1,43 @@
 {
   "meta": {
     "title": "Teeth Whitening | The British Dental Hub",
-    "description": "Safe, clinically supervised teeth whitening in Cairo, with in-office and custom take-home options planned around your suitability."
+    "description": "A brighter, more confident smile achieved safely and under clinical supervision, with in-office and custom take-home whitening options in Cairo."
   },
   "hero": {
     "eyebrow": "Teeth Whitening",
-    "title": "A Brighter Smile, Safely Supervised",
-    "subtitle": "Whitening is planned with careful clinical oversight, so brightness is achieved safely and suited to your own teeth."
+    "title": "A Brighter Smile, Safely and Under Clinical Supervision",
+    "subtitle": "Every whitening treatment is planned around your teeth and gums, so the result feels confident, natural, and safely achieved.",
+    "ctaPrimary": "Book a Consultation"
+  },
+  "options": {
+    "eyebrow": "Treatment Options",
+    "title": "Whitening Options",
+    "subtitle": "Two considered approaches, so treatment fits how you'd like to experience it.",
+    "badge": "Treatment Option",
+    "items": {
+      "inOffice": { "title": "In-Office Teeth Whitening", "description": "A professional whitening treatment carried out here in the clinic, under close clinical supervision from start to finish.", "note": "Ideal for: patients who prefer their whitening fully managed in-clinic" },
+      "takeHome": { "title": "Custom Take-Home Whitening Trays", "description": "Whitening trays made specifically for your teeth, for you to use at home following clear professional guidance and instructions.", "note": "Ideal for: patients who prefer a guided, at-home whitening routine" }
+    }
+  },
+  "beforeYouWhiten": {
+    "eyebrow": "Before You Whiten",
+    "title": "A safe starting point, checked first.",
+    "description": "Every whitening treatment begins with a preliminary clinical assessment to check that your teeth and gums are ready. Issues such as untreated decay or gum concerns are identified and addressed first, so whitening treatment can proceed safely and effectively."
+  },
+  "consultationCta": {
+    "eyebrow": "Begin Your Journey",
+    "title": "Ready for a Brighter Smile?",
+    "description": "Every whitening treatment begins with a comprehensive consultation. We'll assess your suitability, explain every available option, and shape a plan around your needs.",
+    "noPressure": "No pressure. Just honest clinical advice.",
+    "bookConsultation": "Book Consultation",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "contactNote": "Our team will personally contact you to arrange your consultation at a convenient time.",
+    "includesLabel": "What your consultation includes",
+    "trustItems": {
+      "duration": "30–45 Minute Consultation",
+      "suitabilityAssessment": "Suitability Assessment",
+      "optionsDiscussion": "Treatment Options Discussion",
+      "noObligation": "No Obligation"
+    }
   }
 }

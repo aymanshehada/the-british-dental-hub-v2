@@ -1,11 +1,43 @@
 {
   "meta": {
-    "title": "Teeth Whitening | The British Dental Hub",
-    "description": "Safe, clinically supervised teeth whitening in Cairo, with in-office and custom take-home options planned around your suitability."
+    "title": "تبييض الأسنان | The British Dental Hub",
+    "description": "ابتسامة أكثر إشراقًا وثقة، تُحقَّق بأمان وتحت إشراف سريري، مع خيارات تبييض داخل العيادة وأخرى مخصَّصة للاستخدام المنزلي، في القاهرة."
   },
   "hero": {
-    "eyebrow": "Teeth Whitening",
-    "title": "A Brighter Smile, Safely Supervised",
-    "subtitle": "Whitening is planned with careful clinical oversight, so brightness is achieved safely and suited to your own teeth."
+    "eyebrow": "تبييض الأسنان",
+    "title": "ابتسامة أكثر إشراقًا، بأمان وتحت إشراف سريري",
+    "subtitle": "يُخطَّط كل علاج تبييض وفق أسنانك ولثتك، لتأتي النتيجة واثقة وطبيعية ومُحقَّقة بأمان.",
+    "ctaPrimary": "احجز استشارتك"
+  },
+  "options": {
+    "eyebrow": "خيارات العلاج",
+    "title": "خيارات التبييض",
+    "subtitle": "نهجان مدروسان، ليتناسب العلاج مع الطريقة التي تفضّل بها خوض التجربة.",
+    "badge": "خيار علاجي",
+    "items": {
+      "inOffice": { "title": "تبييض الأسنان داخل العيادة", "description": "علاج تبييض احترافي يُجرى هنا في العيادة، تحت إشراف سريري دقيق من البداية إلى النهاية.", "note": "مثالي لـ: المرضى الذين يفضّلون إدارة تبييضهم بالكامل داخل العيادة" },
+      "takeHome": { "title": "أطقم تبييض مخصَّصة للاستخدام المنزلي", "description": "أطقم تبييض مصمَّمة خصيصًا لأسنانك، لاستخدامها في المنزل وفق إرشادات وتعليمات مهنية واضحة.", "note": "مثالي لـ: المرضى الذين يفضّلون روتين تبييض منزلي موجَّه" }
+    }
+  },
+  "beforeYouWhiten": {
+    "eyebrow": "قبل أن تبيِّض أسنانك",
+    "title": "بداية آمنة، تُفحَص أولًا.",
+    "description": "يبدأ كل علاج تبييض بتقييم سريري أولي للتحقق من جاهزية أسنانك ولثتك. تُحدَّد وتُعالَج أولًا أي مشكلات مثل التسوس غير المعالَج أو مشكلات اللثة، ليتسنى المضي في علاج التبييض بأمان وفعالية."
+  },
+  "consultationCta": {
+    "eyebrow": "ابدأ رحلتك",
+    "title": "هل أنت مستعد لابتسامةٍ أكثر إشراقًا؟",
+    "description": "يبدأ كل علاج تبييض باستشارة شاملة. سنُقيِّم مدى ملاءمتك للعلاج، ونشرح كل الخيارات المتاحة، ونضع خطة وفق احتياجاتك.",
+    "noPressure": "بلا أي ضغط. مجرد نصيحة سريرية صادقة.",
+    "bookConsultation": "احجز استشارتك",
+    "chatWhatsapp": "تواصل عبر واتساب",
+    "contactNote": "سيتواصل فريقنا معك شخصيًا لترتيب موعد استشارتك في الوقت الذي يناسبك.",
+    "includesLabel": "ما تتضمّنه استشارتك",
+    "trustItems": {
+      "duration": "استشارة مدتها 30–45 دقيقة",
+      "suitabilityAssessment": "تقييم مدى الملاءمة",
+      "optionsDiscussion": "مناقشة خيارات العلاج",
+      "noObligation": "بلا التزام"
+    }
   }
 }
