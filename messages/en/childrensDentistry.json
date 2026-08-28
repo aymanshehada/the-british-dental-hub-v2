@@ -6,6 +6,79 @@
   "hero": {
     "eyebrow": "Children's Dentistry",
     "title": "Prevention, early detection, and positive dental experiences.",
-    "subtitle": "The British Dental Hub welcomes children of all ages, from their very first dental visit through every stage of growth, with care that's gentle, patient, and reassuring."
+    "subtitle": "The British Dental Hub welcomes children of all ages, from their very first dental visit through every stage of growth, with care that's gentle, patient, and reassuring.",
+    "ctaPrimary": "Book a Consultation"
+  },
+  "services": {
+    "eyebrow": "What We Offer",
+    "title": "Our Children's Dental Services",
+    "subtitle": "Comprehensive, age-appropriate care that grows with your child, from first check-up to ongoing prevention.",
+    "items": {
+      "item1": "Routine dental examinations and preventive check-ups",
+      "item2": "Fluoride applications",
+      "item3": "Fissure sealants",
+      "item4": "Children's fillings and early caries management",
+      "item5": "Extraction of primary teeth when clinically indicated",
+      "item6": "Monitoring eruption and dental development",
+      "item7": "Oral hygiene and brushing guidance",
+      "item8": "Dietary and caries-prevention advice",
+      "item9": "Early identification of orthodontic and developmental concerns",
+      "item10": "Assessment of dental pain, trauma, swelling, and other urgent concerns"
+    }
+  },
+  "firstVisit": {
+    "eyebrow": "What To Expect",
+    "title": "Your Child's First Dental Visit",
+    "subtitle": "Every visit is shaped around your child's comfort, so it becomes a positive part of growing up rather than something to dread.",
+    "items": {
+      "environment": { "title": "A Calm, Child-Friendly Environment", "description": "A relaxed clinical setting designed to feel welcoming rather than clinical or intimidating." },
+      "communication": { "title": "Age-Appropriate Communication", "description": "Every explanation is pitched to your child's age and understanding, in simple, reassuring language." },
+      "explainShowDo": { "title": "Explain-Show-Do", "description": "Each step is explained and demonstrated before it happens, so nothing feels sudden or unfamiliar." },
+      "gradual": { "title": "Gradual, Patient Introduction", "description": "For anxious or first-time children, we introduce the visit step by step, at a pace that feels safe." },
+      "reinforcement": { "title": "Positive Reinforcement", "description": "Encouragement and praise throughout help build genuine confidence around dental visits." },
+      "parentsInformed": { "title": "Parents Informed Every Step", "description": "You're kept informed throughout the visit, from what to expect to what happens next." }
+    }
+  },
+  "nervousChildren": {
+    "eyebrow": "For Nervous or First-Time Children",
+    "title": "There's no rush — your child sets the pace.",
+    "description": "For children who feel unsure or are visiting for the very first time, we take extra time to build familiarity and trust before any treatment begins. Every step is introduced gradually, patiently, and only when your child feels ready — never rushed, and always with plenty of encouragement along the way."
+  },
+  "whenToContact": {
+    "eyebrow": "For Parents",
+    "title": "When Should You Contact Us?",
+    "subtitle": "If your child experiences any of the following, it's worth reaching out so we can assess and advise on next steps.",
+    "signs": {
+      "pain": "Dental Pain",
+      "swelling": "Swelling",
+      "injury": "Injury or Broken Tooth",
+      "decay": "Visible Decay",
+      "eating": "Difficulty Eating"
+    }
+  },
+  "generalAnaesthesia": {
+    "eyebrow": "Your Child's Comfort",
+    "title": "General Anaesthesia (GA) — When Needed",
+    "badge": "Important information for parents",
+    "paragraph1": "The British Dental Hub does not provide any form of sedation within the clinic.",
+    "paragraph2": "In cases where this is clinically necessary, our dentists may recommend and deliver treatment under General Anaesthesia (GA) — always arranged in an appropriate hospital setting outside the clinic, never on-site.",
+    "paragraph3": "This follows an individual clinical assessment of each child's specific case, with careful coordination and referral to the appropriate hospital.",
+    "paragraph4": "General Anaesthesia is never offered or provided as a routine service within the clinic itself — it is reserved specifically for cases where it is clinically indicated, following assessment."
+  },
+  "consultationCta": {
+    "eyebrow": "Begin Your Journey",
+    "title": "Book a Children's Dental Assessment",
+    "description": "Every visit begins with a comprehensive, unhurried assessment. We'll get to know your child, explain everything clearly, and shape a calm, personalised approach around their needs.",
+    "noPressure": "No pressure. Just honest, patient clinical advice.",
+    "bookConsultation": "Book Consultation",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "contactNote": "Our team will personally contact you to arrange your consultation at a convenient time.",
+    "includesLabel": "What your consultation includes",
+    "trustItems": {
+      "duration": "30–45 Minute Consultation",
+      "personalisedApproach": "Personalised, Age-Appropriate Approach",
+      "optionsDiscussion": "Treatment Options Discussion",
+      "noObligation": "No Obligation"
+    }
   }
 }
