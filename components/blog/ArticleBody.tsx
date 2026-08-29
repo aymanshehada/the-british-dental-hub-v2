@@ -1,5 +1,10 @@
 import { Info } from "lucide-react"
+import { Fragment } from "react"
+import { Link } from "@/i18n/navigation"
 import type { ContentBlock } from "@/lib/blog/types"
+
+const linkClassName =
+  "text-[#0A2247] underline decoration-[#0A2247]/25 underline-offset-2 transition-colors duration-200 ease-out hover:text-brand-red hover:decoration-brand-red/40"
 
 export function ArticleBody({ content }: { content: ContentBlock[] }) {
   return (
@@ -9,7 +14,27 @@ export function ArticleBody({ content }: { content: ContentBlock[] }) {
           case "paragraph":
             return (
               <p key={index} className="text-[1.02rem] leading-8 text-[#3d4a5c]">
-                {block.text}
+                {typeof block.text === "string"
+                  ? block.text
+                  : block.text.map((part, partIndex) =>
+                      typeof part === "string" ? (
+                        <Fragment key={partIndex}>{part}</Fragment>
+                      ) : part.external ? (
+                        <a
+                          key={partIndex}
+                          href={part.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={linkClassName}
+                        >
+                          {part.text}
+                        </a>
+                      ) : (
+                        <Link key={partIndex} href={part.href} className={linkClassName}>
+                          {part.text}
+                        </Link>
+                      ),
+                    )}
               </p>
             )
 

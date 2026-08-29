@@ -1,6 +1,6 @@
 import type { ContentBlock } from "@/lib/blog/types"
 
-export function TableOfContents({ content }: { content: ContentBlock[] }) {
+export function TableOfContents({ content, isArabic = false }: { content: ContentBlock[]; isArabic?: boolean }) {
   const headings = content.filter(
     (block): block is Extract<ContentBlock, { type: "heading" }> => block.type === "heading" && block.level === 2,
   )
@@ -8,9 +8,9 @@ export function TableOfContents({ content }: { content: ContentBlock[] }) {
   if (headings.length === 0) return null
 
   return (
-    <nav aria-label="Table of contents" className="rounded-[18px] border border-[#e5ebf3] bg-brand-bg p-6">
+    <nav aria-label={isArabic ? "فهرس المقال" : "Table of contents"} className="rounded-[18px] border border-[#e5ebf3] bg-brand-bg p-6">
       <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-brand-red">
-        In This Article
+        {isArabic ? "في هذا المقال" : "In This Article"}
       </p>
       <ol className="mt-4 space-y-3">
         {headings.map((heading) => (
