@@ -301,29 +301,125 @@ export const articles: BlogArticle[] = [
   {
     slug: 'understanding-root-canal-treatment',
     title: 'Understanding Root Canal Treatment',
-    dek: 'What root canal treatment involves, in plain terms, and why it is often the option that saves a tooth.',
+    dek: 'A clear, clinically grounded explanation of what root canal treatment involves, why it may be needed, and what to expect before and after treatment.',
     category: 'endodontics',
     publishedAt: '2026-08-16',
     author: DEFAULT_AUTHOR,
     medicalReviewer: DEFAULT_REVIEWER,
     content: [
-      { type: 'paragraph', text: 'Root canal treatment has a reputation that often outpaces the reality of the procedure itself. Understanding what it actually involves can help put that reputation into perspective.' },
-      { type: 'heading', level: 2, id: 'what-happens-inside-a-tooth', text: 'What Happens Inside a Tooth' },
-      { type: 'paragraph', text: 'Beneath the visible surface, every tooth contains soft tissue that can become irritated or affected by decay or injury. Root canal treatment addresses this tissue with the aim of retaining the natural tooth wherever possible.' },
-      { type: 'heading', level: 2, id: 'signs-worth-discussing', text: 'Signs Worth Discussing With Your Dentist' },
-      { type: 'list', items: [
-        'Persistent pain in or around a tooth',
-        'Noticeable sensitivity to hot or cold that lingers',
-        'Swelling or tenderness near a tooth',
+      { type: 'paragraph', text: "Root canal treatment carries a reputation that rarely matches the reality of the procedure itself — much of what people expect comes from stories rather than experience. Understanding what actually happens inside the tooth, and what treatment genuinely involves, is a far more useful starting point than the reputation alone, particularly if you've just been told you may need it. This isn't a promise that treatment feels like nothing; it's an honest account of what to expect, so any decision ahead of you is based on facts rather than fear." },
+
+      { type: 'heading', level: 2, id: 'whats-happening-inside-the-tooth', text: "What's Happening Inside the Tooth" },
+      { type: 'paragraph', text: "Inside a tooth is the pulp — soft tissue that contains the nerves and blood vessels supplying the tooth. Usually, this tissue does its job quietly and without any attention. It can become inflamed or infected for several reasons: decay that has reached deep enough to affect it, a crack or other injury to the tooth, or, in some cases, gum disease affecting the tissues that support it. Once the pulp is significantly affected, it generally can't heal on its own, and leaving it untreated allows the underlying problem to continue rather than resolve by itself. Root canal treatment aims to treat that affected tissue directly rather than remove the tooth altogether, since keeping a natural tooth in place generally supports how it looks, feels, and functions alongside the rest of your teeth. The goal is to retain your natural tooth where that's clinically suitable — but it isn't a guarantee that every affected tooth can be saved, and suitability is something your dentist assesses individually rather than assumes." },
+
+      { type: 'heading', level: 2, id: 'signs-worth-discussing-with-your-dentist', text: 'Signs Worth Discussing With Your Dentist' },
+      { type: 'paragraph', text: "A number of signs are worth raising with your dentist, including persistent pain in or around a tooth, pain that comes on its own without an obvious trigger, discomfort when biting or chewing, and sensitivity to hot or cold that lingers well after the food or drink is gone. Swelling or tenderness near a tooth, or in some cases a small abscess, are also worth a prompt conversation, and how noticeable any of these signs are can vary from mild to more pronounced." },
+      { type: 'paragraph', text: "None of these signs diagnoses the problem on their own, and it's worth knowing that pain settling down doesn't necessarily mean the underlying problem has resolved — the pulp can stop responding to pain while the issue affecting it continues to develop. For that reason, diagnosis relies on a proper clinical assessment rather than symptoms alone: your dentist will consider your history, examine the tooth and surrounding tissues, and use imaging where it's clinically useful, rather than relying on any single test in every case. This is a general picture only, not a checklist — the same signs can point to different problems, and only an in-person assessment can tell you what's actually happening." },
+
+      { type: 'heading', level: 2, id: 'what-treatment-involves', text: 'What Treatment Involves' },
+      { type: 'paragraph', text: "Root canal treatment follows a broadly consistent sequence, though the details vary by tooth and case. Local anaesthetic is used to numb the area first, since the aim throughout is to keep treatment as comfortable as possible — individual experience still varies, and it's worth discussing what to expect with your dentist beforehand. Once the area is numb, your dentist accesses the inside of the tooth and removes the affected pulp. The root canal system — the fine channels running through the root — is then cleaned and disinfected to remove the affected tissue and reduce bacterial contamination, since bacteria can be present well beyond what's visible to the eye. Where the canals are especially narrow or curved, this stage can reasonably take longer to complete carefully. Once cleaning is complete, the canals are filled and sealed to help reduce the risk of reinfection." },
+      { type: 'paragraph', text: 'Depending on the tooth and the complexity of the case, this may be completed in a single visit or may take more than one appointment, with a temporary filling protecting the tooth in between while a more definitive restoration is planned.' },
+
+      { type: 'heading', level: 2, id: 'root-canal-treatment-or-extraction', text: 'Root Canal Treatment or Extraction?' },
+      { type: 'paragraph', text: [
+        "Root canal treatment and extraction sit at different ends of the same decision: one aims to keep your natural tooth, the other removes it. Neither is automatically the better choice — which is appropriate depends on whether the tooth can be predictably restored, taking into account how much natural structure remains, the anatomy of the root canals themselves, and any previous treatment the tooth has already had. Where a tooth genuinely isn't restorable, extraction may be the more realistic option, and that isn't a failure of treatment; it's simply what the individual tooth allows given its own condition. Your dentist will talk through that reasoning with you rather than leaving you to guess which route is right. If a tooth is extracted, replacing it becomes its own separate decision, with several restorative routes to consider, covered in more detail in ",
+        { text: 'our guide to restorative options', href: '/blog/crowns-bridges-and-dentures-explained' },
+        ".",
       ] },
-      { type: 'callout', text: 'These are general signs only, shared for awareness — a proper diagnosis always requires a clinical examination with your dentist.' },
-      { type: 'heading', level: 2, id: 'what-treatment-generally-involves', text: 'What Treatment Generally Involves' },
-      { type: 'paragraph', text: 'In broad terms, treatment involves carefully treating the affected tissue and then restoring the tooth so it can continue to function comfortably.' },
+
+      { type: 'heading', level: 2, id: 'after-treatment', text: 'After Treatment' },
+      { type: 'paragraph', text: "It's common for a root-treated tooth to feel tender for a few days afterward, and this generally settles on its own, though how long it takes varies from person to person and can occasionally take a little longer. Your dentist will let you know what to expect for your specific case, and when discomfort would be worth a follow-up call rather than simply waiting it out." },
+      { type: 'paragraph', text: [
+        "Where a temporary restoration has been placed, it's there to protect the tooth until the definitive one is ready, and your dentist will let you know when the tooth is ready to be used normally rather than assuming this straightaway — function generally returns gradually as healing progresses, rather than all at once. For a tooth that was significantly affected, a crown or other definitive restoration is often planned afterward to protect it from fracturing under everyday use — though this isn't automatic for every case, and depends on how much natural tooth structure remains. Ongoing review is part of the plan, so any concerns can be picked up early. A fuller look at how we approach this treatment is available on ",
+        { text: 'our root canal treatment page', href: '/root-canal-treatment' },
+        ".",
+      ] },
     ],
     faqs: [
-      { question: 'Does root canal treatment hurt?', answer: 'Modern approaches are planned around comfort throughout. Your clinician can explain exactly what to expect during your specific treatment.' },
-      { question: 'Can any tooth be treated this way?', answer: 'Root canal treatment can generally be considered for any tooth, front or back, though suitability is always confirmed clinically first.' },
+      { question: 'Does root canal treatment hurt?', answer: "Local anaesthetic is normally used to numb the area, and the aim throughout is to keep treatment as comfortable as possible. Individual experience varies, and it's common for the tooth to feel a little tender for a few days afterward as it settles." },
+      { question: 'Can any tooth be treated this way?', answer: 'Not automatically. Whether a tooth is suitable depends on factors like how much natural structure remains, the shape of the root canals, and any previous treatment — this is assessed individually rather than assumed for every tooth.' },
+      { question: 'Is root canal treatment better than extraction?', answer: "Not necessarily. Root canal treatment aims to keep your natural tooth, while extraction removes it — which is more appropriate depends on whether the tooth can be predictably restored, not on one option being universally better." },
+      { question: 'Will I need a crown afterward?', answer: "Not in every case. A crown or other definitive restoration is often recommended for a tooth that was significantly affected, since it can help protect it from fracturing — but what's needed depends on the tooth and how much natural structure is left." },
+      { question: 'Can I still need root canal treatment if the pain has stopped?', answer: 'Yes, this can happen. Pain settling doesn\'t always mean the underlying problem has resolved, which is one reason diagnosis relies on a proper clinical assessment rather than symptoms alone.' },
     ],
+    references: [
+      {
+        title: 'Root canal treatment — NHS',
+        url: 'https://www.nhs.uk/tests-and-treatments/root-canal-treatment/',
+      },
+      {
+        title: 'Root canal treatment: How it is performed — NHS',
+        url: 'https://www.nhs.uk/conditions/root-canal-treatment/what-happens/',
+      },
+      {
+        title: 'Understanding your Endodontic (Root Canal) Treatment — Leeds Teaching Hospitals NHS Trust',
+        url: 'https://www.leedsth.nhs.uk/patients/resources/understanding-your-endodontic-root-canal-treatment/',
+      },
+      {
+        title: 'Abscessed Tooth — Cleveland Clinic',
+        url: 'https://my.clevelandclinic.org/health/diseases/10943-abscessed-tooth',
+      },
+    ],
+    arContent: {
+      title: 'فهم علاج العصب',
+      dek: 'شرح واضح ومبني على أساس سريري لما يتضمنه علاج العصب، ولماذا قد يُحتاج إليه، وما يمكن توقعه قبل العلاج وبعده.',
+      author: 'د. أيمن شحادة',
+      medicalReviewer: 'د. أيمن شحادة',
+      content: [
+        { type: 'paragraph', text: 'يحمل علاج العصب سمعة نادرًا ما تعكس واقع الإجراء نفسه — فكثير مما يتوقعه الناس ينبع من قصص متناقلة أكثر مما ينبع من تجربة حقيقية. وفهم ما يحدث فعليًا داخل السن، وما يتضمنه العلاج فعلًا، نقطة انطلاق أكثر فائدة من مجرد الاعتماد على تلك السمعة، خصوصًا إذا كنت قد أُخبرت للتو بأنك قد تحتاج إليه. وهذا ليس وعدًا بأن العلاج لن يُشعِرك بأي شيء؛ بل هو عرض صادق لما يمكن توقعه، بحيث يكون أي قرار أمامك مبنيًا على حقائق لا على خوف.' },
+
+        { type: 'heading', level: 2, id: 'whats-happening-inside-the-tooth', text: 'ما الذي يحدث داخل السن' },
+        { type: 'paragraph', text: 'في داخل السن يوجد اللُّب — النسيج الرخو الذي يحتوي على الأعصاب والأوعية الدموية التي تغذي السن. وفي المعتاد، يقوم هذا النسيج بوظيفته بهدوء دون أن يلفت الانتباه. وقد يلتهب أو يُصاب بعدوى لأسباب عدة: تسوّس وصل عمقه إلى درجة تؤثر فيه، أو كسر أو إصابة أخرى للسن، أو في بعض الحالات، مرض في اللثة يؤثر في الأنسجة الداعمة للسن. وحين يتأثر اللُّب بشكل كبير، فإنه غالبًا لا يستطيع الشفاء من تلقاء نفسه، وترك المشكلة دون علاج يسمح لها بالاستمرار بدلًا من أن تُحل من تلقاء نفسها. ويهدف علاج العصب إلى معالجة ذلك النسيج المتأثر مباشرة بدلًا من خلع السن بالكامل، إذ إن الحفاظ على السن الطبيعية يدعم عمومًا شكلها وإحساسها ووظيفتها إلى جانب بقية أسنانك. والهدف هو الحفاظ على سنّك الطبيعية حيثما كان ذلك مناسبًا سريريًا — لكنه ليس ضمانًا بأن كل سن متأثرة يمكن إنقاذها، ومدى الملاءمة أمر يُقيِّمه طبيبك بشكل فردي لا افتراضي.' },
+
+        { type: 'heading', level: 2, id: 'signs-worth-discussing-with-your-dentist', text: 'علامات تستحق مناقشتها مع طبيب أسنانك' },
+        { type: 'paragraph', text: 'هناك عدد من العلامات يستحق طرحها على طبيب أسنانك، منها الألم المستمر في السن أو حولها، والألم الذي يظهر من تلقاء نفسه دون محفز واضح، والانزعاج عند العض أو المضغ، والحساسية تجاه الساخن أو البارد التي تستمر لفترة بعد زوال الطعام أو الشراب. كما يستحق أي تورم أو إيلام قرب السن، أو في بعض الحالات خراج صغير، محادثة سريعة مع طبيبك، وقد تتفاوت وضوح هذه العلامات من خفيفة إلى أكثر وضوحًا.' },
+        { type: 'paragraph', text: 'ولا تُشخِّص أي من هذه العلامات المشكلة بمفردها، ومن المفيد معرفة أن هدوء الألم لا يعني بالضرورة أن المشكلة الكامنة قد زالت — إذ قد يتوقف اللُّب عن الاستجابة للألم بينما تستمر المشكلة المؤثرة فيه في التطور. ولهذا السبب، يعتمد التشخيص على تقييم سريري مناسب لا على الأعراض وحدها: إذ يأخذ طبيبك تاريخك المرضي بعين الاعتبار، ويفحص السن والأنسجة المحيطة بها، ويستخدم التصوير حيثما كان ذلك مفيدًا سريريًا، دون الاعتماد على اختبار واحد بعينه في كل الحالات. وهذه صورة عامة فقط، لا قائمة للتشخيص الذاتي — فقد تشير العلامات ذاتها إلى مشكلات مختلفة، ولا يمكن إلا لتقييم حضوري أن يوضح ما يحدث فعليًا.' },
+
+        { type: 'heading', level: 2, id: 'what-treatment-involves', text: 'ما الذي يتضمنه العلاج' },
+        { type: 'paragraph', text: 'يتّبع علاج العصب تسلسلًا عامًا متسقًا إلى حدٍّ كبير، وإن كانت التفاصيل تختلف باختلاف السن والحالة. يُستخدم التخدير الموضعي أولًا لتخدير المنطقة، إذ يظل الهدف طوال العلاج هو الحفاظ على أكبر قدر ممكن من الراحة — وتختلف تجربة كل شخص، ويُستحسن مناقشة ما يمكن توقعه مع طبيبك مسبقًا. وبعد أن تُخدَّر المنطقة، يصل طبيبك إلى داخل السن ويزيل اللُّب المتأثر. بعد ذلك، يُنظَّف نظام قنوات الجذر — القنوات الدقيقة الممتدة داخل الجذر — ويُطهَّر لإزالة النسيج المتأثر والحدّ من التلوث البكتيري، إذ يمكن أن تتواجد البكتيريا في مناطق أبعد مما تراه العين. وحيثما كانت القنوات ضيقة أو منحنية بشكل خاص، قد تستغرق هذه المرحلة وقتًا أطول لإتمامها بعناية. وبمجرد اكتمال التنظيف، تُحشى القنوات وتُغلَق للمساعدة على تقليل خطر العدوى مجددًا.' },
+        { type: 'paragraph', text: 'وبحسب السن ومدى تعقيد الحالة، قد يُنجَز ذلك في زيارة واحدة أو قد يتطلب أكثر من موعد، مع حشوة مؤقتة تحمي السن بين المواعيد ريثما يُخطَّط لترميم نهائي أكثر ثباتًا.' },
+
+        { type: 'heading', level: 2, id: 'root-canal-treatment-or-extraction', text: 'علاج العصب أم الخلع؟' },
+        { type: 'paragraph', text: [
+          'يقف علاج العصب والخلع على طرفي القرار نفسه: يهدف أحدهما إلى الحفاظ على سنّك الطبيعية، بينما يزيلها الآخر. وليس أي منهما بالضرورة الخيار الأفضل تلقائيًا — إذ يعتمد ما هو مناسب على ما إذا كان يمكن ترميم السن بشكل يمكن التنبؤ به، مع الأخذ بعين الاعتبار مقدار ما تبقى من بنية السن الطبيعية، وتشريح قنوات الجذر نفسها، وأي علاج سابق خضعت له السن. وحيثما لا يمكن ترميم السن فعليًا، قد يكون الخلع هو الخيار الأكثر واقعية، وهذا لا يعني فشل العلاج؛ بل هو ببساطة ما تسمح به حالة السن نفسها. وسيناقش طبيبك معك هذا المنطق بدلًا من تركك تخمِّن أي المسارين هو الصحيح. وإذا خُلعت السن، يصبح تعويضها قرارًا منفصلًا بحدّ ذاته، مع عدة مسارات ترميمية يمكن النظر فيها، وهو ما نتناوله بتفصيل أكبر في ',
+          { text: 'دليلنا حول خيارات الترميم', href: '/blog/crowns-bridges-and-dentures-explained' },
+          '.',
+        ] },
+
+        { type: 'heading', level: 2, id: 'after-treatment', text: 'بعد العلاج' },
+        { type: 'paragraph', text: 'من الشائع أن تشعر السن المعالَجة بالعصب بإيلام لبضعة أيام بعد العلاج، وعادةً ما يهدأ ذلك من تلقاء نفسه، وإن كانت المدة تختلف من شخص لآخر وقد تطول قليلًا في بعض الأحيان. وسيخبرك طبيبك بما يمكن توقعه في حالتك تحديدًا، ومتى يستحق الانزعاج مكالمة متابعة بدلًا من الانتظار وحده.' },
+        { type: 'paragraph', text: [
+          'وحيثما وُضع ترميم مؤقت، فإن دوره حماية السن إلى حين جاهزية الترميم النهائي، وسيخبرك طبيبك متى تكون السن جاهزة للاستخدام الطبيعي بدلًا من افتراض ذلك مباشرة — إذ تعود الوظيفة عمومًا تدريجيًا مع تقدّم الشفاء، لا دفعة واحدة. وبالنسبة لسن تأثرت بشكل كبير، غالبًا ما يُخطَّط لتاج أو ترميم نهائي آخر بعد ذلك لحمايتها من الكسر أثناء الاستخدام اليومي — وإن كان هذا ليس تلقائيًا في كل الحالات، إذ يعتمد على مقدار ما تبقى من بنية السن الطبيعية. والمتابعة الدورية جزء من الخطة، بحيث يمكن رصد أي مخاوف مبكرًا. ويمكنك الاطلاع على نهجنا في هذا العلاج بمزيد من التفصيل على ',
+          { text: 'صفحة علاج العصب لدينا', href: '/root-canal-treatment' },
+          '.',
+        ] },
+      ],
+      faqs: [
+        { question: 'هل يسبب علاج العصب ألمًا؟', answer: 'يُستخدم التخدير الموضعي عادةً لتخدير المنطقة، ويظل الهدف طوال العلاج هو الحفاظ على أكبر قدر ممكن من الراحة. وتختلف تجربة كل شخص، ومن الشائع أن تشعر السن بإيلام خفيف لبضعة أيام بعد العلاج ريثما تهدأ.' },
+        { question: 'هل يمكن علاج أي سن بهذه الطريقة؟', answer: 'ليس تلقائيًا. تعتمد مدى ملاءمة السن للعلاج على عوامل مثل مقدار ما تبقى من بنيتها الطبيعية، وشكل قنوات الجذر، وأي علاج سابق خضعت له — ويُقيَّم ذلك بشكل فردي لا افتراضي لكل سن.' },
+        { question: 'هل علاج العصب أفضل من الخلع؟', answer: 'ليس بالضرورة. يهدف علاج العصب إلى الحفاظ على سنّك الطبيعية، بينما يزيلها الخلع — ويعتمد الخيار الأنسب على ما إذا كان يمكن ترميم السن بشكل يمكن التنبؤ به، لا على تفوق أحد الخيارين تلقائيًا.' },
+        { question: 'هل سأحتاج إلى تاج بعد العلاج؟', answer: 'ليس في كل الحالات. غالبًا ما يُوصى بتاج أو ترميم نهائي آخر لسن تأثرت بشكل كبير، إذ يساعد ذلك على حمايتها من الكسر — لكن ما هو مطلوب يعتمد على السن نفسها ومقدار ما تبقى من بنيتها الطبيعية.' },
+        { question: 'هل ما زلت بحاجة إلى علاج العصب حتى لو توقف الألم؟', answer: 'نعم، هذا وارد. فهدوء الألم لا يعني دائمًا أن المشكلة الكامنة قد زالت، وهذا أحد أسباب اعتماد التشخيص على تقييم سريري مناسب لا على الأعراض وحدها.' },
+      ],
+      references: [
+        {
+          title: 'Root canal treatment — NHS',
+          url: 'https://www.nhs.uk/tests-and-treatments/root-canal-treatment/',
+        },
+        {
+          title: 'Root canal treatment: How it is performed — NHS',
+          url: 'https://www.nhs.uk/conditions/root-canal-treatment/what-happens/',
+        },
+        {
+          title: 'Understanding your Endodontic (Root Canal) Treatment — Leeds Teaching Hospitals NHS Trust',
+          url: 'https://www.leedsth.nhs.uk/patients/resources/understanding-your-endodontic-root-canal-treatment/',
+        },
+        {
+          title: 'Abscessed Tooth — Cleveland Clinic',
+          url: 'https://my.clevelandclinic.org/health/diseases/10943-abscessed-tooth',
+        },
+      ],
+    },
   },
   {
     slug: 'gum-health-what-you-should-know',

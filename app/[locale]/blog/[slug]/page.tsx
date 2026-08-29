@@ -30,6 +30,10 @@ import { getLocaleAlternates } from '@/lib/seo'
 const categoryLabelAr: Record<string, string> = {
   'dental-implants': 'زراعة الأسنان',
   prosthodontics: 'طب التعويضات السنية',
+  // Matches the term already used sitewide for this treatment (e.g.
+  // messages/ar/rootCanalTreatment.json, messages/ar/treatments.json) —
+  // there's no separate abstract "Endodontics" noun established elsewhere.
+  endodontics: 'علاج العصب',
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
