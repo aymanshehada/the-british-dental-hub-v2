@@ -48,6 +48,9 @@ export interface BlogArticleLocaleContent {
   faqs: BlogFaq[]
   author?: string
   medicalReviewer?: string
+  // Arabic equivalent of BlogArticle.reviewerCredentials — same purpose,
+  // same sourcing rule (plain text, never invented), just localized.
+  reviewerCredentials?: string
   references?: BlogReference[]
 }
 
@@ -59,6 +62,11 @@ export interface BlogArticle {
   publishedAt: string
   author: string
   medicalReviewer: string
+  // Optional override for the Person JSON-LD `description` field, used when
+  // the reviewer's default (implant-focused) credential summary isn't the
+  // most relevant one for this article's topic. Plain text, sourced only
+  // from already-established, verified credential data — never invented.
+  reviewerCredentials?: string
   content: ContentBlock[]
   faqs: BlogFaq[]
   references?: BlogReference[]

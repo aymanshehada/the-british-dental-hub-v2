@@ -23,12 +23,13 @@ import { getPathname } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
 import { getLocaleAlternates } from '@/lib/seo'
 
-// The only Arabic category label needed today — this article is the sole
-// one with Arabic content, so a full localized categories table (which
-// would touch the shared `categories` array used by every other article
-// and the Journal index) is intentionally out of scope here.
+// Only the Arabic category labels actually needed today — for the articles
+// that currently have Arabic content. A full localized categories table
+// (which would touch the shared `categories` array used by every other
+// article and the Journal index) is intentionally out of scope here.
 const categoryLabelAr: Record<string, string> = {
   'dental-implants': 'زراعة الأسنان',
+  prosthodontics: 'طب التعويضات السنية',
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
@@ -191,13 +192,16 @@ export default async function BlogArticlePage({
         name: displayReviewer,
         jobTitle: 'أخصائي زراعة الأسنان وطب الأسنان التجميلي',
         description:
+          loc?.reviewerCredentials ??
           'بكالوريوس طب وجراحة الأسنان (BDS)، زمالة زراعة الأسنان (الجامعة البريطانية في مصر وجامعة شيفيلد)، الجزء الأول من زمالة طب الأسنان بالكلية الملكية للجراحين في إدنبرة (MFDS)',
       }
     : {
         '@type': 'Person',
         name: displayReviewer,
         jobTitle: 'Implant & Aesthetic Dentistry Specialist',
-        description: 'BDS, Implant Fellowship (The British University in Egypt & University of Sheffield), MFDS Part 1 RCS Edinburgh',
+        description:
+          article.reviewerCredentials ??
+          'BDS, Implant Fellowship (The British University in Egypt & University of Sheffield), MFDS Part 1 RCS Edinburgh',
       }
 
   const pagePathname = getPathname({ href: `/blog/${article.slug}`, locale: locale as AppLocale })

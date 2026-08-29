@@ -158,29 +158,145 @@ export const articles: BlogArticle[] = [
   {
     slug: 'crowns-bridges-and-dentures-explained',
     title: 'Crowns, Bridges, and Dentures: Understanding Your Restorative Options',
-    dek: 'A general overview of the main ways a damaged, missing, or worn tooth can be restored.',
+    dek: 'A considered explanation of how crowns, bridges, and dentures each work — and why the right option depends on the condition of your whole mouth, not a fixed rule.',
     category: 'prosthodontics',
     publishedAt: '2026-08-18',
     author: DEFAULT_AUTHOR,
     medicalReviewer: DEFAULT_REVIEWER,
+    // Genuinely relevant to this article's topic (unlike the implant article) —
+    // sourced verbatim from messages/en/home.json's dr1.qualification2, not invented.
+    reviewerCredentials: 'BDS, currently pursuing MRD and MProstho (Prosthodontics)',
     content: [
-      { type: 'paragraph', text: "Prosthodontics covers the range of treatments used to restore or replace teeth, and the terminology can feel overwhelming at first. In general terms, three options come up most often." },
-      { type: 'heading', level: 2, id: 'what-prosthodontics-covers', text: 'What Prosthodontics Covers' },
-      { type: 'paragraph', text: 'These treatments are generally considered when a tooth is significantly damaged, missing, or worn, and a natural repair is no longer the most suitable option.' },
-      { type: 'heading', level: 2, id: 'comparing-the-main-options', text: 'Comparing the Main Options' },
-      { type: 'table', headers: ['Option', 'Best Suited For', 'Fixed or Removable'], rows: [
-        ['Crown', 'Strengthening a single damaged tooth', 'Fixed'],
-        ['Bridge', 'Replacing one or more missing teeth using neighbouring teeth for support', 'Fixed'],
-        ['Denture', 'Replacing multiple or all missing teeth', 'Removable, or fixed depending on the case'],
+      { type: 'paragraph', text: "A tooth can need restoring or replacing for several reasons — significant decay, a fracture, heavy wear, or a tooth that's already missing. Three broad approaches come up most often: crowns, bridges, and dentures. Each does a different job, is suited to a different situation, and none of them is automatically the right answer for every case. Understanding what each one actually involves, and what determines whether it's suitable, is a more useful starting point than assuming one option is simply \"better\" than the others." },
+
+      { type: 'heading', level: 2, id: 'crowns', text: 'Crowns' },
+      { type: 'paragraph', text: "A crown is a custom-made cover that fits over an existing tooth — it does not replace a missing one. It's generally considered when a tooth has been significantly weakened by decay, a large filling, a fracture, or root canal treatment, and needs its strength, function, and appearance restored rather than removed altogether. The tooth is reshaped first so the crown can fit securely over what remains. In some root-treated teeth with very little remaining structure, a post may be used to help support the build-up beneath the crown. A crown can also sit on top of a dental implant, in which case it is the visible replacement tooth rather than a cover for a natural one — the underlying support is simply different. Cared for well, with consistent brushing, interdental cleaning, and regular check-ups, a crown is generally intended to last for many years, though this varies by case." },
+
+      { type: 'heading', level: 2, id: 'bridges', text: 'Bridges' },
+      { type: 'paragraph', text: "A bridge replaces one or more missing teeth by fixing a false tooth in place, using planned support from one or more neighbouring teeth. Because it's cemented or bonded in, it isn't taken out day to day, and it can help restore biting and chewing across the gap in the way a missing tooth alone cannot. How much those supporting teeth need to be prepared depends on the design used: a conventional bridge reshapes and crowns both supporting teeth to hold the new tooth securely, while some other designs are bonded to the back of a neighbouring tooth rather than covering it, involving considerably less preparation. Which approach is appropriate depends on the health, position, and existing condition of the neighbouring teeth themselves, which is assessed individually rather than assumed. Where several teeth are missing, or where the neighbouring teeth aren't a suitable foundation, an implant-supported alternative may be considered instead." },
+
+      { type: 'heading', level: 2, id: 'dentures', text: 'Dentures' },
+      { type: 'paragraph', text: "A denture is a removable appliance that replaces missing teeth, and it comes in two main forms. A partial denture replaces one or more missing teeth while some natural teeth remain, often held in place with discreet clasps that clip onto those teeth. A complete denture replaces a full set of upper or lower teeth, where none remain. Unlike a crown or bridge, a denture is not fixed permanently in the mouth — it's designed to be removed for cleaning and, generally, overnight." },
+      { type: 'paragraph', text: "Adjusting to a new denture takes time, and the period of adaptation varies from person to person rather than following a fixed timeline. It can feel noticeably large in the mouth at first, and speaking and eating may feel different for a while, particularly with a complete denture replacing a full arch. Starting with softer foods, cutting food into smaller pieces, and chewing evenly on both sides of the mouth generally helps as the mouth and tongue adjust. Daily cleaning, along with removing the denture overnight to let the gums rest, is generally part of ongoing care." },
+
+      { type: 'heading', level: 2, id: 'comparing-the-options', text: 'Comparing the Options' },
+      { type: 'paragraph', text: 'Set out simply, the practical difference between these options often comes down to whether they stay in the mouth permanently or can be taken out, and how many teeth are involved:' },
+      { type: 'table', headers: ['Option', 'Typically Used For', 'Fixed or Removable'], rows: [
+        ['Crown', 'Restoring a single damaged or weakened tooth', 'Fixed'],
+        ['Bridge', 'Replacing one or more missing teeth using planned support from neighbouring teeth', 'Fixed'],
+        ['Denture', 'Replacing one or more missing teeth, or a full arch, depending on the type', 'Removable'],
       ] },
-      { type: 'callout', text: 'The right option depends on the condition of your remaining teeth and gums, which is assessed individually rather than assumed from a general comparison.' },
-      { type: 'heading', level: 2, id: 'living-comfortably-with-a-restoration', text: 'Living Comfortably With a Restoration' },
-      { type: 'paragraph', text: 'Whichever option is recommended, ongoing comfort tends to come down to fit, maintenance, and regular review — all of which are part of the plan your clinician builds with you.' },
+      { type: 'paragraph', text: "This is a starting point for orientation, not a recommendation. The condition of the remaining teeth, the health of the gums and supporting bone, how the bite functions day to day, and what matters most to the patient in terms of appearance and comfort all factor into the actual decision, which is made individually rather than read off a table. These options aren't always a one-time, permanent choice either — as a mouth changes over time, a plan built around a bridge or denture today doesn't rule out a different approach later, and that flexibility is part of what a proper assessment weighs up." },
+      { type: 'callout', text: "There is no single restoration that is right for everyone; the appropriate option depends on the condition of the mouth, what needs to be restored or replaced, and the patient's own priorities." },
+
+      { type: 'heading', level: 2, id: 'where-implants-can-fit-in', text: 'Where Implants Can Fit In' },
+      { type: 'paragraph', text: [
+        "Implants are worth being aware of when weighing up bridges and dentures in particular. Implant treatment can provide support for a replacement tooth without relying on neighbouring teeth for support, and, depending on the case, can also be used to support a bridge or certain types of denture more securely. Whether an implant is suitable depends on individual factors, including the health of the gums and the amount of supporting bone, so it isn't automatically the right choice either — it's simply another route worth discussing alongside a bridge or denture, not a universal upgrade from either. A fuller explanation of what implant treatment involves is available in our guide to ",
+        { text: 'what to expect from dental implant treatment', href: '/blog/what-to-expect-from-dental-implant-treatment' },
+        ", and on our ",
+        { text: 'dental implants page', href: '/dental-implants' },
+        ".",
+      ] },
+
+      { type: 'heading', level: 2, id: 'living-with-your-restoration-long-term', text: 'Living With Your Restoration Long-Term' },
+      { type: 'paragraph', text: "Whichever option is chosen, comfort and longevity over time depend on similar basics: consistent oral hygiene, sensible care of the restoration itself, and regular review visits so fit and condition can be checked. A crown or bridge can generally be cared for with regular brushing and appropriate interdental cleaning, with your dentist or hygienist showing you how to clean around the restoration. A denture needs its own daily cleaning routine and periodic checks, since the mouth and gums can change shape gradually over time, which can affect how well a denture continues to fit. None of this is a one-off procedure — ongoing care is part of the plan from the outset, whichever option is right for you." },
     ],
     faqs: [
-      { question: 'How do I know which option is right for me?', answer: 'This is decided together with your dentist after an assessment of your remaining teeth, gums, and overall goals — not from a general comparison alone.' },
-      { question: 'Do these restorations require special care?', answer: 'Generally, they benefit from the same consistent oral hygiene as natural teeth, alongside regular check-ups so fit and condition can be reviewed.' },
+      { question: 'How do I know which option is right for me?', answer: 'This is decided together with your dentist after assessing your remaining teeth, gums, and supporting bone, along with your own priorities — not from a general comparison like this one.' },
+      { question: 'Do these restorations require special care?', answer: "The basics are similar — consistent oral hygiene and regular check-ups — but a denture also needs its own daily cleaning routine and overnight removal, which a crown or bridge doesn't." },
+      { question: 'Are dentures always removable?', answer: "A conventional denture is designed to be removable. Some patients are instead offered an implant-supported denture, which is a different, more securely retained appliance built on implants rather than a denture that's simply left in place." },
+      { question: 'Do the teeth next to a bridge always need to be filed down?', answer: 'Not to the same extent in every case. A conventional bridge involves reshaping and crowning the supporting teeth, while some other bridge designs need much less preparation. Which approach is suitable depends on the condition of those teeth.' },
+      { question: 'Could an implant be used instead of a bridge or denture?', answer: 'In some cases, yes. An implant can support a replacement tooth without relying on neighbouring teeth, and can sometimes support a bridge or denture as well — though suitability depends on individual factors like gum and bone health.' },
+      { question: 'Does gum disease affect which option I can have?', answer: 'The health of your gums and supporting tissues can affect which restorative options are suitable and how they can be planned, so gum health is assessed as part of the overall treatment plan.' },
     ],
+    references: [
+      {
+        title: 'Crowns — Leeds Teaching Hospitals NHS Trust',
+        url: 'https://www.leedsth.nhs.uk/patients/resources/crowns/',
+      },
+      {
+        title: 'Bridges — Leeds Teaching Hospitals NHS Trust',
+        url: 'https://www.leedsth.nhs.uk/patients/resources/bridges/',
+      },
+      {
+        title: 'Removable Partial Dentures — Leeds Teaching Hospitals NHS Trust',
+        url: 'https://www.leedsth.nhs.uk/patients/resources/removable-partial-dentures/',
+      },
+      {
+        title: 'Dentures — NHS',
+        url: 'https://www.nhs.uk/tests-and-treatments/dentures/',
+      },
+    ],
+    arContent: {
+      title: 'التيجان والجسور وأطقم الأسنان: فهم خيارات الترميم لديك',
+      dek: 'شرح مدروس لكيفية عمل كل من التيجان والجسور وأطقم الأسنان — ولماذا يعتمد الخيار المناسب على الحالة العامة للفم، لا على قاعدة ثابتة واحدة.',
+      author: 'د. أيمن شحادة',
+      medicalReviewer: 'د. أيمن شحادة',
+      // Arabic equivalent of the English reviewerCredentials override,
+      // sourced verbatim from messages/ar/home.json's dr1.qualification2.
+      reviewerCredentials: 'بكالوريوس طب وجراحة الأسنان (BDS)، يتابع حاليًا درجتي MRD وMProstho في طب التعويضات السنية',
+      content: [
+        { type: 'paragraph', text: 'قد تحتاج السنّ إلى ترميم أو استبدال لأسباب عدة — تسوّس كبير، أو كسر، أو تآكل شديد، أو سنّ مفقودة بالفعل. وتُعدّ التيجان والجسور وأطقم الأسنان من أكثر الحلول شيوعًا في هذا السياق. لكل خيار منها وظيفة مختلفة، ويناسب حالة معينة، وليس أي منها الإجابة الصحيحة تلقائيًا لكل حالة. وفهم ما يتضمنه كل خيار فعليًا، وما الذي يحدد مدى ملاءمته، نقطة انطلاق أكثر فائدة من افتراض أن أحدها ببساطة "أفضل" من غيره.' },
+
+        { type: 'heading', level: 2, id: 'crowns', text: 'التيجان' },
+        { type: 'paragraph', text: 'التاج غطاء مصمَّم خصيصًا يُركَّب فوق سنّ موجودة بالفعل — ولا يُستخدم لتعويض سنّ مفقودة. ويُلجأ إليه عادةً حين تكون السنّ قد ضعفت بشكل ملحوظ بسبب تسوّس، أو حشوة كبيرة، أو كسر، أو علاج عصب، وتحتاج إلى استعادة قوتها ووظيفتها ومظهرها بدلًا من خلعها كليًا. تُبرَّد السنّ أولًا وتُعاد تشكيلها لتناسب التاج بإحكام. وفي بعض الأسنان المعالَجة بالعصب حين يتبقى قدر ضئيل جدًا من بنية السنّ، قد تُستخدم دعامة للمساعدة على دعم الحشوة التأسيسية أسفل التاج. ويمكن للتاج أيضًا أن يُركَّب فوق زرعة سنية، وفي هذه الحالة يكون هو السنّ البديلة الظاهرة وليس غطاءً لسنّ طبيعية — فالدعامة الكامنة تختلف فحسب. ومع العناية الجيدة، من تنظيف منتظم بالفرشاة وتنظيف بين الأسنان وزيارات دورية للمتابعة، يُقصد بالتاج عادةً أن يدوم لسنوات عديدة، وإن كان ذلك يختلف من حالة إلى أخرى.' },
+
+        { type: 'heading', level: 2, id: 'bridges', text: 'الجسور' },
+        { type: 'paragraph', text: 'الجسر يعوّض سنّاً مفقودة أو أكثر عبر تثبيت سنّ صناعية في مكانها، بالاعتماد على دعم مخطَّط له من سنّ أو أكثر من الأسنان المجاورة. ولأنه يُثبَّت بالأسمنت أو باللصق، فإنه لا يُخلع يوميًا كطقم الأسنان، ويمكن أن يساعد على استعادة العضّ والمضغ عبر الفراغ بشكل لا تستطيعه السنّ المفقودة وحدها. ويختلف مقدار التحضير اللازم لتلك الأسنان الداعمة باختلاف التصميم المستخدم: فالجسر التقليدي يُعيد تشكيل السنّين الداعمتين ويغطيهما بتاج لتثبيت السنّ الجديدة بإحكام، في حين تُلصَق بعض التصاميم الأخرى بالجزء الخلفي من السنّ المجاورة بدلًا من تغطيتها بالكامل، وتتطلّب تحضيرًا أقل بكثير. ويعتمد اختيار الأسلوب المناسب على صحة الأسنان المجاورة وموضعها وحالتها القائمة، وهو أمر يُقيَّم بشكل فردي وليس افتراضيًا. وحين تكون عدة أسنان مفقودة، أو حين لا تشكّل الأسنان المجاورة أساسًا مناسبًا، قد يُنظر بدلًا من ذلك في بديل مدعوم بزرعة.' },
+
+        { type: 'heading', level: 2, id: 'dentures', text: 'أطقم الأسنان' },
+        { type: 'paragraph', text: 'طقم الأسنان جهاز متحرك يعوّض الأسنان المفقودة، ويأتي في شكلين رئيسيين. فالطقم الجزئي يعوّض سنّاً مفقودة أو أكثر بينما تبقى بعض الأسنان الطبيعية في مكانها، ويُثبَّت غالبًا بمشابك دقيقة تتشبث بتلك الأسنان. أما الطقم الكامل فيعوّض مجموعة كاملة من أسنان الفك العلوي أو السفلي حين لا يتبقى أي منها. وخلافًا للتاج أو الجسر، لا يُثبَّت طقم الأسنان بشكل دائم في الفم — بل صُمِّم ليُخلع للتنظيف، وعادةً أثناء الليل.' },
+        { type: 'paragraph', text: 'والتأقلم مع طقم أسنان جديد يستغرق وقتًا، وتختلف مدة هذا التأقلم من شخص لآخر ولا تسير وفق جدول زمني ثابت. وقد يبدو الطقم كبيرًا وملحوظًا داخل الفم في البداية، وقد يختلف الإحساس أثناء الكلام والأكل لبعض الوقت، خصوصًا مع طقم كامل يعوّض فكًا بأكمله. والبدء بأطعمة طرية، وتقطيع الطعام إلى قطع صغيرة، والمضغ بالتساوي على جانبي الفم، يساعد عادةً في هذه المرحلة أثناء تأقلم الفم واللسان معه. كما يُعدّ التنظيف اليومي، إلى جانب خلع الطقم ليلًا لإراحة اللثة، جزءًا معتادًا من العناية المستمرة به.' },
+
+        { type: 'heading', level: 2, id: 'comparing-the-options', text: 'مقارنة الخيارات' },
+        { type: 'paragraph', text: 'بعبارة مبسّطة، غالبًا ما يكمن الفرق العملي بين هذه الخيارات في ما إذا كانت تبقى في الفم بشكل دائم أو يمكن خلعها، وفي عدد الأسنان المعنيّة:' },
+        { type: 'table', headers: ['الخيار', 'يُستخدم عادةً من أجل', 'ثابت أم متحرك'], rows: [
+          ['التاج', 'ترميم سنّ واحدة تالفة أو ضعيفة', 'ثابت'],
+          ['الجسر', 'تعويض سنّ مفقودة أو أكثر بدعم مخطَّط من الأسنان المجاورة', 'ثابت'],
+          ['طقم الأسنان', 'تعويض سنّ مفقودة أو أكثر، أو فك كامل، بحسب النوع', 'متحرك'],
+        ] },
+        { type: 'paragraph', text: 'هذا مجرد نقطة انطلاق للتوجيه العام، وليس توصية علاجية. فحالة الأسنان المتبقية، وصحة اللثة والعظم الداعم، وطريقة عمل العضّ يوميًا، وما يهم المريض من حيث المظهر والراحة، كلها عوامل تدخل في القرار الفعلي، الذي يُتَّخذ بشكل فردي وليس بالاستناد إلى جدول وحده. كما أن هذه الخيارات ليست دائمًا قرارًا نهائيًا لمرة واحدة؛ فمع تغيّر الفم بمرور الوقت، لا تمنع خطة مبنية على جسر أو طقم أسنان اليوم من اتباع نهج مختلف لاحقًا، وهذه المرونة جزء مما يأخذه التقييم السليم بعين الاعتبار.' },
+        { type: 'callout', text: 'لا يوجد ترميم واحد يناسب الجميع؛ فالخيار المناسب يعتمد على حالة الفم، وما يحتاج إلى ترميم أو تعويض، وأولويات المريض نفسه.' },
+
+        { type: 'heading', level: 2, id: 'where-implants-can-fit-in', text: 'أين تندرج الزراعة ضمن هذه الخيارات' },
+        { type: 'paragraph', text: [
+          'تستحق الزراعة أن تُؤخَذ بعين الاعتبار عند الموازنة بين الجسور وأطقم الأسنان تحديدًا. فعلاج الزراعة يمكن أن يوفّر دعمًا لسنّ بديلة دون الاعتماد على الأسنان المجاورة للدعم، ويمكن أيضًا، بحسب الحالة، أن يُستخدم لدعم جسر أو نوع معيّن من أطقم الأسنان بثبات أكبر. ومدى ملاءمة الزراعة يعتمد على عوامل فردية، منها صحة اللثة وكمية العظم الداعم، لذا فهي ليست الخيار الصحيح تلقائيًا هي الأخرى — بل هي ببساطة مسار آخر يستحق مناقشته إلى جانب الجسر أو طقم الأسنان، لا ترقية عامة على أي منهما. ويتوفر شرح أوفى لما يتضمنه علاج الزراعة في دليلنا حول ',
+          { text: 'ما يمكن توقعه من علاج زراعة الأسنان', href: '/blog/what-to-expect-from-dental-implant-treatment' },
+          '، وعلى ',
+          { text: 'صفحة زراعة الأسنان', href: '/dental-implants' },
+          ' لدينا.',
+        ] },
+
+        { type: 'heading', level: 2, id: 'living-with-your-restoration-long-term', text: 'العناية بترميمك على المدى الطويل' },
+        { type: 'paragraph', text: 'أيًا كان الخيار المُختار، تعتمد الراحة ومتانة النتيجة بمرور الوقت على أساسيات مشتركة: نظافة فموية منتظمة، وعناية مناسبة بالترميم نفسه، وزيارات متابعة دورية للتحقق من ملاءمته وحالته. ويمكن عادةً العناية بالتاج أو الجسر بتنظيف منتظم بالفرشاة وتنظيف مناسب بين الأسنان، مع توجيه من طبيبك أو أخصائي صحة الأسنان حول كيفية التنظيف حول الترميم تحديدًا. أما طقم الأسنان فيحتاج إلى روتين تنظيف يومي خاص به وفحوصات دورية، إذ يمكن أن يتغيّر شكل الفم واللثة تدريجيًا بمرور الوقت، ما قد يؤثر في مدى استمرار ملاءمة الطقم. وليس أي من ذلك إجراءً لمرة واحدة — فالعناية المستمرة جزء من الخطة منذ البداية، أيًا كان الخيار المناسب لك.' },
+      ],
+      faqs: [
+        { question: 'كيف أعرف الخيار المناسب لي؟', answer: 'يُحدَّد ذلك بالتشارك مع طبيبك بعد تقييم أسنانك المتبقية ولثتك والعظم الداعم، إلى جانب أولوياتك الخاصة — وليس من مقارنة عامة كهذه.' },
+        { question: 'هل تحتاج هذه الترميمات إلى عناية خاصة؟', answer: 'الأساسيات متشابهة — نظافة فموية منتظمة وزيارات دورية للفحص — لكن طقم الأسنان يحتاج أيضًا إلى روتين تنظيف يومي خاص به وخلعه ليلًا، وهو ما لا يحتاجه التاج أو الجسر.' },
+        { question: 'هل يكون طقم الأسنان متحركًا دائمًا؟', answer: 'الطقم التقليدي مصمَّم ليكون متحركًا. وقد يُعرَض على بعض المرضى بدلًا من ذلك طقم مدعوم بزرعات، وهو جهاز مختلف وأكثر ثباتًا يُبنى على الزرعات، وليس مجرد طقم عادي يُترَك في مكانه.' },
+        { question: 'هل يجب دائمًا بَرْد الأسنان المجاورة للجسر؟', answer: 'ليس بالقدر نفسه في كل الحالات. فالجسر التقليدي يتضمن إعادة تشكيل الأسنان الداعمة وتغطيتها بتاج، بينما تحتاج بعض تصاميم الجسور الأخرى إلى تحضير أقل بكثير. ويعتمد الأسلوب المناسب على حالة تلك الأسنان.' },
+        { question: 'هل يمكن استخدام زرعة بدلًا من جسر أو طقم أسنان؟', answer: 'في بعض الحالات، نعم. يمكن للزرعة أن تدعم سنّاً بديلة دون الاعتماد على الأسنان المجاورة، وقد تدعم أحيانًا جسرًا أو طقم أسنان أيضًا — إلا أن مدى ملاءمتها يعتمد على عوامل فردية مثل صحة اللثة والعظم.' },
+        { question: 'هل يؤثر مرض اللثة في الخيار المتاح لي؟', answer: 'يمكن ذلك. فصحة اللثة والأنسجة الداعمة جزء مما يحدد الخيارات الترميمية المناسبة وكيفية التخطيط لها، لذا تُقيَّم صحة اللثة كجزء من خطة العلاج الشاملة.' },
+      ],
+      references: [
+        {
+          title: 'Crowns — Leeds Teaching Hospitals NHS Trust',
+          url: 'https://www.leedsth.nhs.uk/patients/resources/crowns/',
+        },
+        {
+          title: 'Bridges — Leeds Teaching Hospitals NHS Trust',
+          url: 'https://www.leedsth.nhs.uk/patients/resources/bridges/',
+        },
+        {
+          title: 'Removable Partial Dentures — Leeds Teaching Hospitals NHS Trust',
+          url: 'https://www.leedsth.nhs.uk/patients/resources/removable-partial-dentures/',
+        },
+        {
+          title: 'Dentures — NHS',
+          url: 'https://www.nhs.uk/tests-and-treatments/dentures/',
+        },
+      ],
+    },
   },
   {
     slug: 'understanding-root-canal-treatment',
