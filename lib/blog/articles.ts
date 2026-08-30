@@ -424,32 +424,67 @@ export const articles: BlogArticle[] = [
   {
     slug: 'gum-health-what-you-should-know',
     title: 'Gum Health: What You Should Know',
-    dek: 'How healthy gums support your whole smile, and what ongoing periodontal care usually looks like.',
+    dek: 'A clear explanation of gum health — the difference between gingivitis and periodontitis, which signs are worth discussing with your dentist, and what ongoing periodontal care usually involves.',
     category: 'periodontal-care',
     publishedAt: '2026-08-14',
     author: DEFAULT_AUTHOR,
     medicalReviewer: DEFAULT_REVIEWER,
     content: [
-      { type: 'paragraph', text: "It's easy to focus entirely on teeth and overlook the gums that support them, but gum health plays a central role in how a smile looks and functions over time." },
-      { type: 'heading', level: 2, id: 'why-gum-health-matters', text: 'Why Gum Health Matters' },
-      { type: 'paragraph', text: 'Gums provide the foundation for your teeth. When that foundation is compromised, it can affect comfort, appearance, and long-term stability.' },
-      { type: 'heading', level: 2, id: 'common-approaches-to-gum-care', text: 'Common Approaches to Gum Care' },
-      { type: 'list', items: [
-        'Deep cleaning beneath the gumline where needed',
-        'Ongoing periodontal maintenance',
-        'Treatment for gum inflammation at different stages',
-      ] },
-      { type: 'callout', text: 'The right approach depends on your specific gum health, assessed individually rather than assumed from general information.' },
-      { type: 'heading', level: 2, id: 'everyday-habits', text: 'Everyday Habits That Support Healthy Gums' },
-      { type: 'list', items: [
-        'A consistent, gentle brushing technique',
-        'Regular interdental cleaning',
-        'Routine dental check-ups',
+      { type: 'paragraph', text: "Healthy gums do more work than they tend to get credit for — they support comfortable biting and chewing, shape how a smile looks, and keep each tooth stable in place. Gum problems don't arrive as a single condition either; they exist on a spectrum, from common, everyday inflammation to more established periodontal disease. Understanding where that distinction lies, and which signs are worth mentioning to your dentist, is more useful than waiting until something feels obviously wrong, whether you've noticed something yourself or are simply keen to look after your gums well." },
+
+      { type: 'heading', level: 2, id: 'gingivitis-and-periodontitis-in-plain-terms', text: 'Gingivitis and Periodontitis, in Plain Terms' },
+      { type: 'paragraph', text: "Gingivitis is inflammation limited to the gums themselves, and it's commonly associated with plaque building up along the gumline. Gums affected this way can become red, swollen, or tender, and may bleed more easily than usual, particularly when brushing. With consistent plaque control and appropriate care, gingivitis is generally reversible." },
+      { type: 'paragraph', text: "Periodontitis is a different stage — one that involves the deeper tissues supporting the teeth, including the structures and bone beneath the gumline. Where periodontitis has developed, it can lead to a loss of that supporting tissue and bone, and in more established cases, teeth can become loose or shift position. This loss of support isn't something home care alone can reverse once it has happened, though appropriate treatment can manage the condition and help stabilise it going forward, slowing or halting further loss rather than undoing what's already occurred." },
+      { type: 'paragraph', text: "It's worth being clear that gingivitis doesn't automatically progress to periodontitis, and not everyone with gum inflammation goes on to develop the more advanced condition — but the distinction is exactly why a gum concern is worth having assessed rather than judged from home, since the two stages call for genuinely different responses." },
+
+      { type: 'heading', level: 2, id: 'signs-worth-discussing-with-your-dentist', text: 'Signs Worth Discussing With Your Dentist' },
+      { type: 'paragraph', text: 'A number of signs are worth mentioning to your dentist: bleeding when you brush, gums that look red, swollen, or feel sore, persistent bad breath, gums that appear to be receding or shrinking back from the tooth, teeth that feel loose or have started to shift, and, less commonly, pus or a visible gum abscess near the gumline — the latter is worth a prompt conversation rather than waiting for your next routine visit.' },
+      { type: 'paragraph', text: "None of these signs tells you on their own how advanced a problem is, and they shouldn't be treated as a checklist for self-diagnosis — that's what a clinical assessment is genuinely for. It's also worth knowing that the extent of a periodontal problem is not always obvious from symptoms alone, which is part of why regular professional review matters even when nothing feels wrong day to day." },
+      { type: 'paragraph', text: "Bleeding in particular is worth mentioning rather than something to simply accept as normal. It doesn't automatically mean established gum disease, but it is a signal worth acting on — and the right response is to keep the area gently and thoroughly clean, with regular brushing and interdental cleaning, rather than to avoid it or brush harder in response." },
+
+      { type: 'heading', level: 2, id: 'what-helps-at-home', text: 'What Helps at Home' },
+      { type: 'paragraph', text: "Gum inflammation is closely linked to plaque — the soft, sticky film of bacteria that builds up on teeth and along the gumline if it isn't disrupted regularly. Three practical foundations help: brushing your teeth thoroughly and gently, cleaning between your teeth daily with floss or interdental brushes, and attending regular professional reviews. Cleaning between the teeth matters because a toothbrush alone can't reach the tight spaces where plaque tends to accumulate, particularly along the gumline." },
+      { type: 'paragraph', text: "General NHS guidance suggests brushing twice a day with a fluoride toothpaste, though your own dentist may tailor this to your specific needs and any areas that need particular attention. Smoking is also a relevant factor worth being aware of, since it's recognised as something that can affect gum health, and stopping is generally encouraged as part of supporting healthier gums over time." },
+
+      { type: 'heading', level: 2, id: 'what-professional-care-involves', text: 'What Professional Care Involves' },
+      { type: 'paragraph', text: "A periodontal assessment generally looks at the health of your gums as a whole, rather than relying on how things feel day to day. This may include examining the gums directly, checking for bleeding, measuring the depth of the space between the gum and tooth where appropriate, assessing whether any teeth feel loose, and considering the condition of the supporting bone — sometimes with the help of dental imaging where it's clinically useful, rather than as a routine step for everyone. The findings shape what, if anything, is recommended next." },
+      { type: 'paragraph', text: "Where treatment is needed, it's often more thorough than a routine clean — sometimes described as a deep clean, this involves cleaning more thoroughly beneath the gumline than a standard professional clean, and forms part of non-surgical periodontal treatment where it's clinically indicated. Not everyone needs this; what's recommended depends entirely on the condition of your own gums, and your dentist will explain the reasoning rather than assuming it applies by default." },
+      { type: 'paragraph', text: "Ongoing periodontal care afterward is generally about review rather than a single fix: monitoring how your gums are responding, reinforcing home care, removing any new deposits where needed, and reassessing based on your own individual risk and how you're responding to treatment, rather than following one fixed schedule applied to every patient in the same way." },
+
+      { type: 'heading', level: 2, id: 'gum-health-and-the-rest-of-your-care', text: 'Gum Health and the Rest of Your Care' },
+      { type: 'paragraph', text: [
+        "Healthy gums and the tissue and bone beneath them are part of what keeps teeth stable over time, which is one reason gum health is checked at every routine visit rather than only when something feels wrong. It's also relevant beyond your natural teeth: the same supporting tissues are one of the things considered when planning treatments such as ",
+        { text: 'dental implants', href: '/dental-implants' },
+        ' or other restorative work. If gum treatment is ever part of your own plan, you can find more detail on ',
+        { text: 'our gum treatment page', href: '/gum-treatment' },
+        '.',
       ] },
     ],
     faqs: [
-      { question: 'How often should gum health be checked?', answer: 'This depends on your individual history and risk factors, which your dentist will discuss with you directly.' },
-      { question: 'Can gum health affect the rest of my mouth?', answer: 'Gum health is closely linked to the long-term stability of your teeth, which is part of why it is assessed at every routine visit.' },
+      { question: 'How often should gum health be checked?', answer: "There's no single schedule that applies to everyone. How often you should be checked depends on your individual history, your level of periodontal risk, the current health of your gums, and your dentist's professional advice for your specific case." },
+      { question: 'Can gum health affect the rest of my mouth?', answer: 'Periodontal disease can affect the tissues that support your teeth, and in more established disease, that can affect tooth stability. This is also part of why gum health is considered when planning restorative or implant treatment, since the condition of the surrounding gum and bone is one of the things taken into account.' },
+      { question: "What's the difference between gingivitis and periodontitis?", answer: "Gingivitis is inflammation limited to the gums themselves, and it's generally reversible with appropriate plaque control and care. Periodontitis involves the deeper tissues and bone supporting the teeth, and while the loss of support it causes can't simply be reversed, it can be managed and stabilised with appropriate treatment." },
+      { question: 'Can gum disease be reversed?', answer: "Gingivitis generally is, with consistent plaque control and appropriate care. Established periodontitis is different — the supporting tissue it affects can't be fully restored through home care alone, but appropriate periodontal treatment can control the condition and help stabilise it, rather than reverse what's already been lost." },
+      { question: 'Is it normal for my gums to bleed?', answer: "Bleeding gums are not something to simply ignore. It doesn't automatically mean you have gum disease, but it can be a sign of gum inflammation and is worth mentioning to your dentist rather than accepting as normal." },
+      { question: 'Can gum disease cause tooth loss?', answer: "In more advanced, established disease, periodontitis can damage the tissue and bone supporting a tooth, and teeth can become loose and may eventually be lost. This isn't the outcome for everyone with gum disease, which is why earlier assessment and appropriate care matter." },
+    ],
+    references: [
+      {
+        title: 'Gum disease — NHS',
+        url: 'https://www.nhs.uk/conditions/gum-disease/',
+      },
+      {
+        title: 'How to keep your teeth clean — NHS',
+        url: 'https://www.nhs.uk/live-well/healthy-teeth-and-gums/how-to-keep-your-teeth-clean/',
+      },
+      {
+        title: 'Gum (Periodontal) Disease — Scottish Dental (NHS Education for Scotland)',
+        url: 'https://www.scottishdental.nhs.scot/library-dental-topics/gum-periodontal-disease/',
+      },
+      {
+        title: 'Gingivitis: Reversing and preventing early gum disease — Harvard Health Publishing',
+        url: 'https://www.health.harvard.edu/diseases-and-conditions/gingivitis-reversing-and-preventing-early-gum-disease',
+      },
     ],
   },
   {
