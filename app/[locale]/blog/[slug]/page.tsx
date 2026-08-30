@@ -34,6 +34,9 @@ const categoryLabelAr: Record<string, string> = {
   // messages/ar/rootCanalTreatment.json, messages/ar/treatments.json) —
   // there's no separate abstract "Endodontics" noun established elsewhere.
   endodontics: 'علاج العصب',
+  // Matches the eyebrow label already used on the gum-treatment service
+  // page (messages/ar/gumTreatment.json).
+  'periodontal-care': 'رعاية اللثة',
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
