@@ -553,28 +553,73 @@ export const articles: BlogArticle[] = [
   {
     slug: 'veneers-vs-whitening-choosing-the-right-approach',
     title: 'Veneers vs. Whitening: Choosing the Right Approach',
-    dek: 'Two different ways to refine your smile, and how they are generally suited to different goals.',
+    dek: 'A clear look at what teeth whitening and veneers can each actually change — and why the right starting point is your own concern, not which treatment sounds more advanced.',
     category: 'cosmetic-dentistry',
     publishedAt: '2026-08-12',
     author: DEFAULT_AUTHOR,
     medicalReviewer: DEFAULT_REVIEWER,
     content: [
-      { type: 'paragraph', text: 'Veneers and whitening are often mentioned in the same breath, but they solve fairly different problems. Knowing the distinction can make it easier to think about what you actually want to change.' },
-      { type: 'heading', level: 2, id: 'two-different-goals', text: 'Two Different Goals' },
-      { type: 'paragraph', text: 'In general terms, whitening addresses colour, while veneers address shape, alignment, and colour together.' },
-      { type: 'heading', level: 2, id: 'a-general-comparison', text: 'A General Comparison' },
-      { type: 'table', headers: ['Consideration', 'Whitening', 'Veneers'], rows: [
-        ['Addresses', 'Shade and brightness only', 'Shape, shade, and symmetry together'],
-        ['Tooth structure', 'No alteration', 'Conservative preparation is typically required'],
-        ['Best suited for', 'Patients happy with tooth shape, wanting a brighter shade', 'Patients wanting a more comprehensive change'],
+      { type: 'paragraph', text: "Veneers and teeth whitening are often discussed in the same breath, but they address different aesthetic concerns, and the more useful starting point isn't which treatment sounds more advanced — it's what you actually want to change. Some patients are mainly bothered by shade, others by the shape or proportion of a tooth, and some by both together. Starting from that question, rather than from a treatment name, makes it far easier to have a genuinely useful conversation with your dentist, whatever the eventual answer turns out to be." },
+
+      { type: 'heading', level: 2, id: 'what-whitening-changes', text: 'What Whitening Changes' },
+      { type: 'paragraph', text: "Whitening works on the natural colour of your own teeth, lightening it without removing any of the tooth's surface. How predictable the result is depends partly on what's causing the discoloration in the first place: staining that sits on or near the surface — from food, drink, or smoking, for example — tends to respond more predictably than discoloration originating from within the tooth, such as after an injury or from some developmental causes. Which category applies to a given tooth is something your dentist assesses directly, rather than something to judge from the mirror." },
+      { type: 'paragraph', text: "One point that's easy to overlook: whitening changes the colour of natural tooth structure, but it doesn't change the colour of existing crowns, fillings, veneers, or similar restorations in the same way. If you have visible restorations in the area you're hoping to brighten, this is worth factoring into the plan and the order treatment happens in, since a shade mismatch can become more noticeable afterward rather than less." },
+      { type: 'paragraph', text: [
+        "Temporary sensitivity to cold, and occasional gum irritation from the whitening gel, can occur, and treatment is generally planned and supervised by a dental professional given the strength of the products involved. Results aren't indefinite either — teeth can gradually darken again over time, and further whitening is sometimes needed later to maintain the shade you started with. A fuller look at how we approach this is available on our ",
+        { text: 'teeth whitening page', href: '/teeth-whitening' },
+        ".",
       ] },
-      { type: 'callout', text: 'Suitability for either option is assessed individually, based on your teeth, gums, and goals.' },
-      { type: 'heading', level: 2, id: 'making-the-right-choice', text: 'Making the Right Choice for You' },
-      { type: 'paragraph', text: 'Many patients start with a conversation about what they would actually like to see change, and work backwards from there with their clinician.' },
+
+      { type: 'heading', level: 2, id: 'what-veneers-change', text: 'What Veneers Change' },
+      { type: 'paragraph', text: "A veneer is a thin facing bonded to the front of a tooth, and it can change what's visible in three ways at once: shape, proportion, and colour. This is what distinguishes it from whitening, which primarily affects tooth colour, and it's also why veneers are generally considered a more involved step than whitening rather than simply a stronger version of it." },
+      { type: 'paragraph', text: "How much of the tooth's own surface is involved varies by case and by the design of veneer being used — some involve removing a small amount of tooth structure to create room for the veneer, while others are designed to need very little preparation at all. Neither approach is automatically right for every tooth; it depends on what's already there and what the veneer needs to achieve to look and function well. Understanding what's actually planned for your own teeth, and how much of your natural structure that involves, is worth discussing clearly with your dentist before treatment begins, rather than assuming either way." },
+      { type: 'paragraph', text: [
+        "Once a tooth's surface has been prepared for a veneer, that change doesn't reverse on its own — the tooth will generally need to remain restored rather than simply returning to its original state. Like any restoration, a veneer can chip or become damaged over time, and it may eventually need repair or replacement. None of this changes what the tooth underneath still needs: the same everyday oral hygiene and regular professional review as the rest of your teeth. A fuller look at how we approach this is available on our ",
+        { text: 'porcelain veneers page', href: '/porcelain-veneers' },
+        ".",
+      ] },
+      { type: 'paragraph', text: "It's also worth being clear about what veneers don't do: they can sometimes change the appearance of minor irregularities, but they don't move teeth in the way orthodontic treatment does." },
+
+      { type: 'heading', level: 2, id: 'comparing-the-options', text: 'Comparing the Options' },
+      { type: 'paragraph', text: 'Set out side by side, the practical differences are easier to see:' },
+      { type: 'table', headers: ['Consideration', 'Whitening', 'Veneers'], rows: [
+        ['What it changes', 'Shade and brightness of your natural tooth colour', 'Shape, proportion, and colour of the visible tooth surface'],
+        ['Effect on tooth structure', 'Does not remove any tooth surface', 'Preparation varies by case — some designs remove a small amount of tooth surface, others very little'],
+        ['Often considered when', 'The main concern is colour, and tooth shape is already acceptable', 'The concern extends beyond colour to shape or proportion'],
+      ] },
+      { type: 'paragraph', text: "This is a starting point for orientation, not a recommendation — the table doesn't tell you which option is right, only how they typically differ. Which approach actually suits you depends on what you're hoping to change, the condition of the tooth or teeth involved, and your own priorities, all of which are worked through individually with your dentist rather than read off a comparison alone. Some patients find, once they've talked it through, that their concern is narrower than they first assumed, or that it spans both columns rather than sitting neatly in one." },
+
+      { type: 'heading', level: 2, id: 'longevity-and-upkeep', text: 'Longevity and Upkeep' },
+      { type: 'paragraph', text: 'Whitening and veneers also age differently, and neither is simply "better" on this measure. Whitening\'s effect isn\'t indefinite — NHS guidance suggests it may last around three years where a dentist\'s aftercare advice is followed, after which teeth can gradually darken again and further treatment may be considered. Veneers are a longer-term restoration; properly cared-for crowns and veneers are generally described as lasting around eight to ten years, though this varies by case, material, bite, and how well they\'re looked after. Rather than one option outlasting the other, it\'s more accurate to say they come with different maintenance profiles — periodic top-up treatment for whitening, and long-term care with the possibility of eventual repair or replacement for veneers.' },
+
+      { type: 'heading', level: 2, id: 'if-youre-considering-both', text: "If You're Considering Both" },
+      { type: 'paragraph', text: "Where both whitening and veneers are genuinely being considered, whitening is often approached first, before any definitive veneer is made — this allows the veneer's shade to be planned against your own, post-whitening natural tooth colour, rather than the other way around. This is a common planning approach rather than a fixed rule, and there's no universal waiting period between the two; the right sequence depends on the individual case and what's being planned overall for the smile as a whole." },
     ],
     faqs: [
-      { question: 'Can whitening and veneers be combined?', answer: 'This is something to discuss directly with your dentist, as it depends on your specific case and goals.' },
-      { question: 'Which option lasts longer?', answer: 'Longevity depends on the option, the material used, and how well it is cared for — your clinician can explain what applies to your case.' },
+      { question: 'Can whitening and veneers be combined?', answer: "Yes, in some cases they can be part of the same overall plan. Where both are appropriate, whitening is often considered before definitive veneers so the veneer's shade can be matched to your own post-whitening tooth colour — though the right sequence, and whether it's needed at all, depends on your individual case rather than a fixed waiting period." },
+      { question: 'Which option lasts longer?', answer: "They're not really comparable in that way. Whitening's effect may last around three years with appropriate aftercare, according to NHS guidance, while properly cared-for veneers are generally described as lasting around eight to ten years — though both figures are approximate and depend on the individual case. Whitening typically needs periodic top-up treatment, while veneers are longer-term but may still need repair or replacement eventually." },
+      { question: 'Does whitening work on all types of discoloration?', answer: "Not equally. Staining that sits on or near the tooth's surface tends to respond more predictably than discoloration originating from within the tooth, such as after an injury or from certain developmental causes. Your dentist assesses which applies to your case before recommending whitening." },
+      { question: 'Will whitening change the colour of my existing crowns or fillings?', answer: "Not in the same way. Whitening lightens natural tooth structure, but existing crowns, fillings, veneers, and similar restorations generally don't change colour the same way — which is worth factoring into shade planning if you have visible restorations in the area you're hoping to brighten." },
+      { question: 'Do veneers always require removing tooth structure?', answer: 'No. How much preparation is needed varies by the veneer design and your individual case — some involve removing a small amount of tooth surface, while others need very little. What\'s actually planned for your own teeth is something to understand clearly before treatment begins.' },
+      { question: 'Can veneers fix crooked teeth?', answer: "They can sometimes improve the appearance of minor irregularities, but they don't move teeth into new positions. Genuinely correcting misalignment is what orthodontic treatment is for, not veneers." },
+    ],
+    references: [
+      {
+        title: 'Teeth whitening — NHS',
+        url: 'https://www.nhs.uk/tests-and-treatments/teeth-whitening/',
+      },
+      {
+        title: 'Tooth Whitening Information for Adult Patients — Leeds Teaching Hospitals NHS Trust',
+        url: 'https://www.leedsth.nhs.uk/patients/resources/tooth-whitening-information-for-adult-patients/',
+      },
+      {
+        title: 'Dental treatments — NHS',
+        url: 'https://www.nhs.uk/live-well/healthy-teeth-and-gums/dental-treatments/',
+      },
+      {
+        title: 'Crowns — Leeds Teaching Hospitals NHS Trust',
+        url: 'https://www.leedsth.nhs.uk/patients/resources/crowns/',
+      },
     ],
   },
   {
