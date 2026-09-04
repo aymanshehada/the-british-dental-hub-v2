@@ -22,7 +22,11 @@ export type ContentBlock =
   | { type: 'paragraph'; text: ParagraphContent }
   | { type: 'heading'; level: 2 | 3; id: string; text: string }
   | { type: 'list'; items: string[] }
-  | { type: 'table'; headers: string[]; rows: string[][] }
+  // columnWidths is optional and only needed when a table's default
+  // (content-driven) column proportions look unbalanced for a given
+  // language/script — e.g. a short-label first column in Arabic. Omit it
+  // to keep the browser's normal auto-layout behaviour.
+  | { type: 'table'; headers: string[]; rows: string[][]; columnWidths?: string[] }
   | { type: 'callout'; text: string }
 
 export interface BlogFaq {

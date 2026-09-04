@@ -57,7 +57,7 @@ export function ArticleBody({ content }: { content: ContentBlock[] }) {
 
           case "list":
             return (
-              <ul key={index} className="space-y-2.5 pl-1">
+              <ul key={index} className="space-y-2.5 ps-1">
                 {block.items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[1.02rem] leading-7 text-[#3d4a5c]">
                     <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" />
@@ -70,7 +70,14 @@ export function ArticleBody({ content }: { content: ContentBlock[] }) {
           case "table":
             return (
               <div key={index} className="overflow-x-auto rounded-[14px] border border-[#e5ebf3]">
-                <table className="w-full min-w-[480px] border-collapse text-left text-[0.92rem]">
+                <table className="w-full min-w-[480px] border-collapse text-start text-[0.92rem]">
+                  {block.columnWidths && (
+                    <colgroup>
+                      {block.columnWidths.map((width, colIndex) => (
+                        <col key={colIndex} style={{ width }} />
+                      ))}
+                    </colgroup>
+                  )}
                   <thead>
                     <tr className="bg-brand-bg">
                       {block.headers.map((header) => (
