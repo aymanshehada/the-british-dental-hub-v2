@@ -43,6 +43,11 @@ const categoryLabelAr: Record<string, string> = {
   // Matches the term already used on the children's-dentistry service page
   // (messages/ar/childrensDentistry.json).
   'childrens-dentistry': 'طب أسنان الأطفال',
+  // No dedicated oral-surgery service page or messages/ar file exists yet
+  // (matches the English article's own note that no /oral-surgery page
+  // exists) — this is the standard clinical Arabic term for the category,
+  // with no existing sitewide term to defer to instead.
+  'oral-surgery': 'جراحة الفم',
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
