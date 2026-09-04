@@ -40,6 +40,9 @@ const categoryLabelAr: Record<string, string> = {
   // Matches the term already baked into the default Arabic reviewer
   // jobTitle below ("أخصائي زراعة الأسنان وطب الأسنان التجميلي").
   'cosmetic-dentistry': 'طب الأسنان التجميلي',
+  // Matches the term already used on the children's-dentistry service page
+  // (messages/ar/childrensDentistry.json).
+  'childrens-dentistry': 'طب أسنان الأطفال',
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
