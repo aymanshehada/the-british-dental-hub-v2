@@ -37,6 +37,9 @@ const categoryLabelAr: Record<string, string> = {
   // Matches the eyebrow label already used on the gum-treatment service
   // page (messages/ar/gumTreatment.json).
   'periodontal-care': 'رعاية اللثة',
+  // Matches the term already baked into the default Arabic reviewer
+  // jobTitle below ("أخصائي زراعة الأسنان وطب الأسنان التجميلي").
+  'cosmetic-dentistry': 'طب الأسنان التجميلي',
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
