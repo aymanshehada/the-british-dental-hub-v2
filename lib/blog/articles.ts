@@ -970,34 +970,125 @@ export const articles: BlogArticle[] = [
   {
     slug: 'the-case-for-regular-dental-check-ups',
     title: 'The Case for Regular Dental Check-Ups',
-    dek: 'Why consistent preventive care tends to matter more than any single treatment.',
+    dek: 'Why consistent preventive care tends to matter more than any single treatment — and why a check-up looks different for every patient.',
     category: 'preventive-dentistry',
     publishedAt: '2026-08-06',
     author: DEFAULT_AUTHOR,
     medicalReviewer: DEFAULT_REVIEWER,
     content: [
-      { type: 'paragraph', text: 'It can be tempting to think of dental visits as something for when a problem arises. In practice, the visits that matter most are often the ones where nothing appears to be wrong at all.' },
-      { type: 'heading', level: 2, id: 'prevention-vs-treatment', text: 'Prevention vs. Treatment' },
-      { type: 'paragraph', text: 'Regular check-ups are built around identifying small concerns early, well before they become larger ones — which is generally more comfortable and more manageable for everyone involved.' },
-      { type: 'heading', level: 2, id: 'what-a-preventive-visit-covers', text: 'What a Preventive Visit Typically Covers' },
-      { type: 'list', items: [
-        'A comprehensive clinical examination',
-        'Professional cleaning',
-        'Personalised advice for your own oral health',
-        'Diagnostic imaging, where clinically appropriate',
-      ] },
-      { type: 'callout', text: 'Not every visit requires the same diagnostic imaging — this is recommended individually, based on clinical need, not as a routine step for every patient.' },
-      { type: 'heading', level: 2, id: 'building-good-habits', text: 'Building Good Habits Between Visits' },
-      { type: 'list', items: [
-        'A consistent brushing routine',
-        'Regular interdental cleaning',
-        'General awareness of diet and its effect on oral health',
+      { type: 'paragraph', text: "It's a fair question: if nothing hurts, why go to the dentist at all? The honest answer is that some dental problems don't announce themselves early on — decay and gum disease can develop quietly, without pain, for some time before they become noticeable. A preventive check-up isn't built around finding something wrong; it's built around assessment, monitoring, and advice tailored to your own mouth, so that if something is starting to develop, it's more likely to be picked up while it's still limited, rather than only once it's already causing problems. Attending regularly doesn't mean every visit leads to treatment — for many people, most check-ups simply confirm that things are stable. What follows sets out what a check-up can actually involve, why it doesn't look the same for everyone, and how often you might reasonably need one." },
+
+      { type: 'heading', level: 2, id: 'what-a-preventive-check-up-can-look-for', text: 'What a Preventive Check-Up Can Look For' },
+      { type: 'paragraph', text: "A dental examination typically starts with a conversation — about any symptoms or concerns you've noticed, and about your general health, since some medical conditions and medications can affect your mouth. From there, your dentist examines your teeth and gums, and where appropriate, checks the soft tissues of your mouth more generally. This is also where oral-health habits come into the picture: your diet, smoking or alcohol use, and how you clean your teeth are usually discussed, since they all influence your risk of future problems. Based on what's found, your dentist decides whether anything needs further investigation, and gives advice that's actually relevant to you and your circumstances, rather than generic guidance handed out the same way to everyone. Not every one of these elements plays an equally large part at every visit — a straightforward check-up for someone with stable oral health looks different from one where a new concern is being followed up." },
+
+      { type: 'heading', level: 2, id: 'why-you-may-not-need-an-x-ray-every-time', text: 'Why You May Not Need an X-Ray Every Time' },
+      { type: 'paragraph', text: "It's a common assumption that a dental check-up automatically includes an X-ray, but that isn't how they're meant to be used. UK guidance on dental radiography is clear that X-rays should be prescribed based on individual clinical need, not taken as a matter of routine regardless of whether there's a specific reason to. In practice, this means your dentist decides whether an X-ray would actually add useful information for your particular situation — for example, checking an area that can't be assessed properly by examination alone — rather than including one automatically at every visit. If you haven't had an X-ray in a while, that isn't necessarily a gap in your care; it may simply mean nothing has arisen that requires one." },
+
+      { type: 'heading', level: 2, id: 'does-every-check-up-include-a-clean', text: 'Does Every Check-Up Include a Clean?' },
+      { type: 'paragraph', text: "A professional clean, sometimes called a scale and polish, is another part of dental care that's often assumed to be automatic — but it isn't a standard component of every check-up either. Whether it's recommended depends on what your dentist finds: how much plaque or tartar has built up, and the general condition of your gums. Where there's a genuine clinical reason for it — for example, a build-up that brushing alone can't remove, or signs that your gums need closer support — a professional clean can be a useful part of managing gum health; where your oral hygiene at home is already keeping things in good order, it may simply not be needed at that particular visit. This isn't a substitute for daily brushing and cleaning between your teeth, and it isn't something that, on its own, prevents dental disease." },
+
+      { type: 'heading', level: 2, id: 'how-often-should-you-have-a-check-up', text: 'How Often Should You Have a Check-Up?' },
+      { type: 'paragraph', text: "This is probably the most persistent assumption in dentistry: that everyone should go every six months. UK guidance doesn't actually support that as a universal rule. According to NICE, the interval between check-ups for adults can reasonably range from around three months to two years, depending on an individual assessment of oral-health risk — and the NHS makes the same point directly to patients, noting that while many people assume six months is standard, the appropriate gap can run anywhere from three months up to two years. Children and teenagers under 18 are looked at slightly differently, with a shorter maximum interval of twelve months, reflecting how dental decay can progress faster at a younger age. In practice, this means the right interval for you is the one your dentist recommends based on your own oral health and history — not a fixed calendar rule that applies equally to everyone. Someone with a strong track record of good oral health may reasonably be seen less often than someone whose risk profile currently calls for closer monitoring." },
+
+      { type: 'heading', level: 2, id: 'what-you-can-do-between-visits', text: 'What You Can Do Between Visits' },
+      { type: 'paragraph', text: [
+        "Most of what protects your teeth and gums day to day happens between appointments, not during them. Brushing twice daily with a fluoride toothpaste, cleaning between your teeth, and being mindful of how often you have sugary food and drink all make a genuine difference. Beyond that, following whatever specific advice your dentist has given you for your own situation matters more than any general checklist, since your particular risk factors will shape what's actually worth prioritising. Keeping to the recall interval you've been advised, rather than letting appointments slip because nothing feels wrong, is part of this too. Our ",
+          { text: 'check-up and cleaning', href: '/check-up-cleaning' },
+          ' page has more on what this looks like in practice.',
+        ] },
+
+      { type: 'heading', level: 2, id: 'when-prevention-becomes-early-treatment', text: 'When Prevention Becomes Early Treatment' },
+      { type: 'paragraph', text: [
+        "Sometimes a preventive check-up does turn up something that needs attention — a small area of decay, early signs of gum inflammation, or something worth keeping an eye on at your next visit. Finding something small like this doesn't automatically mean extensive treatment is needed; a lot of the value of regular attendance is that it can help identify these things while they're still limited, giving you and your dentist the opportunity to decide what, if anything, needs to happen next. It isn't a guarantee — not every problem behaves predictably, and some conditions progress regardless of how early they're caught — but consistent monitoring genuinely gives you and your dentist more to work with. Preventive care isn't really a single appointment; it's closer to an ongoing conversation about your own oral health, one check-up at a time. For children specifically, our ",
+        { text: 'article on helping children feel comfortable at the dentist', href: '/blog/helping-your-child-feel-comfortable-at-the-dentist' },
+        ' covers how this same principle of regular, unhurried attendance applies from an early age.',
       ] },
     ],
     faqs: [
-      { question: 'How often should I have a check-up?', answer: 'This depends on your individual oral health and history, which your dentist will advise on directly.' },
-      { question: 'Will I always need an X-ray?', answer: 'No — X-rays are recommended when clinically appropriate, not as a standard part of every single visit.' },
+      { question: 'How often should I have a dental check-up?', answer: "There's no single answer that applies to everyone. UK guidance suggests adults can reasonably be seen anywhere from every three months to every two years, depending on an individual assessment of oral-health risk, while children under 18 are generally reviewed at intervals of no more than one year. Your dentist will recommend an interval based on your own history and current oral health, not a fixed calendar rule." },
+      { question: 'Will I always need an X-ray at my check-up?', answer: "No. X-rays are based on clinical need rather than taken automatically at every visit. Your dentist will only recommend one where it's likely to provide information that examination alone can't, such as looking at an area that isn't visible or assessable by eye." },
+      { question: 'Does every check-up include a clean?', answer: 'Not necessarily. A check-up is primarily an examination and assessment; a professional clean (sometimes called a scale and polish) is a separate treatment that\'s recommended when there\'s a clinical reason for it, such as a build-up of plaque or tartar, rather than included as standard every time.' },
+      { question: 'What happens if my dentist finds a small problem?', answer: "It depends on what's found, but a small issue identified early doesn't automatically mean extensive treatment. Your dentist will explain what's been noticed and discuss whether it needs monitoring, preventive advice, or treatment, and on what timescale — many small findings don't require anything urgent, and how they're managed depends on what's actually found." },
+      { question: 'Can regular check-ups really prevent dental problems?', answer: "Not entirely — check-ups can't prevent all dental disease, and some conditions develop regardless of how regularly you attend. What consistent attendance can do is help identify developing problems and support personalised preventive advice, which may allow issues to be managed sooner and more simply than if they were left unnoticed." },
     ],
+    references: [
+      {
+        title: 'NHS — Dental check-ups',
+        url: 'https://www.nhs.uk/live-well/healthy-teeth-and-gums/dental-check-ups/',
+      },
+      {
+        title: 'NICE — CG19: Dental checks: intervals between oral health reviews',
+        url: 'https://www.nice.org.uk/guidance/cg19/chapter/Recommendations',
+      },
+      {
+        title: 'NHS Business Services Authority — What band of treatment is a scale and polish?',
+        url: 'https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-02034/en-us',
+      },
+      {
+        title: 'FGDP(UK) / College of General Dentistry — Selection Criteria for Dental Radiography',
+        url: 'https://cgdent.uk/wp-content/uploads/securepdfs/FGDP-SCDR-ALL-Web.pdf',
+      },
+    ],
+    arContent: {
+      title: 'لماذا تهم فحوصات الأسنان المنتظمة؟',
+      dek: 'لماذا تُعدّ الرعاية الوقائية المستمرة أكثر أهمية من أي علاج بمفرده — ولماذا يختلف الفحص من مريض إلى آخر.',
+      author: 'د. أيمن شحادة',
+      medicalReviewer: 'د. أيمن شحادة',
+      content: [
+        { type: 'paragraph', text: 'سؤال منطقي: ما دام لا يوجد ألم، فلماذا الذهاب إلى طبيب الأسنان أصلًا؟ الإجابة الصادقة هي أن بعض مشكلات الأسنان لا تُعلن عن نفسها مبكرًا — فقد يتطور تسوس الأسنان أو أمراض اللثة بهدوء، دون ألم، لفترة قبل أن تصبح ملحوظة. والفحص الوقائي لا يُبنى على افتراض وجود خطأ ما؛ بل يُبنى على التقييم والمراقبة وتقديم نصائح مصممة خصيصًا لفمك، بحيث إذا بدأت مشكلة ما في التكوّن، تكون فرصة اكتشافها أكبر بينما لا تزال محدودة، لا بعد أن تتسبب في مشكلات فعلية. والحضور بانتظام لا يعني أن كل زيارة تنتهي بعلاج — فبالنسبة لكثير من الناس، تُثبت معظم الفحوصات فقط أن الأمور مستقرة. وفيما يلي عرض لما يمكن أن يتضمنه الفحص فعليًا، ولماذا لا يبدو بالشكل نفسه لدى كل شخص، وما مدى تكراره المعقول.' },
+
+        { type: 'heading', level: 2, id: 'what-a-preventive-check-up-can-look-for', text: 'ما الذي يبحث عنه الفحص الوقائي' },
+        { type: 'paragraph', text: "يبدأ الفحص السني عادةً بمحادثة — حول أي أعراض أو مخاوف لاحظتَها، وحول صحتك العامة، لأن بعض الحالات الطبية والأدوية قد تؤثر في فمك. ومن هناك، يفحص طبيبك أسنانك ولثتك، ويتحقق عند الحاجة من أنسجة فمك الرخوة بشكل أعم. وهنا أيضًا تدخل عادات صحة الفم في الصورة: فنظامك الغذائي، والتدخين أو تناول الكحول، وطريقة تنظيف أسنانك، كل ذلك يُناقَش عادةً لأنه يؤثر في احتمالية حدوث مشكلات مستقبلية. وبناءً على ما يُكتشف، يقرر طبيبك ما إذا كان أي شيء يحتاج إلى مزيد من الفحص، ويقدم نصائح ذات صلة فعلية بك وبظروفك، لا توجيهات عامة تُقدَّم بالطريقة نفسها لكل شخص. وليس لكل هذه العناصر الدور نفسه في كل زيارة — فالفحص المباشر لشخص يتمتع بصحة فموية مستقرة يختلف عن فحص يُتابَع فيه شاغل جديد." },
+
+        { type: 'heading', level: 2, id: 'why-you-may-not-need-an-x-ray-every-time', text: 'لماذا قد لا تحتاج إلى أشعة سينية في كل مرة' },
+        { type: 'paragraph', text: 'من الشائع افتراض أن الفحص السني يشمل أشعة سينية تلقائيًا، لكن هذا ليس الغرض الفعلي منها. فالإرشادات البريطانية بشأن التصوير الشعاعي للأسنان واضحة في أن الأشعة السينية ينبغي أن تُطلَب بناءً على حاجة سريرية فردية، لا كإجراء روتيني بصرف النظر عن وجود سبب محدد لها. وعمليًا، يعني ذلك أن طبيبك يقرر ما إذا كانت الأشعة السينية ستضيف فعليًا معلومة مفيدة لحالتك الخاصة — كفحص منطقة لا يمكن تقييمها بدقة بالفحص السريري وحده — بدلًا من تضمينها تلقائيًا في كل زيارة. وإذا لم تخضع لأشعة سينية منذ فترة، فهذا لا يعني بالضرورة نقصًا في رعايتك؛ فقد يعني ببساطة أنه لم يطرأ ما يستدعي ذلك.' },
+
+        { type: 'heading', level: 2, id: 'does-every-check-up-include-a-clean', text: 'هل يشمل كل فحص تنظيفًا؟' },
+        { type: 'paragraph', text: 'التنظيف المهني، الذي يُعرف أحيانًا بتقشير الأسنان وتلميعها، جزء آخر من رعاية الأسنان يُفترض غالبًا أنه تلقائي — لكنه أيضًا ليس عنصرًا معياريًا في كل فحص. فما إذا كان يُنصح به يعتمد على ما يجده طبيبك: مقدار ما تراكم من البلاك أو الجير، والحالة العامة للثتك. وحين يكون هناك سبب سريري حقيقي له — كتراكم لا يمكن للتفريش وحده إزالته، أو علامات تشير إلى حاجة لثتك إلى دعم أوثق — يمكن أن يكون التنظيف المهني جزءًا مفيدًا من إدارة صحة اللثة؛ أما حين تكون عنايتك بنظافة فمك في المنزل تحفظ الأمور بحالة جيدة أصلًا، فقد لا يكون التنظيف ضروريًا في تلك الزيارة بعينها. وهذا ليس بديلًا عن التفريش اليومي والتنظيف بين الأسنان، ولا هو أمر يمنع بمفرده أمراض الأسنان.' },
+
+        { type: 'heading', level: 2, id: 'how-often-should-you-have-a-check-up', text: 'كم مرة ينبغي أن تخضع للفحص؟' },
+        { type: 'paragraph', text: 'هذا هو الافتراض الأكثر رسوخًا في طب الأسنان: أن على الجميع الحضور كل ستة أشهر. لكن الإرشادات البريطانية لا تدعم ذلك فعليًا كقاعدة عامة. فوفقًا لهيئة NICE، يمكن أن تتراوح الفترة بين الفحوصات لدى البالغين بشكل معقول من نحو ثلاثة أشهر إلى سنتين، تبعًا لتقييم فردي لمخاطر صحة الفم — وتؤكد هيئة NHS النقطة نفسها مباشرة للمرضى، مشيرة إلى أنه بينما يفترض كثيرون أن ستة أشهر هي المعيار، فإن الفاصل المناسب قد يمتد من ثلاثة أشهر إلى سنتين. أما الأطفال والمراهقون دون 18 عامًا، فيُنظر إليهم بشكل مختلف قليلًا، بحد أقصى أقصر مدته اثنا عشر شهرًا، بما يعكس أن تسوس الأسنان قد يتطور بسرعة أكبر في سن أصغر. وعمليًا، يعني ذلك أن الفاصل الصحيح بالنسبة لك هو ما يوصي به طبيبك بناءً على صحة فمك وتاريخك الخاص — لا قاعدة تقويمية ثابتة تنطبق على الجميع بالتساوي. فمن يملك سجلًا قويًا من صحة الفم الجيدة قد يُرى بشكل معقول بوتيرة أقل ممن يستدعي وضعه الحالي متابعة أوثق.' },
+
+        { type: 'heading', level: 2, id: 'what-you-can-do-between-visits', text: 'ما يمكنك فعله بين الزيارات' },
+        { type: 'paragraph', text: [
+          'معظم ما يحمي أسنانك ولثتك يوميًا يحدث بين المواعيد، لا خلالها. فتفريش الأسنان مرتين يوميًا بمعجون يحتوي على الفلورايد، والتنظيف بين الأسنان، والانتباه إلى وتيرة تناول الأطعمة والمشروبات السكرية، كل ذلك يُحدث فرقًا حقيقيًا. وإلى جانب ذلك، فإن اتّباع أي نصيحة محددة قدّمها طبيبك بخصوص حالتك أهم من أي قائمة عامة، إذ إن عوامل الخطر الخاصة بك هي ما يحدد ما يستحق الأولوية فعليًا. والحفاظ على الفاصل الزمني الموصى به للمراجعة، بدلًا من ترك المواعيد تتأخر لأن لا شيء يبدو خاطئًا، جزء من ذلك أيضًا. ويمكنكم الاطلاع على مزيد من التفاصيل حول ذلك عمليًا على صفحة ',
+          { text: 'الفحص والتنظيف', href: '/check-up-cleaning' },
+          ' لدينا.',
+        ] },
+
+        { type: 'heading', level: 2, id: 'when-prevention-becomes-early-treatment', text: 'حين تتحول الوقاية إلى علاج مبكر' },
+        { type: 'paragraph', text: [
+          'أحيانًا يكشف الفحص الوقائي عن أمر يستدعي الاهتمام — منطقة تسوس صغيرة، أو علامات مبكرة على التهاب اللثة، أو شيء يستحق المراقبة في زيارتك القادمة. واكتشاف أمر صغير كهذا لا يعني تلقائيًا الحاجة إلى علاج مكثّف؛ فجزء كبير من قيمة الحضور المنتظم هو أنه يساعد على اكتشاف هذه الأمور بينما لا تزال محدودة، مما يمنحك وطبيبك فرصة تحديد ما يجب فعله تاليًا، إن وُجد. وهذا ليس ضمانًا — فلا تسير كل مشكلة بشكل متوقع، وتتطور بعض الحالات بصرف النظر عن مدى مبكر اكتشافها — لكن المراقبة المستمرة تمنحك وطبيبك فعليًا ما تعملان عليه معًا. والرعاية الوقائية ليست موعدًا واحدًا في حقيقتها؛ بل هي أقرب إلى محادثة مستمرة حول صحة فمك، فحصًا بعد آخر. وبالنسبة للأطفال تحديدًا، يتناول ',
+          { text: 'مقالنا عن مساعدة طفلك على الشعور بالارتياح عند طبيب الأسنان', href: '/blog/helping-your-child-feel-comfortable-at-the-dentist' },
+          ' كيفية انطباق هذا المبدأ نفسه — الحضور المنتظم غير المتسرع — منذ سن مبكرة.',
+        ] },
+      ],
+      faqs: [
+        { question: 'كم مرة ينبغي أن أخضع لفحص الأسنان؟', answer: 'لا توجد إجابة واحدة تنطبق على الجميع. تشير الإرشادات البريطانية إلى أن البالغين يمكن أن يُرَوا بشكل معقول من كل ثلاثة أشهر إلى كل سنتين، تبعًا لتقييم فردي لمخاطر صحة الفم، بينما يُراجَع الأطفال دون 18 عامًا عمومًا بفواصل لا تتجاوز عامًا واحدًا. وسيوصي طبيبك بفاصل زمني بناءً على تاريخك وحالتك الحالية، لا قاعدة تقويمية ثابتة.' },
+        { question: 'هل سأحتاج دائمًا إلى أشعة سينية في فحصي؟', answer: 'لا. تُقرَّر الأشعة السينية بناءً على الحاجة السريرية لا كإجراء تلقائي في كل زيارة. ولن يوصي طبيبك بها إلا حين يُرجَّح أن تقدم معلومة لا يمكن للفحص وحده تقديمها، كفحص منطقة غير مرئية أو غير قابلة للتقييم بالعين.' },
+        { question: 'هل يشمل كل فحص تنظيفًا؟', answer: 'ليس بالضرورة. الفحص هو في الأساس تقييم وفحص؛ والتنظيف المهني (المعروف أحيانًا بتقشير الأسنان وتلميعها) علاج منفصل يُوصى به حين يكون هناك سبب سريري لذلك، كتراكم البلاك أو الجير، لا كإجراء معياري في كل مرة.' },
+        { question: 'ماذا يحدث إذا وجد طبيبي مشكلة صغيرة؟', answer: 'يعتمد ذلك على ما يُكتشف، لكن مشكلة صغيرة تُكتشف مبكرًا لا تعني تلقائيًا الحاجة إلى علاج مكثّف. سيشرح طبيبك ما لاحظه ويناقش معك ما إذا كانت تحتاج إلى مراقبة، أو نصيحة وقائية، أو علاج، وعلى أي مدى زمني — فكثير من الملاحظات الصغيرة لا يستدعي أي إجراء عاجل، ويعتمد التعامل معها على ما يُكتشف فعليًا.' },
+        { question: 'هل يمكن للفحوصات المنتظمة أن تمنع مشكلات الأسنان فعليًا؟', answer: 'ليس تمامًا — فالفحوصات لا يمكنها منع كل أمراض الأسنان، وتتطور بعض الحالات بصرف النظر عن مدى انتظام حضورك. ما يمكن أن يفعله الحضور المنتظم هو المساعدة في اكتشاف المشكلات الناشئة ودعم نصائح وقائية مخصصة، وهو ما قد يسمح بإدارة المشكلات بشكل أبسط وأسرع مما لو تُركت دون ملاحظة.' },
+      ],
+      references: [
+        {
+          title: 'NHS — Dental check-ups',
+          url: 'https://www.nhs.uk/live-well/healthy-teeth-and-gums/dental-check-ups/',
+        },
+        {
+          title: 'NICE — CG19: Dental checks: intervals between oral health reviews',
+          url: 'https://www.nice.org.uk/guidance/cg19/chapter/Recommendations',
+        },
+        {
+          title: 'NHS Business Services Authority — What band of treatment is a scale and polish?',
+          url: 'https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-02034/en-us',
+        },
+        {
+          title: 'FGDP(UK) / College of General Dentistry — Selection Criteria for Dental Radiography',
+          url: 'https://cgdent.uk/wp-content/uploads/securepdfs/FGDP-SCDR-ALL-Web.pdf',
+        },
+      ],
+    },
   },
 ]
 

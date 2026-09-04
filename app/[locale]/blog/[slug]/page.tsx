@@ -48,6 +48,11 @@ const categoryLabelAr: Record<string, string> = {
   // exists) — this is the standard clinical Arabic term for the category,
   // with no existing sitewide term to defer to instead.
   'oral-surgery': 'جراحة الفم',
+  // No existing sitewide category label for this exact term — messages/ar
+  // uses "الرعاية الوقائية" (preventive care) generically in
+  // treatments.json, but no dedicated Preventive Dentistry category label.
+  // This is the standard clinical Arabic term for the category.
+  'preventive-dentistry': 'طب الأسنان الوقائي',
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
