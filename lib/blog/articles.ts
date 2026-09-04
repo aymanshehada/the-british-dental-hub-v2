@@ -694,29 +694,79 @@ export const articles: BlogArticle[] = [
   {
     slug: 'helping-your-child-feel-comfortable-at-the-dentist',
     title: 'Helping Your Child Feel Comfortable at the Dentist',
-    dek: 'Practical, reassuring context for parents preparing their child for a dental visit.',
+    dek: "A calm, practical guide for parents preparing a child for a dental visit — what helps, what to expect, and what to do if they're nervous.",
     category: 'childrens-dentistry',
     publishedAt: '2026-08-10',
     author: DEFAULT_AUTHOR,
     medicalReviewer: DEFAULT_REVIEWER,
     content: [
-      { type: 'paragraph', text: "A child's early experiences at the dentist can shape how they feel about dental visits for years to come, which is why the approach taken matters as much as the treatment itself." },
+      { type: 'paragraph', text: "A child's first experiences at the dentist tend to shape how comfortable they feel about dental visits later on. That doesn't mean a single appointment determines everything that follows — children's attitudes are shaped by many visits, by temperament, and by how each stage of an appointment is explained to them — but the approach taken in those early visits matters as much as the treatment itself." },
+
       { type: 'heading', level: 2, id: 'why-early-experiences-matter', text: 'Why Early, Positive Experiences Matter' },
-      { type: 'paragraph', text: 'Children who feel informed and unrushed tend to build genuine confidence around dental care, rather than simply tolerating it.' },
-      { type: 'heading', level: 2, id: 'what-helps-most', text: 'What Helps Most' },
+      { type: 'paragraph', text: "The NHS recommends taking a child to the dentist as soon as their first milk tooth appears, or by their first birthday at the latest, so they become familiar with the environment and get to know the dental team before any treatment is needed. The American Academy of Pediatric Dentistry gives a closely aligned recommendation: a first visit within six months of the first tooth erupting, or by age one. That early visit is usually brief and low-key — often little more than a look at the teeth and gums, sometimes with the child on a parent's lap — but it establishes something more lasting than the check-up itself: familiarity." },
+      { type: 'paragraph', text: "Children who feel informed and are not rushed through each stage of an appointment tend to build genuine, gradual confidence around dental care, rather than simply enduring it. NHS England's clinical standard for children's oral healthcare reflects this directly: communication should be developmentally appropriate, and a child's own views should be heard and given weight in line with their age and understanding — a principle that applies as much to a routine check-up as to more involved treatment." },
+
+      { type: 'heading', level: 2, id: 'what-helps-a-child-feel-more-comfortable', text: 'What Helps a Child Feel More Comfortable?' },
+      { type: 'paragraph', text: "Most of what makes a dental visit easier for a child comes down to communication rather than clinical technique. NHS England's guidance on non-pharmacological anxiety management — the approach used across all levels of paediatric dental care, from routine primary care upward — sets out a consistent set of techniques: tell-show-do, modelling, distraction, guided imagery, a consistent team approach, and gradual acclimatisation to the setting." },
+      { type: 'paragraph', text: "Tell-show-do is one of the best-established of these techniques. The dentist explains what's about to happen in simple language, shows the child the instrument or step involved, and only then carries it out. The American Academy of Pediatric Dentistry describes this as helping the child become familiar with the dental setting and giving both child and parent a chance to ask questions in a low-pressure way — and notes it can be used with any child, regardless of age or previous experience." },
+      { type: 'paragraph', text: 'A few other things tend to help alongside this:' },
       { type: 'list', items: [
-        'Age-appropriate explanations of what is happening',
-        'A gradual, patient introduction to each step',
-        'Positive reinforcement throughout the visit',
-        'Keeping parents informed at every stage',
+        "Age-appropriate explanations, rather than adult clinical language or, at the other extreme, vague reassurance that avoids saying what's actually going to happen",
+        'A gradual introduction to each step, rather than moving straight into treatment on a first visit',
+        'Positive reinforcement and specific, descriptive praise during the appointment, rather than generic encouragement',
+        "Giving the child a reasonable way to signal discomfort or ask a question, so they don't feel like a passive participant",
+        'Keeping parents informed at each stage, so they can reinforce the same calm, matter-of-fact tone at home',
       ] },
-      { type: 'callout', text: 'Every child adjusts at their own pace — there is no single timeline that applies to every visit.' },
+      { type: 'paragraph', text: "None of this is a fixed script. Behaviour guidance in paediatric dentistry is deliberately individualised — built around a particular child's age, temperament and previous experience, not applied the same way at every visit." },
+
+      { type: 'heading', level: 2, id: 'the-parents-role', text: "The Parent's Role" },
+      { type: 'paragraph', text: 'Parents shape a child\'s expectations well before the appointment itself, often just through how the visit is talked about beforehand. Speaking about it in a calm, matter-of-fact way — without over-promising that nothing will happen, and without introducing unnecessary detail that raises questions the child then has to sit with — tends to help more than either extreme.' },
+      { type: 'paragraph', text: "It's also worth mentioning anything relevant ahead of time — a previous difficult visit, a general sensitivity to noise or new environments — so the team can plan for it rather than discover it mid-appointment. Where appropriate, many dental teams also find it useful to speak with the child directly, in language pitched at their level, rather than relaying everything through the parent." },
+      { type: 'paragraph', text: "None of this means a parent is responsible for how a child reacts on the day. Cooperation varies by age, individual temperament, and sometimes simply by how a particular day is going, and dental teams generally expect and plan for that variation rather than treating it as unusual." },
+
+      { type: 'heading', level: 2, id: 'if-your-child-is-nervous', text: 'If Your Child Is Nervous' },
+      { type: 'paragraph', text: "Some children feel nervous before a dental visit, and it isn't a sign that something has gone wrong in earlier preparation. Where a child is anxious, the approach is typically to slow down rather than push through — more time spent on tell-show-do, more opportunity to become familiar with the room and instruments before anything is attempted, and a pace that's set by the child's response rather than a fixed appointment schedule." },
+      { type: 'paragraph', text: "It's worth being honest here: there's no guarantee that anxiety disappears in a single visit. A gradual approach is about building familiarity over time, not promising an anxiety-free appointment on the spot — and what helps one child settle may do very little for another." },
+      { type: 'paragraph', text: 'For most children, this kind of graduated, non-pharmacological approach is enough on its own, without needing anything beyond it.' },
+
       { type: 'heading', level: 2, id: 'preventive-habits-that-start-early', text: 'Preventive Habits That Start Early' },
-      { type: 'paragraph', text: 'Alongside a positive clinical experience, early guidance on brushing and diet tends to have a lasting effect on long-term oral health.' },
+      { type: 'paragraph', text: 'A positive clinical experience works alongside good everyday habits, not instead of them. The NHS advises brushing a child\'s teeth twice daily with fluoride toothpaste as soon as the first tooth appears — a smear of toothpaste for children under three, moving to a pea-sized amount from around age three, with fluoride content checked against the guidance for the child\'s age. Diet matters here too, particularly limiting sugary food and drink between meals, alongside regular dental attendance rather than visits prompted only by pain or an obvious problem.' },
+      { type: 'paragraph', text: 'None of this needs to become a separate project — the habits that support a comfortable relationship with the dentist and the habits that support oral health more broadly are largely the same, and they reinforce each other over time.' },
+
+      { type: 'heading', level: 2, id: 'when-to-seek-advice', text: 'When to Seek Advice' },
+      { type: 'paragraph', text: "Every child settles into dental visits at their own pace, and there's no single timeline that applies evenly across every child or every appointment. Where a previous visit went badly, where a child has a broader sensitivity to new environments or procedures, or where anxiety seems to be affecting whether appointments happen at all, it's worth raising this directly with your dentist beforehand rather than waiting to see how the next visit goes. A dental team that knows the specific concern in advance can plan the pacing and approach around it, which is usually more effective than adjusting mid-appointment." },
+      { type: 'paragraph', text: [
+        'Our ',
+        { text: "Children's Dentistry", href: '/children-dentistry' },
+        ' page has more on how we approach paediatric visits day to day, and regular ',
+        { text: 'check-ups and cleaning', href: '/check-up-cleaning' },
+        ' are where most of this familiarity is built over time.',
+      ] },
     ],
     faqs: [
-      { question: 'At what age should a child first visit the dentist?', answer: 'This is best discussed with your dentist, who can advise based on your child’s individual development.' },
-      { question: 'What if my child is nervous?', answer: 'A gradual, patient approach is used for nervous or first-time children, letting them set the pace rather than rushing any step.' },
+      { question: 'At what age should a child first visit the dentist?', answer: 'The NHS recommends a first visit as soon as the first milk tooth appears, or by their first birthday at the latest — this is echoed by the American Academy of Pediatric Dentistry, which recommends a visit within six months of the first tooth erupting, or by age one.' },
+      { question: 'What if my child is nervous?', answer: "Some children feel nervous about dental visits, and that isn't a sign that something went wrong beforehand. Dental teams typically slow the pace, spend more time on explaining and demonstrating each step, and let familiarity build gradually rather than promising the anxiety will disappear in one visit. The approach is adjusted to the individual child rather than following one fixed method." },
+      { question: 'Should I tell my child exactly what will happen at the appointment?', answer: "Speaking about the visit in a calm, matter-of-fact way tends to help more than either over-explaining or avoiding the subject. Very specific pre-appointment detail isn't usually necessary — the dental team will typically explain each step directly to the child, in age-appropriate language, once there." },
+      { question: 'Should a parent stay with the child during the dental visit?', answer: "This varies by child, by practice, and by the individual dentist's approach — there's no single rule that applies to every visit. It's worth discussing this with your dental team beforehand, particularly for a first appointment or where a child has found separation difficult in other settings." },
+      { question: 'What if my child will not cooperate?', answer: 'This is common and expected, particularly at a first visit or with younger children. Dental teams generally have a range of non-pharmacological techniques — like tell-show-do and gradual acclimatisation — to help build cooperation over more than one visit if needed, rather than expecting full cooperation immediately.' },
+    ],
+    references: [
+      {
+        title: "NHS — Children's teeth",
+        url: 'https://www.nhs.uk/live-well/healthy-teeth-and-gums/taking-care-of-childrens-teeth/',
+      },
+      {
+        title: 'NHS England — Clinical standard: oral health and dental care for children and young people',
+        url: 'https://www.england.nhs.uk/long-read/clinical-standard-oral-health-dental-care-children-young-people/',
+      },
+      {
+        title: 'American Academy of Pediatric Dentistry — Behavior Guidance for the Pediatric Dental Patient',
+        url: 'https://www.aapd.org/research/oral-health-policies--recommendations/behavior-guidance-for-the-pediatric-dental-patient/',
+      },
+      {
+        title: 'American Academy of Pediatric Dentistry — Nonpharmacological Behavior Guidance for the Pediatric Dental Patient',
+        url: 'https://www.aapd.org/globalassets/media/policies_guidelines/g_behaviorguidance.pdf',
+      },
     ],
   },
   {
