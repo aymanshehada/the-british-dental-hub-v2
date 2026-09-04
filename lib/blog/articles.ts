@@ -847,28 +847,64 @@ export const articles: BlogArticle[] = [
   {
     slug: 'what-oral-surgery-can-involve',
     title: 'What Oral Surgery Can Involve',
-    dek: 'A general introduction to when oral surgery may be recommended and what preparation usually looks like.',
+    dek: 'A calm, evidence-based overview of what "oral surgery" actually covers — from surgical extractions to biopsies — and what to expect at each stage.',
     category: 'oral-surgery',
     publishedAt: '2026-08-08',
     author: DEFAULT_AUTHOR,
     medicalReviewer: DEFAULT_REVIEWER,
     content: [
-      { type: 'paragraph', text: 'Oral surgery covers a range of procedures, and being recommended one can feel like a big step. In most cases, it simply reflects a considered clinical decision rather than anything to be alarmed by.' },
-      { type: 'heading', level: 2, id: 'when-oral-surgery-may-be-considered', text: 'When Oral Surgery May Be Considered' },
-      { type: 'paragraph', text: 'It may be recommended for reasons such as a complex extraction, or as part of preparing for another treatment, always following a full clinical assessment.' },
-      { type: 'heading', level: 2, id: 'how-cases-are-typically-planned', text: 'How Cases Are Typically Planned' },
-      { type: 'list', items: [
-        'A detailed clinical assessment',
-        'Diagnostic imaging where clinically needed',
-        'A personalised plan explained clearly before anything proceeds',
+      { type: 'paragraph', text: '"Oral surgery" is a broad term, not a single procedure. It can describe anything from removing an impacted wisdom tooth to taking a small tissue sample for investigation, and the complexity involved varies substantially from one case to another. Being told that a treatment falls under "oral surgery" doesn\'t, by itself, mean a case is unusually serious or complicated — it more often reflects that a straightforward approach, like a simple extraction, isn\'t suitable for that particular tooth or situation. What follows sets out, in general terms, why oral surgery may be recommended, how a case is typically assessed and planned, and what recovery can involve — without assuming any two cases are the same.' },
+
+      { type: 'heading', level: 2, id: 'when-oral-surgery-may-be-recommended', text: 'When Oral Surgery May Be Recommended' },
+      { type: 'paragraph', text: [
+        "Most teeth are removed using a straightforward extraction technique. Surgical removal becomes necessary in more specific circumstances — for example, where a tooth is broken, cracked, or brittle below the gum line, or where its roots are long, curved, or an unusual shape that a simple extraction technique can't accommodate. Impacted wisdom teeth are one of the most common reasons oral surgery is considered: where there isn't enough room for a wisdom tooth to come through fully, it can become impacted against the tooth in front or the jawbone behind, sometimes leading to repeated infection, decay, or a cyst forming around it. Even so, an impacted wisdom tooth that isn't causing problems doesn't automatically need to be removed — it's just as often left in place and monitored at routine check-ups instead. Oral surgery also covers situations that aren't about removing a tooth at all: where a lump, ulcer, or area of tissue in the mouth needs a closer look, a small sample may be taken and sent for laboratory examination to help reach a diagnosis. Where a tooth is diseased rather than broken or badly positioned, it isn't always the only option — treatment such as ",
+        { text: 'root canal treatment', href: '/blog/understanding-root-canal-treatment' },
+        ' can sometimes save a tooth that might otherwise need to be removed. In every case, though, the recommendation follows an individual assessment rather than a general rule about a particular tooth or symptom.',
       ] },
-      { type: 'callout', text: 'Every recommendation follows an individual assessment — general information like this is never a substitute for that consultation.' },
-      { type: 'heading', level: 2, id: 'recovery-generally-speaking', text: 'Recovery, Generally Speaking' },
-      { type: 'paragraph', text: 'Recovery varies by procedure and by patient. Rather than a fixed expectation, your clinician will explain a recovery approach suited specifically to your case.' },
+
+      { type: 'heading', level: 2, id: 'how-your-case-is-assessed', text: 'How Your Case Is Assessed' },
+      { type: 'paragraph', text: "Assessment usually starts with a clinical examination, alongside X-rays to check the position of the tooth or area in question and its relationship to surrounding structures. For some wisdom teeth, particularly where an X-ray suggests the roots may sit close to a nerve running through the lower jaw, a more detailed 3D scan — sometimes called a cone beam CT — may be suggested to assess that relationship more precisely. This is considered where there's a specific concern to look into, rather than carried out as standard for every case. Your dentist will also ask about your general medical history and any medications you're taking, since both can influence how treatment is planned. Taken together, this assessment is what actually determines the recommendation — not the general category of \"oral surgery\" itself — and not every case will need the same combination of imaging or investigation." },
+
+      { type: 'heading', level: 2, id: 'preparing-for-treatment', text: 'Preparing for Treatment' },
+      { type: 'paragraph', text: "Most oral surgery is carried out under local anaesthetic, which numbs the area completely while you remain awake. Depending on the complexity of the procedure and how anxious you feel about it, sedation may also be offered to help you feel calmer and more relaxed. A general anaesthetic — where you're fully asleep — may be considered in selected circumstances, including some more complex cases or where other approaches are not suitable. Neither sedation nor general anaesthetic is a routine default; which approach, if any, is used depends on the specific procedure, your circumstances, and your own preference, and it's something your dentist or surgeon will discuss with you directly rather than assume in advance. Before any treatment goes ahead, this is also the point where risks, benefits, alternatives, and what aftercare will involve are explained, so that any consent you give is genuinely informed rather than a formality." },
+
+      { type: 'heading', level: 2, id: 'what-the-procedure-can-involve', text: 'What the Procedure Can Involve' },
+      { type: 'paragraph', text: "The details of a procedure depend heavily on what's actually being treated, but a few general patterns are common to surgical extractions. Local anaesthetic is given first in every case, even where sedation or a general anaesthetic is also used. Where a tooth can't simply be lifted out — because it's still mostly covered by gum, for instance — the surgeon may need to make a small cut in the gum to reach it properly. For some more difficult teeth, particularly wisdom teeth with awkward roots, the tooth may be divided into two or three smaller sections to allow it to be removed more easily, rather than in one piece. Once the tooth or tissue has been removed, the gum is usually repositioned and, where needed, closed with stitches that dissolve on their own over the following couple of weeks. None of this is standard for every extraction — many are straightforward — and the specific approach is one your surgeon will explain for your own procedure." },
+
+      { type: 'heading', level: 2, id: 'recovery-and-aftercare', text: 'Recovery and Aftercare' },
+      { type: 'paragraph', text: "Recovery depends on the procedure and the individual, so it's worth being cautious about applying one timeline to every case. That said, some general patterns are well documented for wisdom tooth surgery: discomfort and swelling are common in the first few days, most noticeable around one to two days after treatment, and can take up to around two weeks to fully settle, alongside some temporary jaw stiffness. This isn't the expected course for every procedure — many people recover considerably faster, especially after simpler extractions. Straightforward pain relief such as paracetamol or ibuprofen is generally sufficient, taken regularly rather than only once discomfort has already set in. Antibiotics are not routinely prescribed after oral surgery; they're more typically reserved for cases where an actual infection develops, rather than given automatically as a precaution. Your dental team will give you aftercare instructions specific to your own procedure — covering things like diet, oral hygiene around the area, and activity — and these are worth following closely, since they're tailored to what was actually done rather than generic advice." },
+
+      { type: 'heading', level: 2, id: 'when-to-contact-your-dental-team', text: 'When to Contact Your Dental Team' },
+      { type: 'paragraph', text: [
+        "Contact your dental team if you have bleeding that doesn't settle with gentle pressure, or if pain and swelling seem to be getting worse rather than better a few days after treatment — both are reasons to get it looked at rather than to simply wait it out. A bad taste in your mouth alongside worsening pain, or a high temperature and feeling unwell, are also reasons the NHS lists for seeking urgent dental advice after a procedure like this. Separately, and regardless of whether you've had recent treatment: any mouth ulcer, sore, or area of tissue change that hasn't healed within three weeks is worth having assessed by a dentist. This does not mean that something serious is happening, but it is a sensible reason to have the area examined rather than continue to wait. More on how we assess and plan care across procedures generally is on our ",
+        { text: 'treatments', href: '/treatments' },
+        ' page.',
+      ] },
     ],
     faqs: [
-      { question: 'Is oral surgery always complex?', answer: 'Not necessarily — the term covers a range of procedures, some more involved than others. Your dentist can explain what applies to your case.' },
-      { question: 'How should I prepare?', answer: 'Preparation is discussed individually during your consultation, based on the specific procedure being planned.' },
+      { question: 'What counts as "oral surgery" rather than a routine extraction?', answer: "Most teeth are removed with a straightforward extraction technique. Oral surgery generally describes situations where that approach isn't suitable — for example, a tooth that's broken or cracked below the gum line, one with an unusually shaped root, or an impacted wisdom tooth — as well as other procedures like taking a tissue sample for investigation. The distinction is about the technique required, not about how serious the underlying issue is." },
+      { question: 'Will I be awake during the procedure?', answer: "In most cases, yes — oral surgery is typically carried out under local anaesthetic, which numbs the area while you stay awake. Sedation or a general anaesthetic may be offered for more complex procedures or where you're particularly anxious, but neither is used as a routine default; this is discussed and agreed with you beforehand based on your specific situation." },
+      { question: 'Is oral surgery painful?', answer: 'The area is numbed with local anaesthetic before treatment begins, so you should not normally feel pain during the procedure itself, although you may feel pressure or movement. Afterwards, some discomfort is common as the anaesthetic wears off, and this is generally managed well with regular over-the-counter pain relief.' },
+      { question: 'How long does recovery usually take, and will I need time off work?', answer: 'This varies by procedure and by person. For some wisdom tooth surgery, swelling and discomfort are most noticeable in the first day or two and can take up to around two weeks to fully settle, though many people feel back to normal well before that. Simpler extractions often involve a shorter recovery. Your dental team can give you a more specific expectation for your own procedure.' },
+      { question: "What if I notice a lump or sore in my mouth that hasn't been checked yet?", answer: "It's worth having any mouth ulcer, lump, or area of tissue change assessed if it hasn't healed within about three weeks. This is a standard, sensible threshold rather than a sign that something serious is happening. A dentist can examine it properly and advise on next steps, including a biopsy if that is genuinely needed." },
+    ],
+    references: [
+      {
+        title: 'NHS — Wisdom tooth removal',
+        url: 'https://www.nhs.uk/conditions/wisdom-tooth-removal/',
+      },
+      {
+        title: 'Newcastle Hospitals NHS Foundation Trust — Surgical removal of teeth',
+        url: 'https://www.newcastle-hospitals.nhs.uk/resources/surgical-removal-of-teeth/',
+      },
+      {
+        title: 'Newcastle Hospitals NHS Foundation Trust — Oral (mouth) biopsy information leaflet',
+        url: 'https://www.newcastle-hospitals.nhs.uk/resources/oral-mouth-biopsy-information-leaflet-for-patients/',
+      },
+      {
+        title: 'NHS — Mouth ulcers',
+        url: 'https://www.nhs.uk/conditions/mouth-ulcers/',
+      },
     ],
   },
   {
