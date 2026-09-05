@@ -1,18 +1,14 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { Container } from '@/components/ui/container'
 import { CategoryFilter } from '@/components/blog/CategoryFilter'
 import { ArticleCard, FeaturedArticleCard } from '@/components/blog/ArticleCard'
-import { getArticlesByCategory, getCategoryLabel } from '@/lib/blog/articles'
+import { getArticlesByCategory, getCategoryLabel, getCategoryLabelAr } from '@/lib/blog/articles'
 import type { AppLocale } from '@/i18n/routing'
 import { getLocaleAlternates } from '@/lib/seo'
-
-const pageTitle = 'The BDH Journal | The British Dental Hub'
-const pageDescription =
-  'Clear, clinically reviewed articles to help you understand your dental treatment options, from The British Dental Hub in New Cairo.'
 
 export async function generateMetadata({
   params,
@@ -20,6 +16,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: 'blog.meta' })
+  const pageTitle = t('title')
+  const pageDescription = t('description')
 
   return {
     title: pageTitle,
@@ -49,10 +48,16 @@ export default async function BlogPage({
 }) {
   const { locale } = await params
   setRequestLocale(locale)
+  const isArabic = locale === 'ar'
+  const t = await getTranslations('blog.hero')
 
   const { category } = await searchParams
   const articles = getArticlesByCategory(category)
   const [featured, ...rest] = articles
+
+  const displayCategoryLabel = category
+    ? (isArabic ? getCategoryLabelAr(category) : getCategoryLabel(category))
+    : undefined
 
   return (
     <>
@@ -64,13 +69,13 @@ export default async function BlogPage({
           <div className="mx-auto max-w-3xl text-center">
             <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               <span className="h-px w-10 bg-brand-red" />
-              The BDH Journal
+              {t('eyebrow')}
             </p>
             <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.08] text-[#0A2247] sm:text-5xl lg:text-[3.5rem]">
-              Clarity before every decision.
+              {t('title')}
             </h1>
             <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-              Considered, clinically reviewed articles written to help you understand your treatment options — never to alarm, and never in place of a real consultation.
+              {t('subtitle')}
             </p>
           </div>
         </Container>
@@ -78,34 +83,45 @@ export default async function BlogPage({
 
       <section className="bg-brand-bg py-14 sm:py-16 lg:py-20">
         <Container>
-          <CategoryFilter activeCategory={category} />
+          <CategoryFilter activeCategory={category} locale={locale as AppLocale} />
 
           {articles.length === 0 ? (
             <p className="mt-16 text-center text-[1rem] text-[#495a73]">
-              No articles in this category yet — please check back soon.
+              {isArabic
+                ? 'لا توجد مقالات في هذا التصنيف بعد — يُرجى العودة لاحقًا.'
+                : 'No articles in this category yet — please check back soon.'}
             </p>
           ) : (
             <>
               {featured ? (
                 <div className="mt-10">
-                  <FeaturedArticleCard article={featured} />
+                  <FeaturedArticleCard article={featured} locale={locale as AppLocale} />
                 </div>
               ) : null}
 
               {rest.length > 0 ? (
                 <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {rest.map((article) => (
-                    <ArticleCard key={article.slug} article={article} />
+                    <ArticleCard key={article.slug} article={article} locale={locale as AppLocale} />
                   ))}
                 </div>
               ) : null}
             </>
           )}
 
-          {category && category !== 'all' ? (
+          {category && category !== 'all' && displayCategoryLabel ? (
             <p className="mt-10 text-center text-[0.85rem] text-[#5f6f88]">
-              Showing articles in{' '}
-              <span className="font-semibold text-[#0A2247]">{getCategoryLabel(category)}</span>
+              {isArabic ? (
+                <>
+                  عرض المقالات في{' '}
+                  <span className="font-semibold text-[#0A2247]">{displayCategoryLabel}</span>
+                </>
+              ) : (
+                <>
+                  Showing articles in{' '}
+                  <span className="font-semibold text-[#0A2247]">{displayCategoryLabel}</span>
+                </>
+              )}
             </p>
           ) : null}
         </Container>

@@ -15,6 +15,7 @@ import {
   formatArticleDate,
   getArticleBySlug,
   getCategoryLabel,
+  getCategoryLabelAr,
   getReadingTime,
   getReadingTimeAr,
   getRelatedArticles,
@@ -22,38 +23,6 @@ import {
 import { getPathname } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
 import { getLocaleAlternates } from '@/lib/seo'
-
-// Only the Arabic category labels actually needed today — for the articles
-// that currently have Arabic content. A full localized categories table
-// (which would touch the shared `categories` array used by every other
-// article and the Journal index) is intentionally out of scope here.
-const categoryLabelAr: Record<string, string> = {
-  'dental-implants': 'زراعة الأسنان',
-  prosthodontics: 'طب التعويضات السنية',
-  // Matches the term already used sitewide for this treatment (e.g.
-  // messages/ar/rootCanalTreatment.json, messages/ar/treatments.json) —
-  // there's no separate abstract "Endodontics" noun established elsewhere.
-  endodontics: 'علاج العصب',
-  // Matches the eyebrow label already used on the gum-treatment service
-  // page (messages/ar/gumTreatment.json).
-  'periodontal-care': 'رعاية اللثة',
-  // Matches the term already baked into the default Arabic reviewer
-  // jobTitle below ("أخصائي زراعة الأسنان وطب الأسنان التجميلي").
-  'cosmetic-dentistry': 'طب الأسنان التجميلي',
-  // Matches the term already used on the children's-dentistry service page
-  // (messages/ar/childrensDentistry.json).
-  'childrens-dentistry': 'طب أسنان الأطفال',
-  // No dedicated oral-surgery service page or messages/ar file exists yet
-  // (matches the English article's own note that no /oral-surgery page
-  // exists) — this is the standard clinical Arabic term for the category,
-  // with no existing sitewide term to defer to instead.
-  'oral-surgery': 'جراحة الفم',
-  // No existing sitewide category label for this exact term — messages/ar
-  // uses "الرعاية الوقائية" (preventive care) generically in
-  // treatments.json, but no dedicated Preventive Dentistry category label.
-  // This is the standard clinical Arabic term for the category.
-  'preventive-dentistry': 'طب الأسنان الوقائي',
-}
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
 const siteName = 'The British Dental Hub'
@@ -200,7 +169,7 @@ export default async function BlogArticlePage({
   const displayAuthor = isArabic ? (loc!.author ?? article.author) : article.author
   const displayReviewer = isArabic ? (loc!.medicalReviewer ?? article.medicalReviewer) : article.medicalReviewer
   const displayCategoryLabel = isArabic
-    ? (categoryLabelAr[article.category] ?? getCategoryLabel(article.category))
+    ? getCategoryLabelAr(article.category)
     : getCategoryLabel(article.category)
 
   // Related articles currently have no Arabic content, so the section is

@@ -15,6 +15,42 @@ export function getCategoryLabel(slug: string): string {
   return categories.find((category) => category.slug === slug)?.label ?? slug
 }
 
+// Arabic category labels, used by both the article detail page and the
+// Journal index when rendering under the `ar` locale. Kept here (rather
+// than duplicated per page) so every Arabic-aware surface stays in sync.
+const categoryLabelAr: Record<string, string> = {
+  'dental-implants': 'زراعة الأسنان',
+  prosthodontics: 'طب التعويضات السنية',
+  // Matches the term already used sitewide for this treatment (e.g.
+  // messages/ar/rootCanalTreatment.json, messages/ar/treatments.json) —
+  // there's no separate abstract "Endodontics" noun established elsewhere.
+  endodontics: 'علاج العصب',
+  // Matches the eyebrow label already used on the gum-treatment service
+  // page (messages/ar/gumTreatment.json).
+  'periodontal-care': 'رعاية اللثة',
+  // Matches the term already baked into the default Arabic reviewer
+  // jobTitle used on the article detail page ("أخصائي زراعة الأسنان وطب
+  // الأسنان التجميلي").
+  'cosmetic-dentistry': 'طب الأسنان التجميلي',
+  // Matches the term already used on the children's-dentistry service page
+  // (messages/ar/childrensDentistry.json).
+  'childrens-dentistry': 'طب أسنان الأطفال',
+  // No dedicated oral-surgery service page or messages/ar file exists yet
+  // (matches the English article's own note that no /oral-surgery page
+  // exists) — this is the standard clinical Arabic term for the category,
+  // with no existing sitewide term to defer to instead.
+  'oral-surgery': 'جراحة الفم',
+  // No existing sitewide category label for this exact term — messages/ar
+  // uses "الرعاية الوقائية" (preventive care) generically in
+  // treatments.json, but no dedicated Preventive Dentistry category label.
+  // This is the standard clinical Arabic term for the category.
+  'preventive-dentistry': 'طب الأسنان الوقائي',
+}
+
+export function getCategoryLabelAr(slug: string): string {
+  return categoryLabelAr[slug] ?? getCategoryLabel(slug)
+}
+
 const DEFAULT_AUTHOR = 'Dr. Ayman Chhada, BDS'
 const DEFAULT_REVIEWER = 'Dr. Ayman Chhada, BDS'
 

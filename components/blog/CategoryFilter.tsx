@@ -1,7 +1,15 @@
 import { Link } from "@/i18n/navigation"
-import { categories } from "@/lib/blog/articles"
+import { categories, getCategoryLabelAr } from "@/lib/blog/articles"
+import type { AppLocale } from "@/i18n/routing"
 
-export function CategoryFilter({ activeCategory }: { activeCategory?: string }) {
+export function CategoryFilter({
+  activeCategory,
+  locale,
+}: {
+  activeCategory?: string
+  locale?: AppLocale
+}) {
+  const isArabic = locale === "ar"
   const isAllActive = !activeCategory || activeCategory === "all"
 
   const pillClasses = (isActive: boolean) =>
@@ -14,7 +22,7 @@ export function CategoryFilter({ activeCategory }: { activeCategory?: string }) 
   return (
     <div className="flex flex-wrap gap-2.5">
       <Link href="/blog" className={pillClasses(isAllActive)}>
-        All
+        {isArabic ? "الكل" : "All"}
       </Link>
       {categories.map((category) => (
         <Link
@@ -22,7 +30,7 @@ export function CategoryFilter({ activeCategory }: { activeCategory?: string }) 
           href={`/blog?category=${category.slug}`}
           className={pillClasses(activeCategory === category.slug)}
         >
-          {category.label}
+          {isArabic ? getCategoryLabelAr(category.slug) : category.label}
         </Link>
       ))}
     </div>
