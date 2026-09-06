@@ -6,6 +6,9 @@ import { useTranslations } from "next-intl"
 import { CalendarDays, Menu, X } from "lucide-react"
 import { Link, usePathname } from "@/i18n/navigation"
 import { LanguageSwitcher } from "./LanguageSwitcher"
+import { MobileMenu } from "./MobileMenu"
+
+const WHATSAPP_HREF = "https://wa.me/201556887765"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -41,13 +44,13 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#EEF2F6] bg-white shadow-[0_6px_18px_rgba(10,34,71,0.045)]">
       <div className="mx-auto flex h-[104px] w-[min(1600px,96vw)] items-center justify-between gap-10 px-6 sm:px-8 lg:px-10 xl:px-12">
-        <Link href="/" className="-ml-12 shrink-0 xl:-ml-16 2xl:-ml-[72px]">
+        <Link href="/" className="-ms-2 shrink-0 lg:-ms-12 xl:-ms-16 2xl:-ms-[72px]">
           <Image
             src="/images/logo-horizontal.png"
             alt="The British Dental Hub"
             width={320}
-            height={70}
-            className="h-[193px] w-auto sm:h-[202px] lg:h-[216px]"
+            height={160}
+            className="h-[clamp(100px,24vw,140px)] w-auto sm:h-[202px] lg:h-[216px]"
             priority
           />
         </Link>
@@ -66,7 +69,7 @@ export default function Navbar() {
           </div>
         </nav>
 
-        <div className="relative z-10 mr-[-42px] hidden shrink-0 items-center self-center gap-3 sm:flex xl:mr-[-56px] 2xl:mr-[-64px]">
+        <div className="relative z-10 me-[-42px] hidden shrink-0 items-center self-center gap-3 sm:flex xl:me-[-56px] 2xl:me-[-64px]">
           <LanguageSwitcher />
           <Link
             href="/#contact"
@@ -78,50 +81,34 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 xl:hidden">
-          <LanguageSwitcher className="hidden sm:inline-flex" />
-          <button
-            type="button"
-            aria-label={isOpen ? t("closeMenu") : t("openMenu")}
-            onClick={() => setIsOpen((open) => !open)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded border border-[#d8dee8] text-[#0A2247] transition-colors duration-300 hover:bg-brand-bg"
-          >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
+        <button
+          type="button"
+          aria-label={isOpen ? t("closeMenu") : t("openMenu")}
+          aria-expanded={isOpen}
+          aria-controls="mobile-nav-panel"
+          onClick={() => setIsOpen((open) => !open)}
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#d8dee8] text-[#0A2247] transition-colors duration-300 hover:bg-brand-bg xl:hidden"
+        >
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
 
-      {isOpen && (
-        <div className="border-t border-[#e9edf3] bg-white px-4 py-4 shadow-[0_12px_30px_rgba(10,34,71,0.06)] sm:px-6 xl:hidden">
-          <nav className="mx-auto flex max-w-[1140px] flex-col gap-2">
-            {navigation.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="rounded px-4 py-3 text-sm font-medium text-[#233b63] transition hover:bg-brand-bg hover:text-[#0A2247]"
-              >
-                {item.label}
-              </Link>
-            ))}
-
-            <Link
-              href="/#contact"
-              onClick={() => {
-                setIsOpen(false)
-                handleContactClick()
-              }}
-              className="mt-2 inline-flex items-center justify-center rounded-[3px] bg-[#0A2247] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#123164]"
-            >
-              {t("bookAppointment")}
-            </Link>
-
-            <div className="mt-2 flex justify-center sm:hidden">
-              <LanguageSwitcher />
-            </div>
-          </nav>
-        </div>
-      )}
+      <MobileMenu
+        id="mobile-nav-panel"
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        navigation={navigation}
+        menuLabel={t("menu")}
+        languageLabel={t("language")}
+        bookHref="/#contact"
+        bookLabel={t("bookAppointment")}
+        onBookClick={() => {
+          setIsOpen(false)
+          handleContactClick()
+        }}
+        whatsappHref={WHATSAPP_HREF}
+        whatsappLabel={t("chatWhatsapp")}
+      />
     </header>
   )
 }

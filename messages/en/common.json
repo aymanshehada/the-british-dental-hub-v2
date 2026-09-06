@@ -12,6 +12,9 @@
     "blog": "Blog",
     "contact": "Contact",
     "bookAppointment": "Book Appointment",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "language": "Language",
+    "menu": "Menu",
     "openMenu": "Open navigation",
     "closeMenu": "Close navigation"
   },
