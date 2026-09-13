@@ -41,7 +41,7 @@ export default async function TopBar() {
   ]
 
   return (
-    <div className="bg-[#0A2247] text-white">
+    <div className="hidden bg-[#0A2247] text-white md:block">
       <div className="mx-auto flex min-h-[36px] w-full max-w-[1440px] flex-col gap-2 px-6 py-2 sm:px-8 md:flex-row md:items-center md:justify-between md:py-0 lg:px-10 xl:px-12">
         <div className="flex flex-wrap items-center gap-7 text-[13px] font-medium text-white/94 sm:gap-12 lg:gap-14">
           <div className="flex items-center gap-2.5">

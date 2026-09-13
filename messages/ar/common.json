@@ -9,7 +9,8 @@
     "doctors": "أطباؤنا",
     "patientStories": "قصص المرضى",
     "gallery": "معرض الصور",
-    "blog": "المدونة",
+    "blog": "المجلة",
+    "internationalPatients": "المرضى الدوليون",
     "contact": "تواصل معنا",
     "bookAppointment": "احجز موعدك",
     "chatWhatsapp": "تواصل عبر واتساب",
@@ -17,6 +18,12 @@
     "menu": "القائمة",
     "openMenu": "فتح القائمة",
     "closeMenu": "إغلاق القائمة"
+  },
+  "floatingContact": {
+    "whatsappAria": "تواصل عبر واتساب",
+    "whatsappLabel": "واتساب",
+    "callAria": "اتصل بـ The British Dental Hub",
+    "callLabel": "اتصال"
   },
   "languageSwitcher": {
     "switchToArabic": "العربية",
@@ -38,10 +45,12 @@
       "treatments": "العلاجات",
       "doctors": "الأطباء",
       "patientStories": "قصص المرضى",
-      "gallery": "معرض الصور"
+      "gallery": "معرض الصور",
+      "journal": "المجلة",
+      "internationalPatients": "المرضى الدوليون"
     },
     "contact": "تواصل معنا",
-    "address": "مول جيتواي، عيادات D1، العيادة رقم 226، القاهرة الجديدة، مصر",
+    "address": "القاهرة الجديدة، مدينة الرحاب، مول جيتواي، عيادات D1، العيادة 226",
     "copyright": "© 2026 The British Dental Hub. رعاية أسنانٍ بمعايير بريطانية في القاهرة الجديدة."
   }
 }

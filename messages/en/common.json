@@ -9,7 +9,8 @@
     "doctors": "Our Doctors",
     "patientStories": "Patient Stories",
     "gallery": "Gallery",
-    "blog": "Blog",
+    "blog": "Journal",
+    "internationalPatients": "International Patients",
     "contact": "Contact",
     "bookAppointment": "Book Appointment",
     "chatWhatsapp": "Chat on WhatsApp",
@@ -17,6 +18,12 @@
     "menu": "Menu",
     "openMenu": "Open navigation",
     "closeMenu": "Close navigation"
+  },
+  "floatingContact": {
+    "whatsappAria": "Chat on WhatsApp",
+    "whatsappLabel": "WhatsApp",
+    "callAria": "Call The British Dental Hub",
+    "callLabel": "Call"
   },
   "languageSwitcher": {
     "switchToArabic": "العربية",
@@ -38,10 +45,12 @@
       "treatments": "Treatments",
       "doctors": "Doctors",
       "patientStories": "Patient Stories",
-      "gallery": "Gallery"
+      "gallery": "Gallery",
+      "journal": "Journal",
+      "internationalPatients": "International Patients"
     },
     "contact": "Contact",
-    "address": "Gateway Mall, D1 Clinics, Clinic 226, New Cairo, Egypt",
+    "address": "New Cairo, El Rehab City, Gateway Mall, Clinics D1, Clinic 226",
     "copyright": "© 2026 The British Dental Hub. British-inspired dental care in New Cairo."
   }
 }

@@ -17,6 +17,7 @@ const namespaces = [
   'checkUpCleaning',
   'teethWhitening',
   'blog',
+  'internationalPatients',
 ] as const
 
 async function loadMessages(locale: AppLocale) {

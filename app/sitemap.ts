@@ -19,6 +19,7 @@ const staticPathnames = [
   '/check-up-cleaning',
   '/teeth-whitening',
   '/blog',
+  '/international-patients',
 ] as const
 
 function absoluteUrl(pathname: string, locale: AppLocale): string {

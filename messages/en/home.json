@@ -9,7 +9,49 @@
     "titleLine2": "Exceptional Care",
     "subtitle": "Experience world-class dentistry in a modern, comfortable environment with advanced technology and a patient-first approach.",
     "bookAppointment": "Book Appointment",
-    "chatWhatsapp": "Chat on WhatsApp"
+    "chatWhatsapp": "Chat on WhatsApp",
+    "internationalPrompt": "Travelling to Cairo for dental care?",
+    "internationalLink": "Explore our International Patients pathway"
+  },
+  "internationalPathway": {
+    "eyebrow": "International Patients",
+    "question": "Considering dental care in Cairo?",
+    "cta": "Explore the patient journey",
+    "dismiss": "Hide this"
+  },
+  "whyBdh": {
+    "eyebrow": "Why British Dental Hub",
+    "title": "A clinical standard you can feel, from the first visit.",
+    "subtitle": "Four principles guide every treatment we deliver.",
+    "items": {
+      "standards": {
+        "title": "British-Inspired Standards",
+        "description": "Measured protocols and consistent sterilisation, shaped by clinical discipline."
+      },
+      "digitalDentistry": {
+        "title": "Digital, Evidence-Led Dentistry",
+        "description": "Modern scanning and planning used with purpose — for precision, not for show."
+      },
+      "transparentPlanning": {
+        "title": "Transparent Treatment Planning",
+        "description": "Every recommendation is explained clearly, so you always know what's next and why."
+      },
+      "patientCentred": {
+        "title": "Patient-Centred Care",
+        "description": "Warm, attentive care from a team that treats your comfort as a clinical priority."
+      }
+    }
+  },
+  "ourStory": {
+    "eyebrow": "Our Story",
+    "title": "Bringing a British approach to dentistry in Egypt.",
+    "paragraph1": "Dr. Ayman Chhada and Dr. Essam Kayali began their dental education together at The British University in Egypt. What started there continued well beyond graduation, as both doctors kept building on that foundation through further clinical training.",
+    "paragraph2": "Their postgraduate path carried a distinctly British thread — including time studying in London, with Dr. Ayman completing a course at King's College London, and an implant fellowship delivered jointly with the Sheffield Implantology team through The British University in Egypt.",
+    "paragraph3": "Along the way, working in other clinics showed them where the patient experience could be more organised, more considered, and more complete — not only the treatment itself, but everything around it.",
+    "paragraph4": "The British Dental Hub was created to bring that approach home: modern, evidence-informed dentistry delivered with the comfort, safety, trust, and precision every patient deserves.",
+    "imageAlt": "Inside The British Dental Hub clinic",
+    "placeholderTitle": "A photograph of our founders is coming soon.",
+    "placeholderText": "We are saving this space for the real story of Ayman and Essam."
   },
   "trustBar": {
     "britishStandards": {
@@ -145,16 +187,36 @@
     "subtitle": "Every treatment pathway is supported by clinicians who combine disciplined technique with the warmth and communication expected from a premium healthcare brand.",
     "role": "Implant & Aesthetic Dentistry Specialist",
     "requestConsultation": "Request a Consultation",
+    "viewFullProfile": "View Full Profile",
     "dr1": {
       "name": "Dr. Ayman Chhada",
+      "intro": "Focused on dental implants and aesthetic restorative dentistry, with postgraduate training shaped by the British approach.",
+      "expandLabel": "More about Dr. Ayman",
       "qualification1": "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)",
       "qualification2": "Currently pursuing MRD and MProstho (Prosthodontics)",
-      "qualification3": "King's College London certificate: \"The Art and Science of Indirect Aesthetic Restorations\""
+      "qualification3": "King's College London certificate: \"The Art and Science of Indirect Aesthetic Restorations\"",
+      "qualification4": "MFDS Part 1 completed; MFDS Part 2 in progress"
     },
     "dr2": {
-      "name": "Dr. Issam Kayali",
+      "name": "Dr. Essam Kayali",
+      "intro": "Focused on dental implants and aesthetic restorative dentistry, with an implant fellowship completed alongside the Sheffield Implantology team.",
+      "expandLabel": "More about Dr. Essam",
       "qualification1": "Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team)"
     }
+  },
+  "patientStories": {
+    "eyebrow": "Patient Stories",
+    "title": "Real results, thoughtfully delivered.",
+    "subtitle": "A small selection of cases, shown with care and complete transparency.",
+    "before": "Before",
+    "after": "After",
+    "readCaseStory": "Read the Case Story"
+  },
+  "journal": {
+    "eyebrow": "The Journal",
+    "title": "Clinical insight, written for patients.",
+    "subtitle": "Practical, evidence-informed articles from our clinical team.",
+    "viewJournal": "View the Journal"
   },
   "testimonials": {
     "eyebrow": "Patient Stories",
@@ -181,6 +243,30 @@
     "chatWhatsapp": "Chat on WhatsApp",
     "callUs": "Call Us",
     "location": "Location",
-    "address": "Gateway Mall, D1 Clinics, New Cairo"
+    "address": "New Cairo, El Rehab City, Gateway Mall, Clinics D1, Clinic 226",
+    "getDirections": "Get Directions",
+    "whatsappIntro": "New website enquiry",
+    "form": {
+      "title": "Send an enquiry on WhatsApp",
+      "name": "Full name",
+      "phone": "Phone / WhatsApp number",
+      "treatment": "What are you interested in?",
+      "treatmentPlaceholder": "Select an option",
+      "treatmentOptions": {
+        "dentalImplants": "Dental Implants",
+        "porcelainVeneers": "Porcelain Veneers",
+        "teethWhitening": "Teeth Whitening",
+        "orthodontics": "Orthodontics",
+        "gumTreatment": "Gum Treatment",
+        "childrensDentistry": "Children's Dentistry",
+        "generalConsultation": "General Consultation",
+        "other": "Other"
+      },
+      "preferredContact": "Preferred contact method",
+      "contactMethodWhatsapp": "WhatsApp",
+      "contactMethodPhone": "Phone",
+      "message": "Message (optional)",
+      "submit": "Send Enquiry on WhatsApp"
+    }
   }
 }

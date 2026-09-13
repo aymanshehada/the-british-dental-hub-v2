@@ -4,13 +4,16 @@ import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 
 import Hero from "@/components/home/Hero"
-import TrustBar from "@/components/home/TrustBar"
+import WhyBdh from "@/components/home/WhyBdh"
+import OurStory from "@/components/home/OurStory"
+import PatientJourneyStrip from "@/components/home/PatientJourneyStrip"
 import Treatments from "@/components/home/Treatments"
-import WhyChooseUs from "@/components/home/WhyChooseUs"
-import BeforeAfter from "@/components/home/BeforeAfter"
 import Doctors from "@/components/home/Doctors"
-import Testimonials from "@/components/home/Testimonials"
+import CaseStories from "@/components/home/CaseStories"
+import JournalPreview from "@/components/home/JournalPreview"
 import CTA from "@/components/home/CTA"
+import { InternationalPatientsPrompt } from "@/components/home/InternationalPatientsPrompt"
+import type { AppLocale } from "@/i18n/routing"
 
 export default async function HomePage({
   params,
@@ -27,14 +30,17 @@ export default async function HomePage({
 
       <main id="insights">
         <Hero />
-        <TrustBar />
+        <WhyBdh />
+        <OurStory />
+        <PatientJourneyStrip />
         <Treatments />
-        <WhyChooseUs />
-        <BeforeAfter />
         <Doctors />
-        <Testimonials />
+        <CaseStories />
+        <JournalPreview locale={locale as AppLocale} />
         <CTA />
       </main>
+
+      <InternationalPatientsPrompt />
 
       <Footer />
     </div>

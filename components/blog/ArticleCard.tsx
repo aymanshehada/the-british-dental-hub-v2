@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation"
-import { ArrowRight, BookOpen } from "lucide-react"
+import Image from "next/image"
+import { ArrowRight } from "lucide-react"
 import type { BlogArticle } from "@/lib/blog/types"
 import {
   formatArticleDate,
@@ -8,6 +9,7 @@ import {
   getReadingTime,
   getReadingTimeAr,
 } from "@/lib/blog/articles"
+import { getCategoryImage } from "@/lib/blog/category-images"
 import type { AppLocale } from "@/i18n/routing"
 
 // Shared per-card locale resolution — falls back to English whenever the
@@ -26,14 +28,9 @@ function useCardDisplay(article: BlogArticle, locale?: AppLocale) {
   }
 }
 
-function ArticlePlaceholderArt({ className }: { className?: string }) {
+function ArticleCategoryImage({ category, className }: { category: string; className?: string }) {
   return (
-    <div
-      className={`relative flex items-center justify-center overflow-hidden bg-[linear-gradient(135deg,#F8F9FB_0%,#EEF2F6_100%)] ${className ?? ""}`}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(215,25,32,0.06),transparent_55%)]" />
-      <BookOpen className="relative size-8 text-brand-navy/20" strokeWidth={1.3} />
-    </div>
+    <Image src={getCategoryImage(category)} alt="" width={960} height={640} className={`object-cover ${className ?? ""}`} />
   )
 }
 
@@ -45,7 +42,7 @@ export function ArticleCard({ article, locale }: { article: BlogArticle; locale?
       href={`/blog/${article.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-[18px] border border-[#e5ebf3] bg-white shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.06)]"
     >
-      <ArticlePlaceholderArt className="h-[160px] w-full" />
+      <ArticleCategoryImage category={article.category} className="h-[160px] w-full" />
       <div className="flex flex-1 flex-col p-6">
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-brand-red">
           {display.categoryLabel}
@@ -73,7 +70,7 @@ export function FeaturedArticleCard({ article, locale }: { article: BlogArticle;
       href={`/blog/${article.slug}`}
       className="group grid overflow-hidden rounded-[22px] border border-[#e5ebf3] bg-white shadow-[0_5px_20px_rgba(15,39,78,0.05)] transition-all duration-300 ease-out hover:border-brand-red/20 hover:shadow-[0_14px_32px_rgba(215,25,32,0.06)] lg:grid-cols-[1.05fr_0.95fr]"
     >
-      <ArticlePlaceholderArt className="min-h-[220px] w-full lg:min-h-[320px]" />
+      <ArticleCategoryImage category={article.category} className="min-h-[220px] w-full lg:min-h-[320px]" />
       <div className="flex flex-col justify-center p-7 sm:p-9">
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-brand-red">
           {display.isArabic ? (

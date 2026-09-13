@@ -7,6 +7,7 @@ import { CalendarDays, Menu, X } from "lucide-react"
 import { Link, usePathname } from "@/i18n/navigation"
 import { LanguageSwitcher } from "./LanguageSwitcher"
 import { MobileMenu } from "./MobileMenu"
+import { FloatingContact } from "./FloatingContact"
 
 const WHATSAPP_HREF = "https://wa.me/201556887765"
 
@@ -15,30 +16,44 @@ export default function Navbar() {
   const pathname = usePathname()
   const t = useTranslations("common.nav")
 
-  const navigation = [
+  // `mobileOnly` items appear in the slide-out menu but not the desktop bar —
+  // the desktop bar is already at capacity, so "International Patients" is
+  // surfaced there via the footer and the mobile menu instead.
+  const navigation: { label: string; href: string; mobileOnly?: boolean }[] = [
     { label: t("home"), href: "/#home" },
     { label: t("about"), href: "/#about" },
     { label: t("treatments"), href: "/treatments" },
     { label: t("doctors"), href: "/#doctors" },
     { label: t("patientStories"), href: "/#patient-stories" },
-    { label: t("gallery"), href: "/#gallery" },
     { label: t("blog"), href: "/blog" },
+    { label: t("internationalPatients"), href: "/international-patients", mobileOnly: true },
     { label: t("contact"), href: "/#contact" },
   ]
 
+  const desktopNavigation = navigation.filter((item) => !item.mobileOnly)
+
+  // The header CTA normally books via the homepage Contact section, but the
+  // International Patients page has its own enquiry section — sending that
+  // page's visitors to the homepage instead would be a routing error, so the
+  // CTA target and its in-page scroll behaviour both switch based on route.
+  const isInternationalPatients = pathname === "/international-patients"
+  const bookHref = isInternationalPatients ? "/international-patients#enquiry" : "/#contact"
+
   const handleContactClick = () => {
-    if (pathname !== "/") {
+    const targetId = isInternationalPatients ? "enquiry" : pathname === "/" ? "contact" : null
+
+    if (!targetId) {
       return
     }
 
-    const contactSection = document.getElementById("contact")
+    const targetSection = document.getElementById(targetId)
 
-    if (!contactSection) {
+    if (!targetSection) {
       return
     }
 
-    contactSection.scrollIntoView({ behavior: "smooth", block: "start" })
-    window.history.replaceState(null, "", "#contact")
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    window.history.replaceState(null, "", `#${targetId}`)
   }
 
   return (
@@ -50,14 +65,14 @@ export default function Navbar() {
             alt="The British Dental Hub"
             width={320}
             height={160}
-            className="h-[clamp(100px,24vw,140px)] w-auto sm:h-[202px] lg:h-[216px]"
+            className="h-[clamp(96px,24vw,128px)] w-auto sm:h-[150px] md:h-[175px] lg:h-[200px]"
             priority
           />
         </Link>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-center self-stretch px-6 2xl:px-10 xl:flex">
-          <div className="flex h-full items-center gap-8 2xl:gap-10 text-[13px] font-semibold tracking-[0.03em] text-[#233b63]">
-            {navigation.map((item) => (
+        <nav className="hidden min-w-0 flex-1 items-center justify-center self-stretch px-2 2xl:px-10 xl:flex">
+          <div className="flex h-full items-center gap-4 2xl:gap-10 text-[13px] font-semibold tracking-[0.03em] text-[#233b63]">
+            {desktopNavigation.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
@@ -69,10 +84,10 @@ export default function Navbar() {
           </div>
         </nav>
 
-        <div className="relative z-10 me-[-42px] hidden shrink-0 items-center self-center gap-3 sm:flex xl:me-[-56px] 2xl:me-[-64px]">
+        <div className="relative z-10 me-[-42px] hidden shrink-0 items-center self-center gap-3 sm:flex xl:me-[-72px] 2xl:me-[-64px]">
           <LanguageSwitcher />
           <Link
-            href="/#contact"
+            href={bookHref}
             onClick={handleContactClick}
             className="inline-flex h-[48px] items-center gap-2 rounded-[3px] bg-[#0A2247] px-7 text-[14px] font-semibold text-white shadow-[0_2px_6px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_6px_16px_rgba(10,34,71,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/20 focus-visible:ring-offset-2"
           >
@@ -100,7 +115,7 @@ export default function Navbar() {
         navigation={navigation}
         menuLabel={t("menu")}
         languageLabel={t("language")}
-        bookHref="/#contact"
+        bookHref={bookHref}
         bookLabel={t("bookAppointment")}
         onBookClick={() => {
           setIsOpen(false)
@@ -109,6 +124,7 @@ export default function Navbar() {
         whatsappHref={WHATSAPP_HREF}
         whatsappLabel={t("chatWhatsapp")}
       />
+      <FloatingContact hidden={isOpen} />
     </header>
   )
 }

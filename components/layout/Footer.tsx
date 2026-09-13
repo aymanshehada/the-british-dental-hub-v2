@@ -37,7 +37,8 @@ export default async function Footer() {
     { label: t("nav.treatments"), href: "/#treatments" },
     { label: t("nav.doctors"), href: "/#doctors" },
     { label: t("nav.patientStories"), href: "/#patient-stories" },
-    { label: t("nav.gallery"), href: "/#gallery" },
+    { label: t("nav.journal"), href: "/blog" },
+    { label: t("nav.internationalPatients"), href: "/international-patients" },
   ]
 
   const socials = [

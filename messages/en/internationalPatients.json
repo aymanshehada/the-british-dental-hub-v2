@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "title": "International Patients — Dental Treatment in Cairo",
+    "description": "Travelling to Cairo for dental care? See how The British Dental Hub guides international patients — from first enquiry and remote consultation to treatment and follow-up."
+  },
+  "hero": {
+    "eyebrow": "International Patients",
+    "title": "A considered path to treatment in Cairo.",
+    "subtitle": "If you are outside Egypt and thinking about dental care with us, here is exactly how we can guide you — from your first message through to treatment and follow-up.",
+    "ctaPrimary": "Start Your Enquiry",
+    "ctaSecondary": "See the journey",
+    "imageAlt": "A traveller looking out over Cairo — the Nile, the pyramids and the Cairo Tower — beside a dental treatment room"
+  },
+  "intro": {
+    "eyebrow": "How it works",
+    "title": "Organised, unhurried, and led by clinical judgement.",
+    "body": "If you live outside Egypt and are considering dental care with us, this is how the process works. Most international enquiries begin with a short message; from there we learn about your case, review any records you are able to share, and — where it helps — arrange a video consultation so you can speak with the treating doctor before making travel plans. Treatment is only planned in detail once your situation is clear, and refined further after an in-person assessment in Cairo.",
+    "imageAlt": "Inside The British Dental Hub clinic in New Cairo"
+  },
+  "journey": {
+    "eyebrow": "The international patient journey",
+    "title": "Seven steps, from first message to follow-up.",
+    "steps": {
+      "enquiry": {
+        "title": "Initial Enquiry",
+        "description": "Send a short message about what you are considering and where you are travelling from."
+      },
+      "shareCase": {
+        "title": "Share Your Case",
+        "description": "We may ask for recent records, scans or photographs — what is useful depends on your case."
+      },
+      "videoConsultation": {
+        "title": "Video Consultation",
+        "description": "Where appropriate, a remote call to discuss your concerns and meet the treating doctor."
+      },
+      "treatmentPlanning": {
+        "title": "Treatment Planning",
+        "description": "We outline possible approaches; the detailed plan is confirmed after an in-person assessment."
+      },
+      "coordination": {
+        "title": "Visit Coordination",
+        "description": "Once the direction is clearer, we help arrange appointments around your planned visit."
+      },
+      "treatment": {
+        "title": "Treatment in Cairo",
+        "description": "Your treatment is carried out at the clinic, with the sequence guided by clinical need."
+      },
+      "followUp": {
+        "title": "Review & Follow-up",
+        "description": "We agree how review and any ongoing care will be handled after you return home."
+      }
+    }
+  },
+  "beforeTravel": {
+    "eyebrow": "Before you travel"
+  },
+  "records": {
+    "eyebrow": "What to share",
+    "title": "What you can share before your visit.",
+    "body": "There is no fixed checklist. Depending on the treatment you are considering and your clinical history, we may ask for some of the following:",
+    "items": [
+      "Recent dental records",
+      "Any X-rays or CBCT scans already available to you",
+      "Clinical photographs",
+      "Previous treatment reports",
+      "Relevant medical history and current medications"
+    ],
+    "note": "If you do not have some of these, that is not a problem — we will let you know what is genuinely needed for your situation, and some information can only be gathered in person.",
+    "whatsappNote": "If it's easier, you can send photographs or documents straight into the WhatsApp conversation."
+  },
+  "video": {
+    "eyebrow": "Remote video consultation",
+    "title": "Speaking with the doctor before you travel.",
+    "body": "During planning, and where it is appropriate for your case, the team may arrange a video consultation. It is an opportunity to:",
+    "items": [
+      "Talk through your concerns and goals",
+      "Explain the history of your case",
+      "Review the records you have shared",
+      "Hear the possible treatment approaches explained",
+      "Meet the doctor who would be treating you",
+      "Ask questions about the journey ahead"
+    ],
+    "caveatTitle": "It does not replace an in-person examination",
+    "caveat": "A video consultation helps us prepare and helps you decide, but it is not a clinical examination. Definitive treatment planning may require an in-person assessment in Cairo and, in some cases, additional records."
+  },
+  "inCairo": {
+    "eyebrow": "In Cairo"
+  },
+  "arrival": {
+    "title": "What happens when you arrive",
+    "intro": "Once you're at the clinic, your visit typically moves through a clear sequence — though the detail depends on your case.",
+    "steps": {
+      "assessment": {
+        "title": "Clinical assessment",
+        "description": "A full examination of your teeth, gums and bite, and a discussion of your concerns and goals."
+      },
+      "diagnostics": {
+        "title": "Diagnostic assessment where indicated",
+        "description": "Scans or imaging are used where your case calls for them, building on anything you shared beforehand."
+      },
+      "discussion": {
+        "title": "Discussion of options",
+        "description": "Your dentist talks you through the approaches that may be appropriate for your case."
+      },
+      "plan": {
+        "title": "Treatment plan confirmed",
+        "description": "The plan is set out clearly once your situation has been fully assessed in person."
+      },
+      "treatment": {
+        "title": "Treatment",
+        "description": "Care is carried out at the clinic, sequenced according to clinical need."
+      },
+      "review": {
+        "title": "Review before you leave",
+        "description": "Before you travel home, you and your dentist agree how review and any further care will be handled."
+      }
+    },
+    "imageAlt": "Digital scanning technology used as part of a clinical assessment at The British Dental Hub",
+    "advanceNoteTitle": "Preparing in advance can make your visit more efficient",
+    "advanceNote": "When we've already reviewed enough information before you travel — relevant records, imaging or photographs where appropriate, a video consultation, and a clear picture of your concerns and goals — much of your treatment plan can often be agreed in advance. This helps make good use of your time in Cairo, and in selected cases, treatment can begin soon after you arrive. This is not guaranteed and is not appropriate for every case: a remote review does not replace an in-person examination, and a personal assessment at the clinic may still be necessary before your plan is finalised."
+  },
+  "planningTime": {
+    "title": "Planning your time in Cairo",
+    "body": "How long you might need in Cairo depends on the treatment being considered and the plan agreed for your case. Some treatment can be carried out over a short period; other care involves more than one appointment, and healing or laboratory stages can affect the spacing between visits. Depending on the case, more than one trip may be needed."
+  },
+  "coordination": {
+    "eyebrow": "Travel & coordination",
+    "title": "Coordinating your appointments",
+    "body": "Once the clinical direction is clearer, the team can help coordinate your appointments around the dates you plan to be in Cairo, so your time here is well used."
+  },
+  "implantsExample": {
+    "eyebrow": "An example — dental implants",
+    "title": "How the process might work if you are considering implants.",
+    "body": "This is an example of how a case may progress, not a fixed pathway. If you are considering dental implants, we may first ask you to share any existing dental records, relevant scans and photographs available to you. After reviewing the information, we can arrange a video consultation where appropriate to discuss your concerns and explain what may need to be assessed in person. Once you attend the clinic, the treatment plan can be refined following a full clinical assessment.",
+    "timelineNote": "The treatment sequence, the number of visits and any healing time all depend on the clinical assessment, the complexity of your case and the agreed plan. We do not promise that implant treatment can always be completed in a single trip."
+  },
+  "helpBoundaries": {
+    "title": "What we help with — and what you arrange yourself",
+    "canHelpTitle": "We can help with",
+    "canHelp": [
+      "Clinical communication before you travel",
+      "Coordinating your appointments",
+      "Guiding you through the treatment-planning pathway",
+      "Clinic scheduling"
+    ],
+    "cannotArrangeTitle": "We do not arrange",
+    "cannotArrange": [
+      "Flights",
+      "Accommodation",
+      "Visas"
+    ]
+  },
+  "practicalInfo": {
+    "title": "Practical information",
+    "body": "The clinic is in New Cairo, at Gateway Mall in El Rehab City. Entry requirements for Egypt vary by nationality — for current, official visa information, check the Egyptian government's e-Visa portal directly.",
+    "visaLinkLabel": "Official Egypt e-Visa portal",
+    "disclaimer": "This is general orientation, not a service we provide. We do not arrange visas, flights or accommodation."
+  },
+  "afterReturn": {
+    "eyebrow": "After you return home",
+    "title": "Your care continues after you travel home.",
+    "body": "Once you're back home, we agree how review will be handled and what, if any, ongoing care is appropriate for your case. We stay in contact by WhatsApp or email, and if a further in-person review is needed, we'll discuss the best way to arrange it. Not every aspect of follow-up can be managed remotely — some review genuinely needs to happen in person."
+  },
+  "faq": {
+    "eyebrow": "International patient questions",
+    "title": "Questions international patients ask us.",
+    "items": [
+      {
+        "q": "Can I speak with the team before I travel?",
+        "a": "Yes, where it's appropriate for your case — the team can arrange a video consultation so you can discuss your concerns and meet the treating doctor before making travel plans."
+      },
+      {
+        "q": "Can you review X-rays or photographs I already have?",
+        "a": "We can look at records you share as part of a preliminary review. This helps with planning, but it is not a diagnosis — definitive treatment planning depends on an in-person assessment."
+      },
+      {
+        "q": "Will I still need an in-person assessment?",
+        "a": "Yes. A video consultation or a review of your records helps us prepare, but it does not replace a clinical examination. The detailed treatment plan is confirmed in person, in Cairo."
+      },
+      {
+        "q": "How long might I need to stay in Cairo?",
+        "a": "This depends on the treatment you need and the plan agreed for your case. Some care can be completed over a short period; other treatment involves more than one appointment or, in some cases, more than one trip."
+      },
+      {
+        "q": "Can several appointments be arranged around one visit?",
+        "a": "Once the clinical direction is clear, the team can help coordinate your appointments around the dates you plan to be in Cairo."
+      },
+      {
+        "q": "What happens if I need follow-up after I go home?",
+        "a": "We agree how review and any ongoing care will be handled before you leave. We stay in contact remotely, though some review may still need to happen in person."
+      },
+      {
+        "q": "Do you arrange flights, accommodation or visas?",
+        "a": "No. Our coordination is focused on your clinical care and appointment scheduling — flights, accommodation and visas are arranged by you."
+      }
+    ]
+  },
+  "related": {
+    "title": "Explore more",
+    "treatments": "All Treatments",
+    "implants": "Dental Implants",
+    "veneers": "Porcelain Veneers",
+    "doctors": "Our Doctors",
+    "journal": "What to Expect From Implant Treatment"
+  },
+  "enquiry": {
+    "eyebrow": "International patient enquiry",
+    "title": "Start your international patient enquiry.",
+    "subtitle": "Send us the essentials and we will come back to you to talk through the next steps.",
+    "form": {
+      "name": "Full name",
+      "country": "Country",
+      "phone": "WhatsApp / Phone number",
+      "email": "Email",
+      "treatment": "What treatment are you considering?",
+      "treatmentPlaceholder": "Select an option",
+      "treatmentOptions": {
+        "dentalImplants": "Dental Implants",
+        "porcelainVeneers": "Porcelain Veneers",
+        "multipleTeeth": "Multiple teeth / full-mouth treatment",
+        "teethWhitening": "Teeth Whitening",
+        "orthodontics": "Orthodontics",
+        "gumTreatment": "Gum Treatment",
+        "childrensDentistry": "Children's Dentistry",
+        "generalConsultation": "General Consultation",
+        "notSure": "I'm not sure yet",
+        "other": "Other"
+      },
+      "travelTimeframe": "When are you hoping to travel?",
+      "travelTimeframePlaceholder": "Select an option",
+      "travelTimeframeOptions": {
+        "asap": "As soon as possible",
+        "oneToThreeMonths": "Within 1–3 months",
+        "threeToSixMonths": "3–6 months",
+        "exploring": "Just exploring for now"
+      },
+      "preferredContact": "Preferred contact method",
+      "contactMethodWhatsapp": "WhatsApp",
+      "contactMethodPhone": "Phone",
+      "message": "Tell us briefly about your case",
+      "whatsappHelper": "Once the chat opens in WhatsApp, you can also send photographs or documents there.",
+      "consent": "By sending this enquiry you agree we can contact you about it. Please share only what you're comfortable sending in a message.",
+      "submit": "Send Enquiry on WhatsApp"
+    },
+    "whatsappIntro": "New international patient enquiry"
+  }
+}
