@@ -8,7 +8,6 @@ import { HeroSection } from '@/components/implant/HeroSection'
 import { SuitabilitySection } from '@/components/implant/SuitabilitySection'
 import { JourneySection } from '@/components/implant/JourneySection'
 import { DigitalDentistrySection } from '@/components/implant/DigitalDentistrySection'
-import { PatientStoriesSection } from '@/components/implant/PatientStoriesSection'
 import type { AppLocale } from '@/i18n/routing'
 import { getLocaleAlternates } from '@/lib/seo'
 
@@ -76,7 +75,6 @@ export default async function DentalImplantsPage({
       <SuitabilitySection />
       <JourneySection />
       <DigitalDentistrySection />
-      <PatientStoriesSection />
       <ConsultationCtaSection />
       </main>
       <Footer />

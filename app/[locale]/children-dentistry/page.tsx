@@ -90,7 +90,7 @@ async function HeroSection() {
 
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <Container className="relative grid min-h-[auto] items-center gap-10 pt-28 pb-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
+      <Container className="relative grid min-h-[auto] items-center gap-10 pt-10 pb-16 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
@@ -111,7 +111,7 @@ async function HeroSection() {
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
               {t('ctaPrimary')}
-              <ArrowRight className="size-4" />
+              <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
           </div>
         </div>
@@ -154,14 +154,14 @@ async function ServicesSection() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid grid-cols-2 gap-2.5 sm:mt-14 sm:gap-4">
           {services.map((item) => (
             <div
               key={item}
-              className="flex items-start gap-3 rounded-[14px] border border-[#e5ebf3] bg-white px-5 py-4"
+              className="flex items-start gap-2 rounded-[10px] border border-[#e5ebf3] bg-white px-3 py-2.5 sm:gap-3 sm:rounded-[14px] sm:px-5 sm:py-4"
             >
-              <Check className="mt-0.5 size-4 shrink-0 text-brand-red" />
-              <span className="text-[0.95rem] leading-6 text-[#495a73]">{item}</span>
+              <Check className="mt-0.5 size-3.5 shrink-0 text-brand-red sm:size-4" />
+              <span className="text-[0.8rem] leading-[1.4] text-[#495a73] sm:text-[0.95rem] sm:leading-6">{item}</span>
             </div>
           ))}
         </div>
@@ -269,19 +269,19 @@ async function WhenToContactSection() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-5 lg:grid-cols-5">
           {contactSigns.map((item) => {
             const Icon = item.icon
 
             return (
               <div
                 key={item.title}
-                className="flex h-full flex-col items-center gap-3 rounded-[22px] border border-[#e5ebf3] bg-brand-bg p-5 text-center shadow-[0_2px_10px_rgba(15,39,78,0.035)]"
+                className="flex h-full flex-col items-center gap-2 rounded-[16px] border border-[#e5ebf3] bg-brand-bg p-3.5 text-center shadow-[0_2px_10px_rgba(15,39,78,0.035)] sm:gap-3 sm:rounded-[22px] sm:p-5"
               >
-                <div className="flex size-11 items-center justify-center rounded-[16px] border border-brand-red/25 bg-brand-red/10 text-brand-red">
-                  <Icon className="size-5" strokeWidth={1.6} />
+                <div className="flex size-9 items-center justify-center rounded-[14px] border border-brand-red/25 bg-brand-red/10 text-brand-red sm:size-11 sm:rounded-[16px]">
+                  <Icon className="size-4 sm:size-5" strokeWidth={1.6} />
                 </div>
-                <p className="text-[0.92rem] font-semibold leading-tight text-[#0A2247]">
+                <p className="text-[0.82rem] font-semibold leading-tight text-[#0A2247] sm:text-[0.92rem]">
                   {item.title}
                 </p>
               </div>
@@ -371,7 +371,7 @@ async function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
                 {t('bookConsultation')}
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-4 rtl:rotate-180" />
               </Link>
 
               <Link

@@ -43,7 +43,7 @@ export async function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_14px_30px_rgba(10,34,71,0.26)]"
               >
                 {t('bookConsultation')}
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-4 rtl:rotate-180" />
               </Link>
 
               <Link

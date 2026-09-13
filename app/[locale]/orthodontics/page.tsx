@@ -15,7 +15,6 @@ import {
   MessageSquare,
   ScanLine,
   ScanSearch,
-  Star,
   UserRound,
   Workflow,
   Wrench,
@@ -81,31 +80,19 @@ const planningStageIcons = { scanning: ScanSearch, xrays: ScanLine, planning: Wo
 const audienceKeys = ['adults', 'teenagers', 'children'] as const
 const audienceIcons = { adults: UserRound, teenagers: GraduationCap, children: Baby } as const
 
-const testimonialKeys = ['item1', 'item2', 'item3', 'item4'] as const
-
-function Stars() {
-  return (
-    <div className="flex items-center gap-1 text-brand-red" aria-label="Five star review">
-      {Array.from({ length: 5 }).map((_, index) => (
-        <Star key={index} className="size-4 fill-current" />
-      ))}
-    </div>
-  )
-}
-
 async function HeroSection() {
   const t = await getTranslations('orthodontics.hero')
 
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <Container className="relative grid min-h-[auto] items-center gap-10 pt-28 pb-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
+      <Container className="relative grid min-h-[auto] items-center gap-10 pt-10 pb-16 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
             {t('eyebrow')}
           </p>
 
-          <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.94] tracking-[-0.022em] text-[#0A2247]">
+          <h1 className="mt-8 max-w-[560px] font-serif text-[1.62rem] leading-[1.2] tracking-[-0.01em] text-[#0A2247] sm:text-[clamp(2.55rem,4.9vw,4.8rem)] sm:leading-[0.94] sm:tracking-[-0.022em]">
             {t('titleLine1')}
             <span className="mt-2 block">{t('titleLine2')}</span>
           </h1>
@@ -120,7 +107,7 @@ async function HeroSection() {
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
               {t('ctaPrimary')}
-              <ArrowRight className="size-4" />
+              <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
             <Link
               href="#treatment-types"
@@ -342,64 +329,6 @@ async function WhoIsItForSection() {
   )
 }
 
-async function TestimonialsSection() {
-  const t = await getTranslations('orthodontics.testimonials')
-  const verifiedPatient = t('verifiedPatient')
-
-  const testimonials = testimonialKeys.map((key) => ({
-    quote: t(`items.${key}.quote`),
-    treatment: t(`items.${key}.treatment`),
-  }))
-
-  return (
-    <section className="bg-white py-24 sm:py-28 lg:py-32">
-      <Container>
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
-            {t('eyebrow')}
-          </p>
-          <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
-            {t('title')}
-          </h2>
-          <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
-            {t('subtitle')}
-          </p>
-        </div>
-
-        <div className="mt-10 space-y-5">
-          <article className="rounded-[34px] border border-[#e5ebf3] bg-brand-bg p-5 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)] sm:p-6 lg:p-7">
-            <Stars />
-            <blockquote className="mt-3 max-w-4xl text-2xl font-medium leading-[1.35] text-[#0A2247] sm:text-3xl lg:text-[2.05rem]">
-              "{testimonials[0].quote}"
-            </blockquote>
-            <div className="mt-4 border-t border-[#e5ebf3] pt-4">
-              <p className="text-[0.95rem] font-semibold text-[#0A2247]">{verifiedPatient}</p>
-              <p className="mt-1 text-sm font-light text-[#495a73]">{testimonials[0].treatment}</p>
-            </div>
-          </article>
-
-          <div className="grid gap-5 lg:grid-cols-3">
-            {testimonials.slice(1).map((testimonial) => (
-              <div
-                key={testimonial.quote}
-                className="group h-full rounded-[30px] border border-[#e5ebf3] bg-white p-4 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)]"
-              >
-                <Stars />
-                <p className="mt-3 text-[0.98rem] font-light leading-7 text-[#495a73]">
-                  {testimonial.quote}
-                </p>
-                <div className="mt-4 border-t border-[#e5ebf3] pt-3">
-                  <p className="text-sm font-semibold text-[#0A2247]">{verifiedPatient}</p>
-                  <p className="mt-1 text-sm font-light text-[#495a73]">{testimonial.treatment}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </section>
-  )
-}
 
 async function ConsultationCtaSection() {
   const t = await getTranslations('orthodontics.consultationCta')
@@ -442,7 +371,7 @@ async function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
                 {t('bookConsultation')}
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-4 rtl:rotate-180" />
               </Link>
 
               <Link
@@ -498,7 +427,6 @@ export default async function OrthodonticsPage({
       <TypesSection />
       <DigitalPlanningSection />
       <WhoIsItForSection />
-      <TestimonialsSection />
       <ConsultationCtaSection />
       </main>
       <Footer />

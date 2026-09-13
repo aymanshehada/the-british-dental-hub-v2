@@ -73,7 +73,7 @@ async function HeroSection() {
 
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <Container className="relative grid min-h-[auto] items-center gap-10 pt-28 pb-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
+      <Container className="relative grid min-h-[auto] items-center gap-10 pt-10 pb-16 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
@@ -94,7 +94,7 @@ async function HeroSection() {
               className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
               {t('ctaPrimary')}
-              <ArrowRight className="size-4" />
+              <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
           </div>
         </div>
@@ -263,7 +263,7 @@ async function ConsultationCtaSection() {
                 className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
                 {t('bookConsultation')}
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-4 rtl:rotate-180" />
               </Link>
 
               <Link
