@@ -6,7 +6,7 @@ import Image from "next/image"
 import { ArrowRight, X } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 
-const MOBILE_KEY = "bdh:intl-pathway"
+const DISMISS_KEY = "bdh:intl-pathway"
 const ASSET_DIR = "/images/international"
 
 // All artwork below is approved, static, and used as supplied — no redrawing,
@@ -44,12 +44,12 @@ export function InternationalPatientsPrompt() {
   const isRtl = locale === "ar"
 
   const [pastHero, setPastHero] = useState(false)
-  const [mobileDismissed, setMobileDismissed] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     try {
-      if (sessionStorage.getItem(MOBILE_KEY) === "dismissed") setMobileDismissed(true)
+      if (sessionStorage.getItem(DISMISS_KEY) === "dismissed") setDismissed(true)
     } catch {}
 
     const onScroll = () => {
@@ -79,19 +79,23 @@ export function InternationalPatientsPrompt() {
     }
   }, [])
 
-  const dismissMobile = () => {
-    setMobileDismissed(true)
+  // One dismissal hides both the desktop card and the mobile card for the
+  // rest of the session; the page stays reachable from the nav and footer.
+  const dismiss = () => {
+    setDismissed(true)
     try {
-      sessionStorage.setItem(MOBILE_KEY, "dismissed")
+      sessionStorage.setItem(DISMISS_KEY, "dismissed")
     } catch {}
   }
 
   const desktopShown = pastHero && !menuOpen
-  const mobileShown = pastHero && !menuOpen && !mobileDismissed
+  const mobileShown = pastHero && !menuOpen
   const accessibleName = `${t("eyebrow")} — ${t("question")} ${t("cta")}`
 
   const plane = isRtl ? PLANE_AR : PLANE_EN
   const caption = isRtl ? CAPTION_AR : CAPTION_EN
+
+  if (dismissed) return null
 
   return (
     <>
@@ -179,6 +183,23 @@ export function InternationalPatientsPrompt() {
               </span>
             </div>
           </Link>
+
+          {/* Close control: a sibling of the card link (a button can't live
+              inside it), pinned to the card's start-side top corner — the
+              plane and caption artwork sit on the end side in both
+              directions, so this corner is free. */}
+          <button
+            type="button"
+            onClick={dismiss}
+            aria-label={t("dismiss")}
+            title={t("dismiss")}
+            tabIndex={desktopShown ? undefined : -1}
+            className={`absolute start-2.5 z-20 inline-flex size-8 items-center justify-center rounded-full border border-[#e6e0d1] bg-white/95 text-[#233b63] shadow-[0_2px_6px_rgba(10,34,71,0.12)] transition-colors hover:bg-white hover:text-brand-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/30 ${
+              isRtl ? "top-[114px]" : "top-[106px]"
+            }`}
+          >
+            <X size={15} strokeWidth={2} aria-hidden="true" />
+          </button>
         </div>
       </div>
 
@@ -201,7 +222,7 @@ export function InternationalPatientsPrompt() {
             href="/international-patients"
             tabIndex={mobileShown ? undefined : -1}
             aria-label={accessibleName}
-            className="relative block px-3.5 pb-3 pt-2.5 pe-9 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/25"
+            className="relative block px-3.5 pb-3 pt-2.5 pe-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/25"
           >
             <div className="flex items-center gap-1.5">
               <Image
@@ -227,12 +248,13 @@ export function InternationalPatientsPrompt() {
 
           <button
             type="button"
-            onClick={dismissMobile}
+            onClick={dismiss}
             aria-label={t("dismiss")}
+            title={t("dismiss")}
             tabIndex={mobileShown ? undefined : -1}
-            className="absolute end-1.5 top-1.5 z-10 inline-flex h-6 w-6 items-center justify-center rounded-full text-[#8a94a6] transition-colors hover:bg-[#0A2247]/5 hover:text-[#233b63] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/25"
+            className="absolute end-1 top-1 z-10 inline-flex size-8 items-center justify-center rounded-full border border-[#e6e0d1] bg-white/95 text-[#233b63] shadow-[0_1px_4px_rgba(10,34,71,0.12)] transition-colors hover:bg-white hover:text-brand-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/30"
           >
-            <X size={12} aria-hidden="true" />
+            <X size={15} strokeWidth={2} aria-hidden="true" />
           </button>
         </div>
       </div>

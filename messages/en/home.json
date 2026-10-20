@@ -207,10 +207,9 @@
   "patientStories": {
     "eyebrow": "Patient Stories",
     "title": "Real results, thoughtfully delivered.",
-    "subtitle": "A small selection of cases, shown with care and complete transparency.",
+    "subtitle": "One real case from our clinic, shared with the patient's consent.",
     "before": "Before",
-    "after": "After",
-    "readCaseStory": "Read the Case Story"
+    "after": "After"
   },
   "journal": {
     "eyebrow": "The Journal",

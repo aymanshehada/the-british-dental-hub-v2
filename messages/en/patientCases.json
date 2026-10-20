@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Patient Case: Root Canal, Gum Treatment and Fifteen New Crowns",
+    "description": "A real case from The British Dental Hub: root canal treatment, gum treatment and fifteen new lithium disilicate crowns, planned with one principle — health first, appearance second."
+  },
+  "preview": {
+    "treatment": "Root canal treatment, gum treatment and fifteen new crowns",
+    "title": "Health first, appearance second.",
+    "readFull": "Read the Full Case Story"
+  },
+  "page": {
+    "backToStories": "Back to Patient Stories",
+    "eyebrow": "Patient Story",
+    "treatment": "Root canal treatment, gum treatment and fifteen new crowns",
+    "title": "Health first, appearance second.",
+    "lead": "She came because of how her smile looked. What lay beneath it turned out to matter even more.",
+    "before": "Before",
+    "after": "After",
+    "smileLabel": "The smile",
+    "closeupLabel": "Close-up view",
+    "alt": {
+      "beforeSmile": "Before treatment: close view of the patient's smile showing the existing crowns.",
+      "afterSmile": "After treatment: the same close view of the smile, with the new crowns in place.",
+      "beforeCloseup": "Before treatment: front view of the teeth with the lips held back, showing the existing upper crowns and the discoloured lower teeth.",
+      "afterCloseup": "After treatment: the same front view, showing the new upper and lower crowns and the refined gum line."
+    }
+  },
+  "challenge": {
+    "title": "The Challenge",
+    "paragraphs": [
+      "The patient came to us with one clear concern: her smile. Her existing crowns looked unnatural, and she no longer felt comfortable with the way they appeared. Some had already come away.",
+      "It would have been easy to focus only on what she could see. But a smile is only as sound as what supports it, and the first examination suggested that the problems ran deeper than appearance. Some of the old crowns were no longer sealing properly. The gums around them showed signs of inflammation. And beneath several of the restorations, the teeth themselves needed attention.",
+      "Before any conversation about shape or shade, we needed to understand exactly what was happening underneath."
+    ]
+  },
+  "diagnosis": {
+    "title": "Diagnosis & Plan",
+    "intro": "A full assessment, including X-rays, confirmed what the first examination had suggested.",
+    "findings": "Several crowns had lost their seal, allowing leakage beneath them, and some had already failed. Beneath certain restorations, teeth had developed abscesses; others showed decay. The gums were inflamed in places, with periodontal pockets that needed treatment.",
+    "emphasis": "The most visible problem, in other words, was not the most important one.",
+    "planIntro": "The plan followed a clear order: health first, appearance second.",
+    "planSteps": [
+      "Treat the affected teeth with root canal treatment, so that they could be kept.",
+      "Rebuild decayed teeth with fillings and cores, creating a sound foundation.",
+      "Treat the gums to resolve the inflammation and pockets.",
+      "Only then replace the old crowns with new ones: made to precise measurements to reduce the risk of the same problems returning, and shaped to restore a natural, harmonious smile."
+    ],
+    "closing": "Each step was explained to the patient, along with its purpose, before she agreed to the plan. When it came to the shade of the new crowns, she asked for a lighter colour. We discussed it together, and the final choice was hers."
+  },
+  "journey": {
+    "title": "The Journey",
+    "intro": "Treatment took place over two weeks, in a series of separate appointments, each with a defined purpose.",
+    "stages": [
+      {
+        "title": "Foundations",
+        "body": "The affected teeth received root canal treatment. Decay was removed, and teeth were rebuilt with fillings and cores, giving every new crown a sound base."
+      },
+      {
+        "title": "Gums",
+        "body": "Periodontal treatment addressed the inflammation and pockets, so that the new crowns would sit within healthy tissue."
+      },
+      {
+        "title": "Preparation",
+        "body": "With healthy foundations in place, the teeth were carefully prepared to receive their new restorations. In the same appointment, laser gum contouring refined the gum line, creating an even, balanced frame around every tooth."
+      },
+      {
+        "title": "The crowns",
+        "body": "Fifteen crowns were made in lithium disilicate, a glass-ceramic valued for combining strength with a natural translucency, across the upper and lower arches."
+      }
+    ]
+  },
+  "result": {
+    "title": "The Result",
+    "paragraphs": [
+      "After two weeks of treatment, the patient left with fifteen new crowns, a healthier foundation beneath them and a gum line in harmony with her smile.",
+      "What she had come for, a smile she felt comfortable with, was the visible part of the result. Just as important was everything a photograph cannot show: infections treated, natural teeth kept, gums healthier and restorations made to fit.",
+      "When she saw the result, she was genuinely surprised. She told us she felt her smile had come back, and that she had never expected it to return like this."
+    ]
+  },
+  "reflection": {
+    "title": "Clinical Reflection",
+    "paragraphs": [
+      "The patient came because of how her smile looked. Yet the most important decisions in this case were about what lay beneath it. A smile has to be studied in every aspect, from roots and gums to shape and colour, if it is to be both beautiful and healthy. Aesthetics was the final step, not the first.",
+      "And the work does not end on the day the crowns are fitted. A result like this lasts through careful daily care and regular follow-up, a commitment we share with every patient."
+    ]
+  },
+  "note": "Every case is different. This page describes one patient's treatment, shared with her consent, and is not a prediction of the outcome for any other patient."
+}

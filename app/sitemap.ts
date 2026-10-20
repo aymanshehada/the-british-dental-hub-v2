@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getPathname } from '@/i18n/navigation'
 import { routing, type AppLocale } from '@/i18n/routing'
 import { articles } from '@/lib/blog/articles'
+import { patientCases } from '@/lib/patient-cases'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
 
@@ -36,7 +37,9 @@ function buildLanguageAlternates(pathname: string): Record<AppLocale, string> {
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
-  for (const pathname of staticPathnames) {
+  const caseStoryPathnames = patientCases.map((patientCase) => `/patient-stories/${patientCase.slug}`)
+
+  for (const pathname of [...staticPathnames, ...caseStoryPathnames]) {
     const languages = buildLanguageAlternates(pathname)
 
     for (const locale of routing.locales) {

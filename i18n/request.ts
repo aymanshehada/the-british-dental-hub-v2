@@ -18,6 +18,7 @@ const namespaces = [
   'teethWhitening',
   'blog',
   'internationalPatients',
+  'patientCases',
 ] as const
 
 async function loadMessages(locale: AppLocale) {
