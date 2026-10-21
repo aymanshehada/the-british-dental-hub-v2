@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl"
 import { ArrowRight, MapPin, MessageCircle, PhoneCall, Send } from "lucide-react"
 
 const WHATSAPP_NUMBER = "201556887765"
-const DIRECTIONS_URL = "https://www.google.com/maps/search/?api=1&query=Gateway+Mall%2C+Clinics+D1%2C+Clinic+226%2C+El+Rehab+City%2C+New+Cairo%2C+Egypt"
+const DIRECTIONS_URL = "https://maps.app.goo.gl/26faiYRKD64g9f729"
 
 const TREATMENT_OPTION_KEYS = [
   "dentalImplants",

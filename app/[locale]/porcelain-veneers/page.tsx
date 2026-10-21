@@ -11,7 +11,7 @@ import { Container } from '@/components/ui/container'
 import { PremiumCard } from '@/components/ui/premium-card'
 import { SectionWrapper } from '@/components/ui/section-wrapper'
 import type { AppLocale } from '@/i18n/routing'
-import { getLocaleAlternates } from '@/lib/seo'
+import { getLocaleAlternates, withSocialDefaults } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -23,8 +23,8 @@ export async function generateMetadata({
   const pageTitle = t('title')
   const pageDescription = t('description')
 
-  return {
-    title: pageTitle,
+  return withSocialDefaults({
+    title: { absolute: pageTitle },
     description: pageDescription,
     keywords: [
       'Porcelain Veneers',
@@ -47,7 +47,7 @@ export async function generateMetadata({
       title: pageTitle,
       description: pageDescription,
     },
-  }
+  }, locale as AppLocale)
 }
 
 const journeyStepKeys = [

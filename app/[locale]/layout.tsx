@@ -40,30 +40,47 @@ const tajawal = Tajawal({
   weight: ['300', '400', '500', '700', '800'],
 })
 
+// Shared clinic entity, emitted on every page. `DentalClinic` was removed from
+// the types: it does not exist in schema.org (Dentist already is a
+// LocalBusiness). The WebSite entity is homepage-only, see app/[locale]/page.tsx.
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['LocalBusiness', 'Dentist', 'DentalClinic'],
+      '@type': ['LocalBusiness', 'Dentist'],
       '@id': `${siteUrl}/#clinic`,
       name: siteName,
-      url: siteUrl,
+      url: `${siteUrl}/`,
       telephone: '+20 155 688 7765',
       email: 'info@thebritishdentalhub.com',
       description: defaultDescription,
       image: `${siteUrl}/images/hero-clinic.png`,
+      logo: `${siteUrl}/images/logo-horizontal.png`,
+      // Official profile URLs only (no share links, link hubs or tracking
+      // parameters). Facebook page and the two Instagram profiles were each
+      // opened and confirmed by title: "The British Dental Hub | Cairo",
+      // "The British Dental Hub (@thebritishdentalhub)" and
+      // "Dr. Ayman Chhada (@dr_aymanchhada)".
       sameAs: [
-        'https://www.instagram.com/thebritishdentalhub?igsh=ODl5OXZ0cjdxMzg2',
-        'https://www.facebook.com/share/1BuVGxN8H3/',
-        'https://linktr.ee/TheBritishDentalHub?utm_source=linktree_profile_share&ltsid=d36e2d8a-a8c3-4810-9f09-d13f5764cb82',
+        'https://www.facebook.com/TheBritishDentalHub/',
+        'https://www.instagram.com/thebritishdentalhub/',
+        'https://www.instagram.com/dr_aymanchhada/',
       ],
+      // Verified against the clinic's public Google Maps listing: "Gateway mall,
+      // clinics, Talat mostafa, D1 226, Cairo Governorate" (plus code 3F7J+H2,
+      // Second New Cairo) and the site's own footer address. New Cairo is the
+      // city; the governorate is the region. No postal code is published, so
+      // none is given.
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Gateway Mall, D1 Clinics – Clinic 226',
-        addressLocality: 'El Rehab City',
-        addressRegion: 'New Cairo',
+        streetAddress: 'Gateway Mall, Clinics D1, Clinic 226, El Rehab City',
+        addressLocality: 'New Cairo',
+        addressRegion: 'Cairo Governorate',
         addressCountry: 'EG',
       },
+      // Owner-confirmed hours: Saturday–Thursday 14:00–22:00, Friday closed.
+      // Friday is closed, so it has no entry (no 00:00–00:00 placeholder,
+      // which is ambiguous between "closed" and "open all day").
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
@@ -72,13 +89,6 @@ const structuredData = {
           closes: '22:00',
         },
       ],
-    },
-    {
-      '@type': 'WebSite',
-      '@id': `${siteUrl}/#website`,
-      url: siteUrl,
-      name: siteName,
-      description: defaultDescription,
     },
   ],
 }
@@ -101,9 +111,9 @@ export const metadata: Metadata = {
     'Cosmetic Dentistry',
     'Premium Dentistry',
   ],
-  alternates: {
-    canonical: '/',
-  },
+  // No default `alternates.canonical` here: a root-level canonical is inherited
+  // by every page without its own (it made /ar canonical to the English
+  // homepage). Each page declares its own via getLocaleAlternates().
   robots: {
     index: true,
     follow: true,

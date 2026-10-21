@@ -22,7 +22,7 @@ import {
 } from '@/lib/blog/articles'
 import { getPathname } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
-import { getLocaleAlternates } from '@/lib/seo'
+import { getLocaleAlternates, withSocialDefaults } from '@/lib/seo'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.thebritishdentalhub.com'
 const siteName = 'The British Dental Hub'
@@ -48,7 +48,7 @@ export async function generateMetadata({
   const metaDek = isArabic ? article.arContent!.dek : article.dek
   const title = `${metaTitleText} | The BDH Journal`
 
-  return {
+  return withSocialDefaults({
     title,
     description: metaDek,
     alternates: getLocaleAlternates(`/blog/${article.slug}`, locale as AppLocale),
@@ -66,7 +66,7 @@ export async function generateMetadata({
       title,
       description: metaDek,
     },
-  }
+  }, locale as AppLocale)
 }
 
 function ArticleCta({ isArabic = false }: { isArabic?: boolean }) {
@@ -185,7 +185,7 @@ export default async function BlogArticlePage({
         jobTitle: 'أخصائي زراعة الأسنان وطب الأسنان التجميلي',
         description:
           loc?.reviewerCredentials ??
-          'بكالوريوس طب وجراحة الأسنان (BDS)، زمالة زراعة الأسنان (الجامعة البريطانية في مصر وجامعة شيفيلد)، الجزء الأول من زمالة طب الأسنان بالكلية الملكية للجراحين في إدنبرة (MFDS)',
+          'بكالوريوس طب وجراحة الأسنان (BDS)، زمالة في زراعة الأسنان من الجامعة البريطانية في مصر (بالتعاون مع فريق Sheffield Implantology)، أتمّ الجزء الأول من MFDS (الكلية الملكية للجراحين في إنجلترا)، ويستكمل حاليًا الجزء الثاني',
       }
     : {
         '@type': 'Person',
@@ -193,7 +193,7 @@ export default async function BlogArticlePage({
         jobTitle: 'Implant & Aesthetic Dentistry Specialist',
         description:
           article.reviewerCredentials ??
-          'BDS, Implant Fellowship (The British University in Egypt & University of Sheffield), MFDS Part 1 RCS Edinburgh',
+          'BDS; Fellowship in Dental Implantology from The British University in Egypt (with the Sheffield Implantology team); MFDS Part 1 completed (Royal College of Surgeons of England); MFDS Part 2 in progress',
       }
 
   const pagePathname = getPathname({ href: `/blog/${article.slug}`, locale: locale as AppLocale })
@@ -206,13 +206,18 @@ export default async function BlogArticlePage({
     datePublished: article.publishedAt,
     inLanguage: locale,
     author: reviewerPerson,
-    reviewedBy: reviewerPerson,
+    // Same @id as the clinic entity in app/[locale]/layout.tsx, so the site
+    // has one business identity instead of a second anonymous Organization.
     publisher: {
-      '@type': 'Organization',
+      '@id': `${siteUrl}/#clinic`,
       name: siteName,
-      url: siteUrl,
     },
-    mainEntityOfPage: `${siteUrl}${pagePathname}`,
+    // `reviewedBy` is defined on WebPage in schema.org, not on Article.
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${siteUrl}${pagePathname}`,
+      reviewedBy: reviewerPerson,
+    },
   }
 
   return (

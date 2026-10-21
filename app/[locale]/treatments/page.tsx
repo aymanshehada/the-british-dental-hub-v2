@@ -17,7 +17,7 @@ import {
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import type { AppLocale } from '@/i18n/routing'
-import { getLocaleAlternates } from '@/lib/seo'
+import { getLocaleAlternates, withSocialDefaults } from '@/lib/seo'
 
 const serviceMeta = [
   { key: 'dentalImplants', number: '01', icon: Anchor, href: '/dental-implants' },
@@ -40,8 +40,8 @@ export async function generateMetadata({
   const pageTitle = t('title')
   const pageDescription = t('description')
 
-  return {
-    title: pageTitle,
+  return withSocialDefaults({
+    title: { absolute: pageTitle },
     description: pageDescription,
     keywords: [
       'Dental Treatments',
@@ -67,7 +67,7 @@ export async function generateMetadata({
       title: pageTitle,
       description: pageDescription,
     },
-  }
+  }, locale as AppLocale)
 }
 
 function HeroSection({

@@ -9,7 +9,7 @@ import { Link } from "@/i18n/navigation"
 import { CasePhotoPair } from "@/components/patient-cases/CasePhotoPair"
 import { getPatientCase, patientCases } from "@/lib/patient-cases"
 import type { AppLocale } from "@/i18n/routing"
-import { getLocaleAlternates } from "@/lib/seo"
+import { getLocaleAlternates, withSocialDefaults } from "@/lib/seo"
 
 export function generateStaticParams() {
   return patientCases.map((patientCase) => ({ slug: patientCase.slug }))
@@ -30,7 +30,7 @@ export async function generateMetadata({
   const sharedTitle = `${pageTitle} | The British Dental Hub`
   const pageDescription = t("description")
 
-  return {
+  return withSocialDefaults({
     title: pageTitle,
     description: pageDescription,
     alternates: getLocaleAlternates(`/patient-stories/${slug}`, locale as AppLocale),
@@ -47,7 +47,7 @@ export async function generateMetadata({
       title: sharedTitle,
       description: pageDescription,
     },
-  }
+  }, locale as AppLocale)
 }
 
 const sectionHeading =

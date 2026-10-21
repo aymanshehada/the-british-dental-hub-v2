@@ -24,12 +24,12 @@ export default async function TopBar() {
   const t = await getTranslations("common.topBar")
   const socialLinks = [
     {
-      href: "https://www.facebook.com/share/1BuVGxN8H3/",
+      href: "https://www.facebook.com/TheBritishDentalHub/",
       label: "Facebook",
       icon: FacebookIcon,
     },
     {
-      href: "https://www.instagram.com/thebritishdentalhub?igsh=ODl5OXZ0cjdxMzg2",
+      href: "https://www.instagram.com/thebritishdentalhub/",
       label: "Instagram",
       icon: InstagramIcon,
     },

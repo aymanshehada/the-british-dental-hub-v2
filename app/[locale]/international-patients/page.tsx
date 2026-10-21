@@ -9,7 +9,7 @@ import { Link } from "@/i18n/navigation"
 import { InternationalPatientJourney } from "@/components/international/InternationalPatientJourney"
 import { InternationalEnquiryForm } from "@/components/international/InternationalEnquiryForm"
 import type { AppLocale } from "@/i18n/routing"
-import { getLocaleAlternates } from "@/lib/seo"
+import { getLocaleAlternates, withSocialDefaults } from "@/lib/seo"
 
 export async function generateMetadata({
   params,
@@ -25,7 +25,7 @@ export async function generateMetadata({
   const sharedTitle = `${pageTitle} | The British Dental Hub`
   const pageDescription = t("description")
 
-  return {
+  return withSocialDefaults({
     title: pageTitle,
     description: pageDescription,
     keywords: [
@@ -58,7 +58,7 @@ export async function generateMetadata({
       description: pageDescription,
       images: ["/images/international-patients-hero.png"],
     },
-  }
+  }, locale as AppLocale)
 }
 
 const ARRIVAL_STEP_KEYS = [

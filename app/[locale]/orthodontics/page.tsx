@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import type { AppLocale } from '@/i18n/routing'
-import { getLocaleAlternates } from '@/lib/seo'
+import { getLocaleAlternates, withSocialDefaults } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -33,8 +33,8 @@ export async function generateMetadata({
   const pageTitle = t('title')
   const pageDescription = t('description')
 
-  return {
-    title: pageTitle,
+  return withSocialDefaults({
+    title: { absolute: pageTitle },
     description: pageDescription,
     keywords: [
       'Orthodontics',
@@ -56,8 +56,8 @@ export async function generateMetadata({
       images: [
         {
           url: '/images/clear-aligners.png',
-          width: 1200,
-          height: 630,
+          width: 1536,
+          height: 1024,
           alt: 'Clear orthodontic aligner at The British Dental Hub',
         },
       ],
@@ -68,7 +68,7 @@ export async function generateMetadata({
       description: pageDescription,
       images: ['/images/clear-aligners.png'],
     },
-  }
+  }, locale as AppLocale)
 }
 
 const typeKeys = ['metal', 'ceramic', 'aligners'] as const

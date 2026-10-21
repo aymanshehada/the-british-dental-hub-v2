@@ -8,7 +8,7 @@ import { CategoryFilter } from '@/components/blog/CategoryFilter'
 import { ArticleCard, FeaturedArticleCard } from '@/components/blog/ArticleCard'
 import { getArticlesByCategory, getCategoryLabel, getCategoryLabelAr } from '@/lib/blog/articles'
 import type { AppLocale } from '@/i18n/routing'
-import { getLocaleAlternates } from '@/lib/seo'
+import { getLocaleAlternates, withSocialDefaults } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -20,8 +20,8 @@ export async function generateMetadata({
   const pageTitle = t('title')
   const pageDescription = t('description')
 
-  return {
-    title: pageTitle,
+  return withSocialDefaults({
+    title: { absolute: pageTitle },
     description: pageDescription,
     alternates: getLocaleAlternates('/blog', locale as AppLocale),
     openGraph: {
@@ -36,7 +36,7 @@ export async function generateMetadata({
       title: pageTitle,
       description: pageDescription,
     },
-  }
+  }, locale as AppLocale)
 }
 
 export default async function BlogPage({

@@ -30,6 +30,20 @@ function WhatsAppIcon() {
 
 export default async function Footer() {
   const t = await getTranslations("common.footer")
+  const tServices = await getTranslations("treatments.services")
+
+  // Crawlable links to every service page from every page of the site; the
+  // homepage's Treatments section only features six of the eight.
+  const serviceLinks = [
+    { key: "dentalImplants", href: "/dental-implants" },
+    { key: "porcelainVeneers", href: "/porcelain-veneers" },
+    { key: "orthodontics", href: "/orthodontics" },
+    { key: "rootCanalTreatment", href: "/root-canal-treatment" },
+    { key: "gumTreatment", href: "/gum-treatment" },
+    { key: "childrensDentistry", href: "/children-dentistry" },
+    { key: "checkUpCleaning", href: "/check-up-cleaning" },
+    { key: "teethWhitening", href: "/teeth-whitening" },
+  ].map(({ key, href }) => ({ label: tServices(`${key}.title`), href }))
 
   const navigation = [
     { label: t("nav.home"), href: "/#home" },
@@ -42,8 +56,8 @@ export default async function Footer() {
   ]
 
   const socials = [
-    { label: t("socials.facebook"), href: "https://www.facebook.com/share/1BuVGxN8H3/", icon: FacebookIcon },
-    { label: t("socials.instagram"), href: "https://www.instagram.com/thebritishdentalhub?igsh=ODl5OXZ0cjdxMzg2", icon: InstagramIcon },
+    { label: t("socials.facebook"), href: "https://www.facebook.com/TheBritishDentalHub/", icon: FacebookIcon },
+    { label: t("socials.instagram"), href: "https://www.instagram.com/thebritishdentalhub/", icon: InstagramIcon },
     { label: t("socials.whatsapp"), href: "https://wa.me/201556887765", icon: WhatsAppIcon },
   ]
 
@@ -61,7 +75,7 @@ export default async function Footer() {
 
             <div className="h-[130px] w-[230px] shrink-0 overflow-hidden rounded-[10px] border border-white/10">
               <iframe
-                src="https://www.google.com/maps?q=Gateway+Mall+D1+Clinics+New+Cairo+Egypt&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900!2d31.4800711!3d30.0639845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14581954e7a1dd7d%3A0x82c7b2034b7213b4!2sThe%20British%20Dental%20Hub%20-%20%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%20%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A%20%D9%84%D8%AC%D8%B1%D8%A7%D8%AD%D8%A9%20%D9%88%20%D8%B2%D8%B1%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B3%D9%86%D8%A7%D9%86!5e0"
                 title="The British Dental Hub location on Google Maps"
                 className="h-full w-full grayscale-[35%] contrast-[1.05]"
                 loading="lazy"
@@ -90,6 +104,21 @@ export default async function Footer() {
                   <Icon />
                 </Link>
               ))}
+            </div>
+
+            <div className="mt-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">{t("nav.treatments")}</p>
+              <div className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3">
+                {serviceLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm text-white/72 transition hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
