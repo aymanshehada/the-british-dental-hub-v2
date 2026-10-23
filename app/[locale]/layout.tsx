@@ -50,6 +50,9 @@ const structuredData = {
       '@type': ['LocalBusiness', 'Dentist'],
       '@id': `${siteUrl}/#clinic`,
       name: siteName,
+      // The clinic's Arabic name as it appears on its Google Maps listing, plus
+      // the short form "BDH", so searches by either name resolve to this entity.
+      alternateName: ['المركز البريطاني لجراحة وزراعة الأسنان', 'BDH'],
       url: `${siteUrl}/`,
       telephone: '+20 155 688 7765',
       email: 'info@thebritishdentalhub.com',
@@ -78,6 +81,14 @@ const structuredData = {
         addressRegion: 'Cairo Governorate',
         addressCountry: 'EG',
       },
+      // Pin coordinates from the same Google Maps listing (cross-checked against
+      // plus code 3F7J+H2); hasMap is the owner's own short link to that listing.
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 30.0639845,
+        longitude: 31.4800711,
+      },
+      hasMap: 'https://maps.app.goo.gl/26faiYRKD64g9f729',
       // Owner-confirmed hours: Saturday–Thursday 14:00–22:00, Friday closed.
       // Friday is closed, so it has no entry (no 00:00–00:00 placeholder,
       // which is ambiguous between "closed" and "open all day").
