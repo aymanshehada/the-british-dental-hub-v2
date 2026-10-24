@@ -12,12 +12,12 @@ const ASSET_DIR = "/images/international"
 // All artwork below is approved, static, and used as supplied — no redrawing,
 // no SVG re-interpretation, no rotation/mirroring. EN and AR each get their
 // own correctly-oriented plane and caption image; nothing is flipped in CSS.
-const PLANE_EN = { src: `${ASSET_DIR}/international-plane-en.png`, width: 1536, height: 1024 }
-const PLANE_AR = { src: `${ASSET_DIR}/international-plane-ar.png`, width: 1536, height: 1024 }
-const CAPTION_EN = { src: `${ASSET_DIR}/international-caption-en.png`, width: 556, height: 242 }
-const CAPTION_AR = { src: `${ASSET_DIR}/international-caption-ar.png`, width: 506, height: 242 }
-const CLOUDS = { src: `${ASSET_DIR}/international-clouds.png`, width: 593, height: 203 }
-const WATERMARK = { src: `${ASSET_DIR}/international-cairo-watermark.png`, width: 1536, height: 306 }
+const PLANE_EN = { src: `${ASSET_DIR}/international-plane-en.webp`, width: 1536, height: 1024 }
+const PLANE_AR = { src: `${ASSET_DIR}/international-plane-ar.webp`, width: 1536, height: 1024 }
+const CAPTION_EN = { src: `${ASSET_DIR}/international-caption-en.webp`, width: 556, height: 242 }
+const CAPTION_AR = { src: `${ASSET_DIR}/international-caption-ar.webp`, width: 506, height: 242 }
+const CLOUDS = { src: `${ASSET_DIR}/international-clouds.webp`, width: 593, height: 203 }
+const WATERMARK = { src: `${ASSET_DIR}/international-cairo-watermark.webp`, width: 1536, height: 306 }
 
 // The International Patients invitation for the homepage.
 //

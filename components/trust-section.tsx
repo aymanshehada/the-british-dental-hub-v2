@@ -79,7 +79,7 @@ export function TrustSection() {
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
-              src="/images/trust-detail.png"
+              src="/images/trust-detail.webp"
               alt="Polished dental instruments arranged at The British Dental Hub"
               fill
               className="object-cover"

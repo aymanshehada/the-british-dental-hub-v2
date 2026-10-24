@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative isolate flex min-h-screen items-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="/images/hero-clinic.png"
+        src="/images/hero-clinic.webp"
         alt="Interior of The British Dental Hub luxury clinic in Cairo"
         fill
         priority

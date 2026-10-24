@@ -61,7 +61,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-[104px] w-[min(1600px,96vw)] items-center justify-between gap-10 px-6 sm:px-8 lg:px-10 xl:px-12">
         <Link href="/" className="-ms-2 shrink-0 lg:-ms-12 xl:-ms-16 2xl:-ms-[72px]">
           <Image
-            src="/images/logo-horizontal.png"
+            src="/images/logo-horizontal.webp"
             alt="The British Dental Hub"
             width={320}
             height={160}

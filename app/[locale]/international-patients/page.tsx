@@ -107,7 +107,7 @@ function Hero({
           no directional gradient. Positioning mirrors naturally under RTL. */}
       <div className="relative h-[460px] w-full sm:h-[520px] lg:h-[min(70vh,580px)]">
         <Image
-          src="/images/international-patients-hero.png"
+          src="/images/international-patients-hero.webp"
           alt={imageAlt}
           fill
           priority
@@ -170,7 +170,7 @@ function IntroSection({
       <div className="mx-auto grid max-w-[1140px] items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-0">
         <div className="order-2 overflow-hidden rounded-[16px] lg:order-1">
           <Image
-            src="/images/about-clinic.png"
+            src="/images/about-clinic.webp"
             alt={imageAlt}
             width={1024}
             height={1024}
@@ -314,7 +314,7 @@ function InCairoSection({
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
           <div className="order-2 overflow-hidden rounded-[16px] lg:order-1">
             <Image
-              src="/images/about-digital.png"
+              src="/images/about-digital.webp"
               alt={arrivalImageAlt}
               width={1024}
               height={1024}

@@ -14,15 +14,15 @@ export default function BeforeAfter() {
     {
       title: t("case1.title"),
       treatment: t("case1.treatment"),
-      before: "/images/case-1-before.png",
-      after: "/images/case-1-after.png",
+      before: "/images/case-1-before.webp",
+      after: "/images/case-1-after.webp",
       summary: t("case1.summary"),
     },
     {
       title: t("case2.title"),
       treatment: t("case2.treatment"),
-      before: "/images/case-2-before.png",
-      after: "/images/case-2-after.png",
+      before: "/images/case-2-before.webp",
+      after: "/images/case-2-after.webp",
       summary: t("case2.summary"),
     },
   ]

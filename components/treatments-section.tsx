@@ -9,38 +9,38 @@ const treatments = [
     title: "Dental & Immediate Implants",
     description:
       "Permanent tooth replacement using conventional and immediate implant solutions.",
-    image: "/images/about-clinic.png",
+    image: "/images/about-clinic.webp",
     featured: true,
   },
   {
     title: "Veneers & Smile Design",
     description:
       "Natural-looking smile transformations with minimally invasive techniques.",
-    image: "/images/hero-clinic.png",
+    image: "/images/hero-clinic.webp",
   },
   {
     title: "Orthodontics",
     description:
       "Modern teeth straightening for children and adults.",
-    image: "/images/about-digital.png",
+    image: "/images/about-digital.webp",
   },
   {
     title: "Paediatric Dentistry",
     description:
       "Gentle and comfortable dental care designed specifically for children.",
-    image: "/images/trust-detail.png",
+    image: "/images/trust-detail.webp",
   },
   {
     title: "General & Preventive Dentistry",
     description:
       "Routine examinations, hygiene therapy and long-term oral health maintenance.",
-    image: "/images/blog-1.png",
+    image: "/images/blog-1.webp",
   },
   {
     title: "Full Mouth Rehabilitation",
     description:
       "Comprehensive restorative treatment combining implants, prosthodontics and advanced restorative care.",
-    image: "/images/blog-3.png",
+    image: "/images/blog-3.webp",
     featured: true,
   },
 ]

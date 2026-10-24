@@ -13,37 +13,37 @@ export default function Treatments() {
     {
       title: t("dentalImplants.title"),
       description: t("dentalImplants.description"),
-      image: "/images/implant-treatment.png",
+      image: "/images/implant-treatment.webp",
       href: "/dental-implants",
     },
     {
       title: t("porcelainVeneers.title"),
       description: t("porcelainVeneers.description"),
-      image: "/images/veneers-showcase.png",
+      image: "/images/veneers-showcase.webp",
       href: "/porcelain-veneers",
     },
     {
       title: t("teethWhitening.title"),
       description: t("teethWhitening.description"),
-      image: "/images/teeth-whitening.png",
+      image: "/images/teeth-whitening.webp",
       href: "/teeth-whitening",
     },
     {
       title: t("orthodontics.title"),
       description: t("orthodontics.description"),
-      image: "/images/clear-aligners.png",
+      image: "/images/clear-aligners.webp",
       href: "/orthodontics",
     },
     {
       title: t("gumTreatment.title"),
       description: t("gumTreatment.description"),
-      image: "/images/gum-treatment.png",
+      image: "/images/gum-treatment.webp",
       href: "/gum-treatment",
     },
     {
       title: t("childrensDentistry.title"),
       description: t("childrensDentistry.description"),
-      image: "/images/children-dentistry.png",
+      image: "/images/children-dentistry.webp",
       href: "/children-dentistry",
     },
   ]

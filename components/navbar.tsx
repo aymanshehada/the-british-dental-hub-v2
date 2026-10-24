@@ -106,7 +106,7 @@ export function Navbar() {
         <div className="flex items-center">
           <a href="#about" className="block" onClick={handleNavClick("#about")}>
             <Image
-              src="/images/logo-horizontal.png"
+              src="/images/logo-horizontal.webp"
               alt="The British Dental Hub"
               width={320}
               height={60}

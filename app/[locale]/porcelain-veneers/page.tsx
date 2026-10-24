@@ -129,7 +129,7 @@ async function HeroSection() {
         <div className="flex w-full items-center justify-center lg:justify-end">
           <div className="w-full overflow-hidden rounded-[28px] border border-[#e5ebf3] shadow-[0_20px_50px_rgba(15,39,78,0.08)]">
             <Image
-              src="/images/veneers-showcase.png"
+              src="/images/veneers-showcase.webp"
               alt="Premium porcelain veneers at The British Dental Hub"
               width={1400}
               height={1100}

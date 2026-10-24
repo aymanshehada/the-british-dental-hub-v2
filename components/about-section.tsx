@@ -35,7 +35,7 @@ export function AboutSection() {
           <div className="opacity-0 translate-y-6 scale-[0.98] animate-about-fade-scale image-premium">
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
-                src="/images/about-clinic.png"
+                src="/images/about-clinic.webp"
                 alt="The luxurious clinic interior at The British Dental Hub"
                 fill
                 className="object-cover"

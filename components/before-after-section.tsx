@@ -18,16 +18,16 @@ type Case = {
 const cases: Case[] = [
   {
     label: "Porcelain Veneers",
-    before: "/images/case-1-before.png",
-    after: "/images/case-1-after.png",
+    before: "/images/case-1-before.webp",
+    after: "/images/case-1-after.webp",
     duration: "10 Days",
     visits: "2 Visits",
     result: "Natural Smile Transformation",
   },
   {
     label: "Smile Makeover",
-    before: "/images/case-2-before.png",
-    after: "/images/case-2-after.png",
+    before: "/images/case-2-before.webp",
+    after: "/images/case-2-after.webp",
     duration: "14 Days",
     visits: "3 Visits",
     result: "Refined Facial Harmony",

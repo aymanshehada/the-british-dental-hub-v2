@@ -142,7 +142,7 @@ export default function Doctors() {
     {
       name: t("dr1.name"),
       role: t("role"),
-      image: "/images/dr-ayman-chhada.jpg",
+      image: "/images/dr-ayman-chhada.webp",
       intro: t("dr1.intro"),
       expandLabel: t("dr1.expandLabel"),
       details: [
@@ -155,7 +155,7 @@ export default function Doctors() {
     {
       name: t("dr2.name"),
       role: t("role"),
-      image: "/images/dr-issam-kayali.jpg",
+      image: "/images/dr-issam-kayali.webp",
       intro: t("dr2.intro"),
       expandLabel: t("dr2.expandLabel"),
       details: [t("dr2.qualification1")],

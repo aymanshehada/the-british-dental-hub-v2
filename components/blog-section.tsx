@@ -5,21 +5,21 @@ import { PremiumCard } from "@/components/ui/premium-card"
 
 const posts = [
   {
-    image: "/images/blog-1.png",
+    image: "/images/blog-1.webp",
     category: "Cosmetic",
     title: "Are veneers right for you? A considered guide",
     excerpt:
       "Understanding when porcelain veneers are the ideal choice — and how to keep them looking flawless for years.",
   },
   {
-    image: "/images/blog-2.png",
+    image: "/images/blog-2.webp",
     category: "Implants",
     title: "The science behind same-day dental implants",
     excerpt:
       "How digital planning makes immediate implants both possible and predictable, without compromising on safety.",
   },
   {
-    image: "/images/blog-3.png",
+    image: "/images/blog-3.webp",
     category: "Wellbeing",
     title: "Building a premium daily oral care routine",
     excerpt:

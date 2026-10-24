@@ -17,7 +17,7 @@ export default function Hero() {
             sitting in a separate block or behind a heavy glass panel. */}
         <div className="relative h-[540px] overflow-hidden sm:h-[600px] lg:hidden">
           <Image
-            src="/images/hero-clinic.png"
+            src="/images/hero-clinic.webp"
             alt="The British Dental Hub reception"
             fill
             priority
@@ -72,7 +72,7 @@ export default function Hero() {
         <div className="hidden lg:block">
           <div className="relative min-h-[90vh]">
             <Image
-              src="/images/hero-clinic.png"
+              src="/images/hero-clinic.webp"
               alt="The British Dental Hub reception"
               width={1600}
               height={1000}
