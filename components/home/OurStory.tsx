@@ -10,7 +10,7 @@ export default function OurStory() {
   const t = useTranslations("home.ourStory")
 
   return (
-    <section id="story" className="bg-brand-bg py-12 sm:py-14 lg:py-16">
+    <section id="story" className="bg-brand-bg py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
           <motion.div
@@ -18,9 +18,9 @@ export default function OurStory() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.45 }}
-            className="order-2 lg:order-1"
+            className="order-2 hidden sm:block lg:order-1"
           >
-            <div className="flex aspect-[4/3] items-end rounded-[16px] border border-[#e4e8ed] bg-[linear-gradient(145deg,#ffffff_0%,#f1f3f6_100%)] p-6 sm:p-8">
+            <div className="hidden aspect-[4/3] items-end rounded-[16px] border border-[#e4e8ed] bg-[linear-gradient(145deg,#ffffff_0%,#f1f3f6_100%)] p-6 sm:flex sm:p-8">
               <div className="max-w-[260px] border-s-2 border-brand-red ps-4">
                 <p className="font-heading text-[1.35rem] leading-[1.2] text-[#183668]">{t("placeholderTitle")}</p>
                 <p className="mt-2 text-[13px] leading-[1.6] text-[#697b95]">{t("placeholderText")}</p>
@@ -41,7 +41,7 @@ export default function OurStory() {
                 {t("eyebrow")}
               </p>
             </div>
-            <h2 className="font-heading text-[2.1rem] leading-[1.1] tracking-[-0.03em] text-[#183668] sm:text-[2.6rem]">
+            <h2 className="font-heading text-[1.5rem] leading-[1.1] tracking-[-0.03em] text-[#183668] sm:text-[2.6rem]">
               {t("title")}
             </h2>
             <div className="mt-5 space-y-4 text-[15px] leading-[1.8] text-[#495a73]">

@@ -86,17 +86,17 @@ function ArticleCta({ isArabic = false }: { isArabic?: boolean }) {
   return (
     <section
       aria-labelledby="article-consultation-heading"
-      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-11 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               {isArabic ? 'هل لديك أسئلة حول هذا؟' : 'Have Questions About This?'}
             </p>
             <h2
               id="article-consultation-heading"
-              className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.5rem]"
+              className="mt-4 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.5rem]"
             >
               {isArabic ? 'ناقش حالتك مع فريقنا' : 'Discuss Your Own Case With Our Team'}
             </h2>
@@ -235,7 +235,7 @@ export default async function BlogArticlePage({
       />
 
       <article>
-        <header className="bg-white pt-28 pb-10 sm:pt-32 lg:pt-36">
+        <header className="bg-white pt-8 pb-8 sm:pt-32 sm:pb-10 lg:pt-36">
           <Container>
             <div className="mx-auto max-w-3xl">
               <Link
@@ -259,7 +259,7 @@ export default async function BlogArticlePage({
                 {displayCategoryLabel}
               </p>
 
-              <h1 className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl">
+              <h1 className="mt-4 text-balance font-heading text-[1.9rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl">
                 {displayTitle}
               </h1>
 
@@ -291,14 +291,14 @@ export default async function BlogArticlePage({
           </Container>
         </header>
 
-        <div className="bg-white pb-20 sm:pb-24">
+        <div className="bg-white pb-12 sm:pb-24">
           <Container>
             <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-14">
               <div className="min-w-0">
                 <ArticleBody content={displayContent} />
 
                 {displayFaqs.length > 0 ? (
-                  <div className="mt-14">
+                  <div className="mt-8 sm:mt-14">
                     <h2 className="font-heading text-[1.6rem] font-semibold leading-tight text-[#0A2247]">
                       {isArabic ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
                     </h2>
@@ -313,7 +313,7 @@ export default async function BlogArticlePage({
                   </div>
                 ) : null}
 
-                <div className="mt-14 flex items-start gap-4 rounded-[18px] border border-brand-border bg-brand-bg p-6">
+                <div className="mt-8 sm:mt-14 flex items-start gap-4 rounded-[18px] border border-brand-border bg-brand-bg p-6">
                   <div className="flex size-10 shrink-0 items-center justify-center rounded-[14px] border border-brand-red/25 bg-brand-red/10 text-brand-red">
                     <ShieldCheck className="size-5" strokeWidth={1.8} />
                   </div>
@@ -360,7 +360,7 @@ export default async function BlogArticlePage({
         </div>
 
         {related.length > 0 ? (
-          <section className="bg-brand-bg py-16 sm:py-20 lg:py-24">
+          <section className="bg-brand-bg py-11 sm:py-20 lg:py-24">
             <Container>
               <h2 className="font-heading text-[1.8rem] font-semibold leading-tight text-[#0A2247] sm:text-[2.1rem]">
                 Related Articles

@@ -17,7 +17,11 @@
     "language": "اللغة",
     "menu": "القائمة",
     "openMenu": "فتح القائمة",
-    "closeMenu": "إغلاق القائمة"
+    "closeMenu": "إغلاق القائمة",
+    "allTreatments": "كل العلاجات",
+    "location": "موقعنا",
+    "locationAddress": "مول جيتواي، مدينة الرحاب، القاهرة الجديدة",
+    "getDirections": "الاتجاهات"
   },
   "floatingContact": {
     "whatsappAria": "تواصل عبر واتساب",

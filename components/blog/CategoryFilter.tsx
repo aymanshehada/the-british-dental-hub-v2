@@ -13,14 +13,14 @@ export function CategoryFilter({
   const isAllActive = !activeCategory || activeCategory === "all"
 
   const pillClasses = (isActive: boolean) =>
-    `inline-flex h-10 items-center rounded-full border px-5 text-[0.82rem] font-medium transition-all duration-200 ease-out whitespace-nowrap ${
+    `inline-flex h-9 shrink-0 items-center rounded-full border px-4 text-[0.82rem] sm:h-10 sm:px-5 font-medium transition-all duration-200 ease-out whitespace-nowrap ${
       isActive
         ? "border-brand-navy bg-brand-navy text-white"
         : "border-[#dfe4ec] bg-white text-[#495a73] hover:border-brand-red/30 hover:text-[#0A2247]"
     }`
 
   return (
-    <div className="flex flex-wrap gap-2.5">
+    <div className="-mx-6 flex gap-2 overflow-x-auto overflow-y-hidden px-6 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:gap-2.5 sm:overflow-visible sm:px-0 sm:pb-0 [&::-webkit-scrollbar]:hidden">
       <Link href="/blog" className={pillClasses(isAllActive)}>
         {isArabic ? "الكل" : "All"}
       </Link>

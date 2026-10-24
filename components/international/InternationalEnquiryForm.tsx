@@ -75,7 +75,7 @@ export function InternationalEnquiryForm() {
   }
 
   return (
-    <section id="enquiry" className="bg-[#fbfaf7] py-14 sm:py-16 lg:py-20">
+    <section id="enquiry" className="bg-[#fbfaf7] py-10 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[760px] px-4 sm:px-6">
         <div className="text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
@@ -85,7 +85,7 @@ export function InternationalEnquiryForm() {
             </p>
             <span className="h-px w-10 bg-brand-red" />
           </div>
-          <h2 className="font-heading text-[2rem] leading-[1.1] tracking-[-0.03em] text-[#183668] sm:text-[2.6rem]">
+          <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.6rem]">
             {t("title")}
           </h2>
           <p className="mx-auto mt-4 max-w-[520px] text-[15px] leading-7 text-[#52647c]">

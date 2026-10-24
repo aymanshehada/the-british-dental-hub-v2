@@ -49,7 +49,7 @@ export default function Treatments() {
   ]
 
   return (
-    <section id="treatments" className="bg-white py-12 sm:py-14 lg:py-16">
+    <section id="treatments" className="bg-white py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-6 xl:px-0">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -65,7 +65,7 @@ export default function Treatments() {
             </p>
           </div>
 
-          <h2 className="font-heading text-[2.1rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.5rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {t("title")}
           </h2>
 

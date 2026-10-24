@@ -59,7 +59,7 @@ const values = [
 
 export function TrustSection() {
   return (
-    <section id="standards" className="bg-background py-24 lg:py-32">
+    <section id="standards" className="bg-background py-14 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl section-premium">
         {/* Heading */}
         <SectionHeader
@@ -76,7 +76,7 @@ export function TrustSection() {
         />
 
         {/* Pillars + image */}
-        <div className="mt-16 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mt-8 sm:mt-16 grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
               src="/images/trust-detail.webp"

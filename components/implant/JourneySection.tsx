@@ -14,13 +14,13 @@ export async function JourneySection() {
   }))
 
   return (
-    <section id="implant-journey" className="scroll-mt-28 bg-brand-bg py-24 sm:py-28 lg:py-32">
+    <section id="implant-journey" className="scroll-mt-28 bg-brand-bg py-14 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
+          <h2 className="mt-6 font-serif text-[clamp(1.65rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
             {t('titleLine1')}
             <span className="mt-2 block">{t('titleLine2')}</span>
           </h2>
@@ -29,22 +29,22 @@ export async function JourneySection() {
           </p>
         </div>
 
-        <div className="relative mt-16">
+        <div className="relative mt-8 sm:mt-16">
           <div className="absolute left-[7%] right-[7%] top-[58px] hidden h-px bg-[#d9e2ed] xl:block" />
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-4">
             {journeySteps.map((step, index) => (
               <article
                 key={step.number}
-                className="relative flex h-full min-h-[286px] flex-col rounded-[18px] border border-[#e5ebf3] bg-white px-6 py-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_5px_14px_rgba(15,39,78,0.05)]"
+                className="relative flex h-full lg:min-h-[286px] flex-col rounded-[18px] border border-[#e5ebf3] bg-white px-4 py-4 sm:px-6 sm:py-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_5px_14px_rgba(15,39,78,0.05)]"
               >
                 {index > 0 ? (
                   <span className="absolute -left-4 top-[58px] hidden h-px w-4 bg-[#d9e2ed] xl:block" />
                 ) : null}
-                <p className="relative z-10 w-fit bg-white pr-2 font-serif text-[3rem] leading-none tracking-[-0.052em] text-[#0A2247]">
+                <p className="relative z-10 w-fit bg-white pr-2 font-serif text-[2rem] sm:text-[3rem] leading-none tracking-[-0.052em] text-[#0A2247]">
                   {step.number}
                 </p>
-                <h3 className="mt-6 text-[1.1rem] font-semibold leading-[1.3] tracking-[-0.01em] text-[#16355f]">
+                <h3 className="mt-3 text-[1.05rem] sm:mt-6 sm:text-[1.1rem] font-semibold leading-[1.3] tracking-[-0.01em] text-[#16355f]">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-[0.95rem] leading-[1.7] text-[#5f6f88]">
@@ -55,7 +55,7 @@ export async function JourneySection() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-[18px] border border-[#e6edf5] bg-brand-bg px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
+        <div className="mt-7 sm:mt-12 rounded-[18px] border border-[#e6edf5] bg-brand-bg px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
           <p className="text-[0.95rem] leading-7">
             {t('footnote')}
           </p>

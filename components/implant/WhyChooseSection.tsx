@@ -4,7 +4,7 @@ import { reasons, trustPoints } from '@/components/implant/data'
 
 export function WhyChooseSection() {
   return (
-    <section className="relative overflow-hidden border-t border-white/10 bg-[#07152C]/95 py-24 sm:py-28 lg:py-32">
+    <section className="relative overflow-hidden border-t border-white/10 bg-[#07152C]/95 py-14 sm:py-28 lg:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,209,110,0.08),transparent_60%)]" />
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
@@ -21,7 +21,7 @@ export function WhyChooseSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {reasons.map((reason, index) => {
             const Icon = reason.icon
 
@@ -59,7 +59,7 @@ export function WhyChooseSection() {
           })}
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-3 rounded-[30px] border border-white/10 bg-white/5 p-4 backdrop-blur-sm sm:gap-4 sm:p-5">
+        <div className="mt-8 sm:mt-14 flex flex-wrap items-center justify-center gap-3 rounded-[30px] border border-white/10 bg-white/5 p-4 backdrop-blur-sm sm:gap-4 sm:p-5">
           {trustPoints.map((point) => (
             <div
               key={point}

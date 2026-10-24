@@ -39,7 +39,7 @@ export default function WhyBdh() {
   ]
 
   return (
-    <section id="about" className="bg-white py-12 sm:py-14 lg:py-16">
+    <section id="about" className="bg-white py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -55,7 +55,7 @@ export default function WhyBdh() {
             </p>
             <span className="h-px w-10 bg-brand-red" />
           </div>
-          <h2 className="font-heading text-[2.1rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.5rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {t("title")}
           </h2>
           <p className="mt-3 text-[14.5px] leading-[1.7] text-[#697b95]">
@@ -63,7 +63,7 @@ export default function WhyBdh() {
           </p>
         </motion.div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4 xl:gap-6">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-5 xl:grid-cols-4 xl:gap-6">
           {items.map((item, index) => {
             const Icon = item.icon
 
@@ -74,16 +74,16 @@ export default function WhyBdh() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="flex items-start gap-4 rounded-[12px] border border-[#edf1f6] bg-white p-4 sm:flex-col sm:gap-3 sm:p-5"
+                className="flex flex-col items-start gap-2.5 rounded-[12px] border border-[#edf1f6] bg-white p-3.5 sm:gap-3 sm:p-5"
               >
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-[10px] bg-brand-bg text-brand-red">
+                <div className="flex size-9 shrink-0 items-center justify-center rounded-[10px] bg-brand-bg text-brand-red sm:size-11">
                   <Icon size={20} strokeWidth={1.8} aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-[15px] font-semibold leading-[1.3] text-[#183668]">
+                  <h3 className="text-[14px] font-semibold leading-[1.3] text-[#183668] sm:text-[15px]">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-[13px] leading-[1.6] text-[#5A6577]">
+                  <p className="mt-1 hidden text-[13px] leading-[1.6] text-[#5A6577] sm:block">
                     {item.description}
                   </p>
                 </div>

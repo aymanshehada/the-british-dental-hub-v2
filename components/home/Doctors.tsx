@@ -61,7 +61,7 @@ function DoctorCard({ doctor, index }: { doctor: Doctor; index: number }) {
       className="w-full rounded-[10px] border border-[#edf1f6] bg-white p-5 shadow-[0_2px_8px_rgba(15,39,78,0.06)] transition hover:shadow-[0_10px_24px_rgba(15,39,78,0.1)] sm:w-auto sm:p-6"
     >
       <div className="flex items-center justify-between">
-        <div className="h-[96px] w-[96px] overflow-hidden rounded-full bg-brand-bg sm:h-[120px] sm:w-[120px]">
+        <div className="h-[64px] w-[64px] overflow-hidden rounded-full bg-brand-bg sm:h-[120px] sm:w-[120px]">
           <Image
             src={doctor.image}
             alt={doctor.name}
@@ -75,10 +75,10 @@ function DoctorCard({ doctor, index }: { doctor: Doctor; index: number }) {
         </div>
       </div>
 
-      <h3 className="mt-5 font-heading text-[1.7rem] tracking-[-0.03em] text-[#183668] sm:mt-6 sm:text-[2rem]">
+      <h3 className="mt-3 font-heading text-[1.35rem] tracking-[-0.03em] text-[#183668] sm:mt-6 sm:text-[2rem]">
         {doctor.name}
       </h3>
-      <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-brand-red">
+      <p className="mt-1 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand-red sm:mt-2 sm:text-[13px]">
         {doctor.role}
       </p>
 
@@ -164,7 +164,7 @@ export default function Doctors() {
   ]
 
   return (
-    <section id="doctors" className="bg-white py-12 sm:py-14 lg:py-16">
+    <section id="doctors" className="bg-white py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -180,11 +180,11 @@ export default function Doctors() {
               </p>
               <span className="h-px w-16 bg-brand-red" />
             </div>
-            <h2 className="font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
+            <h2 className="font-heading text-[1.65rem] leading-[1.05] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
               {t("title")}
             </h2>
           </div>
-          <p className="max-w-[360px] text-[15px] leading-7 text-[#697b95]">
+          <p className="hidden max-w-[360px] text-[15px] leading-7 text-[#697b95] sm:block">
             {t("subtitle")}
           </p>
         </motion.div>

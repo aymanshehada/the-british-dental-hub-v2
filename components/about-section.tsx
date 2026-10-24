@@ -31,7 +31,7 @@ export function AboutSection() {
   return (
     <section id="about" className="bg-[#07152C] py-36">
       <div className="mx-auto w-full max-w-[1700px] section-premium">
-        <div className="grid items-center gap-14 lg:grid-cols-[45%_55%]">
+        <div className="grid items-center gap-8 sm:gap-14 lg:grid-cols-[45%_55%]">
           <div className="opacity-0 translate-y-6 scale-[0.98] animate-about-fade-scale image-premium">
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <Image

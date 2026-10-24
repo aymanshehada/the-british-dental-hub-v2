@@ -58,7 +58,7 @@ export function TreatmentsSection() {
           />
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="mt-8 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
           {treatments.map((treatment, index) => (
             <PremiumCard
               key={treatment.title}
@@ -124,7 +124,7 @@ export function TreatmentsSection() {
           ))}
         </div>
 
-        <div className="mt-16 flex justify-center">
+        <div className="mt-8 sm:mt-16 flex justify-center">
           <PremiumButton variant="outline" className="w-full max-w-[260px] justify-center text-xs tracking-[0.2em]">
             VIEW ALL TREATMENTS
           </PremiumButton>

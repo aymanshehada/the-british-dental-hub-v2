@@ -15,17 +15,17 @@ export async function ConsultationCtaSection() {
   return (
     <section
       aria-labelledby="consultation-cta-heading"
-      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-11 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               {t('eyebrow')}
             </p>
             <h2
               id="consultation-cta-heading"
-              className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
+              className="mt-4 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
               {t('title')}
             </h2>

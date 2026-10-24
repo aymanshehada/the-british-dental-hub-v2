@@ -21,7 +21,7 @@ export function InternationalPatientJourney() {
   const reduceMotion = useReducedMotion()
 
   return (
-    <section id="journey" className="bg-white py-14 sm:py-16 lg:py-20">
+    <section id="journey" className="bg-white py-10 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <div className="mb-8 max-w-[640px] sm:mb-10">
           <div className="mb-4 flex items-center gap-3">
@@ -30,7 +30,7 @@ export function InternationalPatientJourney() {
               {t("eyebrow")}
             </p>
           </div>
-          <h2 className="font-heading text-[2rem] leading-[1.1] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {t("title")}
           </h2>
         </div>

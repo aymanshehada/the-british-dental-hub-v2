@@ -37,7 +37,7 @@ export default function PatientJourneyStrip() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.35, delay: index * 0.05 }}
-              className="relative flex items-start gap-3 rounded-[10px] border border-[#edf1f6] bg-white p-3 sm:flex-col sm:items-start sm:gap-2.5 sm:border-0 sm:bg-transparent sm:p-0"
+              className="relative flex items-center gap-3 rounded-[10px] border border-[#edf1f6] bg-white p-2.5 sm:flex-col sm:items-start sm:gap-2.5 sm:border-0 sm:bg-transparent sm:p-0"
             >
               <span className="relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full bg-[#0A2247] font-heading text-[0.95rem] text-white">
                 {index + 1}
@@ -46,7 +46,7 @@ export default function PatientJourneyStrip() {
                 <h3 className="text-[13.5px] font-semibold leading-[1.3] text-[#183668]">
                   {t(`journeySteps.${step}.title`)}
                 </h3>
-                <p className="mt-1 text-[12px] leading-[1.5] text-[#6a7d99]">
+                <p className="mt-1 hidden text-[12px] leading-[1.5] text-[#6a7d99] sm:block">
                   {t(`journeySteps.${step}.description`)}
                 </p>
               </div>

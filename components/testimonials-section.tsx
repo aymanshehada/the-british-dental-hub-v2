@@ -23,7 +23,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="bg-background py-24 lg:py-32">
+    <section id="testimonials" className="bg-background py-14 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-5 flex items-center justify-center gap-3 text-xs font-medium uppercase tracking-[0.35em] text-primary">
@@ -36,7 +36,7 @@ export function TestimonialsSection() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-8 lg:grid-cols-3">
           {testimonials.map((item) => (
             <figure
               key={item.name}

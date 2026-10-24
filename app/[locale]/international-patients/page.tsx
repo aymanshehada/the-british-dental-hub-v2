@@ -105,7 +105,7 @@ function Hero({
           treatment room reading around it. Readability comes from a soft
           text-shadow plus one very gentle centred wash — no card, no panel,
           no directional gradient. Positioning mirrors naturally under RTL. */}
-      <div className="relative h-[460px] w-full sm:h-[520px] lg:h-[min(70vh,580px)]">
+      <div className="relative h-[300px] w-full sm:h-[520px] lg:h-[min(70vh,580px)]">
         <Image
           src="/images/international-patients-hero.webp"
           alt={imageAlt}
@@ -125,7 +125,7 @@ function Hero({
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-brand-red">
                   {eyebrow}
                 </p>
-                <h1 className="mt-4 text-balance font-heading text-[2.35rem] font-semibold leading-[1.07] tracking-[-0.03em] text-[#0A2247] sm:text-[2.9rem] lg:mt-5 lg:text-[3.35rem]">
+                <h1 className="mt-4 text-balance font-heading text-[1.9rem] font-semibold leading-[1.07] tracking-[-0.03em] text-[#0A2247] sm:text-[2.9rem] lg:mt-5 lg:text-[3.35rem]">
                   {title}
                 </h1>
                 <p className="mx-auto mt-4 max-w-[430px] text-[15px] leading-[1.7] text-[#2c3d55] sm:text-[16px] lg:mt-5 lg:text-[17px] lg:leading-[1.7]">
@@ -166,7 +166,7 @@ function IntroSection({
   imageAlt: string
 }) {
   return (
-    <section className="bg-[#fbfaf7] py-14 sm:py-16 lg:py-20">
+    <section className="bg-[#fbfaf7] py-10 sm:py-16 lg:py-20">
       <div className="mx-auto grid max-w-[1140px] items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-0">
         <div className="order-2 overflow-hidden rounded-[16px] lg:order-1">
           <Image
@@ -179,7 +179,7 @@ function IntroSection({
         </div>
         <div className="order-1 lg:order-2">
           <SectionEyebrow>{eyebrow}</SectionEyebrow>
-          <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {title}
           </h2>
           <p className="mt-5 text-[15px] leading-[1.85] text-[#495a73]">{body}</p>
@@ -218,11 +218,11 @@ function BeforeYouTravelSection({
   videoCaveat: string
 }) {
   return (
-    <section id="before-you-travel" className="bg-[#fbfaf7] py-14 sm:py-16 lg:py-20">
+    <section id="before-you-travel" className="bg-[#fbfaf7] py-10 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[820px] px-4 sm:px-6">
         <SectionEyebrow>{eyebrow}</SectionEyebrow>
 
-        <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+        <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
           {recordsTitle}
         </h2>
         <p className="mt-5 text-[15px] leading-[1.85] text-[#495a73]">{recordsBody}</p>
@@ -241,7 +241,7 @@ function BeforeYouTravelSection({
 
         <div className="my-10 h-px bg-[#e9e5dc] sm:my-12" />
 
-        <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+        <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
           {videoTitle}
         </h2>
         <p className="mt-5 text-[15px] leading-[1.85] text-[#495a73]">{videoBody}</p>
@@ -306,7 +306,7 @@ function InCairoSection({
   t: (key: string) => string
 }) {
   return (
-    <section id="in-cairo" className="bg-white py-14 sm:py-16 lg:py-20">
+    <section id="in-cairo" className="bg-white py-10 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <SectionEyebrow>{arcEyebrow}</SectionEyebrow>
 
@@ -322,7 +322,7 @@ function InCairoSection({
             />
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+            <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
               {arrivalTitle}
             </h2>
             <p className="mt-4 text-[15px] leading-[1.8] text-[#495a73]">{arrivalIntro}</p>
@@ -363,7 +363,7 @@ function InCairoSection({
         {/* Planning your time in Cairo — generalised timing caution, with the
             implant case kept as a concrete worked example underneath. */}
         <div className="mx-auto max-w-[820px]">
-          <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {planningTitle}
           </h2>
           <p className="mt-5 text-[15px] leading-[1.85] text-[#495a73]">{planningBody}</p>
@@ -380,7 +380,7 @@ function InCairoSection({
 
         {/* Coordinating your appointments. */}
         <div className="mx-auto max-w-[820px]">
-          <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {coordinationTitle}
           </h2>
           <p className="mt-5 text-[15px] leading-[1.85] text-[#495a73]">{coordinationBody}</p>
@@ -390,7 +390,7 @@ function InCairoSection({
 
         {/* What we help with — and what you arrange yourself. */}
         <div className="mx-auto max-w-[820px]">
-          <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {boundariesTitle}
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -426,7 +426,7 @@ function InCairoSection({
         {/* Practical information — minimal orientation only, clearly framed
             as not a clinic service. Verified: visa2egypt.gov.eg is the
             official Egypt e-Visa portal (Ministry of Interior). */}
-        <div className="mx-auto mt-12 max-w-[820px] sm:mt-14 lg:mt-16">
+        <div className="mx-auto mt-7 max-w-[820px] sm:mt-14 lg:mt-16">
           <div className="rounded-[12px] border border-[#e9e5dc] bg-[#fffefa] p-5 sm:p-6">
             <h3 className="font-heading text-[1.1rem] text-[#183668]">{t("practicalInfo.title")}</h3>
             <p className="mt-2 text-[14px] leading-7 text-[#52647c]">{t("practicalInfo.body")}</p>
@@ -462,11 +462,11 @@ function ProseSection({
 }) {
   return (
     <section
-      className={`${bg === "ivory" ? "bg-[#fbfaf7]" : "bg-white"} py-14 sm:py-16 lg:py-20`}
+      className={`${bg === "ivory" ? "bg-[#fbfaf7]" : "bg-white"} py-10 sm:py-16 lg:py-20`}
     >
       <div className="mx-auto max-w-[820px] px-4 sm:px-6">
         <SectionEyebrow>{eyebrow}</SectionEyebrow>
-        <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+        <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
           {title}
         </h2>
         <p className="mt-5 text-[15px] leading-[1.85] text-[#495a73]">{body}</p>
@@ -508,14 +508,14 @@ function InternationalFaqSection({
   }
 
   return (
-    <section id="faq" className="bg-white py-14 sm:py-16 lg:py-20">
+    <section id="faq" className="bg-white py-10 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[820px] px-4 sm:px-6">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         <SectionEyebrow>{eyebrow}</SectionEyebrow>
-        <h2 className="font-heading text-[2rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+        <h2 className="font-heading text-[1.65rem] leading-[1.12] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
           {title}
         </h2>
 

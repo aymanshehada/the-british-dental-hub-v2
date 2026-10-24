@@ -4,7 +4,17 @@ import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
-import { ArrowRight, CalendarDays, MessageCircle } from "lucide-react"
+import { ArrowRight, CalendarDays, Clock3, MessageCircle, ScanLine, ShieldCheck, Wallet } from "lucide-react"
+
+// Shown under the phone hero only. "price" and "reply" are clinic-confirmed
+// service promises (a clear price before treatment starts; WhatsApp replies
+// within minutes), so keep their wording in step with how the clinic works.
+const trustItems = [
+  { key: "standards", icon: ShieldCheck },
+  { key: "digital", icon: ScanLine },
+  { key: "price", icon: Wallet },
+  { key: "reply", icon: Clock3 },
+] as const
 
 export default function Hero() {
   const t = useTranslations("home.hero")
@@ -15,31 +25,33 @@ export default function Hero() {
         {/* Mobile / tablet: one composition — cropped image with the copy
             overlaid directly on it, lightened by a soft gradient rather than
             sitting in a separate block or behind a heavy glass panel. */}
-        <div className="relative h-[540px] overflow-hidden sm:h-[600px] lg:hidden">
-          <Image
-            src="/images/hero-clinic.webp"
-            alt="The British Dental Hub reception"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[30%_25%]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white from-[38%] via-white/75 via-[58%] to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 px-5 pb-8 sm:px-7 sm:pb-10">
-            <h1 className="max-w-[420px] font-heading text-[2.55rem] leading-[0.98] tracking-[-0.035em] text-[#15356a] sm:text-[3.1rem]">
+        <div className="relative lg:hidden">
+          <div className="relative h-[250px] overflow-hidden sm:h-[420px]">
+            <Image
+              src="/images/hero-clinic.webp"
+              alt="The British Dental Hub reception"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-[30%_25%]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 via-[35%] to-transparent" />
+          </div>
+          <div className="relative -mt-3 px-5 pb-8 sm:-mt-10 sm:px-7 sm:pb-10">
+            <h1 className="max-w-[420px] font-heading text-[2rem] leading-[1.02] tracking-[-0.035em] text-[#15356a] sm:text-[3.1rem]">
               {t("titleLine1")}
               <br />
               {t("titleLine2")}
             </h1>
 
-            <p className="mt-4 max-w-[420px] text-[14.5px] leading-[1.65] text-[#314c72] sm:text-[16px]">
+            <p className="mt-3 max-w-[420px] text-[14px] leading-[1.65] text-[#314c72] sm:text-[16px]">
               {t("subtitle")}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-5 flex flex-wrap gap-3">
               <Link
                 href="#contact"
-                className="inline-flex h-[48px] items-center gap-2.5 rounded-[3px] bg-[#0A2247] px-5 text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(10,34,71,0.12)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_16px_30px_rgba(10,34,71,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/20 focus-visible:ring-offset-2"
+                className="inline-flex h-11 items-center gap-2.5 rounded-[3px] bg-[#0A2247] px-5 text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(10,34,71,0.12)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_16px_30px_rgba(10,34,71,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/20 focus-visible:ring-offset-2"
               >
                 <CalendarDays size={16} />
                 {t("bookAppointment")}
@@ -48,12 +60,21 @@ export default function Hero() {
                 href="https://wa.me/201556887765"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-[48px] items-center gap-2.5 rounded-[3px] border border-[#7a8ca9] bg-white/92 px-5 text-[14px] font-semibold text-[#233b63] shadow-[0_10px_24px_rgba(10,34,71,0.04)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_28px_rgba(10,34,71,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/10 focus-visible:ring-offset-2"
+                className="inline-flex h-11 items-center gap-2.5 rounded-[3px] border border-[#7a8ca9] bg-white/92 px-5 text-[14px] font-semibold text-[#233b63] shadow-[0_10px_24px_rgba(10,34,71,0.04)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_28px_rgba(10,34,71,0.1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/10 focus-visible:ring-offset-2"
               >
                 <MessageCircle size={16} />
                 {t("chatWhatsapp")}
               </Link>
             </div>
+
+            <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-[#e7ecf2] pt-5 sm:max-w-[520px]">
+              {trustItems.map(({ key, icon: Icon }) => (
+                <li key={key} className="flex items-start gap-2.5 text-[12.5px] font-medium leading-[1.4] text-[#314c72]">
+                  <Icon size={17} strokeWidth={1.6} className="mt-px shrink-0 text-brand-red" aria-hidden="true" />
+                  <span>{t(`trust.${key}`)}</span>
+                </li>
+              ))}
+            </ul>
 
             <p className="mt-5 max-w-[420px] text-[12.5px] leading-[1.55] text-[#4a5b74]">
               {t("internationalPrompt")}{" "}

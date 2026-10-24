@@ -11,7 +11,13 @@
     "bookAppointment": "احجز موعدك",
     "chatWhatsapp": "تواصل عبر واتساب",
     "internationalPrompt": "هل تفكّر في السفر إلى القاهرة لتلقّي العلاج؟",
-    "internationalLink": "تعرّف على رحلة المرضى الدوليين"
+    "internationalLink": "تعرّف على رحلة المرضى الدوليين",
+    "trust": {
+      "standards": "معايير رعاية مستوحاة من بريطانيا",
+      "digital": "تخطيط علاجي رقمي",
+      "price": "سعر واضح قبل البدء",
+      "reply": "رد خلال دقائق على واتساب"
+    }
   },
   "internationalPathway": {
     "eyebrow": "المرضى الدوليون",

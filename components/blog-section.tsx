@@ -29,7 +29,7 @@ const posts = [
 
 export function BlogSection() {
   return (
-    <section id="journal" className="bg-background py-24 lg:py-32">
+    <section id="journal" className="bg-background py-14 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-xl">
@@ -49,7 +49,7 @@ export function BlogSection() {
           </Button>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-8 md:grid-cols-3">
           {posts.map((post) => (
             <PremiumCard
               key={post.title}

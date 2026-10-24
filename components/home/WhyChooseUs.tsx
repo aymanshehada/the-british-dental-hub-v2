@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.35, delay: index * 0.05 }}
-                className="min-h-[118px] rounded-[14px] border border-[#eaf0f6] bg-white px-5 py-4.5 shadow-[0_3px_10px_rgba(15,39,78,0.035)]"
+                className="sm:min-h-[118px] rounded-[14px] border border-[#eaf0f6] bg-white px-5 py-4.5 shadow-[0_3px_10px_rgba(15,39,78,0.035)]"
               >
                 <p className="font-heading text-[1.56rem] leading-[1.12] tracking-[-0.028em] text-[#183668]">{value.title}</p>
                 <p className="mt-2 max-w-[250px] text-[13.5px] leading-[1.72] text-[#5A6577]">{value.description}</p>
@@ -162,7 +162,7 @@ export default function WhyChooseUs() {
               {journeySteps.map((step, index) => (
                 <div
                   key={step.number}
-                  className="relative flex min-h-[220px] flex-col rounded-[14px] border border-white/10 bg-white/[0.05] px-4.5 py-5"
+                  className="relative flex flex-col sm:min-h-[220px] rounded-[14px] border border-white/10 bg-white/[0.05] px-4.5 py-5"
                 >
                   <div className="relative z-10 inline-flex w-fit text-[2.32rem] font-heading leading-none tracking-[-0.06em] text-white/96">
                     {step.number}

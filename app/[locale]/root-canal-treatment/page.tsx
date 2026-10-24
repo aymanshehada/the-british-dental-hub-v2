@@ -85,33 +85,33 @@ async function HeroSection() {
 
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <Container className="relative grid min-h-[auto] items-center gap-10 pt-10 pb-16 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
+      <Container className="relative grid min-h-[auto] items-center gap-7 pt-8 pb-10 sm:gap-10 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
             {t('eyebrow')}
           </p>
 
-          <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.94] tracking-[-0.022em] text-[#0A2247]">
+          <h1 className="mt-5 sm:mt-8 max-w-[560px] font-serif text-[clamp(1.9rem,4.9vw,4.8rem)] leading-[0.94] tracking-[-0.022em] text-[#0A2247]">
             {t('titleLine1')}
             <span className="mt-2 block">{t('titleLine2')}</span>
           </h1>
 
-          <p className="mt-7 max-w-[560px] text-[1.08rem] leading-8 text-[#495a73] sm:text-[1.16rem] sm:leading-9">
+          <p className="mt-4 sm:mt-7 max-w-[560px] text-[0.97rem] leading-[1.7] text-[#495a73] sm:text-[1.16rem] sm:leading-9">
             {t('subtitle')}
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/#contact"
-              className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
+              className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
               {t('ctaPrimary')}
               <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
             <Link
               href="#our-approach"
-              className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-[#8a9ab3] bg-white px-8 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-bg"
+              className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-[#8a9ab3] bg-white px-8 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-bg"
             >
               {t('ctaSecondary')}
             </Link>
@@ -154,13 +154,13 @@ async function ApproachSection() {
   }))
 
   return (
-    <section id="our-approach" className="scroll-mt-28 bg-brand-bg py-24 sm:py-28 lg:py-32">
+    <section id="our-approach" className="scroll-mt-28 bg-brand-bg py-14 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
+          <h2 className="mt-6 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
@@ -168,7 +168,7 @@ async function ApproachSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {approachPoints.map((item) => {
             const Icon = item.icon
 
@@ -205,13 +205,13 @@ async function WhenRecommendedSection() {
   }))
 
   return (
-    <section className="bg-white py-24 sm:py-28 lg:py-32">
+    <section className="bg-white py-14 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
+          <h2 className="mt-6 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
@@ -219,7 +219,7 @@ async function WhenRecommendedSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-6 md:grid-cols-3">
           {signs.map((item) => {
             const Icon = item.icon
 
@@ -263,17 +263,17 @@ async function ConsultationCtaSection() {
   return (
     <section
       aria-labelledby="root-canal-consultation-heading"
-      className="relative overflow-hidden border-t border-brand-border bg-white py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-brand-border bg-white py-11 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               {t('eyebrow')}
             </p>
             <h2
               id="root-canal-consultation-heading"
-              className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
+              className="mt-4 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
               {t('title')}
             </h2>
@@ -288,7 +288,7 @@ async function ConsultationCtaSection() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/#contact"
-                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
+                className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
                 {t('bookConsultation')}
                 <ArrowRight className="size-4 rtl:rotate-180" />
@@ -298,7 +298,7 @@ async function ConsultationCtaSection() {
                 href="https://wa.me/201556887765"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
+                className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
                 <MessageSquare className="size-4 text-brand-red" />
                 {t('chatWhatsapp')}

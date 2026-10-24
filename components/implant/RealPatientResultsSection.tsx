@@ -29,13 +29,13 @@ const featuredCases = [
 
 export function RealPatientResultsSection() {
   return (
-    <section id="real-patient-results" className="bg-white py-24 sm:py-28 lg:py-32">
+    <section id="real-patient-results" className="bg-white py-14 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D62828]">
             Real Patient Results
           </p>
-          <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.4vw,4rem)] leading-[1.02] tracking-[-0.035em] text-[#0A2247]">
+          <h2 className="mt-6 font-serif text-[clamp(1.65rem,4.4vw,4rem)] leading-[1.02] tracking-[-0.035em] text-[#0A2247]">
             Restoring Smiles.
             <span className="mt-2 block">Restoring Confidence.</span>
           </h2>
@@ -46,7 +46,7 @@ export function RealPatientResultsSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-7">
+        <div className="mt-8 sm:mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-7">
           {featuredCases.map((item) => (
             <article key={item.treatment} className="flex h-full flex-col">
               <div className="aspect-[5/4] rounded-[18px] border border-[#e6edf5] bg-[#fafbfd] p-5 shadow-[0_3px_12px_rgba(15,39,78,0.035)]">
@@ -93,7 +93,7 @@ export function RealPatientResultsSection() {
           ))}
         </div>
 
-        <div className="mx-auto mt-14 max-w-3xl text-center">
+        <div className="mx-auto mt-8 sm:mt-14 max-w-3xl text-center">
           <p className="text-[0.95rem] leading-7 text-[#60718b]">
             Every smile shown represents an individual treatment journey.
             <br />

@@ -78,7 +78,7 @@ async function HeroSection() {
 
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <Container className="relative grid min-h-[auto] items-center gap-10 pt-10 pb-16 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
+      <Container className="relative grid min-h-[auto] items-center gap-7 pt-8 pb-10 sm:gap-10 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[620px]">
           <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#5f6f88]">
             The British Dental Hub
@@ -92,26 +92,26 @@ async function HeroSection() {
             {t('eyebrow')}
           </p>
 
-          <h1 className="mt-8 max-w-[560px] font-serif text-[clamp(2.55rem,4.9vw,4.8rem)] leading-[0.92] tracking-[-0.022em] text-[#0A2247]">
+          <h1 className="mt-5 sm:mt-8 max-w-[560px] font-serif text-[clamp(1.9rem,4.9vw,4.8rem)] leading-[0.92] tracking-[-0.022em] text-[#0A2247]">
             {t('titleLine1')}
             <span className="mt-3 block">{t('titleLine2')}</span>
           </h1>
 
-          <p className="mt-7 max-w-[600px] text-[1.08rem] leading-8 text-[#495a73] sm:text-[1.16rem] sm:leading-9">
+          <p className="mt-7 max-w-[600px] text-[0.97rem] leading-[1.7] text-[#495a73] sm:text-[1.16rem] sm:leading-9">
             {t('subtitle')}
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/#contact"
-              className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
+              className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
               {t('ctaPrimary')}
               <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
             <Link
               href="#veneers-journey"
-              className="inline-flex min-h-[52px] min-w-[280px] items-center justify-center gap-2 rounded-[12px] border border-[#8a9ab3] bg-white px-8 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-bg"
+              className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[280px] items-center justify-center gap-2 rounded-[12px] border border-[#8a9ab3] bg-white px-8 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-bg"
             >
               {t('ctaSecondary')}
             </Link>
@@ -154,13 +154,13 @@ async function JourneySection() {
   }))
 
   return (
-    <section id="veneers-journey" className="scroll-mt-28 bg-brand-bg py-24 sm:py-28 lg:py-32">
+    <section id="veneers-journey" className="scroll-mt-28 bg-brand-bg py-14 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
+          <h2 className="mt-6 font-serif text-[clamp(1.65rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
             {t('titleLine1')}
             <span className="mt-2 block">{t('titleLine2')}</span>
           </h2>
@@ -169,22 +169,22 @@ async function JourneySection() {
           </p>
         </div>
 
-        <div className="relative mt-16">
+        <div className="relative mt-8 sm:mt-16">
           <div className="absolute left-[7%] right-[7%] top-[58px] hidden h-px bg-[#d9e2ed] xl:block" />
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 xl:gap-4">
             {journeySteps.map((step, index) => (
               <article
                 key={step.number}
-                className="relative flex h-full min-h-[286px] flex-col rounded-[18px] border border-[#e5ebf3] bg-white px-6 py-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_5px_14px_rgba(15,39,78,0.05)]"
+                className="relative flex h-full lg:min-h-[286px] flex-col rounded-[18px] border border-[#e5ebf3] bg-white px-4 py-4 sm:px-6 sm:py-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_5px_14px_rgba(15,39,78,0.05)]"
               >
                 {index > 0 ? (
                   <span className="absolute -left-4 top-[58px] hidden h-px w-4 bg-[#d9e2ed] xl:block" />
                 ) : null}
-                <p className="relative z-10 w-fit bg-white pr-2 font-serif text-[3rem] leading-none tracking-[-0.052em] text-[#0A2247]">
+                <p className="relative z-10 w-fit bg-white pr-2 font-serif text-[2rem] sm:text-[3rem] leading-none tracking-[-0.052em] text-[#0A2247]">
                   {step.number}
                 </p>
-                <h3 className="mt-6 text-[1.1rem] font-semibold leading-[1.3] tracking-[-0.01em] text-[#16355f]">
+                <h3 className="mt-3 text-[1.05rem] sm:mt-6 sm:text-[1.1rem] font-semibold leading-[1.3] tracking-[-0.01em] text-[#16355f]">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-[0.95rem] leading-[1.7] text-[#5f6f88]">
@@ -195,7 +195,7 @@ async function JourneySection() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-[18px] border border-[#e6edf5] bg-brand-bg px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
+        <div className="mt-7 sm:mt-12 rounded-[18px] border border-[#e6edf5] bg-brand-bg px-6 py-4.5 text-[#4f627f] shadow-[0_1px_6px_rgba(15,39,78,0.03)] sm:px-7">
           <p className="text-[0.95rem] leading-7">
             {t('footnote')}
           </p>
@@ -221,7 +221,7 @@ async function TypesSection() {
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 id="veneer-types-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
+          <h2 id="veneer-types-heading" className="mt-6 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
@@ -229,7 +229,7 @@ async function TypesSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-4 sm:gap-6 lg:grid-cols-3">
           {veneerTypes.map((item) => (
             <PremiumCard
               key={item.title}
@@ -276,7 +276,7 @@ async function DigitalSmileDesignSection() {
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 id="digital-smile-design-heading" className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
+          <h2 id="digital-smile-design-heading" className="mt-6 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
@@ -284,7 +284,7 @@ async function DigitalSmileDesignSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="mt-8 sm:mt-16 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
           <PremiumCard className="group h-full rounded-[34px] border border-[#e5ebf3] bg-white p-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition duration-300 ease-out hover:-translate-y-[2px] hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)] lg:p-8">
             <div className="flex items-center justify-between gap-4">
               <div className="flex size-14 items-center justify-center rounded-[24px] border border-brand-red/25 bg-brand-red/10 text-brand-red">
@@ -352,13 +352,13 @@ async function WhyPatientsChooseVeneersSection() {
   }))
 
   return (
-    <section className="bg-brand-bg py-24 sm:py-28 lg:py-32">
+    <section className="bg-brand-bg py-14 sm:py-28 lg:py-32">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
+          <h2 className="mt-6 font-serif text-[clamp(1.65rem,4.2vw,3.9rem)] leading-[1.02] tracking-[-0.032em] text-[#0A2247]">
             {t('title')}
           </h2>
           <p className="mt-7 text-[1.06rem] leading-8 text-[#566681] sm:text-[1.12rem] sm:leading-9">
@@ -366,7 +366,7 @@ async function WhyPatientsChooseVeneersSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {veneerBenefits.map((item) => (
             <PremiumCard
               key={item.title}
@@ -407,17 +407,17 @@ async function ConsultationCtaSection() {
   return (
     <section
       aria-labelledby="consultation-cta-heading"
-      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-11 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               {t('eyebrow')}
             </p>
             <h2
               id="consultation-cta-heading"
-              className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
+              className="mt-4 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
               {t('title')}
             </h2>
@@ -432,7 +432,7 @@ async function ConsultationCtaSection() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/#contact"
-                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_14px_30px_rgba(10,34,71,0.26)]"
+                className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164] hover:shadow-[0_14px_30px_rgba(10,34,71,0.26)]"
               >
                 {t('bookConsultation')}
                 <ArrowRight className="size-4 rtl:rotate-180" />
@@ -442,7 +442,7 @@ async function ConsultationCtaSection() {
                 href="https://wa.me/201556887765"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
+                className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
                 <MessageSquare className="size-4 text-brand-red" />
                 {t('chatWhatsapp')}

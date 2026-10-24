@@ -228,12 +228,12 @@ export function InternationalPatientsPrompt() {
 
       {/* ==== below lg: simplified compact card, same artwork, dismissible ==== */}
       <div
-        className={`fixed end-4 z-30 bottom-[calc(6.25rem+env(safe-area-inset-bottom))] transition-opacity duration-300 sm:bottom-[calc(8.5rem+env(safe-area-inset-bottom))] lg:hidden ${
+        className={`fixed end-4 z-30 bottom-[calc(7.75rem+env(safe-area-inset-bottom))] transition-opacity duration-300 sm:bottom-[calc(8.5rem+env(safe-area-inset-bottom))] lg:hidden ${
           mobileShown ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden={!mobileShown}
       >
-        <div className="relative w-[min(88vw,300px)] overflow-hidden rounded-[14px] border border-[#e6e0d1] bg-[#fffdf8] shadow-[0_14px_30px_-12px_rgba(10,34,71,0.32)]">
+        <div className="relative w-[min(80vw,264px)] overflow-hidden rounded-[14px] border border-[#e6e0d1] bg-[#fffdf8] shadow-[0_14px_30px_-12px_rgba(10,34,71,0.32)]">
           <Image
             {...WATERMARK}
             alt=""

@@ -26,7 +26,7 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="patient-stories" className="bg-brand-bg py-12 sm:py-14 lg:py-16">
+    <section id="patient-stories" className="bg-brand-bg py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -38,7 +38,7 @@ export default function Testimonials() {
           <p className="text-[13px] font-semibold uppercase tracking-[0.22em] text-brand-red">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-5 font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
+          <h2 className="mt-5 font-heading text-[1.65rem] leading-[1.05] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
             {t("title")}
           </h2>
         </motion.div>

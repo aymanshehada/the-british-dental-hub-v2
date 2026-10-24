@@ -68,7 +68,7 @@ export default async function Footer() {
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">{t("brandEyebrow")}</p>
-              <h2 className="mt-4 max-w-[560px] font-heading text-[2.5rem] leading-[1.02] tracking-[-0.03em] text-white sm:text-[3rem]">
+              <h2 className="mt-4 max-w-[560px] font-heading text-[1.9rem] leading-[1.05] tracking-[-0.03em] text-white sm:text-[3rem]">
                 {t("tagline")}
               </h2>
             </div>
@@ -85,7 +85,7 @@ export default async function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.65fr_0.9fr]">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1.1fr_0.65fr_0.9fr]">
           <div>
             <p className="max-w-[430px] text-base leading-8 text-white/72">
               {t("description")}

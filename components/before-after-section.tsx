@@ -143,7 +143,7 @@ function Comparison({ item }: { item: Case }) {
 
 export function BeforeAfterSection() {
   return (
-    <section id="results" className="bg-background py-24 lg:py-32">
+    <section id="results" className="bg-background py-14 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-5 flex items-center justify-center gap-3 text-xs font-medium uppercase tracking-[0.35em] text-primary">
@@ -160,7 +160,7 @@ export function BeforeAfterSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-2">
+        <div className="mt-8 sm:mt-16 grid gap-10 lg:grid-cols-2">
           {cases.map((item) => (
             <Comparison key={item.label} item={item} />
           ))}

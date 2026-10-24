@@ -17,7 +17,11 @@
     "language": "Language",
     "menu": "Menu",
     "openMenu": "Open navigation",
-    "closeMenu": "Close navigation"
+    "closeMenu": "Close navigation",
+    "allTreatments": "All treatments",
+    "location": "Our location",
+    "locationAddress": "Gateway Mall, Al Rehab City, New Cairo",
+    "getDirections": "Directions"
   },
   "floatingContact": {
     "whatsappAria": "Chat on WhatsApp",

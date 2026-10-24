@@ -41,9 +41,9 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="bg-secondary py-24 lg:py-32">
+    <section id="faq" className="bg-secondary py-14 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="max-w-2xl">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
               Frequently Asked

@@ -61,7 +61,7 @@ export function FloatingContact({ hidden }: { hidden: boolean }) {
 
   return (
     <div
-      className={`fixed end-4 z-40 flex gap-2 bottom-[calc(1rem+env(safe-area-inset-bottom))] transition-all duration-200 sm:end-6 sm:bottom-[calc(1.5rem+env(safe-area-inset-bottom))] sm:flex-col ${isHidden ? "pointer-events-none translate-y-3 opacity-0" : "opacity-100"}`}
+      className={`fixed end-4 z-40 flex flex-col gap-2 bottom-[calc(1rem+env(safe-area-inset-bottom))] transition-all duration-200 sm:end-6 sm:bottom-[calc(1.5rem+env(safe-area-inset-bottom))] ${isHidden ? "pointer-events-none translate-y-3 opacity-0" : "opacity-100"}`}
     >
       <a
         href="https://wa.me/201556887765"
@@ -70,20 +70,20 @@ export function FloatingContact({ hidden }: { hidden: boolean }) {
         aria-label={t("whatsappAria")}
         aria-hidden={isHidden}
         tabIndex={isHidden ? -1 : undefined}
-        className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#25D366] px-4 text-sm font-semibold text-white shadow-[0_8px_22px_rgba(10,34,71,0.2)] transition hover:scale-[1.03] sm:w-12 sm:px-0"
+        className="inline-flex h-11 w-11 items-center justify-center gap-2 rounded-full bg-[#25D366] px-0 text-sm font-semibold text-white shadow-[0_8px_22px_rgba(10,34,71,0.2)] transition hover:scale-[1.03] sm:h-12 sm:w-12"
       >
         <MessageCircle size={20} aria-hidden="true" />
-        <span className="sm:sr-only">{t("whatsappLabel")}</span>
+        <span className="sr-only">{t("whatsappLabel")}</span>
       </a>
       <a
         href="tel:+201556887765"
         aria-label={t("callAria")}
         aria-hidden={isHidden}
         tabIndex={isHidden ? -1 : undefined}
-        className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#0A2247] px-4 text-sm font-semibold text-white shadow-[0_8px_22px_rgba(10,34,71,0.2)] ring-1 ring-white/70 transition hover:scale-[1.03] sm:w-12 sm:px-0"
+        className="inline-flex h-11 w-11 items-center justify-center gap-2 rounded-full bg-[#0A2247] px-0 text-sm font-semibold text-white shadow-[0_8px_22px_rgba(10,34,71,0.2)] ring-1 ring-white/70 transition hover:scale-[1.03] sm:h-12 sm:w-12"
       >
         <Phone size={19} aria-hidden="true" />
-        <span className="sm:sr-only">{t("callLabel")}</span>
+        <span className="sr-only">{t("callLabel")}</span>
       </a>
     </div>
   )

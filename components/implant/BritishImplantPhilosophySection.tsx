@@ -36,7 +36,7 @@ export function BritishImplantPhilosophySection() {
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#D4AF37]">
             The British Implant Philosophy
           </p>
-          <h2 className="mt-3 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]">
+          <h2 className="mt-3 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#F8F8F6] sm:text-5xl lg:text-[3.75rem]">
             Why Every Implant Is Planned for Long-Term Success
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-[1.02rem] leading-8 text-[rgba(255,255,255,0.82)] sm:text-[1.08rem] sm:leading-8">

@@ -17,7 +17,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-slate-950/65" />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/35 to-transparent" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl section-premium py-28 lg:py-32">
+      <div className="relative mx-auto grid w-full max-w-7xl section-premium py-14 sm:py-28 lg:py-32">
         <div className="max-w-3xl">
           <p className="mb-6 eyebrow">
             <span className="h-px w-10 bg-primary" />
@@ -36,7 +36,7 @@ export function Hero() {
             dentistry in the heart of Cairo.
           </p>
 
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-7 sm:mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button
               size="lg"
               className="group rounded-none bg-primary px-9 py-5 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground transition duration-300 ease-out hover:bg-primary/90"

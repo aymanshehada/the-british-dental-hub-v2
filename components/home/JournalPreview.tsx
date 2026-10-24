@@ -13,7 +13,7 @@ export default async function JournalPreview({ locale }: { locale: AppLocale }) 
   const featured = getAllArticles().slice(0, 3)
 
   return (
-    <section id="journal" className="bg-white py-12 sm:py-14 lg:py-16">
+    <section id="journal" className="bg-white py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-[560px]">
@@ -23,7 +23,7 @@ export default async function JournalPreview({ locale }: { locale: AppLocale }) 
                 {t("eyebrow")}
               </p>
             </div>
-            <h2 className="font-heading text-[2.1rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+            <h2 className="font-heading text-[1.5rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
               {t("title")}
             </h2>
             <p className="mt-3 text-[14.5px] leading-[1.7] text-[#697b95]">

@@ -42,15 +42,15 @@ export function ArticleCard({ article, locale }: { article: BlogArticle; locale?
       href={`/blog/${article.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-[18px] border border-[#e5ebf3] bg-white shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.06)]"
     >
-      <ArticleCategoryImage category={article.category} className="h-[160px] w-full" />
-      <div className="flex flex-1 flex-col p-6">
+      <ArticleCategoryImage category={article.category} className="h-[120px] w-full sm:h-[160px]" />
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-brand-red">
           {display.categoryLabel}
         </p>
         <h3 className="mt-3 text-[1.15rem] font-semibold leading-[1.3] text-[#0A2247]">
           {display.title}
         </h3>
-        <p className="mt-2.5 flex-1 text-[0.9rem] leading-6 text-[#495a73]">
+        <p className="mt-2 line-clamp-3 flex-1 text-[0.9rem] leading-6 text-[#495a73] sm:mt-2.5 sm:line-clamp-none">
           {display.dek}
         </p>
         <div className="mt-5 flex items-center justify-between border-t border-[#edf1f6] pt-4 text-[0.76rem] text-[#5f6f88]">
@@ -70,8 +70,8 @@ export function FeaturedArticleCard({ article, locale }: { article: BlogArticle;
       href={`/blog/${article.slug}`}
       className="group grid overflow-hidden rounded-[22px] border border-[#e5ebf3] bg-white shadow-[0_5px_20px_rgba(15,39,78,0.05)] transition-all duration-300 ease-out hover:border-brand-red/20 hover:shadow-[0_14px_32px_rgba(215,25,32,0.06)] lg:grid-cols-[1.05fr_0.95fr]"
     >
-      <ArticleCategoryImage category={article.category} className="min-h-[220px] w-full lg:min-h-[320px]" />
-      <div className="flex flex-col justify-center p-7 sm:p-9">
+      <ArticleCategoryImage category={article.category} className="min-h-[170px] w-full sm:min-h-[220px] lg:min-h-[320px]" />
+      <div className="flex flex-col justify-center p-5 sm:p-9">
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-brand-red">
           {display.isArabic ? (
             <>مقال مميز &middot; {display.categoryLabel}</>

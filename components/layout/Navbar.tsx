@@ -10,11 +10,13 @@ import { MobileMenu } from "./MobileMenu"
 import { FloatingContact } from "./FloatingContact"
 
 const WHATSAPP_HREF = "https://wa.me/201556887765"
+const DIRECTIONS_HREF = "https://maps.app.goo.gl/26faiYRKD64g9f729"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
   const t = useTranslations("common.nav")
+  const tFloat = useTranslations("common.floatingContact")
 
   // `mobileOnly` items appear in the slide-out menu but not the desktop bar —
   // the desktop bar is already at capacity, so "International Patients" is
@@ -31,6 +33,29 @@ export default function Navbar() {
   ]
 
   const desktopNavigation = navigation.filter((item) => !item.mobileOnly)
+
+  // The phone menu is deliberately short: Home is the logo, About lives in the
+  // page itself, and Treatments becomes an expandable list of every service.
+  const mobileNavigation = navigation.filter(
+    (item) => !["/#home", "/#about", "/treatments"].includes(item.href),
+  )
+
+  const tServices = useTranslations("treatments.services")
+  const treatmentsMenu = {
+    label: t("treatments"),
+    allLabel: t("allTreatments"),
+    allHref: "/treatments",
+    items: [
+      { key: "dentalImplants", href: "/dental-implants" },
+      { key: "porcelainVeneers", href: "/porcelain-veneers" },
+      { key: "orthodontics", href: "/orthodontics" },
+      { key: "rootCanalTreatment", href: "/root-canal-treatment" },
+      { key: "gumTreatment", href: "/gum-treatment" },
+      { key: "childrensDentistry", href: "/children-dentistry" },
+      { key: "checkUpCleaning", href: "/check-up-cleaning" },
+      { key: "teethWhitening", href: "/teeth-whitening" },
+    ].map(({ key, href }) => ({ label: tServices(`${key}.title`), href })),
+  }
 
   // The header CTA normally books via the homepage Contact section, but the
   // International Patients page has its own enquiry section — sending that
@@ -58,14 +83,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#EEF2F6] bg-white shadow-[0_6px_18px_rgba(10,34,71,0.045)]">
-      <div className="mx-auto flex h-[104px] w-[min(1600px,96vw)] items-center justify-between gap-10 px-6 sm:px-8 lg:px-10 xl:px-12">
+      <div className="mx-auto flex h-[76px] w-[min(1600px,96vw)] sm:h-[104px] items-center justify-between gap-10 px-6 sm:px-8 lg:px-10 xl:px-12">
         <Link href="/" className="-ms-2 shrink-0 lg:-ms-12 xl:-ms-16 2xl:-ms-[72px]">
           <Image
             src="/images/logo-horizontal.webp"
             alt="The British Dental Hub"
             width={320}
             height={160}
-            className="h-[clamp(96px,24vw,128px)] w-auto sm:h-[150px] md:h-[175px] lg:h-[200px]"
+            className="h-[68px] w-auto sm:h-[150px] md:h-[175px] lg:h-[200px]"
             priority
           />
         </Link>
@@ -112,7 +137,14 @@ export default function Navbar() {
         id="mobile-nav-panel"
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        navigation={navigation}
+        navigation={mobileNavigation}
+        treatments={treatmentsMenu}
+        location={{
+          label: t("location"),
+          address: t("locationAddress"),
+          directionsLabel: t("getDirections"),
+          directionsHref: DIRECTIONS_HREF,
+        }}
         menuLabel={t("menu")}
         languageLabel={t("language")}
         bookHref={bookHref}
@@ -122,7 +154,7 @@ export default function Navbar() {
           handleContactClick()
         }}
         whatsappHref={WHATSAPP_HREF}
-        whatsappLabel={t("chatWhatsapp")}
+        whatsappLabel={tFloat("whatsappLabel")}
       />
       <FloatingContact hidden={isOpen} />
     </header>

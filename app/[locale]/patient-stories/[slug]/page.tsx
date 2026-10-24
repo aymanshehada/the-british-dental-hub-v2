@@ -104,7 +104,7 @@ export default async function PatientCasePage({
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-red rtl:tracking-normal">
                 {t("page.treatment")}
               </p>
-              <h1 className="mt-3 text-balance font-heading text-[2.35rem] font-semibold leading-[1.07] tracking-[-0.03em] text-[#0A2247] sm:text-[2.9rem] lg:text-[3.35rem]">
+              <h1 className="mt-3 text-balance font-heading text-[1.9rem] font-semibold leading-[1.07] tracking-[-0.03em] text-[#0A2247] sm:text-[2.9rem] lg:text-[3.35rem]">
                 {t("page.title")}
               </h1>
               <p className="mt-5 max-w-[620px] text-[16px] leading-[1.7] text-[#2c3d55] sm:text-[17px]">
@@ -149,7 +149,7 @@ export default async function PatientCasePage({
           </div>
         </section>
 
-        <section className="bg-white py-14 sm:py-16 lg:py-20">
+        <section className="bg-white py-10 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-[820px] px-4 sm:px-6">
             <h2 className={sectionHeading}>{t("challenge.title")}</h2>
             <div className="mt-5 space-y-4">
@@ -162,7 +162,7 @@ export default async function PatientCasePage({
           </div>
         </section>
 
-        <section className="bg-[#fbfaf7] py-14 sm:py-16 lg:py-20">
+        <section className="bg-[#fbfaf7] py-10 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-[820px] px-4 sm:px-6">
             <h2 className={sectionHeading}>{t("diagnosis.title")}</h2>
             <p className={`mt-5 ${bodyText}`}>{t("diagnosis.intro")}</p>
@@ -186,7 +186,7 @@ export default async function PatientCasePage({
           </div>
         </section>
 
-        <section className="bg-white py-14 sm:py-16 lg:py-20">
+        <section className="bg-white py-10 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-[820px] px-4 sm:px-6">
             <h2 className={sectionHeading}>{t("journey.title")}</h2>
             <p className={`mt-5 ${bodyText}`}>{t("journey.intro")}</p>
@@ -211,7 +211,7 @@ export default async function PatientCasePage({
           </div>
         </section>
 
-        <section className="bg-[#fbfaf7] py-14 sm:py-16 lg:py-20">
+        <section className="bg-[#fbfaf7] py-10 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-[820px] px-4 sm:px-6">
             <h2 className={sectionHeading}>{t("result.title")}</h2>
             <div className="mt-5 space-y-4">
@@ -224,7 +224,7 @@ export default async function PatientCasePage({
           </div>
         </section>
 
-        <section className="bg-white py-14 sm:py-16 lg:py-20">
+        <section className="bg-white py-10 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-[820px] px-4 sm:px-6">
             <div className={`${noteBox} p-6 sm:p-8`}>
               <h2 className="font-heading text-[1.5rem] leading-[1.15] tracking-[-0.02em] text-[#183668] sm:text-[1.8rem]">

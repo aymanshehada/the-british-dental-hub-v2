@@ -13,15 +13,15 @@ export async function SuitabilitySection() {
   }))
 
   return (
-    <section id="implant-suitability" className="bg-white py-24 sm:py-28 lg:py-32">
+    <section id="implant-suitability" className="bg-white py-14 sm:py-28 lg:py-32">
       <Container>
-        <div className="grid gap-14 lg:grid-cols-[40%_60%] lg:gap-16 xl:gap-20">
+        <div className="grid gap-8 sm:gap-14 lg:grid-cols-[40%_60%] lg:gap-16 xl:gap-20">
           <div className="max-w-[520px]">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-brand-red">
               {t('eyebrow')}
             </p>
 
-            <h2 className="mt-6 max-w-[520px] font-serif text-[clamp(2.25rem,3.7vw,3.55rem)] leading-[1.02] tracking-[-0.03em] text-[#0A2247]">
+            <h2 className="mt-6 max-w-[520px] font-serif text-[clamp(1.65rem,3.7vw,3.55rem)] leading-[1.02] tracking-[-0.03em] text-[#0A2247]">
               {t('title')}
             </h2>
 

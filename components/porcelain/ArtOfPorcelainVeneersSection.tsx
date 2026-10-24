@@ -39,13 +39,13 @@ export function ArtOfPorcelainVeneersSection() {
 
   return (
     <>
-      <section className="bg-brand-bg py-26 sm:py-30 lg:py-34">
+      <section className="bg-brand-bg py-14 sm:py-30 lg:py-34">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               {t('eyebrow')}
             </p>
-            <h2 className="mt-6 font-serif text-[clamp(2.2rem,4.4vw,4.1rem)] leading-[1.02] tracking-[-0.03em] text-[#0A2247]">
+            <h2 className="mt-6 font-serif text-[clamp(1.65rem,4.4vw,4.1rem)] leading-[1.02] tracking-[-0.03em] text-[#0A2247]">
               {t('title')}
             </h2>
             <p className="mt-7 text-[1.05rem] leading-8 text-[#5b6e8b] sm:text-[1.12rem] sm:leading-9">
@@ -53,7 +53,7 @@ export function ArtOfPorcelainVeneersSection() {
             </p>
           </div>
 
-          <div className="mt-16 mb-4">
+          <div className="mt-8 sm:mt-16 mb-4">
             <button
               type="button"
               onClick={() => {

@@ -65,13 +65,13 @@ export default async function BlogPage({
       <Navbar />
       <main className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-white">
-        <Container className="pt-28 pb-14 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
+        <Container className="pt-10 pb-10 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
           <div className="mx-auto max-w-3xl text-center">
             <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               <span className="h-px w-10 bg-brand-red" />
               {t('eyebrow')}
             </p>
-            <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.08] text-[#0A2247] sm:text-5xl lg:text-[3.5rem]">
+            <h1 className="mt-6 text-balance font-heading text-[1.9rem] font-semibold leading-[1.08] text-[#0A2247] sm:text-5xl lg:text-[3.5rem]">
               {t('title')}
             </h1>
             <p className="mt-6 text-lg font-light leading-8 text-[#495a73] sm:text-xl">
@@ -81,12 +81,12 @@ export default async function BlogPage({
         </Container>
       </section>
 
-      <section className="bg-brand-bg py-14 sm:py-16 lg:py-20">
+      <section className="bg-brand-bg py-10 sm:py-16 lg:py-20">
         <Container>
           <CategoryFilter activeCategory={category} locale={locale as AppLocale} />
 
           {articles.length === 0 ? (
-            <p className="mt-16 text-center text-[1rem] text-[#495a73]">
+            <p className="mt-8 sm:mt-16 text-center text-[1rem] text-[#495a73]">
               {isArabic
                 ? 'لا توجد مقالات في هذا التصنيف بعد — يُرجى العودة لاحقًا.'
                 : 'No articles in this category yet — please check back soon.'}
@@ -100,7 +100,7 @@ export default async function BlogPage({
               ) : null}
 
               {rest.length > 0 ? (
-                <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                   {rest.map((article) => (
                     <ArticleCard key={article.slug} article={article} locale={locale as AppLocale} />
                   ))}

@@ -58,12 +58,12 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-secondary py-24 lg:py-32">
+    <section id="contact" className="relative overflow-hidden bg-secondary py-14 sm:py-24 lg:py-32">
       <div className="pointer-events-none absolute left-0 top-0 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="pointer-events-none absolute right-0 bottom-0 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
           <div>
             <SectionHeader
               eyebrow="VISIT OUR CLINIC"

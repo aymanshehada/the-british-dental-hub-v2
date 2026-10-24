@@ -26,10 +26,10 @@ const treatmentOptions = [
 
 export function ImplantTreatmentOptionsSection() {
   return (
-    <section id="implant-treatment-options" className="bg-white py-24 sm:py-28 lg:py-32">
+    <section id="implant-treatment-options" className="bg-white py-14 sm:py-28 lg:py-32">
       <Container>
         <div className="max-w-[860px]">
-          <h2 className="font-serif text-[clamp(2.2rem,4.2vw,3.9rem)] leading-[1.03] tracking-[-0.032em] text-[#0A2247]">
+          <h2 className="font-serif text-[clamp(1.65rem,4.2vw,3.9rem)] leading-[1.03] tracking-[-0.032em] text-[#0A2247]">
             Solutions Tailored To Your Smile
           </h2>
           <p className="mt-7 max-w-[760px] text-[1.03rem] leading-8 text-[#566681] sm:text-[1.1rem] sm:leading-9">
@@ -39,12 +39,12 @@ export function ImplantTreatmentOptionsSection() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 xl:gap-6">
+        <div className="mt-8 sm:mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 xl:gap-6">
           {treatmentOptions.map((option) => (
             <Link
               key={option.title}
               href="/#contact"
-              className="group flex h-full min-h-[198px] flex-col rounded-[18px] border border-[#e8edf4] bg-white px-6 py-4.5 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#d5deea] hover:shadow-[0_6px_14px_rgba(15,39,78,0.05)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/12 focus-visible:ring-offset-2"
+              className="group flex h-full sm:min-h-[198px] flex-col rounded-[18px] border border-[#e8edf4] bg-white px-6 py-4.5 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#d5deea] hover:shadow-[0_6px_14px_rgba(15,39,78,0.05)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/12 focus-visible:ring-offset-2"
             >
               <h3 className="text-[1.35rem] font-semibold leading-[1.25] tracking-[-0.016em] text-[#13345d]">
                 {option.title}

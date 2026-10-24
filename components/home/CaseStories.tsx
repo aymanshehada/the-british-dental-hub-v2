@@ -18,7 +18,7 @@ export default function CaseStories() {
   const { before, after } = patientCase.closeup
 
   return (
-    <section id="patient-stories" className="bg-brand-bg py-12 sm:py-14 lg:py-16">
+    <section id="patient-stories" className="bg-brand-bg py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -34,7 +34,7 @@ export default function CaseStories() {
             </p>
             <span className="h-px w-10 bg-brand-red" />
           </div>
-          <h2 className="font-heading text-[2.1rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
+          <h2 className="font-heading text-[1.5rem] leading-[1.08] tracking-[-0.03em] text-[#183668] sm:text-[2.5rem]">
             {t("title")}
           </h2>
           <p className="mt-3 text-[14.5px] leading-[1.7] text-[#697b95]">

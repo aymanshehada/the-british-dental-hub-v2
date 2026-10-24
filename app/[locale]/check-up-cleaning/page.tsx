@@ -73,14 +73,14 @@ async function HeroSection() {
 
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <Container className="relative grid min-h-[auto] items-center gap-10 pt-10 pb-16 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
+      <Container className="relative grid min-h-[auto] items-center gap-7 pt-8 pb-10 sm:gap-10 sm:pt-16 sm:pb-20 lg:min-h-[85vh] lg:grid-cols-[0.42fr_0.58fr] lg:pt-32 lg:pb-24">
         <div className="max-w-[600px]">
           <p className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             <span className="h-px w-10 bg-brand-red" />
             {t('eyebrow')}
           </p>
 
-          <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
+          <h1 className="mt-6 text-balance font-heading text-[1.9rem] font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             {t('title')}
           </h1>
 
@@ -91,7 +91,7 @@ async function HeroSection() {
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/#contact"
-              className="inline-flex min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
+              className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[250px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
             >
               {t('ctaPrimary')}
               <ArrowRight className="size-4 rtl:rotate-180" />
@@ -128,13 +128,13 @@ async function DigitalAssessmentSection() {
   }))
 
   return (
-    <section className="bg-brand-bg py-20 sm:py-24 lg:py-28">
+    <section className="bg-brand-bg py-12 sm:py-24 lg:py-28">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl">
+          <h2 className="mt-6 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl">
             {t('title')}
           </h2>
           <p className="mt-6 text-lg font-light leading-8 text-[#495a73]">
@@ -142,7 +142,7 @@ async function DigitalAssessmentSection() {
           </p>
         </div>
 
-        <div className="relative mt-14">
+        <div className="relative mt-8 sm:mt-14">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-4">
             {steps.map((step) => {
               const Icon = step.icon
@@ -150,7 +150,7 @@ async function DigitalAssessmentSection() {
               return (
                 <article
                   key={step.number}
-                  className="relative flex h-full min-h-[240px] flex-col rounded-[18px] border border-[#e5ebf3] bg-white px-6 py-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)]"
+                  className="relative flex h-full sm:min-h-[240px] flex-col rounded-[18px] border border-[#e5ebf3] bg-white px-6 py-6 shadow-[0_2px_10px_rgba(15,39,78,0.035)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand-red/20 hover:shadow-[0_10px_26px_rgba(215,25,32,0.05)]"
                 >
                   <div className="flex items-center justify-between">
                     <span className="font-heading text-[1.9rem] leading-none tracking-[-0.03em] text-[#0A2247]">
@@ -188,14 +188,14 @@ async function DigitalRecordSection() {
   const recordItems = recordItemKeys.map((key) => t(`items.${key}`))
 
   return (
-    <section className="bg-white py-20 sm:py-24 lg:py-28">
+    <section className="bg-white py-12 sm:py-24 lg:py-28">
       <Container>
-        <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               {t('eyebrow')}
             </p>
-            <h2 className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl">
+            <h2 className="mt-4 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl">
               {t('title')}
             </h2>
             <p className="mt-6 max-w-lg text-lg font-light leading-8 text-[#495a73]">
@@ -235,17 +235,17 @@ async function ConsultationCtaSection() {
   return (
     <section
       aria-labelledby="checkup-consultation-heading"
-      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-brand-border bg-brand-bg py-11 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
               {t('eyebrow')}
             </p>
             <h2
               id="checkup-consultation-heading"
-              className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
+              className="mt-4 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]"
             >
               {t('title')}
             </h2>
@@ -260,7 +260,7 @@ async function ConsultationCtaSection() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/#contact"
-                className="inline-flex min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
+                className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[236px] items-center justify-center gap-2 rounded-[12px] border border-brand-navy bg-brand-navy px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_rgba(10,34,71,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#123164]"
               >
                 {t('bookConsultation')}
                 <ArrowRight className="size-4 rtl:rotate-180" />
@@ -270,7 +270,7 @@ async function ConsultationCtaSection() {
                 href="https://wa.me/201556887765"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
+                className="inline-flex min-h-[48px] sm:min-h-[52px] min-w-[248px] items-center justify-center gap-2 rounded-[12px] border border-brand-red bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#0A2247] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[rgba(215,25,32,0.10)]"
               >
                 <MessageSquare className="size-4 text-brand-red" />
                 {t('chatWhatsapp')}

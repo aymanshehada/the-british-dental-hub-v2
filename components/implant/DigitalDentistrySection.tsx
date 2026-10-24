@@ -20,13 +20,13 @@ export async function DigitalDentistrySection() {
   }))
 
   return (
-    <section aria-labelledby="digital-dentistry-heading" className="relative overflow-hidden border-t border-brand-border bg-white py-16 sm:py-20 lg:py-24">
+    <section aria-labelledby="digital-dentistry-heading" className="relative overflow-hidden border-t border-brand-border bg-white py-11 sm:py-20 lg:py-24">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-brand-red">
             {t('eyebrow')}
           </p>
-          <h2 id="digital-dentistry-heading" className="mt-4 text-balance font-heading text-4xl font-semibold leading-[1.05] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
+          <h2 id="digital-dentistry-heading" className="mt-4 text-balance font-heading text-[1.75rem] font-semibold leading-[1.1] text-[#0A2247] sm:text-5xl lg:text-[3.75rem]">
             {t('title')}
           </h2>
           <p className="mt-4 text-lg font-light leading-8 text-[#495a73] sm:text-xl">

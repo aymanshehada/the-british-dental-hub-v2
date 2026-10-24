@@ -80,7 +80,7 @@ export function JourneySection() {
   }, [])
 
   return (
-    <section id="journey" ref={sectionRef} className="bg-secondary pt-12 pb-24 lg:pt-20 lg:pb-32">
+    <section id="journey" ref={sectionRef} className="bg-secondary pt-12 pb-14 sm:pb-24 lg:pt-20 lg:pb-32">
       <div className="mx-auto max-w-[1920px] px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <SectionHeader
@@ -138,7 +138,7 @@ export function JourneySection() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-7 sm:mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {trustIndicators.map((text) => (
             <div key={text} className="flex items-center gap-4 rounded-[24px] border border-primary/10 bg-[#07152C] px-6 py-4 shadow-[0_16px_40px_rgba(0,0,0,0.12)]">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-[#07152C] shadow-sm">
@@ -151,7 +151,7 @@ export function JourneySection() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-7 sm:mt-12 flex justify-center">
           <PremiumButton variant="primary" className="w-full max-w-[320px] text-xs tracking-[0.2em]">
             Book Your Consultation
           </PremiumButton>

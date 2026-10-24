@@ -11,7 +11,13 @@
     "bookAppointment": "Book Appointment",
     "chatWhatsapp": "Chat on WhatsApp",
     "internationalPrompt": "Travelling to Cairo for dental care?",
-    "internationalLink": "Explore our International Patients pathway"
+    "internationalLink": "Explore our International Patients pathway",
+    "trust": {
+      "standards": "British-inspired standards of care",
+      "digital": "Digital treatment planning",
+      "price": "A clear price before you start",
+      "reply": "WhatsApp reply within minutes"
+    }
   },
   "internationalPathway": {
     "eyebrow": "International Patients",

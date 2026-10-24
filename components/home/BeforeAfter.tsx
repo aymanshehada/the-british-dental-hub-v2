@@ -38,7 +38,7 @@ export default function BeforeAfter() {
   }
 
   return (
-    <section id="gallery" className="bg-white py-12 sm:py-14 lg:py-16">
+    <section id="gallery" className="bg-white py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-0">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[640px]">
@@ -48,7 +48,7 @@ export default function BeforeAfter() {
               </p>
               <span className="h-px w-16 bg-brand-red" />
             </div>
-            <h2 className="font-heading text-[2.8rem] leading-[1.02] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
+            <h2 className="font-heading text-[1.65rem] leading-[1.05] tracking-[-0.03em] text-[#183668] sm:text-[3.2rem]">
               {t("title")}
             </h2>
             <p className="mt-5 text-[15px] leading-7 text-[#697b95]">
@@ -117,7 +117,7 @@ export default function BeforeAfter() {
                 <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-red">
                   {t("featuredCase", { number: activeIndex + 1 })}
                 </p>
-                <h3 className="mt-4 font-heading text-[2.3rem] leading-[1.04] tracking-[-0.03em] text-[#183668]">
+                <h3 className="mt-4 font-heading text-[1.8rem] leading-[1.04] sm:text-[2.3rem] tracking-[-0.03em] text-[#183668]">
                   {activeCase.title}
                 </h3>
                 <p className="mt-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#183668]">
