@@ -92,7 +92,7 @@ function DoctorCard({ doctor, index }: { doctor: Doctor; index: number }) {
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((value) => !value)}
-          className="mt-4 inline-flex items-center gap-1.5 rounded-[3px] text-[13px] font-semibold text-[#183668] transition-colors hover:text-brand-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/20 focus-visible:ring-offset-2"
+          className="mt-2 inline-flex min-h-11 items-center gap-1.5 rounded-[3px] text-[13px] font-semibold text-[#183668] transition-colors hover:text-brand-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A2247]/20 focus-visible:ring-offset-2"
         >
           {doctor.expandLabel}
           {open ? <Minus size={15} aria-hidden="true" /> : <Plus size={15} aria-hidden="true" />}

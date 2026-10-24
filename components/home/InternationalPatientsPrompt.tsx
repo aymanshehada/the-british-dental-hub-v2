@@ -46,6 +46,29 @@ export function InternationalPatientsPrompt() {
   const [pastHero, setPastHero] = useState(false)
   const [dismissed, setDismissed] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [overContact, setOverContact] = useState(false)
+
+  // Step aside while the booking section or the footer is on screen, so the
+  // card never covers the contact details on a phone.
+  useEffect(() => {
+    const targets: Element[] = []
+    const contact = document.getElementById("contact")
+    const footer = document.querySelector("footer")
+    if (contact) targets.push(contact)
+    if (footer) targets.push(footer)
+    if (targets.length === 0) return
+
+    const visible = new Set<Element>()
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) visible.add(entry.target)
+        else visible.delete(entry.target)
+      }
+      setOverContact(visible.size > 0)
+    })
+    targets.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     try {
@@ -89,7 +112,7 @@ export function InternationalPatientsPrompt() {
   }
 
   const desktopShown = pastHero && !menuOpen
-  const mobileShown = pastHero && !menuOpen
+  const mobileShown = pastHero && !menuOpen && !overContact
   const accessibleName = `${t("eyebrow")} — ${t("question")} ${t("cta")}`
 
   const plane = isRtl ? PLANE_AR : PLANE_EN

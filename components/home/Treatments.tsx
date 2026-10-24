@@ -84,7 +84,7 @@ export default function Treatments() {
 
         {/* Mobile / tablet: horizontal scroll-snap carousel. Desktop (lg+): elegant 3-col grid. */}
         <div
-          className="mt-7 flex gap-4 overflow-x-auto px-4 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:px-6 lg:mt-8 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0 xl:gap-[26px] [&::-webkit-scrollbar]:hidden"
+          className="mt-7 flex gap-4 overflow-x-auto overflow-y-hidden px-4 pb-2[-ms-overflow-style:none] [scrollbar-width:none] sm:px-6 lg:mt-8 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0 xl:gap-[26px] [&::-webkit-scrollbar]:hidden"
           style={{ scrollSnapType: "x mandatory" }}
         >
           {treatments.map((treatment, index) => (

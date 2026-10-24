@@ -73,7 +73,7 @@ export default async function Footer() {
               </h2>
             </div>
 
-            <div className="h-[130px] w-[230px] shrink-0 overflow-hidden rounded-[10px] border border-white/10">
+            <div className="h-[190px] w-full shrink-0 overflow-hidden rounded-[10px] border border-white/10 sm:h-[130px] sm:w-[230px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900!2d31.4800711!3d30.0639845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14581954e7a1dd7d%3A0x82c7b2034b7213b4!2sThe%20British%20Dental%20Hub%20-%20%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%20%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A%20%D9%84%D8%AC%D8%B1%D8%A7%D8%AD%D8%A9%20%D9%88%20%D8%B2%D8%B1%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B3%D9%86%D8%A7%D9%86!5e0"
                 title="The British Dental Hub location on Google Maps"
@@ -108,12 +108,12 @@ export default async function Footer() {
 
             <div className="mt-10">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">{t("nav.treatments")}</p>
-              <div className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3">
+              <div className="mt-3 grid grid-cols-2 gap-x-6 gap-y-0">
                 {serviceLinks.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-sm text-white/72 transition hover:text-white"
+                    className="py-2.5 text-sm text-white/72 transition hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -124,12 +124,12 @@ export default async function Footer() {
 
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">{t("navigate")}</p>
-            <div className="mt-6 grid gap-4">
+            <div className="mt-4 grid gap-0">
               {navigation.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-sm text-white/72 transition hover:text-white"
+                  className="py-2.5 text-sm text-white/72 transition hover:text-white"
                 >
                   {item.label}
                 </Link>

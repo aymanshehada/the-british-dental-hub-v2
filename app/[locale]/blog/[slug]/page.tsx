@@ -5,7 +5,8 @@ import { notFound } from 'next/navigation'
 import TopBar from '@/components/layout/TopBar'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { ArrowLeft, ArrowRight, BookOpen, Check, MessageSquare, ShieldCheck } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowLeft, ArrowRight, Check, MessageSquare, ShieldCheck } from 'lucide-react'
 import { Container } from '@/components/ui/container'
 import { ArticleCard } from '@/components/blog/ArticleCard'
 import { TableOfContents } from '@/components/blog/TableOfContents'
@@ -20,6 +21,7 @@ import {
   getReadingTimeAr,
   getRelatedArticles,
 } from '@/lib/blog/articles'
+import { getCategoryImage } from '@/lib/blog/category-images'
 import { getPathname } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
 import { getLocaleAlternates, withSocialDefaults } from '@/lib/seo'
@@ -46,10 +48,12 @@ export async function generateMetadata({
   const isArabic = locale === 'ar' && Boolean(article.arContent)
   const metaTitleText = isArabic ? article.arContent!.title : article.title
   const metaDek = isArabic ? article.arContent!.dek : article.dek
-  const title = `${metaTitleText} | The BDH Journal`
+  const title = `${metaTitleText} | ${siteName}`
 
   return withSocialDefaults({
-    title,
+    // `absolute` stops the root layout template from appending the brand a
+    // second time.
+    title: { absolute: title },
     description: metaDek,
     alternates: getLocaleAlternates(`/blog/${article.slug}`, locale as AppLocale),
     openGraph: {
@@ -241,7 +245,7 @@ export default async function BlogArticlePage({
                 {isArabic ? (
                   <>
                     <ArrowRight className="size-3.5" />
-                    The BDH Journal
+                    مدونة BDH
                   </>
                 ) : (
                   <>
@@ -273,9 +277,15 @@ export default async function BlogArticlePage({
             </div>
 
             <div className="mx-auto mt-10 max-w-4xl">
-              <div className="relative flex h-[220px] w-full items-center justify-center overflow-hidden rounded-[24px] border border-[#e5ebf3] bg-[linear-gradient(135deg,#F8F9FB_0%,#EEF2F6_100%)] sm:h-[320px]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(215,25,32,0.06),transparent_55%)]" />
-                <BookOpen className="relative size-12 text-brand-navy/20" strokeWidth={1.2} />
+              <div className="relative h-[220px] w-full overflow-hidden rounded-[24px] border border-[#e5ebf3] bg-[#F8F9FB] sm:h-[320px]">
+                <Image
+                  src={getCategoryImage(article.category)}
+                  alt=""
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 896px, 100vw"
+                  className="object-cover"
+                />
               </div>
             </div>
           </Container>

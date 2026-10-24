@@ -17,6 +17,7 @@ import { MessageCircle, Phone } from "lucide-react"
 export function FloatingContact({ hidden }: { hidden: boolean }) {
   const t = useTranslations("common.floatingContact")
   const [overHero, setOverHero] = useState(true)
+  const [overContact, setOverContact] = useState(false)
 
   useEffect(() => {
     const hero = document.getElementById("home")
@@ -33,7 +34,30 @@ export function FloatingContact({ hidden }: { hidden: boolean }) {
     return () => observer.disconnect()
   }, [])
 
-  const isHidden = hidden || overHero
+  // The booking section and the footer already carry the phone number, the
+  // WhatsApp link and the directions, and on a phone the floating buttons
+  // would otherwise sit on top of that text.
+  useEffect(() => {
+    const targets: Element[] = []
+    const contact = document.getElementById("contact")
+    const footer = document.querySelector("footer")
+    if (contact) targets.push(contact)
+    if (footer) targets.push(footer)
+    if (targets.length === 0) return
+
+    const visible = new Set<Element>()
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) visible.add(entry.target)
+        else visible.delete(entry.target)
+      }
+      setOverContact(visible.size > 0)
+    })
+    targets.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
+  const isHidden = hidden || overHero || overContact
 
   return (
     <div
@@ -56,7 +80,7 @@ export function FloatingContact({ hidden }: { hidden: boolean }) {
         aria-label={t("callAria")}
         aria-hidden={isHidden}
         tabIndex={isHidden ? -1 : undefined}
-        className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#0A2247] px-4 text-sm font-semibold text-white shadow-[0_8px_22px_rgba(10,34,71,0.2)] transition hover:scale-[1.03] sm:w-12 sm:px-0"
+        className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#0A2247] px-4 text-sm font-semibold text-white shadow-[0_8px_22px_rgba(10,34,71,0.2)] ring-1 ring-white/70 transition hover:scale-[1.03] sm:w-12 sm:px-0"
       >
         <Phone size={19} aria-hidden="true" />
         <span className="sm:sr-only">{t("callLabel")}</span>

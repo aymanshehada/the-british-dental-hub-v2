@@ -42,7 +42,7 @@ export default async function JournalPreview({ locale }: { locale: AppLocale }) 
 
         {featured.length > 0 ? (
           <div
-            className="mt-8 flex gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden"
+            className="mt-8 flex gap-4 overflow-x-auto overflow-y-hidden pb-2[-ms-overflow-style:none] [scrollbar-width:none] lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden"
             style={{ scrollSnapType: "x mandatory" }}
           >
             {featured.map((article) => (
